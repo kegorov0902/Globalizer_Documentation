@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс SeparableOptimizationTask</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="class_separable_optimization_task-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс SeparableOptimizationTask</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф наследования:SeparableOptimizationTask:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_separable_optimization_task.png" usemap="#SeparableOptimizationTask_map" alt=""/>
+  <map id="SeparableOptimizationTask_map" name="SeparableOptimizationTask_map">
+<area href="class_task.html" title="Класс, инкапсулирующий информацию о задаче оптимизации." alt="Task" shape="rect" coords="0,56,164,80"/>
+<area href="class_queue_base_data.html" alt="QueueBaseData" shape="rect" coords="0,0,164,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac3c027d2e1ac2b0993e1e8ef4b13b086" id="r_ac3c027d2e1ac2b0993e1e8ef4b13b086"><td class="memItemLeft" align="right" valign="top"><a id="ac3c027d2e1ac2b0993e1e8ef4b13b086" name="ac3c027d2e1ac2b0993e1e8ef4b13b086"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SeparableOptimizationTask</b> (<a class="el" href="class_i_problem.html">IProblem</a> *_problem, int _ProcLevel)</td></tr>
+<tr class="memitem:a817f83376c4ce38deeaf0b01c08af412" id="r_a817f83376c4ce38deeaf0b01c08af412"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_task.html">Task</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a817f83376c4ce38deeaf0b01c08af412">Clone</a> ()</td></tr>
+<tr class="memdesc:a817f83376c4ce38deeaf0b01c08af412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает копию класса  <br /></td></tr>
+<tr class="memitem:ab5559f5ebaed34fd0b49f3eeb92d8257" id="r_ab5559f5ebaed34fd0b49f3eeb92d8257"><td class="memItemLeft" align="right" valign="top">virtual const double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5559f5ebaed34fd0b49f3eeb92d8257">GetA</a> () const</td></tr>
+<tr class="memdesc:ab5559f5ebaed34fd0b49f3eeb92d8257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает левую границу области поиска  <br /></td></tr>
+<tr class="memitem:add9ff07671f0e40ed09353f3b0a72251" id="r_add9ff07671f0e40ed09353f3b0a72251"><td class="memItemLeft" align="right" valign="top">virtual const double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add9ff07671f0e40ed09353f3b0a72251">GetB</a> () const</td></tr>
+<tr class="memdesc:add9ff07671f0e40ed09353f3b0a72251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает правую границу области поиска  <br /></td></tr>
+<tr class="memitem:a9c0a639a5250b5a34e1dbc37093e7401" id="r_a9c0a639a5250b5a34e1dbc37093e7401"><td class="memItemLeft" align="right" valign="top">virtual const double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c0a639a5250b5a34e1dbc37093e7401">GetOptimumPoint</a> () const</td></tr>
+<tr class="memdesc:a9c0a639a5250b5a34e1dbc37093e7401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает априори известные координаты точки глобального минимума Перед первым вызовом нужно вызвать <a class="el" href="class_task.html#abf83336201b047e167c00d0fdc07c70f" title="Обновляет координаты точки глобального минимума из объекта IProblem.">resetOptimumPoint()</a>  <br /></td></tr>
+<tr class="memitem:ad5cd0c3bb2a8c3ae73abe82ce5b55941" id="r_ad5cd0c3bb2a8c3ae73abe82ce5b55941"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5cd0c3bb2a8c3ae73abe82ce5b55941">CalculateFuncs</a> (const double *y, int fNumber)</td></tr>
+<tr class="memdesc:ad5cd0c3bb2a8c3ae73abe82ce5b55941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисляет значение функции с номером fNumber в точке y.  <br /></td></tr>
+<tr class="memitem:abfc4afbe445b3a82b15e71df687cf562" id="r_abfc4afbe445b3a82b15e71df687cf562"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfc4afbe445b3a82b15e71df687cf562">CalculateFuncsInManyPoints</a> (double *y, int fNumber, int numPoints, double *values)</td></tr>
+<tr class="memdesc:abfc4afbe445b3a82b15e71df687cf562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисляет numPoints значений функции с номером fNumber, в координатах y в массив values Работает только если задача является наследником <a class="el" href="class_i_g_p_u_problem.html" title="Базовый класс-интерфейс, от которого наследуются классы, описывающие задачи оптимизации использующие ...">IGPUProblem</a>.  <br /></td></tr>
+<tr class="memitem:ae0c193de8dbb55b4490d05b3c4f2d5ab" id="r_ae0c193de8dbb55b4490d05b3c4f2d5ab"><td class="memItemLeft" align="right" valign="top"><a id="ae0c193de8dbb55b4490d05b3c4f2d5ab" name="ae0c193de8dbb55b4490d05b3c4f2d5ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetStartParameterNumber</b> (int _startParameterNumber)</td></tr>
+<tr class="memdesc:ae0c193de8dbb55b4490d05b3c4f2d5ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задает начало блока переменных <br /></td></tr>
+<tr class="memitem:a3537252b6f1a871690bcb0f1e48afe7a" id="r_a3537252b6f1a871690bcb0f1e48afe7a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3537252b6f1a871690bcb0f1e48afe7a">CopyPoint</a> (double *y, <a class="el" href="class_trial.html">Trial</a> *point)</td></tr>
+<tr class="memdesc:a3537252b6f1a871690bcb0f1e48afe7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Копирует координаты точки из массива, согласно имеющимся правилам  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_task"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_task')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Открытые члены унаследованные от <a class="el" href="class_task.html">Task</a></td></tr>
+<tr class="memitem:a4c3c98ee0639e1aade90ab94fd09cbf8 inherit pub_methods_class_task" id="r_a4c3c98ee0639e1aade90ab94fd09cbf8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a4c3c98ee0639e1aade90ab94fd09cbf8">Task</a> (<a class="el" href="class_i_problem.html">IProblem</a> *_problem, int _ProcLevel)</td></tr>
+<tr class="memdesc:a4c3c98ee0639e1aade90ab94fd09cbf8 inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор.  <br /></td></tr>
+<tr class="memitem:a0ca53354bdc006762a0fda68c64f7608 inherit pub_methods_class_task" id="r_a0ca53354bdc006762a0fda68c64f7608"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a0ca53354bdc006762a0fda68c64f7608">Task</a> ()</td></tr>
+<tr class="memdesc:a0ca53354bdc006762a0fda68c64f7608 inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор по умолчанию.  <br /></td></tr>
+<tr class="memitem:a3ecf499ea35fb4a96853969a1e1cbbce inherit pub_methods_class_task" id="r_a3ecf499ea35fb4a96853969a1e1cbbce"><td class="memItemLeft" align="right" valign="top">
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Task</b> ()</td></tr>
+<tr class="memdesc:a3ecf499ea35fb4a96853969a1e1cbbce inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор. <br /></td></tr>
+<tr class="memitem:aad529519bb179231f222ed272c36c63f inherit pub_methods_class_task" id="r_aad529519bb179231f222ed272c36c63f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_task.html">Task</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#aad529519bb179231f222ed272c36c63f">CloneWithNewData</a> ()</td></tr>
+<tr class="memdesc:aad529519bb179231f222ed272c36c63f inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает клон текущего объекта с новыми данными (в данной реализации эквивалентно <a class="el" href="class_task.html#a3ddef7bc459fc3649ca51aeba273f60a" title="Создает клон текущего объекта.">Clone</a>).  <br /></td></tr>
+<tr class="memitem:ab3c5b4aaecf446c93d92f11f71c454e8 inherit pub_methods_class_task" id="r_ab3c5b4aaecf446c93d92f11f71c454e8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#ab3c5b4aaecf446c93d92f11f71c454e8">Init</a> (<a class="el" href="class_i_problem.html">IProblem</a> *_problem, int _ProcLevel)</td></tr>
+<tr class="memdesc:ab3c5b4aaecf446c93d92f11f71c454e8 inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализирует объект данными задачи.  <br /></td></tr>
+<tr class="memitem:a0633bd09f6b32f0ca9e7d3dbbfa1fb0f inherit pub_methods_class_task" id="r_a0633bd09f6b32f0ca9e7d3dbbfa1fb0f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a0633bd09f6b32f0ca9e7d3dbbfa1fb0f">GetN</a> () const</td></tr>
+<tr class="memdesc:a0633bd09f6b32f0ca9e7d3dbbfa1fb0f inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает общую размерность задачи.  <br /></td></tr>
+<tr class="memitem:a2efe1060efe5feae072e81566b2095cb inherit pub_methods_class_task" id="r_a2efe1060efe5feae072e81566b2095cb"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a2efe1060efe5feae072e81566b2095cb">GetOptimumValue</a> () const</td></tr>
+<tr class="memdesc:a2efe1060efe5feae072e81566b2095cb inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает априори известное значение глобального минимума.  <br /></td></tr>
+<tr class="memitem:abf83336201b047e167c00d0fdc07c70f inherit pub_methods_class_task" id="r_abf83336201b047e167c00d0fdc07c70f"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>resetOptimumPoint</b> ()</td></tr>
+<tr class="memdesc:abf83336201b047e167c00d0fdc07c70f inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет координаты точки глобального минимума из объекта <a class="el" href="class_i_problem.html" title="Базовый класс-интерфейс, от которого наследуются классы, описывающие задачи оптимизации.">IProblem</a>. <br /></td></tr>
+<tr class="memitem:a16f5ec8f0d114f29ea735d71a3a90fdc inherit pub_methods_class_task" id="r_a16f5ec8f0d114f29ea735d71a3a90fdc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a16f5ec8f0d114f29ea735d71a3a90fdc">GetIsOptimumValueDefined</a> () const</td></tr>
+<tr class="memdesc:a16f5ec8f0d114f29ea735d71a3a90fdc inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, известно ли для задачи значение глобального минимума.  <br /></td></tr>
+<tr class="memitem:a8e66c9b6b5aa99489f08323d4c900112 inherit pub_methods_class_task" id="r_a8e66c9b6b5aa99489f08323d4c900112"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a8e66c9b6b5aa99489f08323d4c900112">GetIsOptimumPointDefined</a> () const</td></tr>
+<tr class="memdesc:a8e66c9b6b5aa99489f08323d4c900112 inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, известны ли для задачи координаты глобального минимума.  <br /></td></tr>
+<tr class="memitem:ad1c1bd79ff2b89bcdb84dd74043a605d inherit pub_methods_class_task" id="r_ad1c1bd79ff2b89bcdb84dd74043a605d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_problem.html">IProblem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#ad1c1bd79ff2b89bcdb84dd74043a605d">getProblem</a> ()</td></tr>
+<tr class="memdesc:ad1c1bd79ff2b89bcdb84dd74043a605d inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает указатель на текущую задачу.  <br /></td></tr>
+<tr class="memitem:a289fd4170511ed664c580b5328e31c23 inherit pub_methods_class_task" id="r_a289fd4170511ed664c580b5328e31c23"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a289fd4170511ed664c580b5328e31c23">GetNumOfFunc</a> () const</td></tr>
+<tr class="memdesc:a289fd4170511ed664c580b5328e31c23 inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает число функций (ограничения и критерии).  <br /></td></tr>
+<tr class="memitem:af0dd2de01cff508be1aaef7a3f8226b1 inherit pub_methods_class_task" id="r_af0dd2de01cff508be1aaef7a3f8226b1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#af0dd2de01cff508be1aaef7a3f8226b1">SetNumofFunc</a> (int nf)</td></tr>
+<tr class="memdesc:af0dd2de01cff508be1aaef7a3f8226b1 inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задает число функций.  <br /></td></tr>
+<tr class="memitem:a1db05dcbe850aaac0f71941001fa4cbb inherit pub_methods_class_task" id="r_a1db05dcbe850aaac0f71941001fa4cbb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a1db05dcbe850aaac0f71941001fa4cbb">GetProcLevel</a> ()</td></tr>
+<tr class="memdesc:a1db05dcbe850aaac0f71941001fa4cbb inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает уровень процесса в дереве процессов.  <br /></td></tr>
+<tr class="memitem:afd969252b99ce7c6eac7ba4798f59b0c inherit pub_methods_class_task" id="r_afd969252b99ce7c6eac7ba4798f59b0c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#afd969252b99ce7c6eac7ba4798f59b0c">GetNumOfFuncAtProblem</a> () const</td></tr>
+<tr class="memdesc:afd969252b99ce7c6eac7ba4798f59b0c inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает число функций в исходной задаче.  <br /></td></tr>
+<tr class="memitem:a8a437bbd8a4ce1e89303f9b025f34d97 inherit pub_methods_class_task" id="r_a8a437bbd8a4ce1e89303f9b025f34d97"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a8a437bbd8a4ce1e89303f9b025f34d97">GetNumberOfDiscreteVariable</a> ()</td></tr>
+<tr class="memdesc:a8a437bbd8a4ce1e89303f9b025f34d97 inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает число дискретных параметров.  <br /></td></tr>
+<tr class="memitem:a5a11faa70aa65327bd4d004a6d9bb923 inherit pub_methods_class_task" id="r_a5a11faa70aa65327bd4d004a6d9bb923"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a5a11faa70aa65327bd4d004a6d9bb923">GetNumberOfValues</a> (int discreteVariable)</td></tr>
+<tr class="memdesc:a5a11faa70aa65327bd4d004a6d9bb923 inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает число допустимых значений для дискретного параметра.  <br /></td></tr>
+<tr class="memitem:a5d05d4e0135cbf331d95e0d8a23c9698 inherit pub_methods_class_task" id="r_a5d05d4e0135cbf331d95e0d8a23c9698"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a5d05d4e0135cbf331d95e0d8a23c9698">GetAllDiscreteValues</a> (int discreteVariable, double *values)</td></tr>
+<tr class="memdesc:a5d05d4e0135cbf331d95e0d8a23c9698 inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Определяет все допустимые значения дискретного параметра.  <br /></td></tr>
+<tr class="memitem:a4919e593aed01f2123266f5ccf88fa10 inherit pub_methods_class_task" id="r_a4919e593aed01f2123266f5ccf88fa10"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a4919e593aed01f2123266f5ccf88fa10">IsPermissibleValue</a> (double value, int discreteVariable)</td></tr>
+<tr class="memdesc:a4919e593aed01f2123266f5ccf88fa10 inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, является ли значение допустимым для дискретного параметра.  <br /></td></tr>
+<tr class="memitem:af5afb88f42c65ccfd6fc93ae96f476de inherit pub_methods_class_task" id="r_af5afb88f42c65ccfd6fc93ae96f476de"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#af5afb88f42c65ccfd6fc93ae96f476de">getMin</a> ()</td></tr>
+<tr class="memdesc:af5afb88f42c65ccfd6fc93ae96f476de inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает минимальные значения функций (для многокритериальной оптимизации).  <br /></td></tr>
+<tr class="memitem:a5cbb8db5c4e316594437295ef896f2f1 inherit pub_methods_class_task" id="r_a5cbb8db5c4e316594437295ef896f2f1"><td class="memItemLeft" align="right" valign="top">virtual double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#a5cbb8db5c4e316594437295ef896f2f1">getMax</a> ()</td></tr>
+<tr class="memdesc:a5cbb8db5c4e316594437295ef896f2f1 inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает максимальные значения функций (для многокритериальной оптимизации).  <br /></td></tr>
+<tr class="memitem:adc847093b563a644029d3e95cda70f80 inherit pub_methods_class_task" id="r_adc847093b563a644029d3e95cda70f80"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#adc847093b563a644029d3e95cda70f80">IsInit</a> ()</td></tr>
+<tr class="memdesc:adc847093b563a644029d3e95cda70f80 inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, был ли объект инициализирован.  <br /></td></tr>
+<tr class="memitem:ac64461233c0f31a85beae35456ae2aca inherit pub_methods_class_task" id="r_ac64461233c0f31a85beae35456ae2aca"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_task.html#ac64461233c0f31a85beae35456ae2aca">IsLeaf</a> ()</td></tr>
+<tr class="memdesc:ac64461233c0f31a85beae35456ae2aca inherit pub_methods_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, является ли задача листом в дереве процессов.  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_queue_base_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_queue_base_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Открытые члены унаследованные от <a class="el" href="class_queue_base_data.html">QueueBaseData</a></td></tr>
+<tr class="memitem:a2dcc30157b2d8e40b21996923bf312bf inherit pub_methods_class_queue_base_data" id="r_a2dcc30157b2d8e40b21996923bf312bf"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetQueueElementa</b> (<a class="el" href="struct_queue_element.html">QueueElement</a> *q)</td></tr>
+<tr class="memitem:a2ac31c2e9ead6a48b409aec4ca85a6d6 inherit pub_methods_class_queue_base_data" id="r_a2ac31c2e9ead6a48b409aec4ca85a6d6"><td class="memItemLeft" align="right" valign="top">
+virtual <a class="el" href="struct_queue_element.html">QueueElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetQueueElementa</b> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:acc96fd082ca96a827e513253ea857184" id="r_acc96fd082ca96a827e513253ea857184"><td class="memItemLeft" align="right" valign="top"><a id="acc96fd082ca96a827e513253ea857184" name="acc96fd082ca96a827e513253ea857184"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>startParameterNumber</b></td></tr>
+<tr class="memdesc:acc96fd082ca96a827e513253ea857184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Начало блока переменных <br /></td></tr>
+<tr class="inherit_header pro_attribs_class_task"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_task')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Защищенные данные унаследованные от <a class="el" href="class_task.html">Task</a></td></tr>
+<tr class="memitem:a73dccb7998678e6a3b4eaaf000449c6d inherit pro_attribs_class_task" id="r_a73dccb7998678e6a3b4eaaf000449c6d"><td class="memItemLeft" align="right" valign="top">
+double&#160;</td><td class="memItemRight" valign="bottom"><b>A</b> [MaxDim]</td></tr>
+<tr class="memdesc:a73dccb7998678e6a3b4eaaf000449c6d inherit pro_attribs_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Левая граница области поиска <br /></td></tr>
+<tr class="memitem:af08771a09c298e319945f654406bb96f inherit pro_attribs_class_task" id="r_af08771a09c298e319945f654406bb96f"><td class="memItemLeft" align="right" valign="top">
+double&#160;</td><td class="memItemRight" valign="bottom"><b>B</b> [MaxDim]</td></tr>
+<tr class="memdesc:af08771a09c298e319945f654406bb96f inherit pro_attribs_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Правая граница области поиска <br /></td></tr>
+<tr class="memitem:a9b024e35f9d6624d84f4ff8af0cd6f26 inherit pro_attribs_class_task" id="r_a9b024e35f9d6624d84f4ff8af0cd6f26"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>NumOfFunc</b></td></tr>
+<tr class="memdesc:a9b024e35f9d6624d84f4ff8af0cd6f26 inherit pro_attribs_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Число функционалов (последний - критерий) <br /></td></tr>
+<tr class="memitem:a875f3406f5067a29466e57018d70de1a inherit pro_attribs_class_task" id="r_a875f3406f5067a29466e57018d70de1a"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_i_problem.html">IProblem</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pProblem</b></td></tr>
+<tr class="memdesc:a875f3406f5067a29466e57018d70de1a inherit pro_attribs_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на саму задачу оптимизации <br /></td></tr>
+<tr class="memitem:acb1c1da58b5d4a44faa17cf8e4962834 inherit pro_attribs_class_task" id="r_acb1c1da58b5d4a44faa17cf8e4962834"><td class="memItemLeft" align="right" valign="top">
+double&#160;</td><td class="memItemRight" valign="bottom"><b>OptimumValue</b></td></tr>
+<tr class="memdesc:acb1c1da58b5d4a44faa17cf8e4962834 inherit pro_attribs_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оптимальное значение целевой функции (определено, если известно из задачи) <br /></td></tr>
+<tr class="memitem:ade169ee89d6357d6e51be156ece968a2 inherit pro_attribs_class_task" id="r_ade169ee89d6357d6e51be156ece968a2"><td class="memItemLeft" align="right" valign="top">
+double&#160;</td><td class="memItemRight" valign="bottom"><b>OptimumPoint</b> [MaxDim]</td></tr>
+<tr class="memdesc:ade169ee89d6357d6e51be156ece968a2 inherit pro_attribs_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координаты глобального минимума целевой функции (определено, если известно) <br /></td></tr>
+<tr class="memitem:aa5e1d68265ac8a0fa7f24da7b5576f16 inherit pro_attribs_class_task" id="r_aa5e1d68265ac8a0fa7f24da7b5576f16"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsOptimumValueDefined</b></td></tr>
+<tr class="memdesc:aa5e1d68265ac8a0fa7f24da7b5576f16 inherit pro_attribs_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">true, если в задаче известно оптимальное значение критерия <br /></td></tr>
+<tr class="memitem:a2f9711aaec7aa06e31d1b0c635a10009 inherit pro_attribs_class_task" id="r_a2f9711aaec7aa06e31d1b0c635a10009"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsOptimumPointDefined</b></td></tr>
+<tr class="memdesc:a2f9711aaec7aa06e31d1b0c635a10009 inherit pro_attribs_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">true, если в задаче известна точка глобального минимума <br /></td></tr>
+<tr class="memitem:a44f4b4d079d67d0e35b94658f20301a9 inherit pro_attribs_class_task" id="r_a44f4b4d079d67d0e35b94658f20301a9"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ProcLevel</b></td></tr>
+<tr class="memdesc:a44f4b4d079d67d0e35b94658f20301a9 inherit pro_attribs_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уровень процесса в дереве процессов <br /></td></tr>
+<tr class="memitem:a42a7c5633283c01bdd098f85f35d81fd inherit pro_attribs_class_task" id="r_a42a7c5633283c01bdd098f85f35d81fd"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b></td></tr>
+<tr class="memdesc:a42a7c5633283c01bdd098f85f35d81fd inherit pro_attribs_class_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Флаг, указывающий, был ли класс инициализирован <br /></td></tr>
+<tr class="inherit_header pro_attribs_class_queue_base_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_queue_base_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Защищенные данные унаследованные от <a class="el" href="class_queue_base_data.html">QueueBaseData</a></td></tr>
+<tr class="memitem:af668471b658fdcce42a5330ea86ea5d5 inherit pro_attribs_class_queue_base_data" id="r_af668471b658fdcce42a5330ea86ea5d5"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="struct_queue_element.html">QueueElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>queueElementa</b></td></tr>
+<tr class="memdesc:af668471b658fdcce42a5330ea86ea5d5 inherit pro_attribs_class_queue_base_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Элемент очереди, хранящий этот интервал <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_attribs_class_task"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_task')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Открытые атрибуты унаследованные от <a class="el" href="class_task.html">Task</a></td></tr>
+<tr class="memitem:abeded0321cfcb7f18849ec0fa0fb28da inherit pub_attribs_class_task" id="r_abeded0321cfcb7f18849ec0fa0fb28da"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>num</b></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="ad5cd0c3bb2a8c3ae73abe82ce5b55941" name="ad5cd0c3bb2a8c3ae73abe82ce5b55941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5cd0c3bb2a8c3ae73abe82ce5b55941">&#9670;&#160;</a></span>CalculateFuncs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SeparableOptimizationTask::CalculateFuncs </td>
+          <td>(</td>
+          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fNumber</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вычисляет значение функции с номером fNumber в точке y. </p>
+
+<p>Переопределяет метод предка <a class="el" href="class_task.html#aec6e5ecb1d84a29d361e719cdedd9f62">Task</a>.</p>
+
+</div>
+</div>
+<a id="abfc4afbe445b3a82b15e71df687cf562" name="abfc4afbe445b3a82b15e71df687cf562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc4afbe445b3a82b15e71df687cf562">&#9670;&#160;</a></span>CalculateFuncsInManyPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SeparableOptimizationTask::CalculateFuncsInManyPoints </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fNumber</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>numPoints</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>values</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вычисляет numPoints значений функции с номером fNumber, в координатах y в массив values Работает только если задача является наследником <a class="el" href="class_i_g_p_u_problem.html" title="Базовый класс-интерфейс, от которого наследуются классы, описывающие задачи оптимизации использующие ...">IGPUProblem</a>. </p>
+
+<p>Переопределяет метод предка <a class="el" href="class_task.html#a2d309750745b9c64e62bff85c6397322">Task</a>.</p>
+
+</div>
+</div>
+<a id="a817f83376c4ce38deeaf0b01c08af412" name="a817f83376c4ce38deeaf0b01c08af412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a817f83376c4ce38deeaf0b01c08af412">&#9670;&#160;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_task.html">Task</a> * SeparableOptimizationTask::Clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает копию класса </p>
+
+<p>Переопределяет метод предка <a class="el" href="class_task.html#a3ddef7bc459fc3649ca51aeba273f60a">Task</a>.</p>
+
+</div>
+</div>
+<a id="a3537252b6f1a871690bcb0f1e48afe7a" name="a3537252b6f1a871690bcb0f1e48afe7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3537252b6f1a871690bcb0f1e48afe7a">&#9670;&#160;</a></span>CopyPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SeparableOptimizationTask::CopyPoint </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_trial.html">Trial</a> *</td>          <td class="paramname"><span class="paramname"><em>point</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Копирует координаты точки из массива, согласно имеющимся правилам </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>имеющисся координаты. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">point</td><td>точка назначения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если значение допустимо, иначе false. </dd></dl>
+
+<p>Переопределяет метод предка <a class="el" href="class_task.html#a3498b8da2816df277921fba0db366dd4">Task</a>.</p>
+
+</div>
+</div>
+<a id="ab5559f5ebaed34fd0b49f3eeb92d8257" name="ab5559f5ebaed34fd0b49f3eeb92d8257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5559f5ebaed34fd0b49f3eeb92d8257">&#9670;&#160;</a></span>GetA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double * SeparableOptimizationTask::GetA </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает левую границу области поиска </p>
+
+<p>Переопределяет метод предка <a class="el" href="class_task.html#a34bdf9b16f13a23f4aea02ab45c1095f">Task</a>.</p>
+
+</div>
+</div>
+<a id="add9ff07671f0e40ed09353f3b0a72251" name="add9ff07671f0e40ed09353f3b0a72251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add9ff07671f0e40ed09353f3b0a72251">&#9670;&#160;</a></span>GetB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double * SeparableOptimizationTask::GetB </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает правую границу области поиска </p>
+
+<p>Переопределяет метод предка <a class="el" href="class_task.html#aefb6f0d3ad6588fd71abefea3e3f4cf5">Task</a>.</p>
+
+</div>
+</div>
+<a id="a9c0a639a5250b5a34e1dbc37093e7401" name="a9c0a639a5250b5a34e1dbc37093e7401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0a639a5250b5a34e1dbc37093e7401">&#9670;&#160;</a></span>GetOptimumPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double * SeparableOptimizationTask::GetOptimumPoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает априори известные координаты точки глобального минимума Перед первым вызовом нужно вызвать <a class="el" href="class_task.html#abf83336201b047e167c00d0fdc07c70f" title="Обновляет координаты точки глобального минимума из объекта IProblem.">resetOptimumPoint()</a> </p>
+
+<p>Переопределяет метод предка <a class="el" href="class_task.html#a6bbfea2c4ea75c5891eb45ff15b689ae">Task</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>globalizer/method/include/<a class="el" href="_separable_optimization_task_8h_source.html">SeparableOptimizationTask.h</a></li>
+<li>globalizer/method/src/<b>SeparableOptimizationTask.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

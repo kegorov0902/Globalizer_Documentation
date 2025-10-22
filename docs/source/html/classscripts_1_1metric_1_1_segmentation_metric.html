@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс scripts.metric.SegmentationMetric</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>scripts</b></li><li class="navelem"><b>metric</b></li><li class="navelem"><a href="classscripts_1_1metric_1_1_segmentation_metric.html">SegmentationMetric</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classscripts_1_1metric_1_1_segmentation_metric-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс scripts.metric.SegmentationMetric</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a7fd52805b7c857721fbc791774c926ec" id="r_a7fd52805b7c857721fbc791774c926ec"><td class="memItemLeft" align="right" valign="top"><a id="a7fd52805b7c857721fbc791774c926ec" name="a7fd52805b7c857721fbc791774c926ec"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, Literal['p', 'qrs', 't', 'all'] monitor='all', Literal['onset', 'offset', 'all'] orientation_type='all', Literal['precision', 'recall', 'f1', 'confusion_matrix'] return_type='confusion_matrix', samples=75)</td></tr>
+<tr class="memitem:aaa40271530215561b83ea24b9f76af29" id="r_aaa40271530215561b83ea24b9f76af29"><td class="memItemLeft" align="right" valign="top"><a id="aaa40271530215561b83ea24b9f76af29" name="aaa40271530215561b83ea24b9f76af29"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>__call__</b> (self, y_pred, y_true)</td></tr>
+<tr class="memitem:a698ba61d6867511790b3b5bef82b0f30" id="r_a698ba61d6867511790b3b5bef82b0f30"><td class="memItemLeft" align="right" valign="top"><a id="a698ba61d6867511790b3b5bef82b0f30" name="a698ba61d6867511790b3b5bef82b0f30"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>__str__</b> (self)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a5cf02a02ebd9ada2b2b3dc82497579ff" id="r_a5cf02a02ebd9ada2b2b3dc82497579ff"><td class="memItemLeft" align="right" valign="top"><a id="a5cf02a02ebd9ada2b2b3dc82497579ff" name="a5cf02a02ebd9ada2b2b3dc82497579ff"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>samples</b> = samples</td></tr>
+<tr class="memitem:a420ae5fa9594d01d1a62eb36aa234606" id="r_a420ae5fa9594d01d1a62eb36aa234606"><td class="memItemLeft" align="right" valign="top"><a id="a420ae5fa9594d01d1a62eb36aa234606" name="a420ae5fa9594d01d1a62eb36aa234606"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>monitor</b> = monitor</td></tr>
+<tr class="memitem:a75b7cb4b7775dc51351a9d327ba40556" id="r_a75b7cb4b7775dc51351a9d327ba40556"><td class="memItemLeft" align="right" valign="top"><a id="a75b7cb4b7775dc51351a9d327ba40556" name="a75b7cb4b7775dc51351a9d327ba40556"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>orientation_type</b> = orientation_type</td></tr>
+<tr class="memitem:a2479352cfeabde42932153f5e486fa04" id="r_a2479352cfeabde42932153f5e486fa04"><td class="memItemLeft" align="right" valign="top"><a id="a2479352cfeabde42932153f5e486fa04" name="a2479352cfeabde42932153f5e486fa04"></a>
+str&#160;</td><td class="memItemRight" valign="bottom"><b>return_type</b> = return_type</td></tr>
+<tr class="memitem:ad5326ae48013379b4f2771062fd942c1" id="r_ad5326ae48013379b4f2771062fd942c1"><td class="memItemLeft" align="right" valign="top">dict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5326ae48013379b4f2771062fd942c1">metric_to_func</a></td></tr>
+</table>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="ad5326ae48013379b4f2771062fd942c1" name="ad5326ae48013379b4f2771062fd942c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5326ae48013379b4f2771062fd942c1">&#9670;&#160;</a></span>metric_to_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dict scripts.metric.SegmentationMetric.metric_to_func</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">=  {<span class="stringliteral">&#39;precision&#39;</span>: self.__precision,</div>
+<div class="line">                               <span class="stringliteral">&#39;recall&#39;</span>: self.__recall,</div>
+<div class="line">                               <span class="stringliteral">&#39;f1&#39;</span>: self.__f1}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>third_party/Problems/Problems/iOptProblem/ML_Problems/scripts/<b>metric.py</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

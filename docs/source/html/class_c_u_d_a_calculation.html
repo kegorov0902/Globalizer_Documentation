@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс CUDACalculation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="class_c_u_d_a_calculation-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс CUDACalculation</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф наследования:CUDACalculation:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_c_u_d_a_calculation.png" usemap="#CUDACalculation_map" alt=""/>
+  <map id="CUDACalculation_map" name="CUDACalculation_map">
+<area href="class_calculation.html" title="Базовый класс для проведения испытаний" alt="Calculation" shape="rect" coords="0,0,110,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ae29890df23a6f4d6b64721bfaed304dc" id="r_ae29890df23a6f4d6b64721bfaed304dc"><td class="memItemLeft" align="right" valign="top"><a id="ae29890df23a6f4d6b64721bfaed304dc" name="ae29890df23a6f4d6b64721bfaed304dc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CUDACalculation</b> (<a class="el" href="class_task.html">Task</a> &amp;_pTask)</td></tr>
+<tr class="memitem:ad8e797252f38c798705ecad90b8a5cf0" id="r_ad8e797252f38c798705ecad90b8a5cf0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8e797252f38c798705ecad90b8a5cf0">Calculate</a> (<a class="el" href="class_information_for_calculation.html">InformationForCalculation</a> &amp;inputSet, <a class="el" href="struct_t_result_for_calculation.html">TResultForCalculation</a> &amp;outputSet)</td></tr>
+<tr class="memdesc:ad8e797252f38c798705ecad90b8a5cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">0 - Инициализирует массивы  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_calculation"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_calculation')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Открытые члены унаследованные от <a class="el" href="class_calculation.html">Calculation</a></td></tr>
+<tr class="memitem:a075a697e25059368755a48384215c3fe inherit pub_methods_class_calculation" id="r_a075a697e25059368755a48384215c3fe"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>Calculation</b> (<a class="el" href="class_task.html">Task</a> &amp;_pTask)</td></tr>
+<tr class="memitem:a4b4cd7aa9fdc92cc074e8d8f53883e9a inherit pub_methods_class_calculation" id="r_a4b4cd7aa9fdc92cc074e8d8f53883e9a"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetCountCalculation</b> (int c)</td></tr>
+<tr class="memitem:a6e0b48974c2ff7b6edd6396aa07a69fe inherit pub_methods_class_calculation" id="r_a6e0b48974c2ff7b6edd6396aa07a69fe"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ContinueComputing</b> ()</td></tr>
+<tr class="memitem:a1b1834b65ae618987a0011892cba2a83 inherit pub_methods_class_calculation" id="r_a1b1834b65ae618987a0011892cba2a83"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTask</b> (<a class="el" href="class_task.html">Task</a> *_pTask)</td></tr>
+<tr class="memdesc:a1b1834b65ae618987a0011892cba2a83 inherit pub_methods_class_calculation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задасть используемую задачу <br /></td></tr>
+<tr class="memitem:a22a4831a2d392a76b9feca6747fdf0ec inherit pub_methods_class_calculation" id="r_a22a4831a2d392a76b9feca6747fdf0ec"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSearchData</b> (<a class="el" href="class_search_data.html">SearchData</a> *_pData)</td></tr>
+<tr class="memitem:a9bab1648d322d74c63747bef39ab90c4 inherit pub_methods_class_calculation" id="r_a9bab1648d322d74c63747bef39ab90c4"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:ab4337bcbe9da1ff9d10db81243341c48" id="r_ab4337bcbe9da1ff9d10db81243341c48"><td class="memItemLeft" align="right" valign="top"><a id="ab4337bcbe9da1ff9d10db81243341c48" name="ab4337bcbe9da1ff9d10db81243341c48"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>StartCalculate</b> (<a class="el" href="class_information_for_calculation.html">InformationForCalculation</a> &amp;inputSet, <a class="el" href="struct_t_result_for_calculation.html">TResultForCalculation</a> &amp;outputSet)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:aeddb7bc3883cf74a2fb653bb7cd33bb6" id="r_aeddb7bc3883cf74a2fb653bb7cd33bb6"><td class="memItemLeft" align="right" valign="top"><a id="aeddb7bc3883cf74a2fb653bb7cd33bb6" name="aeddb7bc3883cf74a2fb653bb7cd33bb6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>deviceCount</b></td></tr>
+<tr class="memdesc:aeddb7bc3883cf74a2fb653bb7cd33bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Кол-во устройств <br /></td></tr>
+<tr class="memitem:ae7f866c62f700d570abef01164d68bfc" id="r_ae7f866c62f700d570abef01164d68bfc"><td class="memItemLeft" align="right" valign="top"><a id="ae7f866c62f700d570abef01164d68bfc" name="ae7f866c62f700d570abef01164d68bfc"></a>
+int *&#160;</td><td class="memItemRight" valign="bottom"><b>dataSize</b></td></tr>
+<tr class="memdesc:ae7f866c62f700d570abef01164d68bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Кол-во данных на каждом устройстве <br /></td></tr>
+<tr class="memitem:a06f8266530bd5086c83b510737290e92" id="r_a06f8266530bd5086c83b510737290e92"><td class="memItemLeft" align="right" valign="top"><a id="a06f8266530bd5086c83b510737290e92" name="a06f8266530bd5086c83b510737290e92"></a>
+int *&#160;</td><td class="memItemRight" valign="bottom"><b>dataStart</b></td></tr>
+<tr class="memdesc:a06f8266530bd5086c83b510737290e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Начало данных для устройств <br /></td></tr>
+<tr class="memitem:a03351021d2a80cd9a79cd281b8d9753e" id="r_a03351021d2a80cd9a79cd281b8d9753e"><td class="memItemLeft" align="right" valign="top"><a id="a03351021d2a80cd9a79cd281b8d9753e" name="a03351021d2a80cd9a79cd281b8d9753e"></a>
+int *&#160;</td><td class="memItemRight" valign="bottom"><b>devicesIndex</b></td></tr>
+<tr class="memitem:abed25f405eafc259b6edb0fdb1b79717" id="r_abed25f405eafc259b6edb0fdb1b79717"><td class="memItemLeft" align="right" valign="top"><a id="abed25f405eafc259b6edb0fdb1b79717" name="abed25f405eafc259b6edb0fdb1b79717"></a>
+double *&#160;</td><td class="memItemRight" valign="bottom"><b>coordinates</b></td></tr>
+<tr class="memitem:a085a159d0a95c0fafdc3718a864e66c8" id="r_a085a159d0a95c0fafdc3718a864e66c8"><td class="memItemLeft" align="right" valign="top"><a id="a085a159d0a95c0fafdc3718a864e66c8" name="a085a159d0a95c0fafdc3718a864e66c8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>coordinatesSize</b></td></tr>
+<tr class="memitem:aec577ff9bd785719c35b7842dfbc0c95" id="r_aec577ff9bd785719c35b7842dfbc0c95"><td class="memItemLeft" align="right" valign="top"><a id="aec577ff9bd785719c35b7842dfbc0c95" name="aec577ff9bd785719c35b7842dfbc0c95"></a>
+double *&#160;</td><td class="memItemRight" valign="bottom"><b>FuncValues</b></td></tr>
+<tr class="memitem:a20ed4b5fa9547a7736c39e9f35f38bf5" id="r_a20ed4b5fa9547a7736c39e9f35f38bf5"><td class="memItemLeft" align="right" valign="top"><a id="a20ed4b5fa9547a7736c39e9f35f38bf5" name="a20ed4b5fa9547a7736c39e9f35f38bf5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>FuncValuesSize</b></td></tr>
+<tr class="memitem:aeeea556a6594fa2caff6b84b685e9d98" id="r_aeeea556a6594fa2caff6b84b685e9d98"><td class="memItemLeft" align="right" valign="top"><a id="aeeea556a6594fa2caff6b84b685e9d98" name="aeeea556a6594fa2caff6b84b685e9d98"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsInitialized</b></td></tr>
+<tr class="inherit_header pro_attribs_class_calculation"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_calculation')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Защищенные данные унаследованные от <a class="el" href="class_calculation.html">Calculation</a></td></tr>
+<tr class="memitem:a6cbe03f8447b906e54941c8f450c9c44 inherit pro_attribs_class_calculation" id="r_a6cbe03f8447b906e54941c8f450c9c44"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_task.html">Task</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pTask</b></td></tr>
+<tr class="memdesc:a6cbe03f8447b906e54941c8f450c9c44 inherit pro_attribs_class_calculation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на решаемую задачу <br /></td></tr>
+<tr class="memitem:a95c44137ad8897ec1beefc0ca99b7107 inherit pro_attribs_class_calculation" id="r_a95c44137ad8897ec1beefc0ca99b7107"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_search_data.html">SearchData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pData</b></td></tr>
+<tr class="memdesc:a95c44137ad8897ec1beefc0ca99b7107 inherit pro_attribs_class_calculation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Данные по решению <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_static_attribs_class_calculation"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_class_calculation')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Статические открытые данные унаследованные от <a class="el" href="class_calculation.html">Calculation</a></td></tr>
+<tr class="memitem:a5dca55a2ca476a525acdf99ad7108edd inherit pub_static_attribs_class_calculation" id="r_a5dca55a2ca476a525acdf99ad7108edd"><td class="memItemLeft" align="right" valign="top">
+static <a class="el" href="class_calculation.html">Calculation</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>firstCalculation</b> = 0</td></tr>
+<tr class="memdesc:a5dca55a2ca476a525acdf99ad7108edd inherit pub_static_attribs_class_calculation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычислитель который вызывался изначально <br /></td></tr>
+<tr class="memitem:a9d41125ca54c471287dc542fad20a558 inherit pub_static_attribs_class_calculation" id="r_a9d41125ca54c471287dc542fad20a558"><td class="memItemLeft" align="right" valign="top">
+static <a class="el" href="class_calculation.html">Calculation</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>leafCalculation</b> = 0</td></tr>
+<tr class="memdesc:a9d41125ca54c471287dc542fad20a558 inherit pub_static_attribs_class_calculation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычислитель который вызывался на листьях <br /></td></tr>
+<tr class="inherit_header pro_static_attribs_class_calculation"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_static_attribs_class_calculation')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Статические защищенные данные унаследованные от <a class="el" href="class_calculation.html">Calculation</a></td></tr>
+<tr class="memitem:ab93a4b03d921555eedd9ebb53da0be1f inherit pro_static_attribs_class_calculation" id="r_ab93a4b03d921555eedd9ebb53da0be1f"><td class="memItemLeft" align="right" valign="top">
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>countCalculation</b> = 0</td></tr>
+<tr class="memdesc:ab93a4b03d921555eedd9ebb53da0be1f inherit pro_static_attribs_class_calculation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество вычислений за итерацию <br /></td></tr>
+<tr class="memitem:a39fb0e36872db05e50ed62d6bfc25ce1 inherit pro_static_attribs_class_calculation" id="r_a39fb0e36872db05e50ed62d6bfc25ce1"><td class="memItemLeft" align="right" valign="top">
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isStartComputingAway</b> = true</td></tr>
+<tr class="memitem:a6a2d5ec49ed794d2e9a4cb6d7dbbb5d8 inherit pro_static_attribs_class_calculation" id="r_a6a2d5ec49ed794d2e9a4cb6d7dbbb5d8"><td class="memItemLeft" align="right" valign="top">
+static <a class="el" href="class_information_for_calculation.html">InformationForCalculation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>inputCalculation</b></td></tr>
+<tr class="memitem:a3e134ec331fbcc1cfe68b80754c0d97c inherit pro_static_attribs_class_calculation" id="r_a3e134ec331fbcc1cfe68b80754c0d97c"><td class="memItemLeft" align="right" valign="top">
+static <a class="el" href="struct_t_result_for_calculation.html">TResultForCalculation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>resultCalculation</b></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="ad8e797252f38c798705ecad90b8a5cf0" name="ad8e797252f38c798705ecad90b8a5cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e797252f38c798705ecad90b8a5cf0">&#9670;&#160;</a></span>Calculate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CUDACalculation::Calculate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_information_for_calculation.html">InformationForCalculation</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>inputSet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_t_result_for_calculation.html">TResultForCalculation</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>outputSet</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>0 - Инициализирует массивы </p>
+<p>1 - Задает координаты точки испытания 2 - Вычисляет функции (ограничения и критерий) и индекс невыполненного ограничения по координатам </p>
+<p>Запускать вычисления как только пришли данные</p>
+
+<p>Замещает <a class="el" href="class_calculation.html#a5121ae50e2f5f8064addcd4cc75c5969">Calculation</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>globalizer/method/calculation/include/<a class="el" href="_cuda_calculation_8h_source.html">CudaCalculation.h</a></li>
+<li>globalizer/method/calculation/src/<b>CudaCalculation.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

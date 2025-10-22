@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс MPICalculationAsync</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="class_m_p_i_calculation_async-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс MPICalculationAsync</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф наследования:MPICalculationAsync:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_m_p_i_calculation_async.png" usemap="#MPICalculationAsync_map" alt=""/>
+  <map id="MPICalculationAsync_map" name="MPICalculationAsync_map">
+<area href="class_calculation.html" title="Базовый класс для проведения испытаний" alt="Calculation" shape="rect" coords="0,0,133,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a88c1053d62f32a87991e0c2e32124820" id="r_a88c1053d62f32a87991e0c2e32124820"><td class="memItemLeft" align="right" valign="top"><a id="a88c1053d62f32a87991e0c2e32124820" name="a88c1053d62f32a87991e0c2e32124820"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MPICalculationAsync</b> (<a class="el" href="class_task.html">Task</a> &amp;_pTask)</td></tr>
+<tr class="memitem:a737791422b210eab50b967bd2a231faf" id="r_a737791422b210eab50b967bd2a231faf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a737791422b210eab50b967bd2a231faf">Calculate</a> (<a class="el" href="class_information_for_calculation.html">InformationForCalculation</a> &amp;inputSet, <a class="el" href="struct_t_result_for_calculation.html">TResultForCalculation</a> &amp;outputSet)</td></tr>
+<tr class="memdesc:a737791422b210eab50b967bd2a231faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисляет функции fNumber и индекс невыполненного ограничения по координатам  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_calculation"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_calculation')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Открытые члены унаследованные от <a class="el" href="class_calculation.html">Calculation</a></td></tr>
+<tr class="memitem:a075a697e25059368755a48384215c3fe inherit pub_methods_class_calculation" id="r_a075a697e25059368755a48384215c3fe"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>Calculation</b> (<a class="el" href="class_task.html">Task</a> &amp;_pTask)</td></tr>
+<tr class="memitem:a4b4cd7aa9fdc92cc074e8d8f53883e9a inherit pub_methods_class_calculation" id="r_a4b4cd7aa9fdc92cc074e8d8f53883e9a"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetCountCalculation</b> (int c)</td></tr>
+<tr class="memitem:a6e0b48974c2ff7b6edd6396aa07a69fe inherit pub_methods_class_calculation" id="r_a6e0b48974c2ff7b6edd6396aa07a69fe"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ContinueComputing</b> ()</td></tr>
+<tr class="memitem:a1b1834b65ae618987a0011892cba2a83 inherit pub_methods_class_calculation" id="r_a1b1834b65ae618987a0011892cba2a83"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTask</b> (<a class="el" href="class_task.html">Task</a> *_pTask)</td></tr>
+<tr class="memdesc:a1b1834b65ae618987a0011892cba2a83 inherit pub_methods_class_calculation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задасть используемую задачу <br /></td></tr>
+<tr class="memitem:a22a4831a2d392a76b9feca6747fdf0ec inherit pub_methods_class_calculation" id="r_a22a4831a2d392a76b9feca6747fdf0ec"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSearchData</b> (<a class="el" href="class_search_data.html">SearchData</a> *_pData)</td></tr>
+<tr class="memitem:a9bab1648d322d74c63747bef39ab90c4 inherit pub_methods_class_calculation" id="r_a9bab1648d322d74c63747bef39ab90c4"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ac52262e4cd61027b9511a140d8b07a41" id="r_ac52262e4cd61027b9511a140d8b07a41"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac52262e4cd61027b9511a140d8b07a41">AsyncFinilize</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a71b75676d764c8e4847d4ada975eaa5d" id="r_a71b75676d764c8e4847d4ada975eaa5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71b75676d764c8e4847d4ada975eaa5d">FirstStartCalculate</a> (<a class="el" href="class_information_for_calculation.html">InformationForCalculation</a> &amp;inputSet, <a class="el" href="struct_t_result_for_calculation.html">TResultForCalculation</a> &amp;outputSet)</td></tr>
+<tr class="memitem:a753df95a52fed921279077a14fc7d959" id="r_a753df95a52fed921279077a14fc7d959"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a753df95a52fed921279077a14fc7d959">StartCalculate</a> (<a class="el" href="class_information_for_calculation.html">InformationForCalculation</a> &amp;inputSet, <a class="el" href="struct_t_result_for_calculation.html">TResultForCalculation</a> &amp;outputSet)</td></tr>
+<tr class="memitem:aa1463a41b9bafbe47bdaa9230f96df67" id="r_aa1463a41b9bafbe47bdaa9230f96df67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1463a41b9bafbe47bdaa9230f96df67">RecieveCalculatedFunctional</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:ac9c2c0bfd43224ec77e140a0b5c0c904" id="r_ac9c2c0bfd43224ec77e140a0b5c0c904"><td class="memItemLeft" align="right" valign="top"><a id="ac9c2c0bfd43224ec77e140a0b5c0c904" name="ac9c2c0bfd43224ec77e140a0b5c0c904"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFirst</b> = true</td></tr>
+<tr class="memitem:aa9ed3c8e98bbe6b2cb2a6c2b9959bef9" id="r_aa9ed3c8e98bbe6b2cb2a6c2b9959bef9"><td class="memItemLeft" align="right" valign="top"><a id="aa9ed3c8e98bbe6b2cb2a6c2b9959bef9" name="aa9ed3c8e98bbe6b2cb2a6c2b9959bef9"></a>
+std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vecTrials</b></td></tr>
+<tr class="memitem:ac283703a0ecd72663c4a6bd6d4b3a9b5" id="r_ac283703a0ecd72663c4a6bd6d4b3a9b5"><td class="memItemLeft" align="right" valign="top"><a id="ac283703a0ecd72663c4a6bd6d4b3a9b5" name="ac283703a0ecd72663c4a6bd6d4b3a9b5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ChildNumRecv</b></td></tr>
+<tr class="memdesc:ac283703a0ecd72663c4a6bd6d4b3a9b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">MPI-номер потомка, закончившего решение выделенной задачи <br /></td></tr>
+<tr class="memitem:a51d6038fb527b1705215bc4f33129fd2" id="r_a51d6038fb527b1705215bc4f33129fd2"><td class="memItemLeft" align="right" valign="top"><a id="a51d6038fb527b1705215bc4f33129fd2" name="a51d6038fb527b1705215bc4f33129fd2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ChildNum</b></td></tr>
+<tr class="memdesc:a51d6038fb527b1705215bc4f33129fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Внутренний" номер потомка среди всех потомков данного процесса <br /></td></tr>
+<tr class="inherit_header pro_attribs_class_calculation"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_calculation')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Защищенные данные унаследованные от <a class="el" href="class_calculation.html">Calculation</a></td></tr>
+<tr class="memitem:a6cbe03f8447b906e54941c8f450c9c44 inherit pro_attribs_class_calculation" id="r_a6cbe03f8447b906e54941c8f450c9c44"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_task.html">Task</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pTask</b></td></tr>
+<tr class="memdesc:a6cbe03f8447b906e54941c8f450c9c44 inherit pro_attribs_class_calculation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на решаемую задачу <br /></td></tr>
+<tr class="memitem:a95c44137ad8897ec1beefc0ca99b7107 inherit pro_attribs_class_calculation" id="r_a95c44137ad8897ec1beefc0ca99b7107"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_search_data.html">SearchData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pData</b></td></tr>
+<tr class="memdesc:a95c44137ad8897ec1beefc0ca99b7107 inherit pro_attribs_class_calculation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Данные по решению <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_static_attribs_class_calculation"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_class_calculation')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Статические открытые данные унаследованные от <a class="el" href="class_calculation.html">Calculation</a></td></tr>
+<tr class="memitem:a5dca55a2ca476a525acdf99ad7108edd inherit pub_static_attribs_class_calculation" id="r_a5dca55a2ca476a525acdf99ad7108edd"><td class="memItemLeft" align="right" valign="top">
+static <a class="el" href="class_calculation.html">Calculation</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>firstCalculation</b> = 0</td></tr>
+<tr class="memdesc:a5dca55a2ca476a525acdf99ad7108edd inherit pub_static_attribs_class_calculation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычислитель который вызывался изначально <br /></td></tr>
+<tr class="memitem:a9d41125ca54c471287dc542fad20a558 inherit pub_static_attribs_class_calculation" id="r_a9d41125ca54c471287dc542fad20a558"><td class="memItemLeft" align="right" valign="top">
+static <a class="el" href="class_calculation.html">Calculation</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>leafCalculation</b> = 0</td></tr>
+<tr class="memdesc:a9d41125ca54c471287dc542fad20a558 inherit pub_static_attribs_class_calculation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычислитель который вызывался на листьях <br /></td></tr>
+<tr class="inherit_header pro_static_attribs_class_calculation"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_static_attribs_class_calculation')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Статические защищенные данные унаследованные от <a class="el" href="class_calculation.html">Calculation</a></td></tr>
+<tr class="memitem:ab93a4b03d921555eedd9ebb53da0be1f inherit pro_static_attribs_class_calculation" id="r_ab93a4b03d921555eedd9ebb53da0be1f"><td class="memItemLeft" align="right" valign="top">
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>countCalculation</b> = 0</td></tr>
+<tr class="memdesc:ab93a4b03d921555eedd9ebb53da0be1f inherit pro_static_attribs_class_calculation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество вычислений за итерацию <br /></td></tr>
+<tr class="memitem:a39fb0e36872db05e50ed62d6bfc25ce1 inherit pro_static_attribs_class_calculation" id="r_a39fb0e36872db05e50ed62d6bfc25ce1"><td class="memItemLeft" align="right" valign="top">
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isStartComputingAway</b> = true</td></tr>
+<tr class="memitem:a6a2d5ec49ed794d2e9a4cb6d7dbbb5d8 inherit pro_static_attribs_class_calculation" id="r_a6a2d5ec49ed794d2e9a4cb6d7dbbb5d8"><td class="memItemLeft" align="right" valign="top">
+static <a class="el" href="class_information_for_calculation.html">InformationForCalculation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>inputCalculation</b></td></tr>
+<tr class="memitem:a3e134ec331fbcc1cfe68b80754c0d97c inherit pro_static_attribs_class_calculation" id="r_a3e134ec331fbcc1cfe68b80754c0d97c"><td class="memItemLeft" align="right" valign="top">
+static <a class="el" href="struct_t_result_for_calculation.html">TResultForCalculation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>resultCalculation</b></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="ac52262e4cd61027b9511a140d8b07a41" name="ac52262e4cd61027b9511a140d8b07a41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac52262e4cd61027b9511a140d8b07a41">&#9670;&#160;</a></span>AsyncFinilize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MPICalculationAsync::AsyncFinilize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Необходимо собрать данные со всех, кроме той точки, которая последней прислала ответ (она нашла ответ задачи -&gt; ей не отправили на вычисление новую точку)</p>
+
+</div>
+</div>
+<a id="a737791422b210eab50b967bd2a231faf" name="a737791422b210eab50b967bd2a231faf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a737791422b210eab50b967bd2a231faf">&#9670;&#160;</a></span>Calculate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MPICalculationAsync::Calculate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_information_for_calculation.html">InformationForCalculation</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>inputSet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_t_result_for_calculation.html">TResultForCalculation</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>outputSet</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вычисляет функции fNumber и индекс невыполненного ограничения по координатам </p>
+<p>Когда нам прислали вычисленную точку, мы достаём нужную точку из вектора, вставляем вычисленное значение функции и записываем её в outputSet</p>
+<p>Запускать вычисления, как только пришли данные</p>
+<p>Собрать данные в один блок и потом вычислить всё сразу</p>
+
+<p>Замещает <a class="el" href="class_calculation.html#a5121ae50e2f5f8064addcd4cc75c5969">Calculation</a>.</p>
+
+</div>
+</div>
+<a id="a71b75676d764c8e4847d4ada975eaa5d" name="a71b75676d764c8e4847d4ada975eaa5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71b75676d764c8e4847d4ada975eaa5d">&#9670;&#160;</a></span>FirstStartCalculate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MPICalculationAsync::FirstStartCalculate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_information_for_calculation.html">InformationForCalculation</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>inputSet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_t_result_for_calculation.html">TResultForCalculation</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>outputSet</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Принимаем значения функционалов</p>
+<p>Отправляем координату y</p>
+
+</div>
+</div>
+<a id="aa1463a41b9bafbe47bdaa9230f96df67" name="aa1463a41b9bafbe47bdaa9230f96df67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1463a41b9bafbe47bdaa9230f96df67">&#9670;&#160;</a></span>RecieveCalculatedFunctional()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MPICalculationAsync::RecieveCalculatedFunctional </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Принимаем индекс точки</p>
+<p>Запоминаем индекс в векторе, где теперь хранится вычисленное значение</p>
+<p>Принимаем точку</p>
+<p>Принимаем значения функционалов</p>
+
+</div>
+</div>
+<a id="a753df95a52fed921279077a14fc7d959" name="a753df95a52fed921279077a14fc7d959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a753df95a52fed921279077a14fc7d959">&#9670;&#160;</a></span>StartCalculate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MPICalculationAsync::StartCalculate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_information_for_calculation.html">InformationForCalculation</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>inputSet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_t_result_for_calculation.html">TResultForCalculation</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>outputSet</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Отдадим точку свободному Ждём, когда пришлют следующую И так, пока не решим</p>
+<p>Записываем в ту же ячейку вектора новую точку, которую теперь надо вычислить</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>globalizer/method/calculation/include/<a class="el" href="_m_p_i_calculation_async_8h_source.html">MPICalculationAsync.h</a></li>
+<li>globalizer/method/calculation/src/<b>MPICalculationAsync.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

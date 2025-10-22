@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс SearchData</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pub-static-attribs">Статические открытые данные</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="class_search_data-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс SearchData</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:acf67159cfa5f865724edc262905587dd" id="r_acf67159cfa5f865724edc262905587dd"><td class="memItemLeft" align="right" valign="top"><a id="acf67159cfa5f865724edc262905587dd" name="acf67159cfa5f865724edc262905587dd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SearchData</b> (int _NumOfFuncs, int _MaxSize=DefaultSearchDataSize)</td></tr>
+<tr class="memitem:a27f8fb108153bfdd55bb042ce98d761b" id="r_a27f8fb108153bfdd55bb042ce98d761b"><td class="memItemLeft" align="right" valign="top"><a id="a27f8fb108153bfdd55bb042ce98d761b" name="a27f8fb108153bfdd55bb042ce98d761b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SearchData</b> (int _NumOfFuncs, int _MaxSize, int _queueSize)</td></tr>
+<tr class="memitem:ac4694af29e414e0208d38ba7baeb3bac" id="r_ac4694af29e414e0208d38ba7baeb3bac"><td class="memItemLeft" align="right" valign="top"><a id="ac4694af29e414e0208d38ba7baeb3bac" name="ac4694af29e414e0208d38ba7baeb3bac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Clear</b> ()</td></tr>
+<tr class="memdesc:ac4694af29e414e0208d38ba7baeb3bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очищает и дерево и очередь интервалов <br /></td></tr>
+<tr class="memitem:acf56cf212611fd84d6a1a0b01584395a" id="r_acf56cf212611fd84d6a1a0b01584395a"><td class="memItemLeft" align="right" valign="top"><a id="acf56cf212611fd84d6a1a0b01584395a" name="acf56cf212611fd84d6a1a0b01584395a"></a>
+<a class="el" href="class_search_interval.html">SearchInterval</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>InsertInterval</b> (<a class="el" href="class_search_interval.html">SearchInterval</a> &amp;pInterval)</td></tr>
+<tr class="memdesc:acf56cf212611fd84d6a1a0b01584395a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Новый интервал (по xl) <br /></td></tr>
+<tr class="memitem:ac5bcbb5c3442ac71f4e42dd80d8ae863" id="r_ac5bcbb5c3442ac71f4e42dd80d8ae863"><td class="memItemLeft" align="right" valign="top"><a id="ac5bcbb5c3442ac71f4e42dd80d8ae863" name="ac5bcbb5c3442ac71f4e42dd80d8ae863"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateInterval</b> (<a class="el" href="class_search_interval.html">SearchInterval</a> &amp;pInterval)</td></tr>
+<tr class="memdesc:ac5bcbb5c3442ac71f4e42dd80d8ae863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновление интервала (по xl) <br /></td></tr>
+<tr class="memitem:a5b418224e09780157ea6ccc327c686be" id="r_a5b418224e09780157ea6ccc327c686be"><td class="memItemLeft" align="right" valign="top"><a id="a5b418224e09780157ea6ccc327c686be" name="a5b418224e09780157ea6ccc327c686be"></a>
+<a class="el" href="class_search_interval.html">SearchInterval</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetIntervalByX</b> (<a class="el" href="class_trial.html">Trial</a> *x)</td></tr>
+<tr class="memdesc:a5b418224e09780157ea6ccc327c686be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ищет интервал у которого левой точкой является x. <br /></td></tr>
+<tr class="memitem:a54bd2fd63ea6986ae39490c03ee41c02" id="r_a54bd2fd63ea6986ae39490c03ee41c02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_interval.html">SearchInterval</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54bd2fd63ea6986ae39490c03ee41c02">FindCoveringInterval</a> (<a class="el" href="class_trial.html">Trial</a> *x)</td></tr>
+<tr class="memdesc:a54bd2fd63ea6986ae39490c03ee41c02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск интервала, в котором содержится x, т.  <br /></td></tr>
+<tr class="memitem:a6f57bd7ccd9dfc43fee7e990ec5fa7c3" id="r_a6f57bd7ccd9dfc43fee7e990ec5fa7c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_interval.html">SearchInterval</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f57bd7ccd9dfc43fee7e990ec5fa7c3">GetIntervalWithMaxR</a> ()</td></tr>
+<tr class="memdesc:a6f57bd7ccd9dfc43fee7e990ec5fa7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение интервала с максимальной хар-кой.  <br /></td></tr>
+<tr class="memitem:a8c0dcc4480e1354ac012f77cc46efcb7" id="r_a8c0dcc4480e1354ac012f77cc46efcb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_interval.html">SearchInterval</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c0dcc4480e1354ac012f77cc46efcb7">GetIntervalWithMaxLocalR</a> ()</td></tr>
+<tr class="memdesc:a8c0dcc4480e1354ac012f77cc46efcb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение интервала с максимальной локальной хар-кой.  <br /></td></tr>
+<tr class="memitem:a6d3f10575a711738707f12d8197cc6d6" id="r_a6d3f10575a711738707f12d8197cc6d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_search_interval.html">SearchInterval</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d3f10575a711738707f12d8197cc6d6">InsertPoint</a> (<a class="el" href="class_search_interval.html">SearchInterval</a> *coveringInterval, <a class="el" href="class_trial.html">Trial</a> &amp;newPoint, int iteration, int methodDimension)</td></tr>
+<tr class="memdesc:a6d3f10575a711738707f12d8197cc6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вставка испытания в заданный интервал.  <br /></td></tr>
+<tr class="memitem:ac52be5915059f29a4629467da9b05735" id="r_ac52be5915059f29a4629467da9b05735"><td class="memItemLeft" align="right" valign="top"><a id="ac52be5915059f29a4629467da9b05735" name="ac52be5915059f29a4629467da9b05735"></a>
+<a class="el" href="class_searc_data_iterator.html">SearcDataIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetIterator</b> (<a class="el" href="class_search_interval.html">SearchInterval</a> *p)</td></tr>
+<tr class="memdesc:ac52be5915059f29a4629467da9b05735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить итератор <br /></td></tr>
+<tr class="memitem:aba45669bf972ba8c3eb8be1b1f8de6e1" id="r_aba45669bf972ba8c3eb8be1b1f8de6e1"><td class="memItemLeft" align="right" valign="top"><a id="aba45669bf972ba8c3eb8be1b1f8de6e1" name="aba45669bf972ba8c3eb8be1b1f8de6e1"></a>
+<a class="el" href="class_searc_data_iterator.html">SearcDataIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetBeginIterator</b> ()</td></tr>
+<tr class="memdesc:aba45669bf972ba8c3eb8be1b1f8de6e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить следующий итератор <br /></td></tr>
+<tr class="memitem:a1c0d132bd0134220d53d95fd43052660" id="r_a1c0d132bd0134220d53d95fd43052660"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c0d132bd0134220d53d95fd43052660">PushToQueue</a> (<a class="el" href="class_search_interval.html">SearchInterval</a> *pInterval)</td></tr>
+<tr class="memdesc:a1c0d132bd0134220d53d95fd43052660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить интервал, предыдущий к указанному не относится к итератору, не меняет текущий узел в итераторе SearchInterval* GetPrev(SearchInterval &amp;pInterval);.  <br /></td></tr>
+<tr class="memitem:ad6ad6fcc5ccad142660102d42ad438af" id="r_ad6ad6fcc5ccad142660102d42ad438af"><td class="memItemLeft" align="right" valign="top"><a id="ad6ad6fcc5ccad142660102d42ad438af" name="ad6ad6fcc5ccad142660102d42ad438af"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RefillQueue</b> ()</td></tr>
+<tr class="memdesc:ad6ad6fcc5ccad142660102d42ad438af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перезаполнение очереди (при ее опустошении или при смене оценки константы Липшица) <br /></td></tr>
+<tr class="memitem:a3fc6ac65ba54c72eba87bedc52ba5adc" id="r_a3fc6ac65ba54c72eba87bedc52ba5adc"><td class="memItemLeft" align="right" valign="top"><a id="a3fc6ac65ba54c72eba87bedc52ba5adc" name="a3fc6ac65ba54c72eba87bedc52ba5adc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteIntervalFromQueue</b> (<a class="el" href="class_search_interval.html">SearchInterval</a> *i)</td></tr>
+<tr class="memdesc:a3fc6ac65ba54c72eba87bedc52ba5adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удалить интервал из очереди <br /></td></tr>
+<tr class="memitem:a277342ca5604b6abbb4bc0fbc4d67f8f" id="r_a277342ca5604b6abbb4bc0fbc4d67f8f"><td class="memItemLeft" align="right" valign="top"><a id="a277342ca5604b6abbb4bc0fbc4d67f8f" name="a277342ca5604b6abbb4bc0fbc4d67f8f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PopFromGlobalQueue</b> (<a class="el" href="class_search_interval.html">SearchInterval</a> **pInterval)</td></tr>
+<tr class="memdesc:a277342ca5604b6abbb4bc0fbc4d67f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Берет из очереди один интервал <br /></td></tr>
+<tr class="memitem:a34f2f49224485180db9f96d74aa035d8" id="r_a34f2f49224485180db9f96d74aa035d8"><td class="memItemLeft" align="right" valign="top"><a id="a34f2f49224485180db9f96d74aa035d8" name="a34f2f49224485180db9f96d74aa035d8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PopFromLocalQueue</b> (<a class="el" href="class_search_interval.html">SearchInterval</a> **pInterval)</td></tr>
+<tr class="memdesc:a34f2f49224485180db9f96d74aa035d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Берет из очереди локальных характеристик один интервал <br /></td></tr>
+<tr class="memitem:abec4a5e6656a04d7b968b0dccb550a47" id="r_abec4a5e6656a04d7b968b0dccb550a47"><td class="memItemLeft" align="right" valign="top"><a id="abec4a5e6656a04d7b968b0dccb550a47" name="abec4a5e6656a04d7b968b0dccb550a47"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearQueue</b> ()</td></tr>
+<tr class="memdesc:abec4a5e6656a04d7b968b0dccb550a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очистить очередь интервалов <br /></td></tr>
+<tr class="memitem:a4712982c96db83359383aebd051b3f06" id="r_a4712982c96db83359383aebd051b3f06"><td class="memItemLeft" align="right" valign="top"><a id="a4712982c96db83359383aebd051b3f06" name="a4712982c96db83359383aebd051b3f06"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResizeQueue</b> (int size)</td></tr>
+<tr class="memdesc:a4712982c96db83359383aebd051b3f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Изменить размер очереди интервалов <br /></td></tr>
+<tr class="memitem:a5be25cfc277e8b268bf0c56d05bc06fe" id="r_a5be25cfc277e8b268bf0c56d05bc06fe"><td class="memItemLeft" align="right" valign="top"><a id="a5be25cfc277e8b268bf0c56d05bc06fe" name="a5be25cfc277e8b268bf0c56d05bc06fe"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetCount</b> ()</td></tr>
+<tr class="memdesc:a5be25cfc277e8b268bf0c56d05bc06fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает текущее число интервалов в дереве <br /></td></tr>
+<tr class="memitem:a444ef9c14871bf4a26d106fea5b4e27e" id="r_a444ef9c14871bf4a26d106fea5b4e27e"><td class="memItemLeft" align="right" valign="top"><a id="a444ef9c14871bf4a26d106fea5b4e27e" name="a444ef9c14871bf4a26d106fea5b4e27e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>GetBestIntervals</b> (<a class="el" href="class_search_interval.html">SearchInterval</a> **intervals, int count)</td></tr>
+<tr class="memdesc:a444ef9c14871bf4a26d106fea5b4e27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить count лучших интервалов <br /></td></tr>
+<tr class="memitem:ae5dcdce598791946ecbf87eb72613b74" id="r_ae5dcdce598791946ecbf87eb72613b74"><td class="memItemLeft" align="right" valign="top"><a id="ae5dcdce598791946ecbf87eb72613b74" name="ae5dcdce598791946ecbf87eb72613b74"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>GetBestLocalIntervals</b> (<a class="el" href="class_search_interval.html">SearchInterval</a> **intervals, int count)</td></tr>
+<tr class="memdesc:ae5dcdce598791946ecbf87eb72613b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить count лучших локальных интервалов <br /></td></tr>
+<tr class="memitem:a4780fab7055fd13692f934c2f72410ca" id="r_a4780fab7055fd13692f934c2f72410ca"><td class="memItemLeft" align="right" valign="top"><a id="a4780fab7055fd13692f934c2f72410ca" name="a4780fab7055fd13692f934c2f72410ca"></a>
+std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetTrials</b> ()</td></tr>
+<tr class="memdesc:a4780fab7055fd13692f934c2f72410ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить испытания <br /></td></tr>
+<tr class="memitem:a7b0161db615c5981fa32b540633feb54" id="r_a7b0161db615c5981fa32b540633feb54"><td class="memItemLeft" align="right" valign="top"><a id="a7b0161db615c5981fa32b540633feb54" name="a7b0161db615c5981fa32b540633feb54"></a>
+<a class="el" href="class_search_interval.html">SearchInterval</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>FindMax</b> ()</td></tr>
+<tr class="memdesc:a7b0161db615c5981fa32b540633feb54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает максимальный элемент без извлечения <br /></td></tr>
+<tr class="memitem:a3567c23b6b64c10957d1baedfe8ae786" id="r_a3567c23b6b64c10957d1baedfe8ae786"><td class="memItemLeft" align="right" valign="top"><a id="a3567c23b6b64c10957d1baedfe8ae786" name="a3567c23b6b64c10957d1baedfe8ae786"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsRecalc</b> ()</td></tr>
+<tr class="memdesc:a3567c23b6b64c10957d1baedfe8ae786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Истина, если нужен пересчет характеристик <br /></td></tr>
+<tr class="memitem:ac7c3ab39b8f3e937e1c3ec0795cb7db4" id="r_ac7c3ab39b8f3e937e1c3ec0795cb7db4"><td class="memItemLeft" align="right" valign="top"><a id="ac7c3ab39b8f3e937e1c3ec0795cb7db4" name="ac7c3ab39b8f3e937e1c3ec0795cb7db4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRecalc</b> (bool f)</td></tr>
+<tr class="memdesc:ac7c3ab39b8f3e937e1c3ec0795cb7db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задает нужно ли пересчитывать характеристики <br /></td></tr>
+<tr class="memitem:a167347fea2d5c840038e30d29cea270b" id="r_a167347fea2d5c840038e30d29cea270b"><td class="memItemLeft" align="right" valign="top"><a id="a167347fea2d5c840038e30d29cea270b" name="a167347fea2d5c840038e30d29cea270b"></a>
+<a class="el" href="class_trial.html">Trial</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetBestTrial</b> ()</td></tr>
+<tr class="memdesc:a167347fea2d5c840038e30d29cea270b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Лучшая точка, полученная для данной поисковой информации <br /></td></tr>
+<tr class="memitem:a3cc268d8c6ae8e5caa7441b0fbcbb9cd" id="r_a3cc268d8c6ae8e5caa7441b0fbcbb9cd"><td class="memItemLeft" align="right" valign="top"><a id="a3cc268d8c6ae8e5caa7441b0fbcbb9cd" name="a3cc268d8c6ae8e5caa7441b0fbcbb9cd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBestTrial</b> (<a class="el" href="class_trial.html">Trial</a> *trial)</td></tr>
+<tr class="memdesc:a3cc268d8c6ae8e5caa7441b0fbcbb9cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задает лучшую точку <br /></td></tr>
+<tr class="memitem:ae9e2e21145b2b0a5521848c4301f2c6e" id="r_ae9e2e21145b2b0a5521848c4301f2c6e"><td class="memItemLeft" align="right" valign="top"><a id="ae9e2e21145b2b0a5521848c4301f2c6e" name="ae9e2e21145b2b0a5521848c4301f2c6e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>TrickleUp</b> (<a class="el" href="class_search_interval.html">SearchInterval</a> *intervals)</td></tr>
+<tr class="memdesc:ae9e2e21145b2b0a5521848c4301f2c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Всплытие для интервала <br /></td></tr>
+<tr class="memitem:a14d5a51802a0d757b39d5f40390cf9e6" id="r_a14d5a51802a0d757b39d5f40390cf9e6"><td class="memItemLeft" align="right" valign="top"><a id="a14d5a51802a0d757b39d5f40390cf9e6" name="a14d5a51802a0d757b39d5f40390cf9e6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetQueueSize</b> ()</td></tr>
+<tr class="memdesc:a14d5a51802a0d757b39d5f40390cf9e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает размер очереди <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a73825a5881df0773ca03c353c3f442a2" id="r_a73825a5881df0773ca03c353c3f442a2"><td class="memItemLeft" align="right" valign="top"><a id="a73825a5881df0773ca03c353c3f442a2" name="a73825a5881df0773ca03c353c3f442a2"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>M</b> [MaxNumOfFunc]</td></tr>
+<tr class="memdesc:a73825a5881df0773ca03c353c3f442a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оценки констант Липшица <br /></td></tr>
+<tr class="memitem:a16a96dd43d9442be94c53b2f4637855a" id="r_a16a96dd43d9442be94c53b2f4637855a"><td class="memItemLeft" align="right" valign="top"><a id="a16a96dd43d9442be94c53b2f4637855a" name="a16a96dd43d9442be94c53b2f4637855a"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>Z</b> [MaxNumOfFunc]</td></tr>
+<tr class="memdesc:a16a96dd43d9442be94c53b2f4637855a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Минимальные значения функций задачи (для индексного метода) <br /></td></tr>
+<tr class="memitem:a3044d3e5ad474c15e6f1b78a346f990f" id="r_a3044d3e5ad474c15e6f1b78a346f990f"><td class="memItemLeft" align="right" valign="top"><a id="a3044d3e5ad474c15e6f1b78a346f990f" name="a3044d3e5ad474c15e6f1b78a346f990f"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>local_r</b></td></tr>
+<tr class="memdesc:a3044d3e5ad474c15e6f1b78a346f990f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисляемое r. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:a0ac87dea252d80aa9016ff04ef3cb822" id="r_a0ac87dea252d80aa9016ff04ef3cb822"><td class="memItemLeft" align="right" valign="top"><a id="a0ac87dea252d80aa9016ff04ef3cb822" name="a0ac87dea252d80aa9016ff04ef3cb822"></a>
+static std::vector&lt; <a class="el" href="class_search_data.html">SearchData</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pRecalcDatas</b></td></tr>
+<tr class="memdesc:a0ac87dea252d80aa9016ff04ef3cb822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вектор указателей на матрицы состояния поиска, для которых нужно произвести пересчет <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:af449051c83dab4a0f2a896ffa25227db" id="r_af449051c83dab4a0f2a896ffa25227db"><td class="memItemLeft" align="right" valign="top"><a id="af449051c83dab4a0f2a896ffa25227db" name="af449051c83dab4a0f2a896ffa25227db"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteTree</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *pNode)</td></tr>
+<tr class="memdesc:af449051c83dab4a0f2a896ffa25227db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удалить дерево <br /></td></tr>
+<tr class="memitem:a11a98d33408d8932014d60df2817724f" id="r_a11a98d33408d8932014d60df2817724f"><td class="memItemLeft" align="right" valign="top"><a id="a11a98d33408d8932014d60df2817724f" name="a11a98d33408d8932014d60df2817724f"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>GetHeight</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p)</td></tr>
+<tr class="memdesc:a11a98d33408d8932014d60df2817724f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить высоту <br /></td></tr>
+<tr class="memitem:af38b8e64053a1c1b7d6dd3d56205260d" id="r_af38b8e64053a1c1b7d6dd3d56205260d"><td class="memItemLeft" align="right" valign="top"><a id="af38b8e64053a1c1b7d6dd3d56205260d" name="af38b8e64053a1c1b7d6dd3d56205260d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetBalance</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p)</td></tr>
+<tr class="memdesc:af38b8e64053a1c1b7d6dd3d56205260d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отбалансировать <br /></td></tr>
+<tr class="memitem:a3eee38d33d3db264441ad32649ed5848" id="r_a3eee38d33d3db264441ad32649ed5848"><td class="memItemLeft" align="right" valign="top"><a id="a3eee38d33d3db264441ad32649ed5848" name="a3eee38d33d3db264441ad32649ed5848"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>FixHeight</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p)</td></tr>
+<tr class="memdesc:a3eee38d33d3db264441ad32649ed5848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Исправить высоту <br /></td></tr>
+<tr class="memitem:aeb2001c5d2673a12d567ac28dc2b131b" id="r_aeb2001c5d2673a12d567ac28dc2b131b"><td class="memItemLeft" align="right" valign="top"><a id="aeb2001c5d2673a12d567ac28dc2b131b" name="aeb2001c5d2673a12d567ac28dc2b131b"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>RotateRight</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p)</td></tr>
+<tr class="memdesc:aeb2001c5d2673a12d567ac28dc2b131b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Правый поворот вокруг p. <br /></td></tr>
+<tr class="memitem:a9ca3d8589c89969889d73d1986048cf2" id="r_a9ca3d8589c89969889d73d1986048cf2"><td class="memItemLeft" align="right" valign="top"><a id="a9ca3d8589c89969889d73d1986048cf2" name="a9ca3d8589c89969889d73d1986048cf2"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>RotateLeft</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p)</td></tr>
+<tr class="memdesc:a9ca3d8589c89969889d73d1986048cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Левый поворот вокруг p. <br /></td></tr>
+<tr class="memitem:a619f5c7b3302670f039db6ce3406da05" id="r_a619f5c7b3302670f039db6ce3406da05"><td class="memItemLeft" align="right" valign="top"><a id="a619f5c7b3302670f039db6ce3406da05" name="a619f5c7b3302670f039db6ce3406da05"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Balance</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p)</td></tr>
+<tr class="memdesc:a619f5c7b3302670f039db6ce3406da05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Балансировка узла p. <br /></td></tr>
+<tr class="memitem:aad88c652f4452ba3b42eb002dd359fe1" id="r_aad88c652f4452ba3b42eb002dd359fe1"><td class="memItemLeft" align="right" valign="top"><a id="aad88c652f4452ba3b42eb002dd359fe1" name="aad88c652f4452ba3b42eb002dd359fe1"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Maximum</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p) const</td></tr>
+<tr class="memdesc:aad88c652f4452ba3b42eb002dd359fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск самого левого интервала в поддереве <br /></td></tr>
+<tr class="memitem:a1cf69fc69bb1599e01c8a4d3f5c07a0f" id="r_a1cf69fc69bb1599e01c8a4d3f5c07a0f"><td class="memItemLeft" align="right" valign="top"><a id="a1cf69fc69bb1599e01c8a4d3f5c07a0f" name="a1cf69fc69bb1599e01c8a4d3f5c07a0f"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Minimum</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p) const</td></tr>
+<tr class="memdesc:a1cf69fc69bb1599e01c8a4d3f5c07a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск самого правого интервала в поддереве <br /></td></tr>
+<tr class="memitem:aff7d770701196010ad07013a7b23ff45" id="r_aff7d770701196010ad07013a7b23ff45"><td class="memItemLeft" align="right" valign="top"><a id="aff7d770701196010ad07013a7b23ff45" name="aff7d770701196010ad07013a7b23ff45"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Previous</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p) const</td></tr>
+<tr class="memdesc:aff7d770701196010ad07013a7b23ff45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение предыдущего за p интервала <br /></td></tr>
+<tr class="memitem:a755cc0fbca7c5d8f4252dc129ffcc12e" id="r_a755cc0fbca7c5d8f4252dc129ffcc12e"><td class="memItemLeft" align="right" valign="top"><a id="a755cc0fbca7c5d8f4252dc129ffcc12e" name="a755cc0fbca7c5d8f4252dc129ffcc12e"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Next</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p) const</td></tr>
+<tr class="memdesc:a755cc0fbca7c5d8f4252dc129ffcc12e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение следующего за p интервала <br /></td></tr>
+<tr class="memitem:af672b934f0a50eae0fcd939350d67b24" id="r_af672b934f0a50eae0fcd939350d67b24"><td class="memItemLeft" align="right" valign="top"><a id="af672b934f0a50eae0fcd939350d67b24" name="af672b934f0a50eae0fcd939350d67b24"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Insert</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p, <a class="el" href="class_search_interval.html">SearchInterval</a> &amp;pInterval)</td></tr>
+<tr class="memdesc:af672b934f0a50eae0fcd939350d67b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вставка в дерево с корнем p (рекурсивная) <br /></td></tr>
+<tr class="memitem:a7f7cf6f12f161365ef56942334b69b07" id="r_a7f7cf6f12f161365ef56942334b69b07"><td class="memItemLeft" align="right" valign="top"><a id="a7f7cf6f12f161365ef56942334b69b07" name="a7f7cf6f12f161365ef56942334b69b07"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Find</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p, <a class="el" href="class_trial.html">Trial</a> *x) const</td></tr>
+<tr class="memdesc:a7f7cf6f12f161365ef56942334b69b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск узла с нужным x в дереве с корнем p по левой границе интервала (рекурсивный) <br /></td></tr>
+<tr class="memitem:a622c2ce0eddec4a8d50f676fa9bbeac1" id="r_a622c2ce0eddec4a8d50f676fa9bbeac1"><td class="memItemLeft" align="right" valign="top"><a id="a622c2ce0eddec4a8d50f676fa9bbeac1" name="a622c2ce0eddec4a8d50f676fa9bbeac1"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>FindR</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p, <a class="el" href="class_trial.html">Trial</a> *x) const</td></tr>
+<tr class="memdesc:a622c2ce0eddec4a8d50f676fa9bbeac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск узла по правой границе интервала <br /></td></tr>
+<tr class="memitem:a2b3dee3add152eb6a91bbb65071b01a1" id="r_a2b3dee3add152eb6a91bbb65071b01a1"><td class="memItemLeft" align="right" valign="top"><a id="a2b3dee3add152eb6a91bbb65071b01a1" name="a2b3dee3add152eb6a91bbb65071b01a1"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>FindIn</b> (<a class="el" href="class_tree_node.html">TreeNode</a> *p, <a class="el" href="class_trial.html">Trial</a> *x) const</td></tr>
+<tr class="memdesc:a2b3dee3add152eb6a91bbb65071b01a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск узла с нужным x по левой и правой границам интервала(рекурсивный) xl() &lt; x &lt; xr. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a69b1137b73e8c8991ec0e1fed3aa9816" id="r_a69b1137b73e8c8991ec0e1fed3aa9816"><td class="memItemLeft" align="right" valign="top"><a id="a69b1137b73e8c8991ec0e1fed3aa9816" name="a69b1137b73e8c8991ec0e1fed3aa9816"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>NumOfFuncs</b></td></tr>
+<tr class="memdesc:a69b1137b73e8c8991ec0e1fed3aa9816"><td class="mdescLeft">&#160;</td><td class="mdescRight">Число функций задачи <br /></td></tr>
+<tr class="memitem:a1f47f063324cde5c37215e1b03e5a3ac" id="r_a1f47f063324cde5c37215e1b03e5a3ac"><td class="memItemLeft" align="right" valign="top"><a id="a1f47f063324cde5c37215e1b03e5a3ac" name="a1f47f063324cde5c37215e1b03e5a3ac"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxSize</b></td></tr>
+<tr class="memdesc:a1f47f063324cde5c37215e1b03e5a3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимальный размер МСП = максимальному числу итераций метода <br /></td></tr>
+<tr class="memitem:aea84cc4288d763e19c1d1dbe7ce9ce52" id="r_aea84cc4288d763e19c1d1dbe7ce9ce52"><td class="memItemLeft" align="right" valign="top"><a id="aea84cc4288d763e19c1d1dbe7ce9ce52" name="aea84cc4288d763e19c1d1dbe7ce9ce52"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>Count</b></td></tr>
+<tr class="memdesc:aea84cc4288d763e19c1d1dbe7ce9ce52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущее число интервалов в дереве <br /></td></tr>
+<tr class="memitem:a327eb370ea59d27cb462061c4e89142e" id="r_a327eb370ea59d27cb462061c4e89142e"><td class="memItemLeft" align="right" valign="top"><a id="a327eb370ea59d27cb462061c4e89142e" name="a327eb370ea59d27cb462061c4e89142e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>CurIndex</b></td></tr>
+<tr class="memdesc:a327eb370ea59d27cb462061c4e89142e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущий индекс, используется в итераторе <br /></td></tr>
+<tr class="memitem:a4fa366661f060d25f9274039dd99c6bd" id="r_a4fa366661f060d25f9274039dd99c6bd"><td class="memItemLeft" align="right" valign="top"><a id="a4fa366661f060d25f9274039dd99c6bd" name="a4fa366661f060d25f9274039dd99c6bd"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pRoot</b></td></tr>
+<tr class="memdesc:a4fa366661f060d25f9274039dd99c6bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Корень дерева <br /></td></tr>
+<tr class="memitem:a4129d531a00fb09eb2c45cfc0bd24015" id="r_a4129d531a00fb09eb2c45cfc0bd24015"><td class="memItemLeft" align="right" valign="top"><a id="a4129d531a00fb09eb2c45cfc0bd24015" name="a4129d531a00fb09eb2c45cfc0bd24015"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pCur</b></td></tr>
+<tr class="memdesc:a4129d531a00fb09eb2c45cfc0bd24015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущая вершина дерева <br /></td></tr>
+<tr class="memitem:ad3659bbc3ad94b995d4b47b8d5728b8e" id="r_ad3659bbc3ad94b995d4b47b8d5728b8e"><td class="memItemLeft" align="right" valign="top"><a id="ad3659bbc3ad94b995d4b47b8d5728b8e" name="ad3659bbc3ad94b995d4b47b8d5728b8e"></a>
+std::stack&lt; <a class="el" href="class_tree_node.html">TreeNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Stack</b></td></tr>
+<tr class="memdesc:ad3659bbc3ad94b995d4b47b8d5728b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Стек для итератора <br /></td></tr>
+<tr class="memitem:ad784c018dea03eb8ad23b52fb21155f7" id="r_ad784c018dea03eb8ad23b52fb21155f7"><td class="memItemLeft" align="right" valign="top"><a id="ad784c018dea03eb8ad23b52fb21155f7" name="ad784c018dea03eb8ad23b52fb21155f7"></a>
+<a class="el" href="class_priority_queue_common.html">PriorityQueueCommon</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pQueue</b></td></tr>
+<tr class="memdesc:ad784c018dea03eb8ad23b52fb21155f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очередь характеристик <br /></td></tr>
+<tr class="memitem:a1c036e4237d1885dc99ca86ed44e3c07" id="r_a1c036e4237d1885dc99ca86ed44e3c07"><td class="memItemLeft" align="right" valign="top"><a id="a1c036e4237d1885dc99ca86ed44e3c07" name="a1c036e4237d1885dc99ca86ed44e3c07"></a>
+std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>trials</b></td></tr>
+<tr class="memdesc:a1c036e4237d1885dc99ca86ed44e3c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Список всех точек, для их последующего удаления <br /></td></tr>
+<tr class="memitem:a199e87cf80ce3a7421db68915f9a99e8" id="r_a199e87cf80ce3a7421db68915f9a99e8"><td class="memItemLeft" align="right" valign="top"><a id="a199e87cf80ce3a7421db68915f9a99e8" name="a199e87cf80ce3a7421db68915f9a99e8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>recalc</b></td></tr>
+<tr class="memdesc:a199e87cf80ce3a7421db68915f9a99e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Истина, если нужен пересчет характеристик <br /></td></tr>
+<tr class="memitem:ab5e147575622b644f258888f7012b1ce" id="r_ab5e147575622b644f258888f7012b1ce"><td class="memItemLeft" align="right" valign="top"><a id="ab5e147575622b644f258888f7012b1ce" name="ab5e147575622b644f258888f7012b1ce"></a>
+<a class="el" href="class_trial.html">Trial</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>BestTrial</b></td></tr>
+<tr class="memdesc:ab5e147575622b644f258888f7012b1ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Лучшая точка, полученная для данной поисковой информации <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a72cdc15edb6e8e4c41efc1a388d339cd" id="r_a72cdc15edb6e8e4c41efc1a388d339cd"><td class="memItemLeft" align="right" valign="top"><a id="a72cdc15edb6e8e4c41efc1a388d339cd" name="a72cdc15edb6e8e4c41efc1a388d339cd"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>SearcDataIterator</b></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a54bd2fd63ea6986ae39490c03ee41c02" name="a54bd2fd63ea6986ae39490c03ee41c02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54bd2fd63ea6986ae39490c03ee41c02">&#9670;&#160;</a></span>FindCoveringInterval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_search_interval.html">SearchInterval</a> * SearchData::FindCoveringInterval </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_trial.html">Trial</a> *</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Поиск интервала, в котором содержится x, т. </p>
+<p>е. xl() &lt; x &lt; xr нужен для вставки прообразов при использовании множественной развертки </p>
+
+</div>
+</div>
+<a id="a8c0dcc4480e1354ac012f77cc46efcb7" name="a8c0dcc4480e1354ac012f77cc46efcb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c0dcc4480e1354ac012f77cc46efcb7">&#9670;&#160;</a></span>GetIntervalWithMaxLocalR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_search_interval.html">SearchInterval</a> * SearchData::GetIntervalWithMaxLocalR </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение интервала с максимальной локальной хар-кой. </p>
+<p>Интервал берется из очереди. Если очередь пуста, то сначала будет вызван Refill() </p>
+
+</div>
+</div>
+<a id="a6f57bd7ccd9dfc43fee7e990ec5fa7c3" name="a6f57bd7ccd9dfc43fee7e990ec5fa7c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f57bd7ccd9dfc43fee7e990ec5fa7c3">&#9670;&#160;</a></span>GetIntervalWithMaxR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_search_interval.html">SearchInterval</a> * SearchData::GetIntervalWithMaxR </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение интервала с максимальной хар-кой. </p>
+<p>Интервал берется из очереди. Если очередь пуста, то сначала будет вызван Refill() </p>
+
+</div>
+</div>
+<a id="a6d3f10575a711738707f12d8197cc6d6" name="a6d3f10575a711738707f12d8197cc6d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d3f10575a711738707f12d8197cc6d6">&#9670;&#160;</a></span>InsertPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_search_interval.html">SearchInterval</a> * SearchData::InsertPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_search_interval.html">SearchInterval</a> *</td>          <td class="paramname"><span class="paramname"><em>coveringInterval</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_trial.html">Trial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>newPoint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>iteration</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>methodDimension</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вставка испытания в заданный интервал. </p>
+<p>Нужна для множественной развертки и добавления поисковой информации локального метода возвращает указатель на интервал с левым концом в newPoint </p>
+
+</div>
+</div>
+<a id="a1c0d132bd0134220d53d95fd43052660" name="a1c0d132bd0134220d53d95fd43052660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c0d132bd0134220d53d95fd43052660">&#9670;&#160;</a></span>PushToQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SearchData::PushToQueue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_search_interval.html">SearchInterval</a> *</td>          <td class="paramname"><span class="paramname"><em>pInterval</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить интервал, предыдущий к указанному не относится к итератору, не меняет текущий узел в итераторе SearchInterval* GetPrev(SearchInterval &amp;pInterval);. </p>
+<p>Для работы с очередью характеристик вставка, если новый элемент больше минимального в очереди если при этом очередь полна, то замещение минимального </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>globalizer/method/include/<a class="el" href="_search_data_8h_source.html">SearchData.h</a></li>
+<li>globalizer/method/src/<b>SearchData.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

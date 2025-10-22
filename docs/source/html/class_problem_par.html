@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс ProblemPar</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-attribs">Статические открытые данные</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="class_problem_par-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс ProblemPar<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф наследования:ProblemPar:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_problem_par.png" usemap="#ProblemPar_map" alt=""/>
+  <map id="ProblemPar_map" name="ProblemPar_map">
+<area href="class_base_problem.html" alt="BaseProblem&lt; ProblemFromFunctionPointers &gt;" shape="rect" coords="0,56,280,80"/>
+<area href="class_constrained_problem_base.html" alt="ConstrainedProblemBase&lt; Func &gt;" shape="rect" coords="290,56,570,80"/>
+<area href="class_constrained_problem_generator.html" alt="ConstrainedProblemGenerator&lt; Func &gt;" shape="rect" coords="580,56,860,80"/>
+<area href="class_base_problem.html" title="Базовый класс реализующий основные методы задач" alt="BaseProblem&lt; Owner &gt;" shape="rect" coords="870,56,1150,80"/>
+<area href="class_constrained_problem_base.html" alt="ConstrainedProblemBase&lt; FType &gt;" shape="rect" coords="1450,56,1730,80"/>
+<area href="class_constrained_problem_generator.html" alt="ConstrainedProblemGenerator&lt; FType &gt;" shape="rect" coords="1740,56,2020,80"/>
+<area href="class_problem.html" alt="Problem&lt; ProblemFromFunctionPointers &gt;" shape="rect" coords="0,112,280,136"/>
+<area href="class_constrained_problem.html" alt="ConstrainedProblem&lt; Func &gt;" shape="rect" coords="290,112,570,136"/>
+<area href="class_problem_with_constraints.html" alt="ProblemWithConstraints&lt; Owner, Func &gt;" shape="rect" coords="580,112,860,136"/>
+<area href="class_problem_with_constraints.html" alt="ProblemWithConstraints&lt; Owner, Func &gt;" shape="rect" coords="1160,112,1440,136"/>
+<area href="class_problem.html" title="Основной класс для работы с задачами" alt="Problem&lt; Owner &gt;" shape="rect" coords="1160,168,1440,192"/>
+<area href="class_problem_with_constraints.html" alt="ProblemWithConstraints&lt; Owner, FType &gt;" shape="rect" coords="1160,224,1440,248"/>
+<area href="class_constrained_problem.html" alt="ConstrainedProblem&lt; FType &gt;" shape="rect" coords="1450,112,1730,136"/>
+<area href="class_problem_with_constraints.html" alt="ProblemWithConstraints&lt; Owner, FType &gt;" shape="rect" coords="1740,112,2020,136"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a62adef321bc7007e104dabb86f55f955" id="r_a62adef321bc7007e104dabb86f55f955"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62adef321bc7007e104dabb86f55f955">GetConstraintOptimumPoint</a> (double *point, int fNumber)=0</td></tr>
+<tr class="memdesc:a62adef321bc7007e104dabb86f55f955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает точку глобального оптимума для функции fNumber.  <br /></td></tr>
+<tr class="memitem:a4e7d377df4685676fd92ccb57ab5d8f3" id="r_a4e7d377df4685676fd92ccb57ab5d8f3"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e7d377df4685676fd92ccb57ab5d8f3">GetOptimumPoint</a> (double *y) const =0</td></tr>
+<tr class="memdesc:a4e7d377df4685676fd92ccb57ab5d8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает координаты точки глобального минимума целевой функции  <br /></td></tr>
+<tr class="memitem:a240272288dbbe4fa3cc1cdf323091879" id="r_a240272288dbbe4fa3cc1cdf323091879"><td class="memItemLeft" align="right" valign="top"><a id="a240272288dbbe4fa3cc1cdf323091879" name="a240272288dbbe4fa3cc1cdf323091879"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetDim</b> () const</td></tr>
+<tr class="memitem:a7dd170d982828257faad7e2d4a20eec7" id="r_a7dd170d982828257faad7e2d4a20eec7"><td class="memItemLeft" align="right" valign="top"><a id="a7dd170d982828257faad7e2d4a20eec7" name="a7dd170d982828257faad7e2d4a20eec7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDim</b> (int dim)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:a5e22f14a09b271efbb6c455f84696ff9" id="r_a5e22f14a09b271efbb6c455f84696ff9"><td class="memItemLeft" align="right" valign="top"><a id="a5e22f14a09b271efbb6c455f84696ff9" name="a5e22f14a09b271efbb6c455f84696ff9"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>ProblemOK</b> = 0</td></tr>
+<tr class="memdesc:a5e22f14a09b271efbb6c455f84696ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Код ошибки, возвращаемый, если операция завершена успешно <br /></td></tr>
+<tr class="memitem:a3ae397d00385bb765ccf16dc922595a8" id="r_a3ae397d00385bb765ccf16dc922595a8"><td class="memItemLeft" align="right" valign="top"><a id="a3ae397d00385bb765ccf16dc922595a8" name="a3ae397d00385bb765ccf16dc922595a8"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>ProblemUNDEFINED</b> = -1</td></tr>
+<tr class="memdesc:a3ae397d00385bb765ccf16dc922595a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Код ошибки, возвращаемый методами #GetOptimumValue и <a class="el" href="#a4e7d377df4685676fd92ccb57ab5d8f3" title="Метод возвращает координаты точки глобального минимума целевой функции">GetOptimumPoint</a>, если соответствующие параметры задачи не определены,. <br /></td></tr>
+<tr class="memitem:ac6615fed1bf447c45b0b23705207bfe8" id="r_ac6615fed1bf447c45b0b23705207bfe8"><td class="memItemLeft" align="right" valign="top"><a id="ac6615fed1bf447c45b0b23705207bfe8" name="ac6615fed1bf447c45b0b23705207bfe8"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>ProblemERROR</b> = -2</td></tr>
+<tr class="memdesc:ac6615fed1bf447c45b0b23705207bfe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Код ошибки, возвращаемый, если операция не выполнена <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a1bc5892963b48e72183e566ca66fbfb3" id="r_a1bc5892963b48e72183e566ca66fbfb3"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bc5892963b48e72183e566ca66fbfb3">GetRealNumberOfFunctions</a> () const</td></tr>
+<tr class="memdesc:a1bc5892963b48e72183e566ca66fbfb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает число общее функций в задаче (оно равно число ограничений + число критериев)  <br /></td></tr>
+<tr class="memitem:af8ffe187e9185a64b4b19d683e48fe06" id="r_af8ffe187e9185a64b4b19d683e48fe06"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8ffe187e9185a64b4b19d683e48fe06">GetRealNumberOfConstraints</a> () const</td></tr>
+<tr class="memdesc:af8ffe187e9185a64b4b19d683e48fe06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает число ограничений в задаче  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a3000ff72693cbdbba779aa3fa10d7b45" id="r_a3000ff72693cbdbba779aa3fa10d7b45"><td class="memItemLeft" align="right" valign="top"><a id="a3000ff72693cbdbba779aa3fa10d7b45" name="a3000ff72693cbdbba779aa3fa10d7b45"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mNumberOfCriterions</b></td></tr>
+<tr class="memdesc:a3000ff72693cbdbba779aa3fa10d7b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Число критериев <br /></td></tr>
+<tr class="memitem:a6939594c7bade49b94a7afed14082049" id="r_a6939594c7bade49b94a7afed14082049"><td class="memItemLeft" align="right" valign="top"><a id="a6939594c7bade49b94a7afed14082049" name="a6939594c7bade49b94a7afed14082049"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mNumberOfConstraints</b></td></tr>
+<tr class="memdesc:a6939594c7bade49b94a7afed14082049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Число ограничений <br /></td></tr>
+<tr class="memitem:ae0ab6ddcf05e3ed05b349802e3403e99" id="r_ae0ab6ddcf05e3ed05b349802e3403e99"><td class="memItemLeft" align="right" valign="top"><a id="ae0ab6ddcf05e3ed05b349802e3403e99" name="ae0ab6ddcf05e3ed05b349802e3403e99"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mDim</b></td></tr>
+<tr class="memdesc:ae0ab6ddcf05e3ed05b349802e3403e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разерность задачи <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a62adef321bc7007e104dabb86f55f955" name="a62adef321bc7007e104dabb86f55f955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62adef321bc7007e104dabb86f55f955">&#9670;&#160;</a></span>GetConstraintOptimumPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ProblemPar::GetConstraintOptimumPoint </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>point</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fNumber</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает точку глобального оптимума для функции fNumber. </p>
+
+<p>Замещается в <a class="el" href="class_constrained_problem.html#a2dcc8b8a645c24892b977905d208f0fb">ConstrainedProblem&lt; FType &gt;</a>, <a class="el" href="class_constrained_problem.html#a2dcc8b8a645c24892b977905d208f0fb">ConstrainedProblem&lt; Func &gt;</a>, <a class="el" href="class_constrained_problem_generator.html#a33e44b1fb98478d8b24af5d379869968">ConstrainedProblemGenerator&lt; FType &gt;</a>, <a class="el" href="class_constrained_problem_generator.html#a33e44b1fb98478d8b24af5d379869968">ConstrainedProblemGenerator&lt; Func &gt;</a>, <a class="el" href="class_problem.html#a665917f1e82e22b53f949cf68be2f77c">Problem&lt; Owner &gt;</a>, <a class="el" href="class_problem.html#a665917f1e82e22b53f949cf68be2f77c">Problem&lt; ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_problem_with_constraints.html#aabbdd4d01347ea9635a89a354050c82d">ProblemWithConstraints&lt; Owner, FType &gt;</a> и <a class="el" href="class_problem_with_constraints.html#aabbdd4d01347ea9635a89a354050c82d">ProblemWithConstraints&lt; Owner, Func &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a4e7d377df4685676fd92ccb57ab5d8f3" name="a4e7d377df4685676fd92ccb57ab5d8f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e7d377df4685676fd92ccb57ab5d8f3">&#9670;&#160;</a></span>GetOptimumPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ProblemPar::GetOptimumPoint </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>y</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод возвращает координаты точки глобального минимума целевой функции </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td>точка, в которой достигается оптимальное значение </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Код ошибки (#OK или #UNDEFINED) </dd></dl>
+
+<p>Замещается в <a class="el" href="class_constrained_problem.html#abae84d1367c8963c98c89d0cd5e94e4d">ConstrainedProblem&lt; FType &gt;</a>, <a class="el" href="class_constrained_problem.html#abae84d1367c8963c98c89d0cd5e94e4d">ConstrainedProblem&lt; Func &gt;</a>, <a class="el" href="class_constrained_problem_generator.html#abab83403148bcb45eac745d6ed2f52f4">ConstrainedProblemGenerator&lt; FType &gt;</a>, <a class="el" href="class_constrained_problem_generator.html#abab83403148bcb45eac745d6ed2f52f4">ConstrainedProblemGenerator&lt; Func &gt;</a>, <a class="el" href="class_problem.html#a9608286f9925c8e1fb633b7079c045be">Problem&lt; Owner &gt;</a>, <a class="el" href="class_problem.html#a9608286f9925c8e1fb633b7079c045be">Problem&lt; ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_problem_from_function_pointers.html#a2298e7d358e989c6e8105ff2a22ff715">ProblemFromFunctionPointers</a>, <a class="el" href="class_problem_with_constraints.html#a848487e3703b0af7238821b8a29b80f7">ProblemWithConstraints&lt; Owner, FType &gt;</a> и <a class="el" href="class_problem_with_constraints.html#a848487e3703b0af7238821b8a29b80f7">ProblemWithConstraints&lt; Owner, Func &gt;</a>.</p>
+
+</div>
+</div>
+<a id="af8ffe187e9185a64b4b19d683e48fe06" name="af8ffe187e9185a64b4b19d683e48fe06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ffe187e9185a64b4b19d683e48fe06">&#9670;&#160;</a></span>GetRealNumberOfConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ProblemPar::GetRealNumberOfConstraints </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод возвращает число ограничений в задаче </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Число ограничений </dd></dl>
+
+<p>Переопределяется в <a class="el" href="class_problem_with_constraints.html#a0decc42e18c75bd3c53773add318c14a">ProblemWithConstraints&lt; Owner, FType &gt;</a> и <a class="el" href="class_problem_with_constraints.html#a0decc42e18c75bd3c53773add318c14a">ProblemWithConstraints&lt; Owner, Func &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a1bc5892963b48e72183e566ca66fbfb3" name="a1bc5892963b48e72183e566ca66fbfb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc5892963b48e72183e566ca66fbfb3">&#9670;&#160;</a></span>GetRealNumberOfFunctions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ProblemPar::GetRealNumberOfFunctions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод возвращает число общее функций в задаче (оно равно число ограничений + число критериев) </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Число функций </dd></dl>
+
+<p>Переопределяется в <a class="el" href="class_problem_with_constraints.html#ae3c8f44721fd0d0482e9487bb3d7750b">ProblemWithConstraints&lt; Owner, FType &gt;</a> и <a class="el" href="class_problem_with_constraints.html#ae3c8f44721fd0d0482e9487bb3d7750b">ProblemWithConstraints&lt; Owner, Func &gt;</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>globalizer/problem/include/<a class="el" href="_problem_par_8hpp_source.html">ProblemPar.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс SeparableOptimizationSolver</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="class_separable_optimization_solver-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс SeparableOptimizationSolver</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Базовый класс для сепарабельной оптимизации  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_separable_optimization_solver_8h_source.html">SeparableOptimizationSolver.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:SeparableOptimizationSolver:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_separable_optimization_solver.png" usemap="#SeparableOptimizationSolver_map" alt=""/>
+  <map id="SeparableOptimizationSolver_map" name="SeparableOptimizationSolver_map">
+<area href="class_i_solver.html" title="Интерфейс, базового класса" alt="ISolver" shape="rect" coords="0,0,175,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac42feadc3854192562163b2bb4eb8cdd" id="r_ac42feadc3854192562163b2bb4eb8cdd"><td class="memItemLeft" align="right" valign="top"><a id="ac42feadc3854192562163b2bb4eb8cdd" name="ac42feadc3854192562163b2bb4eb8cdd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SeparableOptimizationSolver</b> (<a class="el" href="class_i_problem.html">IProblem</a> *<a class="el" href="#ae7e3acb4dbe0c99b9887e7b3e0d2b8dc">problem</a>, std::vector&lt; int &gt; _dimentions={})</td></tr>
+<tr class="memitem:ae66b5483ee2aae49fb6bd81cc23d3604" id="r_ae66b5483ee2aae49fb6bd81cc23d3604"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66b5483ee2aae49fb6bd81cc23d3604">Solve</a> ()</td></tr>
+<tr class="memdesc:ae66b5483ee2aae49fb6bd81cc23d3604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Решение задачи по умолчанию  <br /></td></tr>
+<tr class="memitem:a9eaaee33d146e94c66cdb1f9a084160b" id="r_a9eaaee33d146e94c66cdb1f9a084160b"><td class="memItemLeft" align="right" valign="top"><a id="a9eaaee33d146e94c66cdb1f9a084160b" name="a9eaaee33d146e94c66cdb1f9a084160b"></a>
+<a class="el" href="struct_solution_result.html">SolutionResult</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSolutionResult</b> ()</td></tr>
+<tr class="memitem:a69ea3cbf620df67ff3b23a7c6e1c63d5" id="r_a69ea3cbf620df67ff3b23a7c6e1c63d5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69ea3cbf620df67ff3b23a7c6e1c63d5">SetPoint</a> (std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp;points)</td></tr>
+<tr class="memdesc:a69ea3cbf620df67ff3b23a7c6e1c63d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет точки испытаний  <br /></td></tr>
+<tr class="memitem:aea332052ae97bb5f3f3469d4821b7ff7" id="r_aea332052ae97bb5f3f3469d4821b7ff7"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea332052ae97bb5f3f3469d4821b7ff7">GetAllPoint</a> ()</td></tr>
+<tr class="memdesc:aea332052ae97bb5f3f3469d4821b7ff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврящает все имеющиеся точки испытаний  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a4e050c69e003853cc92a7f93c24e80f9" id="r_a4e050c69e003853cc92a7f93c24e80f9"><td class="memItemLeft" align="right" valign="top"><a id="a4e050c69e003853cc92a7f93c24e80f9" name="a4e050c69e003853cc92a7f93c24e80f9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDimentions</b> (std::vector&lt; int &gt; _dimentions)</td></tr>
+<tr class="memdesc:a4e050c69e003853cc92a7f93c24e80f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задачть размерности <br /></td></tr>
+<tr class="memitem:ad05ff8d348ed5ae4a55cd23db96aeadc" id="r_ad05ff8d348ed5ae4a55cd23db96aeadc"><td class="memItemLeft" align="right" valign="top"><a id="ad05ff8d348ed5ae4a55cd23db96aeadc" name="ad05ff8d348ed5ae4a55cd23db96aeadc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateStartPoint</b> ()</td></tr>
+<tr class="memdesc:ad05ff8d348ed5ae4a55cd23db96aeadc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать начальную точку решения задач <br /></td></tr>
+<tr class="memitem:a8e9c9a715c595a8e0210b4ec5a7594ed" id="r_a8e9c9a715c595a8e0210b4ec5a7594ed"><td class="memItemLeft" align="right" valign="top"><a id="a8e9c9a715c595a8e0210b4ec5a7594ed" name="a8e9c9a715c595a8e0210b4ec5a7594ed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Construct</b> ()</td></tr>
+<tr class="memdesc:a8e9c9a715c595a8e0210b4ec5a7594ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">заполняет основные поля класса <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a1d2abe17c7a3caefd29b795057386cf9" id="r_a1d2abe17c7a3caefd29b795057386cf9"><td class="memItemLeft" align="right" valign="top"><a id="a1d2abe17c7a3caefd29b795057386cf9" name="a1d2abe17c7a3caefd29b795057386cf9"></a>
+std::vector&lt; <a class="el" href="class_solver.html">Solver</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>solvers</b></td></tr>
+<tr class="memdesc:a1d2abe17c7a3caefd29b795057386cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Решатели для оптимизации по группам параметров <br /></td></tr>
+<tr class="memitem:acb0899f5ce5736475d1fa8545d1d7b24" id="r_acb0899f5ce5736475d1fa8545d1d7b24"><td class="memItemLeft" align="right" valign="top"><a id="acb0899f5ce5736475d1fa8545d1d7b24" name="acb0899f5ce5736475d1fa8545d1d7b24"></a>
+<a class="el" href="class_solver.html">Solver</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>finalSolver</b></td></tr>
+<tr class="memdesc:acb0899f5ce5736475d1fa8545d1d7b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Решатель для объединения всех остальных Решателей <br /></td></tr>
+<tr class="memitem:a91b1a560d7ad96e6082477b0ffccf7dd" id="r_a91b1a560d7ad96e6082477b0ffccf7dd"><td class="memItemLeft" align="right" valign="top"><a id="a91b1a560d7ad96e6082477b0ffccf7dd" name="a91b1a560d7ad96e6082477b0ffccf7dd"></a>
+std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dimensions</b></td></tr>
+<tr class="memdesc:a91b1a560d7ad96e6082477b0ffccf7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размерости групп парамеров, по умолчанию по 1. <br /></td></tr>
+<tr class="memitem:a2fae838db5f4936eb7867a6682e2a4ac" id="r_a2fae838db5f4936eb7867a6682e2a4ac"><td class="memItemLeft" align="right" valign="top"><a id="a2fae838db5f4936eb7867a6682e2a4ac" name="a2fae838db5f4936eb7867a6682e2a4ac"></a>
+<a class="el" href="struct_solution_result.html">SolutionResult</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>solutionResult</b></td></tr>
+<tr class="memdesc:a2fae838db5f4936eb7867a6682e2a4ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Решение задачи оптимизации <br /></td></tr>
+<tr class="memitem:a72729452a94e6f2de27b96417b7f2f3c" id="r_a72729452a94e6f2de27b96417b7f2f3c"><td class="memItemLeft" align="right" valign="top"><a id="a72729452a94e6f2de27b96417b7f2f3c" name="a72729452a94e6f2de27b96417b7f2f3c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>originalDimension</b></td></tr>
+<tr class="memdesc:a72729452a94e6f2de27b96417b7f2f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размерность исходной задачи <br /></td></tr>
+<tr class="memitem:a10ac88ebf3060e78b57cdd361346c245" id="r_a10ac88ebf3060e78b57cdd361346c245"><td class="memItemLeft" align="right" valign="top"><a id="a10ac88ebf3060e78b57cdd361346c245" name="a10ac88ebf3060e78b57cdd361346c245"></a>
+std::vector&lt; <a class="el" href="class_separable_optimization_task.html">SeparableOptimizationTask</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tasks</b></td></tr>
+<tr class="memdesc:a10ac88ebf3060e78b57cdd361346c245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задачи для оптимизации по группам параметров <br /></td></tr>
+<tr class="memitem:ae7e3acb4dbe0c99b9887e7b3e0d2b8dc" id="r_ae7e3acb4dbe0c99b9887e7b3e0d2b8dc"><td class="memItemLeft" align="right" valign="top"><a id="ae7e3acb4dbe0c99b9887e7b3e0d2b8dc" name="ae7e3acb4dbe0c99b9887e7b3e0d2b8dc"></a>
+<a class="el" href="class_i_problem.html">IProblem</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>problem</b></td></tr>
+<tr class="memdesc:ae7e3acb4dbe0c99b9887e7b3e0d2b8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">задача оптимизации <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Базовый класс для сепарабельной оптимизации </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="aea332052ae97bb5f3f3469d4821b7ff7" name="aea332052ae97bb5f3f3469d4821b7ff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea332052ae97bb5f3f3469d4821b7ff7">&#9670;&#160;</a></span>GetAllPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp; SeparableOptimizationSolver::GetAllPoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возврящает все имеющиеся точки испытаний </p>
+
+<p>Замещает <a class="el" href="class_i_solver.html#a2fb2a44a05900a2a96ebe3b7558a7249">ISolver</a>.</p>
+
+</div>
+</div>
+<a id="a69ea3cbf620df67ff3b23a7c6e1c63d5" name="a69ea3cbf620df67ff3b23a7c6e1c63d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ea3cbf620df67ff3b23a7c6e1c63d5">&#9670;&#160;</a></span>SetPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SeparableOptimizationSolver::SetPoint </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>points</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Добавляет точки испытаний </p>
+
+<p>Замещает <a class="el" href="class_i_solver.html#a32c762e9d830484ef6349696557814ef">ISolver</a>.</p>
+
+</div>
+</div>
+<a id="ae66b5483ee2aae49fb6bd81cc23d3604" name="ae66b5483ee2aae49fb6bd81cc23d3604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66b5483ee2aae49fb6bd81cc23d3604">&#9670;&#160;</a></span>Solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SeparableOptimizationSolver::Solve </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Решение задачи по умолчанию </p>
+<p>curr_child = parameters.parallel_tree.ProcChild[i];!!!!!</p>
+
+<p>Замещает <a class="el" href="class_i_solver.html#a0062ea0ef69f0a7224ce85b394670380">ISolver</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>globalizer/include/<a class="el" href="_separable_optimization_solver_8h_source.html">SeparableOptimizationSolver.h</a></li>
+<li>globalizer/src/<b>SeparableOptimizationSolver.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

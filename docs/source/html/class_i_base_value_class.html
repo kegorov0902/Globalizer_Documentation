@@ -1,0 +1,923 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: ÐÐ»Ð°ÑÑ IBaseValueClass</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - Ð¿Ð°ÑÐ°Ð»Ð»ÐµÐ»ÑÐ½Ð°Ñ Ð¿ÑÐ¾Ð³ÑÐ°Ð¼Ð¼Ð½Ð°Ñ ÑÐ¸ÑÑÐµÐ¼Ð° Ð´Ð»Ñ ÑÐµÑÐµÐ½Ð¸Ñ Ð·Ð°Ð´Ð°Ñ Ð³Ð»Ð¾Ð±Ð°Ð»ÑÐ½Ð¾Ð¹ Ð¾Ð¿ÑÐ¸Ð¼Ð¸Ð·Ð°ÑÐ¸Ð¸</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¾ ÑÐ¸ÑÑÐµÐ¼Ð¾Ð¹ Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','ÐÐ¾Ð¸ÑÐº',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">ÐÐ°Ð³ÑÑÐ·ÐºÐ°...</div>
+<div class="SRStatus" id="Searching">ÐÐ¾Ð¸ÑÐº...</div>
+<div class="SRStatus" id="NoMatches">ÐÐµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð¾</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">ÐÑÐºÑÑÑÑÐµ ÑÐ»ÐµÐ½Ñ</a> &#124;
+<a href="#pub-attribs">ÐÑÐºÑÑÑÑÐµ Ð°ÑÑÐ¸Ð±ÑÑÑ</a> &#124;
+<a href="class_i_base_value_class-members.html">ÐÐ¾Ð»Ð½ÑÐ¹ ÑÐ¿Ð¸ÑÐ¾Ðº ÑÐ»ÐµÐ½Ð¾Ð² ÐºÐ»Ð°ÑÑÐ°</a>  </div>
+  <div class="headertitle"><div class="title">ÐÐ»Ð°ÑÑ IBaseValueClass<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>ÐÐ½ÑÐµÑÑÐµÐ¹ Ð±Ð°Ð·Ð¾Ð²Ð¾Ð³Ð¾ ÐºÐ»Ð°ÑÑÐ° Ð¸Ð¼ÐµÑÑÐµÐ³Ð¾ Ð¸Ð¼Ñ Ð¸ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ðµ  
+ <a href="#details">ÐÐ¾Ð´ÑÐ¾Ð±Ð½ÐµÐµ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_property_8h_source.html">Property.h</a>&gt;</code></p>
+<div class="dynheader">
+ÐÑÐ°Ñ Ð½Ð°ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ð½Ð¸Ñ:IBaseValueClass:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_i_base_value_class.png" usemap="#IBaseValueClass_map" alt=""/>
+  <map id="IBaseValueClass_map" name="IBaseValueClass_map">
+<area href="class_base_property.html" alt="tCheckValue&lt; Owner &gt;" shape="rect" coords="0,56,468,80"/>
+<area href="class_base_property.html" alt="BaseProperty&lt; Parameters &gt;" shape="rect" coords="478,56,946,80"/>
+<area href="class_base_property.html" alt="BaseProperty&lt; BaseParameters&lt; Parameters &gt; &gt;" shape="rect" coords="1434,56,1902,80"/>
+<area href="class_base_property.html" alt="BaseProperty&lt; ProblemFromFunctionPointers &gt;" shape="rect" coords="2390,56,2858,80"/>
+<area href="class_base_property.html" alt="BaseProperty&lt; BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;" shape="rect" coords="3346,56,3814,80"/>
+<area href="class_base_property.html" title="Áàçîâûé êëàññ èìåþùèé âëàäåëüöà" alt="BaseProperty&lt; Owner &gt;" shape="rect" coords="4302,56,4770,80"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; int, Parameters &gt;" shape="rect" coords="956,112,1424,136"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeMethod, Parameters &gt;" shape="rect" coords="956,168,1424,192"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeCalculation, Parameters &gt;" shape="rect" coords="956,224,1424,248"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeProcess, Parameters &gt;" shape="rect" coords="956,280,1424,304"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; bool, Parameters &gt;" shape="rect" coords="956,336,1424,360"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; std::string, Parameters &gt;" shape="rect" coords="956,392,1424,416"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; double, Parameters &gt;" shape="rect" coords="956,448,1424,472"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; double *, Parameters &gt;" shape="rect" coords="956,504,1424,528"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; EMapType, Parameters &gt;" shape="rect" coords="956,560,1424,584"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; int *, Parameters &gt;" shape="rect" coords="956,616,1424,640"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ELocalMethodScheme, Parameters &gt;" shape="rect" coords="956,672,1424,696"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ESeparableMethodType, Parameters &gt;" shape="rect" coords="956,728,1424,752"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; EStopCondition, Parameters &gt;" shape="rect" coords="956,784,1424,808"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeSolver, Parameters &gt;" shape="rect" coords="956,840,1424,864"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeLocalMethod, Parameters &gt;" shape="rect" coords="956,896,1424,920"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeAddLocalPoint, Parameters &gt;" shape="rect" coords="956,952,1424,976"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ELocalTuningType, Parameters &gt;" shape="rect" coords="956,1008,1424,1032"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;" shape="rect" coords="956,1064,1424,1088"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;" shape="rect" coords="1912,112,2380,136"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;" shape="rect" coords="1912,168,2380,192"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; int, ProblemFromFunctionPointers &gt;" shape="rect" coords="2868,112,3336,136"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; bool, ProblemFromFunctionPointers &gt;" shape="rect" coords="2868,168,3336,192"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;" shape="rect" coords="3824,112,4292,136"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;" shape="rect" coords="3824,168,4292,192"/>
+<area href="class_typed_property.html" alt="tGetter&lt; Type, Owner &gt;" shape="rect" coords="4780,112,5248,136"/>
+<area href="class_typed_property.html" alt="tSetter&lt; Type, Owner &gt;" shape="rect" coords="4780,168,5248,192"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; bool, Owner &gt;" shape="rect" coords="4780,224,5248,248"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; double, Owner &gt;" shape="rect" coords="4780,280,5248,304"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; double *, Owner &gt;" shape="rect" coords="4780,336,5248,360"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ELocalMethodScheme, Owner &gt;" shape="rect" coords="4780,392,5248,416"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ELocalTuningType, Owner &gt;" shape="rect" coords="4780,448,5248,472"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; EMapType, Owner &gt;" shape="rect" coords="4780,504,5248,528"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ESeparableMethodType, Owner &gt;" shape="rect" coords="4780,560,5248,584"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; EStopCondition, Owner &gt;" shape="rect" coords="4780,616,5248,640"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeAddLocalPoint, Owner &gt;" shape="rect" coords="4780,672,5248,696"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeCalculation, Owner &gt;" shape="rect" coords="4780,728,5248,752"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeDistributionStartingPoints, Owner &gt;" shape="rect" coords="4780,784,5248,808"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeLocalMethod, Owner &gt;" shape="rect" coords="4780,840,5248,864"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeLocalMinInterval, Owner &gt;" shape="rect" coords="4780,896,5248,920"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeMethod, Owner &gt;" shape="rect" coords="4780,952,5248,976"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeProcess, Owner &gt;" shape="rect" coords="4780,1008,5248,1032"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeSolver, Owner &gt;" shape="rect" coords="4780,1064,5248,1088"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; ETypeStartLocalMethod, Owner &gt;" shape="rect" coords="4780,1120,5248,1144"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; int, Owner &gt;" shape="rect" coords="4780,1176,5248,1200"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; int *, Owner &gt;" shape="rect" coords="4780,1232,5248,1256"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; std::string, Owner &gt;" shape="rect" coords="4780,1288,5248,1312"/>
+<area href="class_typed_property.html" alt="TypedProperty&lt; std::string *, Owner &gt;" shape="rect" coords="4780,1344,5248,1368"/>
+<area href="class_typed_property.html" title="Áàçîâûé êëàññ äëÿ ñâîéñòâ" alt="TypedProperty&lt; Type, Owner &gt;" shape="rect" coords="4780,1400,5248,1424"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+ÐÑÐºÑÑÑÑÐµ ÑÐ»ÐµÐ½Ñ</h2></td></tr>
+<tr class="memitem:ac280d999279651871e67e54eb728ff04" id="r_ac280d999279651871e67e54eb728ff04"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac280d999279651871e67e54eb728ff04">Copy</a> (void *data)=0</td></tr>
+<tr class="memdesc:ac280d999279651871e67e54eb728ff04"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ¾Ð¿Ð¸ÑÑÐµÑ Ð´Ð°Ð½Ð½ÑÐµ Ð¸Ð· ÑÐºÐ°Ð·Ð°ÑÐµÐ»Ñ Ð² ÑÑÐ¾Ñ Ð¾Ð±ÑÐµÐºÑ  <br /></td></tr>
+<tr class="memitem:a8f4140fb3d9103c6fe088140c7107fb9" id="r_a8f4140fb3d9103c6fe088140c7107fb9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f4140fb3d9103c6fe088140c7107fb9">SetValue</a> (void *data)=0</td></tr>
+<tr class="memdesc:a8f4140fb3d9103c6fe088140c7107fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ°Ð´Ð°ÐµÑ Ð´Ð°Ð½Ð½ÑÐµ Ð¿ÑÐ¸Ð²Ð¾Ð´Ñ void* Ðº ÑÐ¸Ð¿Ñ Ð¾Ð±ÑÐµÐºÑÐ°  <br /></td></tr>
+<tr class="memitem:a3f32244f59e07bf3191645907c7c0e9a" id="r_a3f32244f59e07bf3191645907c7c0e9a"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f32244f59e07bf3191645907c7c0e9a">GetValue</a> ()=0</td></tr>
+<tr class="memdesc:a3f32244f59e07bf3191645907c7c0e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ ÑÐºÐ°Ð·Ð°ÑÐµÐ»Ñ Ð½Ð° Ð´Ð°Ð½Ð½ÑÐµ ÑÑÐ°Ð½ÑÑÐ¸ÐµÑÑ Ð² Ð¾Ð±ÑÐµÐºÑÐµ  <br /></td></tr>
+<tr class="memitem:a1063d00942a2c2ca78784442ded2fdd3" id="r_a1063d00942a2c2ca78784442ded2fdd3"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1063d00942a2c2ca78784442ded2fdd3">ToString</a> ()=0</td></tr>
+<tr class="memdesc:a1063d00942a2c2ca78784442ded2fdd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÑÐ¸Ð²Ð¾Ð´Ð¸Ñ Ðº ÑÑÑÐ¾ÐºÐµ  <br /></td></tr>
+<tr class="memitem:aa56ef9502385f90780ab67d8a303de05" id="r_aa56ef9502385f90780ab67d8a303de05"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa56ef9502385f90780ab67d8a303de05">FromString</a> (std::string val)=0</td></tr>
+<tr class="memdesc:aa56ef9502385f90780ab67d8a303de05"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ¾Ð»ÑÑÐµÐ½Ð¸Ðµ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ñ Ð¸Ð· ÑÑÑÐ¾ÐºÐ¸  <br /></td></tr>
+<tr class="memitem:ab3dd6fcbe29298167483e7fcf8144b8c" id="r_ab3dd6fcbe29298167483e7fcf8144b8c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3dd6fcbe29298167483e7fcf8144b8c">SetSeparator</a> (std::string separator)=0</td></tr>
+<tr class="memdesc:ab3dd6fcbe29298167483e7fcf8144b8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ°Ð´Ð°ÐµÑ ÑÐ°Ð·Ð´ÐµÐ»Ð¸ÑÐµÐ»Ñ ÑÐ»ÐµÐ¼ÐµÐ½ÑÐ¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°  <br /></td></tr>
+<tr class="memitem:a6d7adf42e8cfdda6eb14ac9246563122" id="r_a6d7adf42e8cfdda6eb14ac9246563122"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d7adf42e8cfdda6eb14ac9246563122">GetSeparator</a> ()=0</td></tr>
+<tr class="memdesc:a6d7adf42e8cfdda6eb14ac9246563122"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ ÑÐ°Ð·Ð´ÐµÐ»Ð¸ÑÐµÐ»Ñ ÑÐ»ÐµÐ¼ÐµÐ½ÑÐ¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°  <br /></td></tr>
+<tr class="memitem:abb40142d18be27b5a716cc6e461a5d71" id="r_abb40142d18be27b5a716cc6e461a5d71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb40142d18be27b5a716cc6e461a5d71">SetSize</a> (int size)=0</td></tr>
+<tr class="memdesc:abb40142d18be27b5a716cc6e461a5d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ°Ð´Ð°ÐµÑ ÑÐ°Ð·Ð¼ÐµÑ Ð¼Ð°ÑÑÐ¸Ð²Ð° ÑÐ»ÐµÐ¼ÐµÐ½ÑÐ¾Ð²  <br /></td></tr>
+<tr class="memitem:a7aeb88b6d66616fd92b757bb0c9fd22e" id="r_a7aeb88b6d66616fd92b757bb0c9fd22e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7aeb88b6d66616fd92b757bb0c9fd22e">GetSize</a> ()=0</td></tr>
+<tr class="memdesc:a7aeb88b6d66616fd92b757bb0c9fd22e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ Ð Ð°Ð·Ð¼ÐµÑ Ð¼Ð°ÑÑÐ¸Ð²Ð° ÑÐ»ÐµÐ¼ÐµÐ½ÑÐ¾Ð²  <br /></td></tr>
+<tr class="memitem:a7ba440879d570209b5c4688037b56d86" id="r_a7ba440879d570209b5c4688037b56d86"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ba440879d570209b5c4688037b56d86">GetName</a> ()=0</td></tr>
+<tr class="memdesc:a7ba440879d570209b5c4688037b56d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ¼Ñ ÑÐ²Ð¾Ð¹ÑÑÐ²Ð°  <br /></td></tr>
+<tr class="memitem:a2c8f346102bf9b1453545f389837d5b9" id="r_a2c8f346102bf9b1453545f389837d5b9"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c8f346102bf9b1453545f389837d5b9">GetHelp</a> ()=0</td></tr>
+<tr class="memdesc:a2c8f346102bf9b1453545f389837d5b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ð¢ÐµÐºÑÑ ÑÐ¿ÑÐ°Ð²ÐºÐ¸  <br /></td></tr>
+<tr class="memitem:af95d4d3b1e89f4a2c8724181845e323d" id="r_af95d4d3b1e89f4a2c8724181845e323d"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af95d4d3b1e89f4a2c8724181845e323d">GetLink</a> ()=0</td></tr>
+<tr class="memdesc:af95d4d3b1e89f4a2c8724181845e323d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ¾ÑÐ¾ÑÐºÐ¾Ðµ Ð¸Ð¼Ñ Ð´Ð»Ñ Ð´Ð¾Ð¼Ð°Ð½Ð´Ð½Ð¾Ð¹ ÑÑÑÐ¾ÐºÐ¸  <br /></td></tr>
+<tr class="memitem:ae911fe9d94f749beb95e2d8c12f296ef" id="r_ae911fe9d94f749beb95e2d8c12f296ef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae911fe9d94f749beb95e2d8c12f296ef">SetName</a> (std::string name)=0</td></tr>
+<tr class="memdesc:ae911fe9d94f749beb95e2d8c12f296ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ¼Ñ ÑÐ²Ð¾Ð¹ÑÑÐ²Ð°  <br /></td></tr>
+<tr class="memitem:acb981657311f2f6ea36c7aba35ea9033" id="r_acb981657311f2f6ea36c7aba35ea9033"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb981657311f2f6ea36c7aba35ea9033">SetHelp</a> (std::string help)=0</td></tr>
+<tr class="memdesc:acb981657311f2f6ea36c7aba35ea9033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ð¢ÐµÐºÑÑ ÑÐ¿ÑÐ°Ð²ÐºÐ¸  <br /></td></tr>
+<tr class="memitem:a515ab68fa3351eebb7b419733b17d2a1" id="r_a515ab68fa3351eebb7b419733b17d2a1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a515ab68fa3351eebb7b419733b17d2a1">SetLink</a> (std::string link)=0</td></tr>
+<tr class="memdesc:a515ab68fa3351eebb7b419733b17d2a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ¾ÑÐ¾ÑÐºÐ¾Ðµ Ð¸Ð¼Ñ Ð´Ð»Ñ Ð´Ð¾Ð¼Ð°Ð½Ð´Ð½Ð¾Ð¹ ÑÑÑÐ¾ÐºÐ¸  <br /></td></tr>
+<tr class="memitem:a7f40324a7ecde3251bf1f033661e4727" id="r_a7f40324a7ecde3251bf1f033661e4727"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f40324a7ecde3251bf1f033661e4727">GetHelpString</a> ()=0</td></tr>
+<tr class="memdesc:a7f40324a7ecde3251bf1f033661e4727"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ ÑÐ¿ÑÐ°Ð²ÐºÑ Ð¿Ð¾ ÑÐ²Ð¾Ð¹ÑÑÐ²Ñ  <br /></td></tr>
+<tr class="memitem:a306fe7bf2ab48d737ec079f7c2496f78" id="r_a306fe7bf2ab48d737ec079f7c2496f78"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a306fe7bf2ab48d737ec079f7c2496f78">GetCurrentStringValue</a> ()=0</td></tr>
+<tr class="memdesc:a306fe7bf2ab48d737ec079f7c2496f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ ÑÐµÐºÑÑÐµÐ³Ð¾ ÑÐ¾ÑÑÐ¾ÑÐ½Ð¸Ñ Ð¿Ð°ÑÐ°Ð¼ÐµÑÑÐ°  <br /></td></tr>
+<tr class="memitem:a43d9baa329ef38a571dc439db8b0fbd7" id="r_a43d9baa329ef38a571dc439db8b0fbd7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43d9baa329ef38a571dc439db8b0fbd7">IsNameEqual</a> (std::string name)=0</td></tr>
+<tr class="memdesc:a43d9baa329ef38a571dc439db8b0fbd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ð¡Ð¾Ð²Ð¿Ð°Ð´Ð°ÐµÑ Ð»Ð¸ Ð¸Ð¼Ñ Ð¿Ð°ÑÐ°Ð¼ÐµÑÑÐ° ÑÐ¾ Ð²Ð²ÐµÐ´ÐµÐ½Ð½Ð¾Ð¹ ÑÑÑÐ¾ÐºÐ¾Ð¹  <br /></td></tr>
+<tr class="memitem:a0782ed7b3cca7415188ee34d1895c1d2" id="r_a0782ed7b3cca7415188ee34d1895c1d2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0782ed7b3cca7415188ee34d1895c1d2">GetIsReadValue</a> ()=0</td></tr>
+<tr class="memdesc:a0782ed7b3cca7415188ee34d1895c1d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ Ð¿ÑÐ¾ÑÐ¸ÑÐ°Ð»Ð¾ÑÑ Ð»Ð¸ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ðµ Ð¿Ð°ÑÐ°Ð¼ÐµÑÑÐ° Ð¸Ð· Ð°ÑÐ³ÑÐ¼ÐµÐ½ÑÐ¾Ð² ÐºÐ¾Ð½ÑÐ¾Ð»Ð¸ Ð¸Ð»Ð¸ ÐºÐ¾Ð½ÑÐ¸Ð³ ÑÐ°Ð¹Ð»Ð°  <br /></td></tr>
+<tr class="memitem:af5e998bfb625fcfc599e94573c8c1084" id="r_af5e998bfb625fcfc599e94573c8c1084"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5e998bfb625fcfc599e94573c8c1084">SetIsReadValue</a> (bool isReadValue)=0</td></tr>
+<tr class="memdesc:af5e998bfb625fcfc599e94573c8c1084"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÐ°Ð´Ð°ÐµÑ Ð¿ÑÐ¾ÑÐ¸ÑÐ°Ð»Ð¾ÑÑ Ð»Ð¸ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ðµ Ð¿Ð°ÑÐ°Ð¼ÐµÑÑÐ° Ð¸Ð· Ð°ÑÐ³ÑÐ¼ÐµÐ½ÑÐ¾Ð² ÐºÐ¾Ð½ÑÐ¾Ð»Ð¸ Ð¸Ð»Ð¸ ÐºÐ¾Ð½ÑÐ¸Ð³ ÑÐ°Ð¹Ð»Ð°  <br /></td></tr>
+<tr class="memitem:ac32b75b87d6d36b402df0f01e45806ac" id="r_ac32b75b87d6d36b402df0f01e45806ac"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac32b75b87d6d36b402df0f01e45806ac">IsFlag</a> ()=0</td></tr>
+<tr class="memdesc:ac32b75b87d6d36b402df0f01e45806ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ð¯Ð²Ð»ÑÐµÑÑÑ Ð»Ð¸ ÑÐ²Ð¾Ð¹ÑÑÐ²Ð¾ ÑÐ»Ð°Ð³Ð¾Ð¼, Ð¸ Ð·Ð°Ð´Ð°Ð²Ð°ÑÑ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ðµ Ð½Ðµ ÑÑÐµÐ±ÑÐµÑÑÑ.  <br /></td></tr>
+<tr class="memitem:a374fa7276790ae1261f6c5043693c1f3" id="r_a374fa7276790ae1261f6c5043693c1f3"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a374fa7276790ae1261f6c5043693c1f3">CheckValue</a> ()=0</td></tr>
+<tr class="memdesc:a374fa7276790ae1261f6c5043693c1f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÑÐ¾Ð²ÐµÑÑÐµÑ Ð¿ÑÐ°Ð²Ð¸Ð»ÑÐ½Ð¾ÑÑÑ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ñ  <br /></td></tr>
+<tr class="memitem:a1dcb2aac22e54dd004ec5fb1b9b8bae0" id="r_a1dcb2aac22e54dd004ec5fb1b9b8bae0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dcb2aac22e54dd004ec5fb1b9b8bae0">SetIsPreChange</a> (bool val)=0</td></tr>
+<tr class="memdesc:a1dcb2aac22e54dd004ec5fb1b9b8bae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ð·Ð°Ð´Ð°ÑÑ ÑÑÐ¾ ÑÐ²Ð¾Ð¹ÑÑÐ²Ð¾ Ð±ÑÐ»Ð¾ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¾ Ð´Ð¾ Ð¸Ð½Ð¸ÑÐ¸Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¸  <br /></td></tr>
+<tr class="memitem:ab080656dbfd4e0182bd313f21778f484" id="r_ab080656dbfd4e0182bd313f21778f484"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab080656dbfd4e0182bd313f21778f484">IsPreChange</a> ()=0</td></tr>
+<tr class="memdesc:ab080656dbfd4e0182bd313f21778f484"><td class="mdescLeft">&#160;</td><td class="mdescRight">ÐÑÐ»Ð¾ Ð»Ð¸ ÑÐ²Ð¾Ð¹ÑÑÐ²Ð¾ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¾ Ð´Ð¾ Ð¸Ð½Ð¸ÑÐ¸Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¸  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+ÐÑÐºÑÑÑÑÐµ Ð°ÑÑÐ¸Ð±ÑÑÑ</h2></td></tr>
+<tr class="memitem:ac0c14b1486a1b31e03eb800db585b029" id="r_ac0c14b1486a1b31e03eb800db585b029"><td class="memItemLeft" align="right" valign="top"><a id="ac0c14b1486a1b31e03eb800db585b029" name="ac0c14b1486a1b31e03eb800db585b029"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsEdit</b> = false</td></tr>
+<tr class="memdesc:ac0c14b1486a1b31e03eb800db585b029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ð±ÑÐ´ÐµÑ Ð»Ð¸ ÑÐµÐ´Ð°ÐºÑÐ¸ÑÐ¾Ð²Ð°ÑÑÑÑ (Ð·Ð°Ð²Ð¸ÑÐ¸Ñ Ð¾Ñ ÐºÐ¾Ð½ÑÐ¸Ð³ÑÑÐ°ÑÐ¸Ð¸) <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">ÐÐ¾Ð´ÑÐ¾Ð±Ð½Ð¾Ðµ Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ðµ</h2>
+<div class="textblock"><p>ÐÐ½ÑÐµÑÑÐµÐ¹ Ð±Ð°Ð·Ð¾Ð²Ð¾Ð³Ð¾ ÐºÐ»Ð°ÑÑÐ° Ð¸Ð¼ÐµÑÑÐµÐ³Ð¾ Ð¸Ð¼Ñ Ð¸ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ðµ </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">ÐÐµÑÐ¾Ð´Ñ</h2>
+<a id="a374fa7276790ae1261f6c5043693c1f3" name="a374fa7276790ae1261f6c5043693c1f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374fa7276790ae1261f6c5043693c1f3">&#9670;&#160;</a></span>CheckValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int IBaseValueClass::CheckValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÑÐ¾Ð²ÐµÑÑÐµÑ Ð¿ÑÐ°Ð²Ð¸Ð»ÑÐ½Ð¾ÑÑÑ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ñ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">tGetter&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">tSetter&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_typed_property.html#a3211d5c02a7329559d7b0872d92463cf">TypedProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ac280d999279651871e67e54eb728ff04" name="ac280d999279651871e67e54eb728ff04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac280d999279651871e67e54eb728ff04">&#9670;&#160;</a></span>Copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IBaseValueClass::Copy </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ¾Ð¿Ð¸ÑÑÐµÑ Ð´Ð°Ð½Ð½ÑÐµ Ð¸Ð· ÑÐºÐ°Ð·Ð°ÑÐµÐ»Ñ Ð² ÑÑÐ¾Ñ Ð¾Ð±ÑÐµÐºÑ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">tGetter&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">tSetter&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_typed_property.html#a7fd25ee46df7850933bea90916d4ab2b">TypedProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="aa56ef9502385f90780ab67d8a303de05" name="aa56ef9502385f90780ab67d8a303de05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa56ef9502385f90780ab67d8a303de05">&#9670;&#160;</a></span>FromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IBaseValueClass::FromString </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ¾Ð»ÑÑÐµÐ½Ð¸Ðµ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ñ Ð¸Ð· ÑÑÑÐ¾ÐºÐ¸ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#afac10f25f8af3a87554ac43cf6edb222">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a306fe7bf2ab48d737ec079f7c2496f78" name="a306fe7bf2ab48d737ec079f7c2496f78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a306fe7bf2ab48d737ec079f7c2496f78">&#9670;&#160;</a></span>GetCurrentStringValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string IBaseValueClass::GetCurrentStringValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ ÑÐµÐºÑÑÐµÐ³Ð¾ ÑÐ¾ÑÑÐ¾ÑÐ½Ð¸Ñ Ð¿Ð°ÑÐ°Ð¼ÐµÑÑÐ° </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#ad8a3d25d14e25918b1f0b757517a475e">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a2c8f346102bf9b1453545f389837d5b9" name="a2c8f346102bf9b1453545f389837d5b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c8f346102bf9b1453545f389837d5b9">&#9670;&#160;</a></span>GetHelp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string IBaseValueClass::GetHelp </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ð¢ÐµÐºÑÑ ÑÐ¿ÑÐ°Ð²ÐºÐ¸ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#add33a5e4660f7bd9929307b3aa64d56d">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a7f40324a7ecde3251bf1f033661e4727" name="a7f40324a7ecde3251bf1f033661e4727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f40324a7ecde3251bf1f033661e4727">&#9670;&#160;</a></span>GetHelpString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string IBaseValueClass::GetHelpString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ ÑÐ¿ÑÐ°Ð²ÐºÑ Ð¿Ð¾ ÑÐ²Ð¾Ð¹ÑÑÐ²Ñ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#a772ea70843073baa23c393b9b34bfbc8">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a0782ed7b3cca7415188ee34d1895c1d2" name="a0782ed7b3cca7415188ee34d1895c1d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0782ed7b3cca7415188ee34d1895c1d2">&#9670;&#160;</a></span>GetIsReadValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IBaseValueClass::GetIsReadValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ Ð¿ÑÐ¾ÑÐ¸ÑÐ°Ð»Ð¾ÑÑ Ð»Ð¸ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ðµ Ð¿Ð°ÑÐ°Ð¼ÐµÑÑÐ° Ð¸Ð· Ð°ÑÐ³ÑÐ¼ÐµÐ½ÑÐ¾Ð² ÐºÐ¾Ð½ÑÐ¾Ð»Ð¸ Ð¸Ð»Ð¸ ÐºÐ¾Ð½ÑÐ¸Ð³ ÑÐ°Ð¹Ð»Ð° </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_base_property.html#a03d3a1a2e40141c693c967cdc8ce71bd">BaseProperty&lt; Owner &gt;</a>, <a class="el" href="class_base_property.html#a03d3a1a2e40141c693c967cdc8ce71bd">BaseProperty&lt; BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_base_property.html#a03d3a1a2e40141c693c967cdc8ce71bd">BaseProperty&lt; BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_base_property.html#a03d3a1a2e40141c693c967cdc8ce71bd">BaseProperty&lt; Parameters &gt;</a>, <a class="el" href="class_base_property.html#a03d3a1a2e40141c693c967cdc8ce71bd">BaseProperty&lt; ProblemFromFunctionPointers &gt;</a> Ð¸ <a class="el" href="class_base_property.html#a03d3a1a2e40141c693c967cdc8ce71bd">tCheckValue&lt; Owner &gt;</a>.</p>
+
+</div>
+</div>
+<a id="af95d4d3b1e89f4a2c8724181845e323d" name="af95d4d3b1e89f4a2c8724181845e323d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af95d4d3b1e89f4a2c8724181845e323d">&#9670;&#160;</a></span>GetLink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string IBaseValueClass::GetLink </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ¾ÑÐ¾ÑÐºÐ¾Ðµ Ð¸Ð¼Ñ Ð´Ð»Ñ Ð´Ð¾Ð¼Ð°Ð½Ð´Ð½Ð¾Ð¹ ÑÑÑÐ¾ÐºÐ¸ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#a0c157e6c81ddb36bbb27e8958eb601f5">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a7ba440879d570209b5c4688037b56d86" name="a7ba440879d570209b5c4688037b56d86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ba440879d570209b5c4688037b56d86">&#9670;&#160;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string IBaseValueClass::GetName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ¼Ñ ÑÐ²Ð¾Ð¹ÑÑÐ²Ð° </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#aa469a7f1fa7be815f3fecaa6a3417ad4">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a6d7adf42e8cfdda6eb14ac9246563122" name="a6d7adf42e8cfdda6eb14ac9246563122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d7adf42e8cfdda6eb14ac9246563122">&#9670;&#160;</a></span>GetSeparator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string IBaseValueClass::GetSeparator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ ÑÐ°Ð·Ð´ÐµÐ»Ð¸ÑÐµÐ»Ñ ÑÐ»ÐµÐ¼ÐµÐ½ÑÐ¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð° </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#a80cc8a1443e4689b4780f5546757e285">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a7aeb88b6d66616fd92b757bb0c9fd22e" name="a7aeb88b6d66616fd92b757bb0c9fd22e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aeb88b6d66616fd92b757bb0c9fd22e">&#9670;&#160;</a></span>GetSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int IBaseValueClass::GetSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ Ð Ð°Ð·Ð¼ÐµÑ Ð¼Ð°ÑÑÐ¸Ð²Ð° ÑÐ»ÐµÐ¼ÐµÐ½ÑÐ¾Ð² </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; std::string, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aaca687c3ac5cccbbba71dd646fa0e824">ParameterProperty&lt; std::string, Parameters &gt;</a>, <a class="el" href="class_t_doubles.html#a92aa9d88e636a90b5e16a504d9950594">TDoubles&lt; Owner &gt;</a>, <a class="el" href="class_t_doubles.html#a92aa9d88e636a90b5e16a504d9950594">TDoubles&lt; Parameters &gt;</a>, <a class="el" href="class_t_ints.html#ad285efac3a18573e505dc5491996ab36">TInts&lt; Owner &gt;</a>, <a class="el" href="class_t_ints.html#ad285efac3a18573e505dc5491996ab36">TInts&lt; Parameters &gt;</a> Ð¸ <a class="el" href="class_t_strings.html#ac2ff6056c2f01901a65d2191de2ca245">TStrings&lt; Owner &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a3f32244f59e07bf3191645907c7c0e9a" name="a3f32244f59e07bf3191645907c7c0e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f32244f59e07bf3191645907c7c0e9a">&#9670;&#160;</a></span>GetValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void * IBaseValueClass::GetValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ¾Ð·Ð²ÑÐ°ÑÐ°ÐµÑ ÑÐºÐ°Ð·Ð°ÑÐµÐ»Ñ Ð½Ð° Ð´Ð°Ð½Ð½ÑÐµ ÑÑÐ°Ð½ÑÑÐ¸ÐµÑÑ Ð² Ð¾Ð±ÑÐµÐºÑÐµ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">tGetter&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">tSetter&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_typed_property.html#addd11c30ffa0d7af7a22577ac8234f73">TypedProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ac32b75b87d6d36b402df0f01e45806ac" name="ac32b75b87d6d36b402df0f01e45806ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac32b75b87d6d36b402df0f01e45806ac">&#9670;&#160;</a></span>IsFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IBaseValueClass::IsFlag </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ð¯Ð²Ð»ÑÐµÑÑÑ Ð»Ð¸ ÑÐ²Ð¾Ð¹ÑÑÐ²Ð¾ ÑÐ»Ð°Ð³Ð¾Ð¼, Ð¸ Ð·Ð°Ð´Ð°Ð²Ð°ÑÑ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ðµ Ð½Ðµ ÑÑÐµÐ±ÑÐµÑÑÑ. </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">tGetter&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">tSetter&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_typed_property.html#a6d5abd761ef2e90345196044af3ab35b">TypedProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a43d9baa329ef38a571dc439db8b0fbd7" name="a43d9baa329ef38a571dc439db8b0fbd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43d9baa329ef38a571dc439db8b0fbd7">&#9670;&#160;</a></span>IsNameEqual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IBaseValueClass::IsNameEqual </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ð¡Ð¾Ð²Ð¿Ð°Ð´Ð°ÐµÑ Ð»Ð¸ Ð¸Ð¼Ñ Ð¿Ð°ÑÐ°Ð¼ÐµÑÑÐ° ÑÐ¾ Ð²Ð²ÐµÐ´ÐµÐ½Ð½Ð¾Ð¹ ÑÑÑÐ¾ÐºÐ¾Ð¹ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#ad281abc3117a59e5fb3ef7f2ef06b155">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ab080656dbfd4e0182bd313f21778f484" name="ab080656dbfd4e0182bd313f21778f484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab080656dbfd4e0182bd313f21778f484">&#9670;&#160;</a></span>IsPreChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IBaseValueClass::IsPreChange </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÑÐ»Ð¾ Ð»Ð¸ ÑÐ²Ð¾Ð¹ÑÑÐ²Ð¾ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¾ Ð´Ð¾ Ð¸Ð½Ð¸ÑÐ¸Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¸ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_base_property.html#a0beb8259597e526ab24cd180d4300a71">BaseProperty&lt; Owner &gt;</a>, <a class="el" href="class_base_property.html#a0beb8259597e526ab24cd180d4300a71">BaseProperty&lt; BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_base_property.html#a0beb8259597e526ab24cd180d4300a71">BaseProperty&lt; BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_base_property.html#a0beb8259597e526ab24cd180d4300a71">BaseProperty&lt; Parameters &gt;</a>, <a class="el" href="class_base_property.html#a0beb8259597e526ab24cd180d4300a71">BaseProperty&lt; ProblemFromFunctionPointers &gt;</a> Ð¸ <a class="el" href="class_base_property.html#a0beb8259597e526ab24cd180d4300a71">tCheckValue&lt; Owner &gt;</a>.</p>
+
+</div>
+</div>
+<a id="acb981657311f2f6ea36c7aba35ea9033" name="acb981657311f2f6ea36c7aba35ea9033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb981657311f2f6ea36c7aba35ea9033">&#9670;&#160;</a></span>SetHelp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IBaseValueClass::SetHelp </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>help</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ð¢ÐµÐºÑÑ ÑÐ¿ÑÐ°Ð²ÐºÐ¸ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#ae785f9545a8c12c6cdb51ee57b9691ee">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a1dcb2aac22e54dd004ec5fb1b9b8bae0" name="a1dcb2aac22e54dd004ec5fb1b9b8bae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dcb2aac22e54dd004ec5fb1b9b8bae0">&#9670;&#160;</a></span>SetIsPreChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IBaseValueClass::SetIsPreChange </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ð·Ð°Ð´Ð°ÑÑ ÑÑÐ¾ ÑÐ²Ð¾Ð¹ÑÑÐ²Ð¾ Ð±ÑÐ»Ð¾ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¾ Ð´Ð¾ Ð¸Ð½Ð¸ÑÐ¸Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ð¸ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_base_property.html#ad508fdf74a83c19fdd9e9cac3f0f871f">BaseProperty&lt; Owner &gt;</a>, <a class="el" href="class_base_property.html#ad508fdf74a83c19fdd9e9cac3f0f871f">BaseProperty&lt; BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_base_property.html#ad508fdf74a83c19fdd9e9cac3f0f871f">BaseProperty&lt; BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_base_property.html#ad508fdf74a83c19fdd9e9cac3f0f871f">BaseProperty&lt; Parameters &gt;</a>, <a class="el" href="class_base_property.html#ad508fdf74a83c19fdd9e9cac3f0f871f">BaseProperty&lt; ProblemFromFunctionPointers &gt;</a> Ð¸ <a class="el" href="class_base_property.html#ad508fdf74a83c19fdd9e9cac3f0f871f">tCheckValue&lt; Owner &gt;</a>.</p>
+
+</div>
+</div>
+<a id="af5e998bfb625fcfc599e94573c8c1084" name="af5e998bfb625fcfc599e94573c8c1084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5e998bfb625fcfc599e94573c8c1084">&#9670;&#160;</a></span>SetIsReadValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IBaseValueClass::SetIsReadValue </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isReadValue</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ°Ð´Ð°ÐµÑ Ð¿ÑÐ¾ÑÐ¸ÑÐ°Ð»Ð¾ÑÑ Ð»Ð¸ Ð·Ð½Ð°ÑÐµÐ½Ð¸Ðµ Ð¿Ð°ÑÐ°Ð¼ÐµÑÑÐ° Ð¸Ð· Ð°ÑÐ³ÑÐ¼ÐµÐ½ÑÐ¾Ð² ÐºÐ¾Ð½ÑÐ¾Ð»Ð¸ Ð¸Ð»Ð¸ ÐºÐ¾Ð½ÑÐ¸Ð³ ÑÐ°Ð¹Ð»Ð° </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_base_property.html#aa5f63c6ea00d14904d83e0da3b3685f0">BaseProperty&lt; Owner &gt;</a>, <a class="el" href="class_base_property.html#aa5f63c6ea00d14904d83e0da3b3685f0">BaseProperty&lt; BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_base_property.html#aa5f63c6ea00d14904d83e0da3b3685f0">BaseProperty&lt; BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_base_property.html#aa5f63c6ea00d14904d83e0da3b3685f0">BaseProperty&lt; Parameters &gt;</a>, <a class="el" href="class_base_property.html#aa5f63c6ea00d14904d83e0da3b3685f0">BaseProperty&lt; ProblemFromFunctionPointers &gt;</a> Ð¸ <a class="el" href="class_base_property.html#aa5f63c6ea00d14904d83e0da3b3685f0">tCheckValue&lt; Owner &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a515ab68fa3351eebb7b419733b17d2a1" name="a515ab68fa3351eebb7b419733b17d2a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a515ab68fa3351eebb7b419733b17d2a1">&#9670;&#160;</a></span>SetLink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IBaseValueClass::SetLink </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>link</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ¾ÑÐ¾ÑÐºÐ¾Ðµ Ð¸Ð¼Ñ Ð´Ð»Ñ Ð´Ð¾Ð¼Ð°Ð½Ð´Ð½Ð¾Ð¹ ÑÑÑÐ¾ÐºÐ¸ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#abacc9344158192d22baca3de7254bc5e">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ae911fe9d94f749beb95e2d8c12f296ef" name="ae911fe9d94f749beb95e2d8c12f296ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae911fe9d94f749beb95e2d8c12f296ef">&#9670;&#160;</a></span>SetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IBaseValueClass::SetName </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ¼Ñ ÑÐ²Ð¾Ð¹ÑÑÐ²Ð° </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#a20a7a03f8a7024a49a3edbb9151c8872">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ab3dd6fcbe29298167483e7fcf8144b8c" name="ab3dd6fcbe29298167483e7fcf8144b8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3dd6fcbe29298167483e7fcf8144b8c">&#9670;&#160;</a></span>SetSeparator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IBaseValueClass::SetSeparator </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>separator</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ°Ð´Ð°ÐµÑ ÑÐ°Ð·Ð´ÐµÐ»Ð¸ÑÐµÐ»Ñ ÑÐ»ÐµÐ¼ÐµÐ½ÑÐ¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð° </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#a5d872f6e9748165e92372f7daa09c065">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="abb40142d18be27b5a716cc6e461a5d71" name="abb40142d18be27b5a716cc6e461a5d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb40142d18be27b5a716cc6e461a5d71">&#9670;&#160;</a></span>SetSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IBaseValueClass::SetSize </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ°Ð´Ð°ÐµÑ ÑÐ°Ð·Ð¼ÐµÑ Ð¼Ð°ÑÑÐ¸Ð²Ð° ÑÐ»ÐµÐ¼ÐµÐ½ÑÐ¾Ð² </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; std::string, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#a2d57663ca8cbc5f92d5181f55cbbd567">ParameterProperty&lt; std::string, Parameters &gt;</a>, <a class="el" href="class_t_doubles.html#a3cee6f0eed9d73d9267deaa0235a1dd8">TDoubles&lt; Owner &gt;</a>, <a class="el" href="class_t_doubles.html#a3cee6f0eed9d73d9267deaa0235a1dd8">TDoubles&lt; Parameters &gt;</a>, <a class="el" href="class_t_ints.html#a31e3dad108f7c5875dbb0ab7611248e1">TInts&lt; Owner &gt;</a>, <a class="el" href="class_t_ints.html#a31e3dad108f7c5875dbb0ab7611248e1">TInts&lt; Parameters &gt;</a> Ð¸ <a class="el" href="class_t_strings.html#ab53c1e07e9b407f218c7e36e0499dff9">TStrings&lt; Owner &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a8f4140fb3d9103c6fe088140c7107fb9" name="a8f4140fb3d9103c6fe088140c7107fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f4140fb3d9103c6fe088140c7107fb9">&#9670;&#160;</a></span>SetValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IBaseValueClass::SetValue </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÐ°Ð´Ð°ÐµÑ Ð´Ð°Ð½Ð½ÑÐµ Ð¿ÑÐ¸Ð²Ð¾Ð´Ñ void* Ðº ÑÐ¸Ð¿Ñ Ð¾Ð±ÑÐµÐºÑÐ° </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">tGetter&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">tSetter&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_typed_property.html#a0229a15f3abab171567c6d55cd74545d">TypedProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a1063d00942a2c2ca78784442ded2fdd3" name="a1063d00942a2c2ca78784442ded2fdd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1063d00942a2c2ca78784442ded2fdd3">&#9670;&#160;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string IBaseValueClass::ToString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ÐÑÐ¸Ð²Ð¾Ð´Ð¸Ñ Ðº ÑÑÑÐ¾ÐºÐµ </p>
+
+<p>ÐÐ°Ð¼ÐµÑÐ°ÐµÑÑÑ Ð² <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; Type, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; bool, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; bool, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; bool, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; bool, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; bool, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; double *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; double *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; double, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; double, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ELocalMethodScheme, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ELocalMethodScheme, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ELocalTuningType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ELocalTuningType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; EMapType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; EMapType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ESeparableMethodType, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ESeparableMethodType, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; EStopCondition, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; EStopCondition, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeAddLocalPoint, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeAddLocalPoint, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeCalculation, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeCalculation, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeDistributionStartingPoints, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeDistributionStartingPoints, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeLocalMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeLocalMinInterval, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeMethod, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeProcess, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeProcess, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeSolver, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeSolver, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; ETypeStartLocalMethod, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; int *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; int *, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; int, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; int, Parameters &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; int, ProblemFromFunctionPointers &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; std::string *, Owner &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; std::string, BaseParameters&lt; Parameters &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; std::string, BaseParameters&lt; ProblemFromFunctionPointers &gt; &gt;</a>, <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; std::string, Owner &gt;</a> Ð¸ <a class="el" href="class_parameter_property.html#aecc708e6367c4b0e098e6423a2080cf9">ParameterProperty&lt; std::string, Parameters &gt;</a>.</p>
+
+</div>
+</div>
+<hr/>ÐÐ±ÑÑÐ²Ð»ÐµÐ½Ð¸Ñ Ð¸ Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ñ ÑÐ»ÐµÐ½Ð¾Ð² ÐºÐ»Ð°ÑÑÐ° Ð½Ð°ÑÐ¾Ð´ÑÑÑÑ Ð² ÑÐ°Ð¹Ð»Ðµ:<ul>
+<li>globalizer/parameters/include/<a class="el" href="_property_8h_source.html">Property.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¾ ÑÐ¸ÑÑÐµÐ¼Ð¾Ð¹&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
