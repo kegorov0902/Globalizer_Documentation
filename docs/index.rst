@@ -13,6 +13,4 @@ Welcome to Globalizer documentation! Globalizer is an optimisation tool.
    :maxdepth: 2
    :caption: Contents:
 
-   html/_base_interval_8h_source
-   html/_base_parameters_8h
    html/class_solver
