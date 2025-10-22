@@ -1,0 +1,14 @@
+.. meta::8a82cfe33fc5cd87f513a81ada8a3670c841f872dfbd609a882d901fb1c12b506dc012dc22384628a446b705becefc140dc112b00ea9cec35fa6ff6074ed2e4c
+
+:orphan:
+
+.. title:: Globalizer: Содержание директории third_party/Problems/Problems/stronginC3
+
+Содержание директории third\_party/Problems/Problems/stronginC3
+===============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_606bd301c29aa86d179a945c202daf7b.html

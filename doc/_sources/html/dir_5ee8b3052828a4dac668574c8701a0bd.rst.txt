@@ -1,0 +1,14 @@
+.. meta::6c800f51d2611c7c391b66916191d6b092341a5ad506afb8c58779ca9bacb1a26b573cbd18a8a0b68ee9dc733abd7141db1ccf0739001e3bdd684b2400886ec0
+
+:orphan:
+
+.. title:: Globalizer: Содержание директории globalizer/method/local_method
+
+Содержание директории globalizer/method/local\_method
+=====================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_5ee8b3052828a4dac668574c8701a0bd.html

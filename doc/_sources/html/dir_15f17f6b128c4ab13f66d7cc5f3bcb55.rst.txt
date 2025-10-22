@@ -1,0 +1,14 @@
+.. meta::cea482f38e4652b6d346dc87ded5e6f2fff076819da8b2de26d7f0d4d8deabeaa537df66da83ce110c07eec048243c5c33f7d285ce489fc50bddb62b57ddfc62
+
+:orphan:
+
+.. title:: Globalizer: Содержание директории lib/mpi_stub/src
+
+Содержание директории lib/mpi\_stub/src
+=======================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_15f17f6b128c4ab13f66d7cc5f3bcb55.html

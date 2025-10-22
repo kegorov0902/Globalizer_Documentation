@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Globalizer: Исходный файл globalizer/output_system/include/Messages.h &#8212; документация Globalizer 141025</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=799f848e"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=cd1d70c9"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="globalizer-output-system-include-messages-h">
+<h1>Исходный файл globalizer/output_system/include/Messages.h<a class="headerlink" href="#globalizer-output-system-include-messages-h" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="doxygen-content docutils container">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Исходный файл globalizer/output_system/include/Messages.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_2922e673acdab09499a7633b88aa1b94.html">globalizer</a></li><li class="navelem"><a href="dir_1752d92bbd03b06882412b58d88fb4da.html">output_system</a></li><li class="navelem"><a href="dir_811bb0412fd50f3d68bd8d2161faaef0.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">Messages.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//                                                                         //</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//             LOBACHEVSKY STATE UNIVERSITY OF NIZHNY NOVGOROD             //</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//                                                                         //</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//                       Copyright (c) 2013 by UNN.                        //</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//                          All Rights Reserved.                           //</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//                                                                         //</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//  File:      messages.h                                                  //</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//                                                                         //</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  Purpose:   Header file for method class                                //</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//                                                                         //</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//  Author(s): Sysoyev A., Barkalov K.                                     //</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//                                                                         //</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifndef __MESSAGES_H__</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define __MESSAGES_H__</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;mpi.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;OutputSystem.h&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define SYSTEM_OK          0</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#define SYSTEM_CRASH       1</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define ERROR_ARGUMENT_SIZE -1</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#define ERROR_DIM_IN_TASK_LEVEL -2</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// ------------------------------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_output_message.html">   41</a></span><span class="keyword">class </span><a class="code hl_function" href="class_output_message.html#af60b753a83ab519815a84b6720c30c56">OutputMessage</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_output_message.html#a8c00613e0660084c90a6f2636dea5ed7">   45</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_output_message.html#a8c00613e0660084c90a6f2636dea5ed7">mIsInit</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_output_message.html#a87b0ba90fd35a305d5e8c443510402ed">   47</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_output_message.html#a87b0ba90fd35a305d5e8c443510402ed">mIsMPIInit</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_output_message.html#a708f9af70a52f4e2eadf885c61041958">   49</a></span>  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_output_message.html#a708f9af70a52f4e2eadf885c61041958">mProcessCount</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_output_message.html#a59e8fc4052e02a67f3691acafad87cac">   51</a></span>  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_output_message.html#a59e8fc4052e02a67f3691acafad87cac">mProcessNumber</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_output_message.html#ac803373bbd4e7e17eb75b86fd628c427">   53</a></span>  <span class="keyword">static</span> std::vector&lt;bool&gt; <a class="code hl_variable" href="class_output_message.html#ac803373bbd4e7e17eb75b86fd628c427">mIsPrintToFile</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_output_message.html#ad700424b37aebfe2a0cb09b9f1c80105">   58</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_output_message.html#ad700424b37aebfe2a0cb09b9f1c80105">mOldIsPrintToFile</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_output_message.html#af7afe458c8ff0b25f5f3649759b35caa">   60</a></span>  <span class="keyword">static</span> std::string* <a class="code hl_variable" href="class_output_message.html#af7afe458c8ff0b25f5f3649759b35caa">mErrorsName</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_output_message.html#a94278285fe73a533391f227dd2ebd510">   62</a></span>  <span class="keyword">static</span> <span class="keywordtype">int</span>* <a class="code hl_variable" href="class_output_message.html#a94278285fe73a533391f227dd2ebd510">mErrorsCode</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_output_message.html#a64a2864432f1db5dc5d9a721e99e5e4b">   64</a></span>  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_output_message.html#a64a2864432f1db5dc5d9a721e99e5e4b">mErrorsCount</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_output_message.html#a1995e11c9b32ac30d2a4976f734207fc">   66</a></span>  <span class="keyword">static</span> std::vector&lt;std::string&gt; <a class="code hl_variable" href="class_output_message.html#a1995e11c9b32ac30d2a4976f734207fc">mLogFileName</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_output_message.html#abc281f9ae59b77d50019ce926cb4e34f">   68</a></span>  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_output_message.html#abc281f9ae59b77d50019ce926cb4e34f">rootNumber</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_output_message.html#aa89fd6e5989e1ec377a3e1bd0d49fd52">   70</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="class_output_message.html#aa89fd6e5989e1ec377a3e1bd0d49fd52">mPrintPocessNumber</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_output_message.html#a8d5d6400da58f5f06f916d06e8e8d2cd">   72</a></span>  std::string <a class="code hl_variable" href="class_output_message.html#a8d5d6400da58f5f06f916d06e8e8d2cd">output</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_output_message.html#a73c5c8abdd1794ce69bb2338588e46ba">   74</a></span>  <span class="keyword">static</span> std::vector&lt;std::fstream*&gt; <a class="code hl_variable" href="class_output_message.html#a73c5c8abdd1794ce69bb2338588e46ba">mLogOutputStream</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_output_message.html#a5072cc2a3876db49cdfd2f7ab32ce26c">   76</a></span>  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_output_message.html#a5072cc2a3876db49cdfd2f7ab32ce26c">streamCount</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_output_message.html#ab60aeea77f671ad7e5e33298f7888235">   78</a></span>  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_output_message.html#ab60aeea77f671ad7e5e33298f7888235">ImportantMessageNumber</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_output_message.html#a102283b6cab060fb3e0100572ca0c72d">   80</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_output_message.html#a102283b6cab060fb3e0100572ca0c72d">mIsPrintToConsole</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_output_message.html#a6c318eb7aae40e3faac6666130e366d3">SetDefaultErrors</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_output_message.html#abd5625f95d46dbc108c9978d6667ab54">Print</a>(<span class="keyword">const</span> T&amp; value);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_output_message.html#ac91663b6645a1f70732c94b7a8d1a8b7">ImportantMessageAppears</a>(std::string importantMessageFile = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_output_message.html#af37cb56656865d6db4d53b8cd5502d4d">ImportantMessageEnded</a>();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <a class="code hl_function" href="class_output_message.html#af60b753a83ab519815a84b6720c30c56">OutputMessage</a>(<span class="keywordtype">int</span> printPocessNumber = -1);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <a class="code hl_function" href="class_output_message.html#af60b753a83ab519815a84b6720c30c56">OutputMessage</a>(<span class="keywordtype">bool</span> printInRoot);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_output_message.html#a5cbc7dc7db0b34cb3abb0a2f4d1bc6ee">Init</a>(<span class="keywordtype">bool</span> isMPIInit = <span class="keyword">false</span>, std::string <a class="code hl_variable" href="class_output_message.html#a1995e11c9b32ac30d2a4976f734207fc">mLogFileName</a> = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">int</span> processCount = 1,</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">int</span> processNumber = 0, <span class="keywordtype">bool</span> isPrintToFile = <span class="keyword">false</span>, std::string* errorsName = 0,</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">int</span>* errorsCode = 0, <span class="keywordtype">int</span> errorsCount = 0);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keyword">static</span> std::string <a class="code hl_function" href="class_output_message.html#a5de9d6abb4676288903b86495a096d57">ErrorName</a>(<span class="keywordtype">int</span> error);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_output_message.html#ac0d2365377b1f9d8299bf369c78cd1ad">PrintError</a>(<span class="keywordtype">int</span> error, std::string file, <span class="keywordtype">int</span> line, std::string expression);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_output_message.html#a49909724a4d1a27355ff32135b54f5c5">PrintImportantMessage</a>(std::string expression, std::string file = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">int</span> line = -1,</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    std::string fileName = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_output_message.html#a73da456716b27fbbaa38353ed050a9cc">PrintMessageToFile</a>(std::string expression, std::string file = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">int</span> line = -1,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    std::string fileName = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_output_message.html#a653f41884418c6a17150c2be3d9b84c7">OpenFileStream</a>(std::string fileName = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_output_message.html#a2a63dec292c06f2165f6e73fb9643c5b">BreakFileStream</a>(std::string fileName = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="keyword">friend</span> <span class="keyword">inline</span> <a class="code hl_function" href="class_output_message.html#af60b753a83ab519815a84b6720c30c56">OutputMessage</a>&amp; <a class="code hl_friend" href="class_output_message.html#a24fe53bfc795c12c5a7fb44653b018f2">operator&lt;&lt;</a>(<a class="code hl_function" href="class_output_message.html#af60b753a83ab519815a84b6720c30c56">OutputMessage</a>&amp; incomingHelper, <span class="keyword">const</span> T&amp; value);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>};</div>
+</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">// ------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span></div>
+<div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_output_message.html#a24fe53bfc795c12c5a7fb44653b018f2">  135</a></span><a class="code hl_function" href="class_output_message.html#af60b753a83ab519815a84b6720c30c56">OutputMessage</a>&amp; <a class="code hl_friend" href="class_output_message.html#a24fe53bfc795c12c5a7fb44653b018f2">operator&lt;&lt;</a>(<a class="code hl_function" href="class_output_message.html#af60b753a83ab519815a84b6720c30c56">OutputMessage</a>&amp; incomingHelper, <span class="keyword">const</span> T&amp; value)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>{</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keywordflow">if</span> (!incomingHelper.<a class="code hl_variable" href="class_output_message.html#a8c00613e0660084c90a6f2636dea5ed7">mIsInit</a>)</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    incomingHelper.<a class="code hl_variable" href="class_output_message.html#a8d5d6400da58f5f06f916d06e8e8d2cd">output</a> = incomingHelper.<a class="code hl_variable" href="class_output_message.html#a8d5d6400da58f5f06f916d06e8e8d2cd">output</a> + toString(value);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordflow">if</span> (incomingHelper.<a class="code hl_variable" href="class_output_message.html#a8d5d6400da58f5f06f916d06e8e8d2cd">output</a> != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      incomingHelper.<a class="code hl_function" href="class_output_message.html#abd5625f95d46dbc108c9978d6667ab54">Print</a>(incomingHelper.<a class="code hl_variable" href="class_output_message.html#a8d5d6400da58f5f06f916d06e8e8d2cd">output</a>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      incomingHelper.<a class="code hl_variable" href="class_output_message.html#a8d5d6400da58f5f06f916d06e8e8d2cd">output</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">if</span> ((incomingHelper.<a class="code hl_variable" href="class_output_message.html#aa89fd6e5989e1ec377a3e1bd0d49fd52">mPrintPocessNumber</a> == incomingHelper.<a class="code hl_variable" href="class_output_message.html#a59e8fc4052e02a67f3691acafad87cac">mProcessNumber</a>) ||</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      (!incomingHelper.<a class="code hl_variable" href="class_output_message.html#a87b0ba90fd35a305d5e8c443510402ed">mIsMPIInit</a>))</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      incomingHelper.<a class="code hl_function" href="class_output_message.html#abd5625f95d46dbc108c9978d6667ab54">Print</a>(value);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (incomingHelper.<a class="code hl_variable" href="class_output_message.html#aa89fd6e5989e1ec377a3e1bd0d49fd52">mPrintPocessNumber</a> == -1)<span class="comment">//нужно доделать</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      incomingHelper.<a class="code hl_function" href="class_output_message.html#abd5625f95d46dbc108c9978d6667ab54">Print</a>(value);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="keywordflow">return</span> incomingHelper;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>}</div>
+</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">// ------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span></div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="class_output_message.html#abd5625f95d46dbc108c9978d6667ab54">  164</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_output_message.html#abd5625f95d46dbc108c9978d6667ab54">OutputMessage::Print</a>(<span class="keyword">const</span> T&amp; value)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>{</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_output_message.html#ac803373bbd4e7e17eb75b86fd628c427">mIsPrintToFile</a>[0])</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">#ifdef _DEBUG</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    print_dbg_file &lt;&lt; value;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; <a class="code hl_variable" href="class_output_message.html#a5072cc2a3876db49cdfd2f7ab32ce26c">streamCount</a>; i++)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordflow">if</span> ((<a class="code hl_variable" href="class_output_message.html#a1995e11c9b32ac30d2a4976f734207fc">mLogFileName</a>[i] != <span class="stringliteral">&quot;&quot;</span>) &amp;&amp; (<a class="code hl_variable" href="class_output_message.html#ac803373bbd4e7e17eb75b86fd628c427">mIsPrintToFile</a>[i]))</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_output_message.html#a73c5c8abdd1794ce69bb2338588e46ba">mLogOutputStream</a>[i]-&gt;is_open())</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <a class="code hl_variable" href="class_output_message.html#a73c5c8abdd1794ce69bb2338588e46ba">mLogOutputStream</a>[i]-&gt;open(<a class="code hl_variable" href="class_output_message.html#a1995e11c9b32ac30d2a4976f734207fc">mLogFileName</a>[i].c_str(), std::fstream::out);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      *(<a class="code hl_variable" href="class_output_message.html#a73c5c8abdd1794ce69bb2338588e46ba">mLogOutputStream</a>[i]) &lt;&lt; value;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_output_message.html#a102283b6cab060fb3e0100572ca0c72d">mIsPrintToConsole</a>)</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    print &lt;&lt; value;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>}</div>
+</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">// ------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keyword">extern</span> <a class="code hl_class" href="class_output_message.html">OutputMessage</a> printMessage;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="keyword">extern</span> <a class="code hl_class" href="class_output_message.html">OutputMessage</a> printMessageInFirstProcess;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="keyword">extern</span> <a class="code hl_class" href="class_output_message.html">OutputMessage</a> printMessageInRoot;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment">// ------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">#define O_TO_S(x) #x</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">#define _ERROR_(errorCode) \</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">OutputMessage::PrintError(errorCode,__FILE__,__LINE__,O_TO_S(errorCode!=SYSTEM_OK));</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">#define _ASSERT_ERROR_CODE_(errorCode) if(errorCode!=SYSTEM_OK) \</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">OutputMessage::PrintError(errorCode,__FILE__,__LINE__,O_TO_S(errorCode!=SYSTEM_OK));</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">#define _ASSERT_(expression) if(expression==false) \</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">OutputMessage::PrintError(1,__FILE__,__LINE__,O_TO_S(expression));</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="preprocessor">#define _IMPORTANT_MESSAGE_(message) \</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="preprocessor">OutputMessage::PrintImportantMessage(toString(message),__FILE__,__LINE__);</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="preprocessor">#endif </span><span class="comment">//__MESSAGES_H__</span></div>
+<div class="ttc" id="aclass_output_message_html"><div class="ttname"><a href="class_output_message.html">OutputMessage</a></div><div class="ttdoc">Базовый класс, реализует вывод на консоль информации, в debug версии также печатает в файл Инициализи...</div><div class="ttdef"><b>Определения</b> Messages.h:42</div></div>
+<div class="ttc" id="aclass_output_message_html_a102283b6cab060fb3e0100572ca0c72d"><div class="ttname"><a href="class_output_message.html#a102283b6cab060fb3e0100572ca0c72d">OutputMessage::mIsPrintToConsole</a></div><div class="ttdeci">static bool mIsPrintToConsole</div><div class="ttdoc">Печатать ли на конслоь</div><div class="ttdef"><b>Определения</b> Messages.h:80</div></div>
+<div class="ttc" id="aclass_output_message_html_a1995e11c9b32ac30d2a4976f734207fc"><div class="ttname"><a href="class_output_message.html#a1995e11c9b32ac30d2a4976f734207fc">OutputMessage::mLogFileName</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; mLogFileName</div><div class="ttdoc">Имя лог файла</div><div class="ttdef"><b>Определения</b> Messages.h:66</div></div>
+<div class="ttc" id="aclass_output_message_html_a24fe53bfc795c12c5a7fb44653b018f2"><div class="ttname"><a href="class_output_message.html#a24fe53bfc795c12c5a7fb44653b018f2">OutputMessage::operator&lt;&lt;</a></div><div class="ttdeci">friend OutputMessage &amp; operator&lt;&lt;(OutputMessage &amp;incomingHelper, const T &amp;value)</div><div class="ttdoc">Вывод сообщений</div><div class="ttdef"><b>Определения</b> Messages.h:135</div></div>
+<div class="ttc" id="aclass_output_message_html_a2a63dec292c06f2165f6e73fb9643c5b"><div class="ttname"><a href="class_output_message.html#a2a63dec292c06f2165f6e73fb9643c5b">OutputMessage::BreakFileStream</a></div><div class="ttdeci">static void BreakFileStream(std::string fileName=&quot;&quot;)</div><div class="ttdoc">Прервать печать в файл</div><div class="ttdef"><b>Определения</b> Messages.cpp:310</div></div>
+<div class="ttc" id="aclass_output_message_html_a49909724a4d1a27355ff32135b54f5c5"><div class="ttname"><a href="class_output_message.html#a49909724a4d1a27355ff32135b54f5c5">OutputMessage::PrintImportantMessage</a></div><div class="ttdeci">static void PrintImportantMessage(std::string expression, std::string file=&quot;&quot;, int line=-1, std::string fileName=&quot;&quot;)</div><div class="ttdoc">Печать важного сообщения</div><div class="ttdef"><b>Определения</b> Messages.cpp:184</div></div>
+<div class="ttc" id="aclass_output_message_html_a5072cc2a3876db49cdfd2f7ab32ce26c"><div class="ttname"><a href="class_output_message.html#a5072cc2a3876db49cdfd2f7ab32ce26c">OutputMessage::streamCount</a></div><div class="ttdeci">static int streamCount</div><div class="ttdoc">Количество потоков вывода</div><div class="ttdef"><b>Определения</b> Messages.h:76</div></div>
+<div class="ttc" id="aclass_output_message_html_a59e8fc4052e02a67f3691acafad87cac"><div class="ttname"><a href="class_output_message.html#a59e8fc4052e02a67f3691acafad87cac">OutputMessage::mProcessNumber</a></div><div class="ttdeci">static int mProcessNumber</div><div class="ttdoc">Номер текущего процесса</div><div class="ttdef"><b>Определения</b> Messages.h:51</div></div>
+<div class="ttc" id="aclass_output_message_html_a5cbc7dc7db0b34cb3abb0a2f4d1bc6ee"><div class="ttname"><a href="class_output_message.html#a5cbc7dc7db0b34cb3abb0a2f4d1bc6ee">OutputMessage::Init</a></div><div class="ttdeci">static void Init(bool isMPIInit=false, std::string mLogFileName=&quot;&quot;, int processCount=1, int processNumber=0, bool isPrintToFile=false, std::string *errorsName=0, int *errorsCode=0, int errorsCount=0)</div><div class="ttdoc">Инициализация систем вывода</div><div class="ttdef"><b>Определения</b> Messages.cpp:74</div></div>
+<div class="ttc" id="aclass_output_message_html_a5de9d6abb4676288903b86495a096d57"><div class="ttname"><a href="class_output_message.html#a5de9d6abb4676288903b86495a096d57">OutputMessage::ErrorName</a></div><div class="ttdeci">static std::string ErrorName(int error)</div><div class="ttdoc">Приводит код ошибки к описанию</div><div class="ttdef"><b>Определения</b> Messages.cpp:142</div></div>
+<div class="ttc" id="aclass_output_message_html_a64a2864432f1db5dc5d9a721e99e5e4b"><div class="ttname"><a href="class_output_message.html#a64a2864432f1db5dc5d9a721e99e5e4b">OutputMessage::mErrorsCount</a></div><div class="ttdeci">static int mErrorsCount</div><div class="ttdoc">Число ошибок</div><div class="ttdef"><b>Определения</b> Messages.h:64</div></div>
+<div class="ttc" id="aclass_output_message_html_a653f41884418c6a17150c2be3d9b84c7"><div class="ttname"><a href="class_output_message.html#a653f41884418c6a17150c2be3d9b84c7">OutputMessage::OpenFileStream</a></div><div class="ttdeci">static void OpenFileStream(std::string fileName=&quot;&quot;)</div><div class="ttdoc">Начать печать в файл</div><div class="ttdef"><b>Определения</b> Messages.cpp:269</div></div>
+<div class="ttc" id="aclass_output_message_html_a6c318eb7aae40e3faac6666130e366d3"><div class="ttname"><a href="class_output_message.html#a6c318eb7aae40e3faac6666130e366d3">OutputMessage::SetDefaultErrors</a></div><div class="ttdeci">static void SetDefaultErrors()</div><div class="ttdoc">Устанавливает ошибки по умолчанию</div><div class="ttdef"><b>Определения</b> Messages.cpp:40</div></div>
+<div class="ttc" id="aclass_output_message_html_a708f9af70a52f4e2eadf885c61041958"><div class="ttname"><a href="class_output_message.html#a708f9af70a52f4e2eadf885c61041958">OutputMessage::mProcessCount</a></div><div class="ttdeci">static int mProcessCount</div><div class="ttdoc">Число процессов</div><div class="ttdef"><b>Определения</b> Messages.h:49</div></div>
+<div class="ttc" id="aclass_output_message_html_a73c5c8abdd1794ce69bb2338588e46ba"><div class="ttname"><a href="class_output_message.html#a73c5c8abdd1794ce69bb2338588e46ba">OutputMessage::mLogOutputStream</a></div><div class="ttdeci">static std::vector&lt; std::fstream * &gt; mLogOutputStream</div><div class="ttdoc">Потоки вывода в файл</div><div class="ttdef"><b>Определения</b> Messages.h:74</div></div>
+<div class="ttc" id="aclass_output_message_html_a73da456716b27fbbaa38353ed050a9cc"><div class="ttname"><a href="class_output_message.html#a73da456716b27fbbaa38353ed050a9cc">OutputMessage::PrintMessageToFile</a></div><div class="ttdeci">static void PrintMessageToFile(std::string expression, std::string file=&quot;&quot;, int line=-1, std::string fileName=&quot;&quot;)</div><div class="ttdoc">Печать сообщения в файл</div><div class="ttdef"><b>Определения</b> Messages.cpp:209</div></div>
+<div class="ttc" id="aclass_output_message_html_a87b0ba90fd35a305d5e8c443510402ed"><div class="ttname"><a href="class_output_message.html#a87b0ba90fd35a305d5e8c443510402ed">OutputMessage::mIsMPIInit</a></div><div class="ttdeci">static bool mIsMPIInit</div><div class="ttdoc">Был ли проинициализирован mpi.</div><div class="ttdef"><b>Определения</b> Messages.h:47</div></div>
+<div class="ttc" id="aclass_output_message_html_a8c00613e0660084c90a6f2636dea5ed7"><div class="ttname"><a href="class_output_message.html#a8c00613e0660084c90a6f2636dea5ed7">OutputMessage::mIsInit</a></div><div class="ttdeci">static bool mIsInit</div><div class="ttdoc">Были ли проинициализированы статические параметры</div><div class="ttdef"><b>Определения</b> Messages.h:45</div></div>
+<div class="ttc" id="aclass_output_message_html_a8d5d6400da58f5f06f916d06e8e8d2cd"><div class="ttname"><a href="class_output_message.html#a8d5d6400da58f5f06f916d06e8e8d2cd">OutputMessage::output</a></div><div class="ttdeci">std::string output</div><div class="ttdoc">строки вывода</div><div class="ttdef"><b>Определения</b> Messages.h:72</div></div>
+<div class="ttc" id="aclass_output_message_html_a94278285fe73a533391f227dd2ebd510"><div class="ttname"><a href="class_output_message.html#a94278285fe73a533391f227dd2ebd510">OutputMessage::mErrorsCode</a></div><div class="ttdeci">static int * mErrorsCode</div><div class="ttdoc">Коды ошибок</div><div class="ttdef"><b>Определения</b> Messages.h:62</div></div>
+<div class="ttc" id="aclass_output_message_html_aa89fd6e5989e1ec377a3e1bd0d49fd52"><div class="ttname"><a href="class_output_message.html#aa89fd6e5989e1ec377a3e1bd0d49fd52">OutputMessage::mPrintPocessNumber</a></div><div class="ttdeci">int mPrintPocessNumber</div><div class="ttdoc">Номер процесса для которого будет выводиться</div><div class="ttdef"><b>Определения</b> Messages.h:70</div></div>
+<div class="ttc" id="aclass_output_message_html_ab60aeea77f671ad7e5e33298f7888235"><div class="ttname"><a href="class_output_message.html#ab60aeea77f671ad7e5e33298f7888235">OutputMessage::ImportantMessageNumber</a></div><div class="ttdeci">static int ImportantMessageNumber</div><div class="ttdoc">Номер потока для вывода важного сообщения</div><div class="ttdef"><b>Определения</b> Messages.h:78</div></div>
+<div class="ttc" id="aclass_output_message_html_abc281f9ae59b77d50019ce926cb4e34f"><div class="ttname"><a href="class_output_message.html#abc281f9ae59b77d50019ce926cb4e34f">OutputMessage::rootNumber</a></div><div class="ttdeci">static int rootNumber</div><div class="ttdoc">Номер главного процесса</div><div class="ttdef"><b>Определения</b> Messages.h:68</div></div>
+<div class="ttc" id="aclass_output_message_html_abd5625f95d46dbc108c9978d6667ab54"><div class="ttname"><a href="class_output_message.html#abd5625f95d46dbc108c9978d6667ab54">OutputMessage::Print</a></div><div class="ttdeci">void Print(const T &amp;value)</div><div class="ttdoc">Функция печати</div><div class="ttdef"><b>Определения</b> Messages.h:164</div></div>
+<div class="ttc" id="aclass_output_message_html_ac0d2365377b1f9d8299bf369c78cd1ad"><div class="ttname"><a href="class_output_message.html#ac0d2365377b1f9d8299bf369c78cd1ad">OutputMessage::PrintError</a></div><div class="ttdeci">static void PrintError(int error, std::string file, int line, std::string expression)</div><div class="ttdoc">Напечатать подробную информацию об ошибке</div><div class="ttdef"><b>Определения</b> Messages.cpp:153</div></div>
+<div class="ttc" id="aclass_output_message_html_ac803373bbd4e7e17eb75b86fd628c427"><div class="ttname"><a href="class_output_message.html#ac803373bbd4e7e17eb75b86fd628c427">OutputMessage::mIsPrintToFile</a></div><div class="ttdeci">static std::vector&lt; bool &gt; mIsPrintToFile</div><div class="ttdoc">Печатать ли в лог файл</div><div class="ttdef"><b>Определения</b> Messages.h:53</div></div>
+<div class="ttc" id="aclass_output_message_html_ac91663b6645a1f70732c94b7a8d1a8b7"><div class="ttname"><a href="class_output_message.html#ac91663b6645a1f70732c94b7a8d1a8b7">OutputMessage::ImportantMessageAppears</a></div><div class="ttdeci">static void ImportantMessageAppears(std::string importantMessageFile=&quot;&quot;)</div><div class="ttdoc">Включает печать в файл</div><div class="ttdef"><b>Определения</b> Messages.cpp:224</div></div>
+<div class="ttc" id="aclass_output_message_html_ad700424b37aebfe2a0cb09b9f1c80105"><div class="ttname"><a href="class_output_message.html#ad700424b37aebfe2a0cb09b9f1c80105">OutputMessage::mOldIsPrintToFile</a></div><div class="ttdeci">static bool mOldIsPrintToFile</div><div class="ttdoc">Печатать ли в лог файл, переменная в которую сохраняется значение флага во время печати важного сообщ...</div><div class="ttdef"><b>Определения</b> Messages.h:58</div></div>
+<div class="ttc" id="aclass_output_message_html_af37cb56656865d6db4d53b8cd5502d4d"><div class="ttname"><a href="class_output_message.html#af37cb56656865d6db4d53b8cd5502d4d">OutputMessage::ImportantMessageEnded</a></div><div class="ttdeci">static void ImportantMessageEnded()</div><div class="ttdoc">Выключает печать в файл если она раньше была выключена</div><div class="ttdef"><b>Определения</b> Messages.cpp:332</div></div>
+<div class="ttc" id="aclass_output_message_html_af60b753a83ab519815a84b6720c30c56"><div class="ttname"><a href="class_output_message.html#af60b753a83ab519815a84b6720c30c56">OutputMessage::OutputMessage</a></div><div class="ttdeci">OutputMessage(int printPocessNumber=-1)</div><div class="ttdef"><b>Определения</b> Messages.cpp:60</div></div>
+<div class="ttc" id="aclass_output_message_html_af7afe458c8ff0b25f5f3649759b35caa"><div class="ttname"><a href="class_output_message.html#af7afe458c8ff0b25f5f3649759b35caa">OutputMessage::mErrorsName</a></div><div class="ttdeci">static std::string * mErrorsName</div><div class="ttdoc">Кописания ошибок</div><div class="ttdef"><b>Определения</b> Messages.h:60</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Globalizer</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_base_interval_8h_source.html">Исходный файл globalizer/method/include/BaseInterval.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_base_parameters_8h.html">Файл globalizer/parameters/include/BaseParameters.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_solver.html">Класс Solver</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, TODO.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/html/_messages_8h_source.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

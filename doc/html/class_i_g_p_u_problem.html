@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Globalizer: Класс IGPUProblem &#8212; документация Globalizer 141025</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=799f848e"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=cd1d70c9"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="igpuproblem">
+<h1>Класс IGPUProblem<a class="headerlink" href="#igpuproblem" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="doxygen-content docutils container">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс IGPUProblem</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_i_g_p_u_problem-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс IGPUProblem</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Базовый класс-интерфейс, от которого наследуются классы, описывающие задачи оптимизации использующие для вычислений GPU.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_problem_interface_8h_source.html">ProblemInterface.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:IGPUProblem:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_i_g_p_u_problem.png" usemap="#IGPUProblem_map" alt=""/>
+  <map id="IGPUProblem_map" name="IGPUProblem_map">
+<area href="class_i_problem.html" title="Базовый класс-интерфейс, от которого наследуются классы, описывающие задачи оптимизации." alt="IProblem" shape="rect" coords="290,0,570,24"/>
+<area href="class_i_integer_programming_problem.html" title="Базовый класс-интерфейс, от которого наследуются классы, описывающие задачи оптимизации с дискретными..." alt="IIntegerProgrammingProblem" shape="rect" coords="290,112,570,136"/>
+<area href="class_base_problem.html" alt="BaseProblem&lt; ProblemFromFunctionPointers &gt;" shape="rect" coords="0,168,280,192"/>
+<area href="class_base_problem.html" title="Базовый класс реализующий основные методы задач" alt="BaseProblem&lt; Owner &gt;" shape="rect" coords="580,168,860,192"/>
+<area href="class_problem.html" alt="Problem&lt; ProblemFromFunctionPointers &gt;" shape="rect" coords="0,224,280,248"/>
+<area href="class_problem_with_constraints.html" alt="ProblemWithConstraints&lt; Owner, Func &gt;" shape="rect" coords="290,224,570,248"/>
+<area href="class_problem.html" title="Основной класс для работы с задачами" alt="Problem&lt; Owner &gt;" shape="rect" coords="580,224,860,248"/>
+<area href="class_problem_with_constraints.html" alt="ProblemWithConstraints&lt; Owner, FType &gt;" shape="rect" coords="870,224,1150,248"/>
+<area href="class_problem_from_function_pointers.html" title="Класс задач принимающий функции как параметры" alt="ProblemFromFunctionPointers" shape="rect" coords="0,280,280,304"/>
+<area href="class_problem_with_mulct_function.html" alt="ProblemWithMulctFunction&lt; Owner, Func &gt;" shape="rect" coords="290,280,570,304"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa63bffa373da4ce01a96236aa5d6caee" id="r_aa63bffa373da4ce01a96236aa5d6caee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa63bffa373da4ce01a96236aa5d6caee">CalculateFunctionals</a> (double *y, int fNumber, int &amp;numPoints, double *values)</td></tr>
+<tr class="memdesc:aa63bffa373da4ce01a96236aa5d6caee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, вычисляющий функции задачи в нескольких точках одновременно  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_i_problem"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_i_problem')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Открытые члены унаследованные от <a class="el" href="class_i_problem.html">IProblem</a></td></tr>
+<tr class="memitem:a1d7d95c5d38878418fe3f0567e549428 inherit pub_methods_class_i_problem" id="r_a1d7d95c5d38878418fe3f0567e549428"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#a1d7d95c5d38878418fe3f0567e549428">SetConfigPath</a> (const std::string &amp;configPath)=0</td></tr>
+<tr class="memdesc:a1d7d95c5d38878418fe3f0567e549428 inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задание пути до конфигурационного файла  <br /></td></tr>
+<tr class="memitem:a800b489c4b04f8d62bdcf7dbf2b061a0 inherit pub_methods_class_i_problem" id="r_a800b489c4b04f8d62bdcf7dbf2b061a0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#a800b489c4b04f8d62bdcf7dbf2b061a0">SetDimension</a> (int dimension)=0</td></tr>
+<tr class="memdesc:a800b489c4b04f8d62bdcf7dbf2b061a0 inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод задаёт размерность задачи  <br /></td></tr>
+<tr class="memitem:aad8897b4bdbb93313d22065dbb1a4d83 inherit pub_methods_class_i_problem" id="r_aad8897b4bdbb93313d22065dbb1a4d83"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#aad8897b4bdbb93313d22065dbb1a4d83">GetDimension</a> () const =0</td></tr>
+<tr class="memdesc:aad8897b4bdbb93313d22065dbb1a4d83 inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает размерность задачи, можно вызывать после <a class="el" href="class_i_problem.html#a64ec620a6609ea40e2ee9f6f22e46f7c" title="Инициализация задачи">Initialize</a>.  <br /></td></tr>
+<tr class="memitem:a64ec620a6609ea40e2ee9f6f22e46f7c inherit pub_methods_class_i_problem" id="r_a64ec620a6609ea40e2ee9f6f22e46f7c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#a64ec620a6609ea40e2ee9f6f22e46f7c">Initialize</a> ()=0</td></tr>
+<tr class="memdesc:a64ec620a6609ea40e2ee9f6f22e46f7c inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация задачи  <br /></td></tr>
+<tr class="memitem:acf4be1b06c1c0f2204de560b863eec7f inherit pub_methods_class_i_problem" id="r_acf4be1b06c1c0f2204de560b863eec7f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#acf4be1b06c1c0f2204de560b863eec7f">GetBounds</a> (double *lower, double *upper)=0</td></tr>
+<tr class="memdesc:acf4be1b06c1c0f2204de560b863eec7f inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает границы области поиска  <br /></td></tr>
+<tr class="memitem:a6040b5003eb137b2edcb3bfdd363a11b inherit pub_methods_class_i_problem" id="r_a6040b5003eb137b2edcb3bfdd363a11b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#a6040b5003eb137b2edcb3bfdd363a11b">GetOptimumValue</a> (double &amp;value) const =0</td></tr>
+<tr class="memdesc:a6040b5003eb137b2edcb3bfdd363a11b inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает значение целевой функции в точке глобального минимума  <br /></td></tr>
+<tr class="memitem:a68b388467724884f0ea16838fb5bd96e inherit pub_methods_class_i_problem" id="r_a68b388467724884f0ea16838fb5bd96e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#a68b388467724884f0ea16838fb5bd96e">GetOptimumValue</a> (double &amp;value, int index) const</td></tr>
+<tr class="memdesc:a68b388467724884f0ea16838fb5bd96e inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает значение функции с номером index в точке глобального минимума  <br /></td></tr>
+<tr class="memitem:accfd49cc22b53f3f6bd8b7db1d198cba inherit pub_methods_class_i_problem" id="r_accfd49cc22b53f3f6bd8b7db1d198cba"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#accfd49cc22b53f3f6bd8b7db1d198cba">GetOptimumPoint</a> (double *y) const =0</td></tr>
+<tr class="memdesc:accfd49cc22b53f3f6bd8b7db1d198cba inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает координаты точки глобального минимума целевой функции  <br /></td></tr>
+<tr class="memitem:afa7d9f0bed948d175c0de5354c55cf9f inherit pub_methods_class_i_problem" id="r_afa7d9f0bed948d175c0de5354c55cf9f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#afa7d9f0bed948d175c0de5354c55cf9f">GetAllOptimumPoint</a> (double *y, int &amp;n) const</td></tr>
+<tr class="memdesc:afa7d9f0bed948d175c0de5354c55cf9f inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает координаты всех точек глобального минимума целевой функции и их количество  <br /></td></tr>
+<tr class="memitem:a9dba2b16c39ed697d58fc4145f612d15 inherit pub_methods_class_i_problem" id="r_a9dba2b16c39ed697d58fc4145f612d15"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#a9dba2b16c39ed697d58fc4145f612d15">GetNumberOfFunctions</a> () const =0</td></tr>
+<tr class="memdesc:a9dba2b16c39ed697d58fc4145f612d15 inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает число общее функций в задаче (оно равно число ограничений + число критериев)  <br /></td></tr>
+<tr class="memitem:a94e24b4656c29ed1a7856d87447d2252 inherit pub_methods_class_i_problem" id="r_a94e24b4656c29ed1a7856d87447d2252"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#a94e24b4656c29ed1a7856d87447d2252">GetNumberOfConstraints</a> () const =0</td></tr>
+<tr class="memdesc:a94e24b4656c29ed1a7856d87447d2252 inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает число ограничений в задаче  <br /></td></tr>
+<tr class="memitem:a2063964a4d1decb95267196a5172554f inherit pub_methods_class_i_problem" id="r_a2063964a4d1decb95267196a5172554f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#a2063964a4d1decb95267196a5172554f">GetNumberOfCriterions</a> () const =0</td></tr>
+<tr class="memdesc:a2063964a4d1decb95267196a5172554f inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает число критериев в задаче  <br /></td></tr>
+<tr class="memitem:a46b6083887f58b4628659121ff8b55b8 inherit pub_methods_class_i_problem" id="r_a46b6083887f58b4628659121ff8b55b8"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_problem.html#a46b6083887f58b4628659121ff8b55b8">CalculateFunctionals</a> (const double *y, int fNumber)</td></tr>
+<tr class="memdesc:a46b6083887f58b4628659121ff8b55b8 inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, вычисляющий функции задачи  <br /></td></tr>
+<tr class="memitem:a616d4d650398567ece4878d73d455739 inherit pub_methods_class_i_problem" id="r_a616d4d650398567ece4878d73d455739"><td class="memItemLeft" align="right" valign="top">
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isOptimal</b> (const double *y, double *minv, double *maxv)</td></tr>
+<tr class="memitem:ac024804a2675c99b41ea992c82666b1b inherit pub_methods_class_i_problem" id="r_ac024804a2675c99b41ea992c82666b1b"><td class="memItemLeft" align="right" valign="top">
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IProblem</b> ()=0</td></tr>
+<tr class="memdesc:ac024804a2675c99b41ea992c82666b1b inherit pub_methods_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_static_attribs_class_i_problem"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_class_i_problem')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Статические открытые данные унаследованные от <a class="el" href="class_i_problem.html">IProblem</a></td></tr>
+<tr class="memitem:ad2d704c38df9196c4ee3d28036ec2c6c inherit pub_static_attribs_class_i_problem" id="r_ad2d704c38df9196c4ee3d28036ec2c6c"><td class="memItemLeft" align="right" valign="top">
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>OK</b> = 0</td></tr>
+<tr class="memdesc:ad2d704c38df9196c4ee3d28036ec2c6c inherit pub_static_attribs_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Код ошибки, возвращаемый, если операция завершена успешно <br /></td></tr>
+<tr class="memitem:a04ba06afacf555f09d03b8e6afb2d8fb inherit pub_static_attribs_class_i_problem" id="r_a04ba06afacf555f09d03b8e6afb2d8fb"><td class="memItemLeft" align="right" valign="top">
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>UNDEFINED</b> = -1</td></tr>
+<tr class="memdesc:a04ba06afacf555f09d03b8e6afb2d8fb inherit pub_static_attribs_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Код ошибки, возвращаемый методами <a class="el" href="class_i_problem.html#a6040b5003eb137b2edcb3bfdd363a11b" title="Метод возвращает значение целевой функции в точке глобального минимума">GetOptimumValue</a> и <a class="el" href="class_i_problem.html#accfd49cc22b53f3f6bd8b7db1d198cba" title="Метод возвращает координаты точки глобального минимума целевой функции">GetOptimumPoint</a>, если соответствующие параметры задачи не определены,. <br /></td></tr>
+<tr class="memitem:a4956a401951b2bff1ec272166bf0f9e9 inherit pub_static_attribs_class_i_problem" id="r_a4956a401951b2bff1ec272166bf0f9e9"><td class="memItemLeft" align="right" valign="top">
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>ERROR</b> = -2</td></tr>
+<tr class="memdesc:a4956a401951b2bff1ec272166bf0f9e9 inherit pub_static_attribs_class_i_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Код ошибки, возвращаемый, если операция не выполнена <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Базовый класс-интерфейс, от которого наследуются классы, описывающие задачи оптимизации использующие для вычислений GPU. </p>
+<p>В классе <a class="el" href="class_i_g_p_u_problem.html" title="Базовый класс-интерфейс, от которого наследуются классы, описывающие задачи оптимизации использующие ...">IGPUProblem</a> описаны прототипы методов, которые должны быть реализованы в подключамых модулях с решением на GPU. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="aa63bffa373da4ce01a96236aa5d6caee" name="aa63bffa373da4ce01a96236aa5d6caee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa63bffa373da4ce01a96236aa5d6caee">&#9670;&#160;</a></span>CalculateFunctionals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IGPUProblem::CalculateFunctionals </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fNumber</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>numPoints</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>values</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод, вычисляющий функции задачи в нескольких точках одновременно </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>массив, содержащий последовательно записанные многомерные точки, в которых необходимо вычислить функционалы задачи </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Номер</td><td>вычисляемой функции </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numPoints</td><td>количество передаваемых точек </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">values</td><td>массив, в который будут записаны вычисленные значения функционалов </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>globalizer/problem/include/<a class="el" href="_problem_interface_8h_source.html">ProblemInterface.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Globalizer</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_base_interval_8h_source.html">Исходный файл globalizer/method/include/BaseInterval.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_base_parameters_8h.html">Файл globalizer/parameters/include/BaseParameters.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_solver.html">Класс Solver</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, TODO.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/html/class_i_g_p_u_problem.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

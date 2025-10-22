@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Globalizer: Шаблон класса MinMaxHeap&amp;lt; T, Compare &amp;gt; &#8212; документация Globalizer 141025</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=799f848e"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=cd1d70c9"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="minmaxheap-lt-t-compare-gt">
+<h1>Шаблон класса MinMaxHeap&amp;lt; T, Compare &amp;gt;<a class="headerlink" href="#minmaxheap-lt-t-compare-gt" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="doxygen-content docutils container">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Шаблон класса MinMaxHeap&lt; T, Compare &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_min_max_heap-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Шаблон класса MinMaxHeap&lt; T, Compare &gt;</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa2413eee670a82dfe26ae656713c08dd" id="r_aa2413eee670a82dfe26ae656713c08dd"><td class="memItemLeft" align="right" valign="top"><a id="aa2413eee670a82dfe26ae656713c08dd" name="aa2413eee670a82dfe26ae656713c08dd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MinMaxHeap</b> (unsigned heapsize)</td></tr>
+<tr class="memitem:aa9ad184e514cd972894792c70aea04c9" id="r_aa9ad184e514cd972894792c70aea04c9"><td class="memItemLeft" align="right" valign="top"><a id="aa9ad184e514cd972894792c70aea04c9" name="aa9ad184e514cd972894792c70aea04c9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="memitem:a1a85bcf73eda0699274d38a940274fa5" id="r_a1a85bcf73eda0699274d38a940274fa5"><td class="memItemLeft" align="right" valign="top"><a id="a1a85bcf73eda0699274d38a940274fa5" name="a1a85bcf73eda0699274d38a940274fa5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const</td></tr>
+<tr class="memitem:a769694f1537c4a2fbfa74f363e808179" id="r_a769694f1537c4a2fbfa74f363e808179"><td class="memItemLeft" align="right" valign="top"><a id="a769694f1537c4a2fbfa74f363e808179" name="a769694f1537c4a2fbfa74f363e808179"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
+<tr class="memitem:ac808aaf4349d4d4b37497cf89181cba2" id="r_ac808aaf4349d4d4b37497cf89181cba2"><td class="memItemLeft" align="right" valign="top"><a id="ac808aaf4349d4d4b37497cf89181cba2" name="ac808aaf4349d4d4b37497cf89181cba2"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><b>push</b> (const T &amp;val)</td></tr>
+<tr class="memitem:afc05492eb50148ae96e3f2dd61a350a4" id="r_afc05492eb50148ae96e3f2dd61a350a4"><td class="memItemLeft" align="right" valign="top"><a id="afc05492eb50148ae96e3f2dd61a350a4" name="afc05492eb50148ae96e3f2dd61a350a4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>TrickleUp</b> (const T *ptr)</td></tr>
+<tr class="memitem:a033f8c54de4687e3f7d22f0699a971a7" id="r_a033f8c54de4687e3f7d22f0699a971a7"><td class="memItemLeft" align="right" valign="top"><a id="a033f8c54de4687e3f7d22f0699a971a7" name="a033f8c54de4687e3f7d22f0699a971a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>TrickleDown</b> (const T *ptr)</td></tr>
+<tr class="memitem:ad8b427ef6275f24fe1986dd5cbc6dbc9" id="r_ad8b427ef6275f24fe1986dd5cbc6dbc9"><td class="memItemLeft" align="right" valign="top"><a id="ad8b427ef6275f24fe1986dd5cbc6dbc9" name="ad8b427ef6275f24fe1986dd5cbc6dbc9"></a>
+T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>findMax</b> () const</td></tr>
+<tr class="memitem:a9b3290939693b3230fa739b83733c05e" id="r_a9b3290939693b3230fa739b83733c05e"><td class="memItemLeft" align="right" valign="top"><a id="a9b3290939693b3230fa739b83733c05e" name="a9b3290939693b3230fa739b83733c05e"></a>
+const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>findMin</b> () const</td></tr>
+<tr class="memitem:afb729bd2cbd179537db3c53f864a7787" id="r_afb729bd2cbd179537db3c53f864a7787"><td class="memItemLeft" align="right" valign="top"><a id="afb729bd2cbd179537db3c53f864a7787" name="afb729bd2cbd179537db3c53f864a7787"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>popMax</b> ()</td></tr>
+<tr class="memitem:a6751ec414bdb98b5ac50bc6072d90fa4" id="r_a6751ec414bdb98b5ac50bc6072d90fa4"><td class="memItemLeft" align="right" valign="top"><a id="a6751ec414bdb98b5ac50bc6072d90fa4" name="a6751ec414bdb98b5ac50bc6072d90fa4"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>pop</b> ()</td></tr>
+<tr class="memitem:a9f231873f1a780a2e6119104c3b16cde" id="r_a9f231873f1a780a2e6119104c3b16cde"><td class="memItemLeft" align="right" valign="top"><a id="a9f231873f1a780a2e6119104c3b16cde" name="a9f231873f1a780a2e6119104c3b16cde"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>popMin</b> ()</td></tr>
+<tr class="memitem:a58e88cd53c7b51c41a2c3e7f86d3b918" id="r_a58e88cd53c7b51c41a2c3e7f86d3b918"><td class="memItemLeft" align="right" valign="top"><a id="a58e88cd53c7b51c41a2c3e7f86d3b918" name="a58e88cd53c7b51c41a2c3e7f86d3b918"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteElement</b> (const T *ptr)</td></tr>
+<tr class="memitem:a07ca1315a107e4eb2c5a03c0148c97f3" id="r_a07ca1315a107e4eb2c5a03c0148c97f3"><td class="memItemLeft" align="right" valign="top"><a id="a07ca1315a107e4eb2c5a03c0148c97f3" name="a07ca1315a107e4eb2c5a03c0148c97f3"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><b>getHeapMemPtr</b> () const</td></tr>
+</table>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>globalizer/method/include/<a class="el" href="_min_max_heap_8h_source.html">MinMaxHeap.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Globalizer</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_base_interval_8h_source.html">Исходный файл globalizer/method/include/BaseInterval.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_base_parameters_8h.html">Файл globalizer/parameters/include/BaseParameters.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_solver.html">Класс Solver</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, TODO.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/html/class_min_max_heap.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

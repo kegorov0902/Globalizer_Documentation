@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Globalizer: Класс OutputMessage &#8212; документация Globalizer 141025</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=799f848e"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=cd1d70c9"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="outputmessage">
+<h1>Класс OutputMessage<a class="headerlink" href="#outputmessage" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="doxygen-content docutils container">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс OutputMessage</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-static-methods">Защищенные статические члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="#pro-static-attribs">Статические защищенные данные</a> &#124;
+<a href="#friends">Друзья</a> &#124;
+<a href="class_output_message-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс OutputMessage</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Базовый класс, реализует вывод на консоль информации, в debug версии также печатает в файл Инициализирующий систему вывода  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_messages_8h_source.html">Messages.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af60b753a83ab519815a84b6720c30c56" id="r_af60b753a83ab519815a84b6720c30c56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af60b753a83ab519815a84b6720c30c56">OutputMessage</a> (int printPocessNumber=-1)</td></tr>
+<tr class="memitem:ae6d7c13f30510ba6fd5bb9c86f532d14" id="r_ae6d7c13f30510ba6fd5bb9c86f532d14"><td class="memItemLeft" align="right" valign="top"><a id="ae6d7c13f30510ba6fd5bb9c86f532d14" name="ae6d7c13f30510ba6fd5bb9c86f532d14"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OutputMessage</b> (bool printInRoot)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a5cbc7dc7db0b34cb3abb0a2f4d1bc6ee" id="r_a5cbc7dc7db0b34cb3abb0a2f4d1bc6ee"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cbc7dc7db0b34cb3abb0a2f4d1bc6ee">Init</a> (bool isMPIInit=false, std::string <a class="el" href="#a1995e11c9b32ac30d2a4976f734207fc">mLogFileName</a>=&quot;&quot;, int processCount=1, int processNumber=0, bool isPrintToFile=false, std::string *errorsName=0, int *errorsCode=0, int errorsCount=0)</td></tr>
+<tr class="memdesc:a5cbc7dc7db0b34cb3abb0a2f4d1bc6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация систем вывода  <br /></td></tr>
+<tr class="memitem:a5de9d6abb4676288903b86495a096d57" id="r_a5de9d6abb4676288903b86495a096d57"><td class="memItemLeft" align="right" valign="top"><a id="a5de9d6abb4676288903b86495a096d57" name="a5de9d6abb4676288903b86495a096d57"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorName</b> (int error)</td></tr>
+<tr class="memdesc:a5de9d6abb4676288903b86495a096d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приводит код ошибки к описанию <br /></td></tr>
+<tr class="memitem:ac0d2365377b1f9d8299bf369c78cd1ad" id="r_ac0d2365377b1f9d8299bf369c78cd1ad"><td class="memItemLeft" align="right" valign="top"><a id="ac0d2365377b1f9d8299bf369c78cd1ad" name="ac0d2365377b1f9d8299bf369c78cd1ad"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>PrintError</b> (int error, std::string file, int line, std::string expression)</td></tr>
+<tr class="memdesc:ac0d2365377b1f9d8299bf369c78cd1ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Напечатать подробную информацию об ошибке <br /></td></tr>
+<tr class="memitem:a49909724a4d1a27355ff32135b54f5c5" id="r_a49909724a4d1a27355ff32135b54f5c5"><td class="memItemLeft" align="right" valign="top"><a id="a49909724a4d1a27355ff32135b54f5c5" name="a49909724a4d1a27355ff32135b54f5c5"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>PrintImportantMessage</b> (std::string expression, std::string file=&quot;&quot;, int line=-1, std::string fileName=&quot;&quot;)</td></tr>
+<tr class="memdesc:a49909724a4d1a27355ff32135b54f5c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печать важного сообщения <br /></td></tr>
+<tr class="memitem:a73da456716b27fbbaa38353ed050a9cc" id="r_a73da456716b27fbbaa38353ed050a9cc"><td class="memItemLeft" align="right" valign="top"><a id="a73da456716b27fbbaa38353ed050a9cc" name="a73da456716b27fbbaa38353ed050a9cc"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>PrintMessageToFile</b> (std::string expression, std::string file=&quot;&quot;, int line=-1, std::string fileName=&quot;&quot;)</td></tr>
+<tr class="memdesc:a73da456716b27fbbaa38353ed050a9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печать сообщения в файл <br /></td></tr>
+<tr class="memitem:a653f41884418c6a17150c2be3d9b84c7" id="r_a653f41884418c6a17150c2be3d9b84c7"><td class="memItemLeft" align="right" valign="top"><a id="a653f41884418c6a17150c2be3d9b84c7" name="a653f41884418c6a17150c2be3d9b84c7"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>OpenFileStream</b> (std::string fileName=&quot;&quot;)</td></tr>
+<tr class="memdesc:a653f41884418c6a17150c2be3d9b84c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Начать печать в файл <br /></td></tr>
+<tr class="memitem:a2a63dec292c06f2165f6e73fb9643c5b" id="r_a2a63dec292c06f2165f6e73fb9643c5b"><td class="memItemLeft" align="right" valign="top"><a id="a2a63dec292c06f2165f6e73fb9643c5b" name="a2a63dec292c06f2165f6e73fb9643c5b"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>BreakFileStream</b> (std::string fileName=&quot;&quot;)</td></tr>
+<tr class="memdesc:a2a63dec292c06f2165f6e73fb9643c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прервать печать в файл <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:abd5625f95d46dbc108c9978d6667ab54" id="r_abd5625f95d46dbc108c9978d6667ab54"><td class="memTemplParams" colspan="2"><a id="abd5625f95d46dbc108c9978d6667ab54" name="abd5625f95d46dbc108c9978d6667ab54"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:abd5625f95d46dbc108c9978d6667ab54 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><b>Print</b> (const T &amp;value)</td></tr>
+<tr class="memdesc:abd5625f95d46dbc108c9978d6667ab54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция печати <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-static-methods" class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Защищенные статические члены</h2></td></tr>
+<tr class="memitem:a6c318eb7aae40e3faac6666130e366d3" id="r_a6c318eb7aae40e3faac6666130e366d3"><td class="memItemLeft" align="right" valign="top"><a id="a6c318eb7aae40e3faac6666130e366d3" name="a6c318eb7aae40e3faac6666130e366d3"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDefaultErrors</b> ()</td></tr>
+<tr class="memdesc:a6c318eb7aae40e3faac6666130e366d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает ошибки по умолчанию <br /></td></tr>
+<tr class="memitem:ac91663b6645a1f70732c94b7a8d1a8b7" id="r_ac91663b6645a1f70732c94b7a8d1a8b7"><td class="memItemLeft" align="right" valign="top"><a id="ac91663b6645a1f70732c94b7a8d1a8b7" name="ac91663b6645a1f70732c94b7a8d1a8b7"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ImportantMessageAppears</b> (std::string importantMessageFile=&quot;&quot;)</td></tr>
+<tr class="memdesc:ac91663b6645a1f70732c94b7a8d1a8b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Включает печать в файл <br /></td></tr>
+<tr class="memitem:af37cb56656865d6db4d53b8cd5502d4d" id="r_af37cb56656865d6db4d53b8cd5502d4d"><td class="memItemLeft" align="right" valign="top"><a id="af37cb56656865d6db4d53b8cd5502d4d" name="af37cb56656865d6db4d53b8cd5502d4d"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ImportantMessageEnded</b> ()</td></tr>
+<tr class="memdesc:af37cb56656865d6db4d53b8cd5502d4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выключает печать в файл если она раньше была выключена <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:aa89fd6e5989e1ec377a3e1bd0d49fd52" id="r_aa89fd6e5989e1ec377a3e1bd0d49fd52"><td class="memItemLeft" align="right" valign="top"><a id="aa89fd6e5989e1ec377a3e1bd0d49fd52" name="aa89fd6e5989e1ec377a3e1bd0d49fd52"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mPrintPocessNumber</b></td></tr>
+<tr class="memdesc:aa89fd6e5989e1ec377a3e1bd0d49fd52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Номер процесса для которого будет выводиться <br /></td></tr>
+<tr class="memitem:a8d5d6400da58f5f06f916d06e8e8d2cd" id="r_a8d5d6400da58f5f06f916d06e8e8d2cd"><td class="memItemLeft" align="right" valign="top"><a id="a8d5d6400da58f5f06f916d06e8e8d2cd" name="a8d5d6400da58f5f06f916d06e8e8d2cd"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>output</b></td></tr>
+<tr class="memdesc:a8d5d6400da58f5f06f916d06e8e8d2cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">строки вывода <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-static-attribs" class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
+Статические защищенные данные</h2></td></tr>
+<tr class="memitem:a8c00613e0660084c90a6f2636dea5ed7" id="r_a8c00613e0660084c90a6f2636dea5ed7"><td class="memItemLeft" align="right" valign="top"><a id="a8c00613e0660084c90a6f2636dea5ed7" name="a8c00613e0660084c90a6f2636dea5ed7"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsInit</b> = false</td></tr>
+<tr class="memdesc:a8c00613e0660084c90a6f2636dea5ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Были ли проинициализированы статические параметры <br /></td></tr>
+<tr class="memitem:a87b0ba90fd35a305d5e8c443510402ed" id="r_a87b0ba90fd35a305d5e8c443510402ed"><td class="memItemLeft" align="right" valign="top"><a id="a87b0ba90fd35a305d5e8c443510402ed" name="a87b0ba90fd35a305d5e8c443510402ed"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsMPIInit</b> = false</td></tr>
+<tr class="memdesc:a87b0ba90fd35a305d5e8c443510402ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Был ли проинициализирован mpi. <br /></td></tr>
+<tr class="memitem:a708f9af70a52f4e2eadf885c61041958" id="r_a708f9af70a52f4e2eadf885c61041958"><td class="memItemLeft" align="right" valign="top"><a id="a708f9af70a52f4e2eadf885c61041958" name="a708f9af70a52f4e2eadf885c61041958"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>mProcessCount</b> = 1</td></tr>
+<tr class="memdesc:a708f9af70a52f4e2eadf885c61041958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Число процессов <br /></td></tr>
+<tr class="memitem:a59e8fc4052e02a67f3691acafad87cac" id="r_a59e8fc4052e02a67f3691acafad87cac"><td class="memItemLeft" align="right" valign="top"><a id="a59e8fc4052e02a67f3691acafad87cac" name="a59e8fc4052e02a67f3691acafad87cac"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>mProcessNumber</b> = 0</td></tr>
+<tr class="memdesc:a59e8fc4052e02a67f3691acafad87cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Номер текущего процесса <br /></td></tr>
+<tr class="memitem:ac803373bbd4e7e17eb75b86fd628c427" id="r_ac803373bbd4e7e17eb75b86fd628c427"><td class="memItemLeft" align="right" valign="top"><a id="ac803373bbd4e7e17eb75b86fd628c427" name="ac803373bbd4e7e17eb75b86fd628c427"></a>
+static std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mIsPrintToFile</b> = std::vector&lt;bool&gt;()</td></tr>
+<tr class="memdesc:ac803373bbd4e7e17eb75b86fd628c427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печатать ли в лог файл <br /></td></tr>
+<tr class="memitem:ad700424b37aebfe2a0cb09b9f1c80105" id="r_ad700424b37aebfe2a0cb09b9f1c80105"><td class="memItemLeft" align="right" valign="top"><a id="ad700424b37aebfe2a0cb09b9f1c80105" name="ad700424b37aebfe2a0cb09b9f1c80105"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>mOldIsPrintToFile</b> = false</td></tr>
+<tr class="memdesc:ad700424b37aebfe2a0cb09b9f1c80105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печатать ли в лог файл, переменная в которую сохраняется значение флага во время печати важного сообщения <br /></td></tr>
+<tr class="memitem:af7afe458c8ff0b25f5f3649759b35caa" id="r_af7afe458c8ff0b25f5f3649759b35caa"><td class="memItemLeft" align="right" valign="top"><a id="af7afe458c8ff0b25f5f3649759b35caa" name="af7afe458c8ff0b25f5f3649759b35caa"></a>
+static std::string *&#160;</td><td class="memItemRight" valign="bottom"><b>mErrorsName</b> = 0</td></tr>
+<tr class="memdesc:af7afe458c8ff0b25f5f3649759b35caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Кописания ошибок <br /></td></tr>
+<tr class="memitem:a94278285fe73a533391f227dd2ebd510" id="r_a94278285fe73a533391f227dd2ebd510"><td class="memItemLeft" align="right" valign="top"><a id="a94278285fe73a533391f227dd2ebd510" name="a94278285fe73a533391f227dd2ebd510"></a>
+static int *&#160;</td><td class="memItemRight" valign="bottom"><b>mErrorsCode</b> = 0</td></tr>
+<tr class="memdesc:a94278285fe73a533391f227dd2ebd510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коды ошибок <br /></td></tr>
+<tr class="memitem:a64a2864432f1db5dc5d9a721e99e5e4b" id="r_a64a2864432f1db5dc5d9a721e99e5e4b"><td class="memItemLeft" align="right" valign="top"><a id="a64a2864432f1db5dc5d9a721e99e5e4b" name="a64a2864432f1db5dc5d9a721e99e5e4b"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>mErrorsCount</b> = 0</td></tr>
+<tr class="memdesc:a64a2864432f1db5dc5d9a721e99e5e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Число ошибок <br /></td></tr>
+<tr class="memitem:a1995e11c9b32ac30d2a4976f734207fc" id="r_a1995e11c9b32ac30d2a4976f734207fc"><td class="memItemLeft" align="right" valign="top"><a id="a1995e11c9b32ac30d2a4976f734207fc" name="a1995e11c9b32ac30d2a4976f734207fc"></a>
+static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mLogFileName</b> = std::vector&lt;std::string&gt;()</td></tr>
+<tr class="memdesc:a1995e11c9b32ac30d2a4976f734207fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя лог файла <br /></td></tr>
+<tr class="memitem:abc281f9ae59b77d50019ce926cb4e34f" id="r_abc281f9ae59b77d50019ce926cb4e34f"><td class="memItemLeft" align="right" valign="top"><a id="abc281f9ae59b77d50019ce926cb4e34f" name="abc281f9ae59b77d50019ce926cb4e34f"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>rootNumber</b> = 0</td></tr>
+<tr class="memdesc:abc281f9ae59b77d50019ce926cb4e34f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Номер главного процесса <br /></td></tr>
+<tr class="memitem:a73c5c8abdd1794ce69bb2338588e46ba" id="r_a73c5c8abdd1794ce69bb2338588e46ba"><td class="memItemLeft" align="right" valign="top"><a id="a73c5c8abdd1794ce69bb2338588e46ba" name="a73c5c8abdd1794ce69bb2338588e46ba"></a>
+static std::vector&lt; std::fstream * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mLogOutputStream</b> = std::vector&lt;std::fstream*&gt;()</td></tr>
+<tr class="memdesc:a73c5c8abdd1794ce69bb2338588e46ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Потоки вывода в файл <br /></td></tr>
+<tr class="memitem:a5072cc2a3876db49cdfd2f7ab32ce26c" id="r_a5072cc2a3876db49cdfd2f7ab32ce26c"><td class="memItemLeft" align="right" valign="top"><a id="a5072cc2a3876db49cdfd2f7ab32ce26c" name="a5072cc2a3876db49cdfd2f7ab32ce26c"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>streamCount</b> = 0</td></tr>
+<tr class="memdesc:a5072cc2a3876db49cdfd2f7ab32ce26c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество потоков вывода <br /></td></tr>
+<tr class="memitem:ab60aeea77f671ad7e5e33298f7888235" id="r_ab60aeea77f671ad7e5e33298f7888235"><td class="memItemLeft" align="right" valign="top"><a id="ab60aeea77f671ad7e5e33298f7888235" name="ab60aeea77f671ad7e5e33298f7888235"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>ImportantMessageNumber</b> = -1</td></tr>
+<tr class="memdesc:ab60aeea77f671ad7e5e33298f7888235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Номер потока для вывода важного сообщения <br /></td></tr>
+<tr class="memitem:a102283b6cab060fb3e0100572ca0c72d" id="r_a102283b6cab060fb3e0100572ca0c72d"><td class="memItemLeft" align="right" valign="top"><a id="a102283b6cab060fb3e0100572ca0c72d" name="a102283b6cab060fb3e0100572ca0c72d"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsPrintToConsole</b> = true</td></tr>
+<tr class="memdesc:a102283b6cab060fb3e0100572ca0c72d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печатать ли на конслоь <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:a24fe53bfc795c12c5a7fb44653b018f2" id="r_a24fe53bfc795c12c5a7fb44653b018f2"><td class="memTemplParams" colspan="2"><a id="a24fe53bfc795c12c5a7fb44653b018f2" name="a24fe53bfc795c12c5a7fb44653b018f2"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a24fe53bfc795c12c5a7fb44653b018f2 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_output_message.html">OutputMessage</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="class_output_message.html">OutputMessage</a> &amp;incomingHelper, const T &amp;value)</td></tr>
+<tr class="memdesc:a24fe53bfc795c12c5a7fb44653b018f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод сообщений <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Базовый класс, реализует вывод на консоль информации, в debug версии также печатает в файл Инициализирующий систему вывода </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="af60b753a83ab519815a84b6720c30c56" name="af60b753a83ab519815a84b6720c30c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af60b753a83ab519815a84b6720c30c56">&#9670;&#160;</a></span>OutputMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OutputMessage::OutputMessage </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>printPocessNumber</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">printPocessNumber</td><td>- номер процесса который должен выводить сообщение Если -1 то выводят все </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a5cbc7dc7db0b34cb3abb0a2f4d1bc6ee" name="a5cbc7dc7db0b34cb3abb0a2f4d1bc6ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cbc7dc7db0b34cb3abb0a2f4d1bc6ee">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OutputMessage::Init </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isMPIInit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>mLogFileName</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>processCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>processNumber</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isPrintToFile</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *</td>          <td class="paramname"><span class="paramname"><em>errorsName</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>errorsCode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>errorsCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Инициализация систем вывода </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">isMPIInit</td><td>- Проинициализирован ли MPI, требуется для корректной печати в файл в многопроцессорном режиме </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mLogFileName</td><td>- имя (префикс) лог файла </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">processCount</td><td>- число процессов </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">processNumber</td><td>- номер текущего процесса </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">isPrintToFile</td><td>- печатать ли в файл все сообщения в debug, в release не печатается </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">errorsName</td><td>- имена (расшифровка) ошибок </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">errorsCode</td><td>- коды ошибок </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">errorsCount</td><td>- число ошибок последние три параметра инициализируются по умолчанию в методе SetDefaultErrors </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>globalizer/output_system/include/<a class="el" href="_messages_8h_source.html">Messages.h</a></li>
+<li>globalizer/output_system/src/<b>Messages.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Globalizer</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_base_interval_8h_source.html">Исходный файл globalizer/method/include/BaseInterval.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_base_parameters_8h.html">Файл globalizer/parameters/include/BaseParameters.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_solver.html">Класс Solver</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, TODO.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/html/class_output_message.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

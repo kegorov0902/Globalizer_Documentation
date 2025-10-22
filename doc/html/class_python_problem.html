@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Globalizer: Класс PythonProblem &#8212; документация Globalizer 141025</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=799f848e"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=cd1d70c9"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="pythonproblem">
+<h1>Класс PythonProblem<a class="headerlink" href="#pythonproblem" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="doxygen-content docutils container">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс PythonProblem</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="class_python_problem-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс PythonProblem</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс обертка для задач python.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="python__function_8h_source.html">python_function.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:PythonProblem:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_python_problem.png" usemap="#PythonProblem_map" alt=""/>
+  <map id="PythonProblem_map" name="PythonProblem_map">
+<area href="class_i_global_optimization_problem.html" title="Базовый класс-интерфейс, от которого наследуются классы, описывающие задачи оптимизации." alt="IGlobalOptimizationProblem" shape="rect" coords="0,0,165,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac8c2b888c51b3102f0c6751aa28b7bd8" id="r_ac8c2b888c51b3102f0c6751aa28b7bd8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8c2b888c51b3102f0c6751aa28b7bd8">SetConfigPath</a> (const std::string &amp;configPath)</td></tr>
+<tr class="memdesc:ac8c2b888c51b3102f0c6751aa28b7bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задание пути до конфигурационного файла Данный метод должн вызываться перед <a class="el" href="#aa2fed4c485ca0bf319887a81b9dbf5e9" title="Инициализация задачи">Initialize</a>.  <br /></td></tr>
+<tr class="memitem:a733c80c40af5fea20043516417eb95ec" id="r_a733c80c40af5fea20043516417eb95ec"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a733c80c40af5fea20043516417eb95ec">SetDimension</a> (int dimension)</td></tr>
+<tr class="memdesc:a733c80c40af5fea20043516417eb95ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод задаёт размерность задачи  <br /></td></tr>
+<tr class="memitem:ae64e21464d06f8e8d2fec54a07e828a1" id="r_ae64e21464d06f8e8d2fec54a07e828a1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae64e21464d06f8e8d2fec54a07e828a1">GetDimension</a> () const</td></tr>
+<tr class="memdesc:ae64e21464d06f8e8d2fec54a07e828a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает размерность задачи, можно вызывать после <a class="el" href="#aa2fed4c485ca0bf319887a81b9dbf5e9" title="Инициализация задачи">Initialize</a>.  <br /></td></tr>
+<tr class="memitem:aa2fed4c485ca0bf319887a81b9dbf5e9" id="r_aa2fed4c485ca0bf319887a81b9dbf5e9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2fed4c485ca0bf319887a81b9dbf5e9">Initialize</a> ()</td></tr>
+<tr class="memdesc:aa2fed4c485ca0bf319887a81b9dbf5e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация задачи  <br /></td></tr>
+<tr class="memitem:a752292212773ce59cae3df6152b9489d" id="r_a752292212773ce59cae3df6152b9489d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a752292212773ce59cae3df6152b9489d">GetBounds</a> (std::vector&lt; double &gt; &amp;upper, std::vector&lt; double &gt; &amp;lower)</td></tr>
+<tr class="memdesc:a752292212773ce59cae3df6152b9489d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает границы области поиска  <br /></td></tr>
+<tr class="memitem:a04c2da7dd63503df0686cb58ff156b08" id="r_a04c2da7dd63503df0686cb58ff156b08"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04c2da7dd63503df0686cb58ff156b08">GetOptimumValue</a> (double &amp;value) const</td></tr>
+<tr class="memdesc:a04c2da7dd63503df0686cb58ff156b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает значение целевой функции в точке глобального минимума  <br /></td></tr>
+<tr class="memitem:af9ee304071def5bce98c23b456a88cb4" id="r_af9ee304071def5bce98c23b456a88cb4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9ee304071def5bce98c23b456a88cb4">GetOptimumPoint</a> (std::vector&lt; double &gt; &amp;x, std::vector&lt; std::string &gt; &amp;u) const</td></tr>
+<tr class="memdesc:af9ee304071def5bce98c23b456a88cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает координаты точки глобального минимума целевой функции  <br /></td></tr>
+<tr class="memitem:aeb97980eb0498aa1bbdb6be41e7add65" id="r_aeb97980eb0498aa1bbdb6be41e7add65"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb97980eb0498aa1bbdb6be41e7add65">GetNumberOfFunctions</a> () const</td></tr>
+<tr class="memdesc:aeb97980eb0498aa1bbdb6be41e7add65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает число общее функций в задаче (оно равно число ограничений + число критериев)  <br /></td></tr>
+<tr class="memitem:ac451228958b5875899d0d395ac6cac3b" id="r_ac451228958b5875899d0d395ac6cac3b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac451228958b5875899d0d395ac6cac3b">GetNumberOfConstraints</a> () const</td></tr>
+<tr class="memdesc:ac451228958b5875899d0d395ac6cac3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает число ограничений в задаче  <br /></td></tr>
+<tr class="memitem:acc4f5dbba4c2cb1c0cd9dbebb85d5ddf" id="r_acc4f5dbba4c2cb1c0cd9dbebb85d5ddf"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc4f5dbba4c2cb1c0cd9dbebb85d5ddf">GetNumberOfCriterions</a> () const</td></tr>
+<tr class="memdesc:acc4f5dbba4c2cb1c0cd9dbebb85d5ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает число критериев в задаче  <br /></td></tr>
+<tr class="memitem:a93684b1159fd0c560c49b45063daf0e6" id="r_a93684b1159fd0c560c49b45063daf0e6"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93684b1159fd0c560c49b45063daf0e6">CalculateFunctionals</a> (const std::vector&lt; double &gt; &amp;y, std::vector&lt; std::string &gt; &amp;u, int fNumber)</td></tr>
+<tr class="memdesc:a93684b1159fd0c560c49b45063daf0e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, вычисляющий функции задачи  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_i_global_optimization_problem"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_i_global_optimization_problem')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Открытые члены унаследованные от <a class="el" href="class_i_global_optimization_problem.html">IGlobalOptimizationProblem</a></td></tr>
+<tr class="memitem:ad602516753c28767081832e51165f2ef inherit pub_methods_class_i_global_optimization_problem" id="r_ad602516753c28767081832e51165f2ef"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#ad602516753c28767081832e51165f2ef">GetOptimumValue</a> (double &amp;value, int index) const</td></tr>
+<tr class="memdesc:ad602516753c28767081832e51165f2ef inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает значение функции с номером index в точке глобального минимума  <br /></td></tr>
+<tr class="memitem:a134726442d8812874b2eb841f138c9b9 inherit pub_methods_class_i_global_optimization_problem" id="r_a134726442d8812874b2eb841f138c9b9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#a134726442d8812874b2eb841f138c9b9">GetAllOptimumPoint</a> (std::vector&lt; std::vector&lt; double &gt; &gt; &amp;y, std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;u, int &amp;n) const</td></tr>
+<tr class="memdesc:a134726442d8812874b2eb841f138c9b9 inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает координаты всех точек глобального минимума целевой функции и их количество  <br /></td></tr>
+<tr class="memitem:ad616450ff205be271752787936c77b68 inherit pub_methods_class_i_global_optimization_problem" id="r_ad616450ff205be271752787936c77b68"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#ad616450ff205be271752787936c77b68">GetStartTrial</a> (std::vector&lt; double &gt; &amp;y, std::vector&lt; std::string &gt; &amp;u, std::vector&lt; double &gt; &amp;values)</td></tr>
+<tr class="memdesc:ad616450ff205be271752787936c77b68 inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает точку из допустимой области  <br /></td></tr>
+<tr class="memitem:a999cad672e6a232eee0d781faa0dcbae inherit pub_methods_class_i_global_optimization_problem" id="r_a999cad672e6a232eee0d781faa0dcbae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#a999cad672e6a232eee0d781faa0dcbae">CalculateFunctionals</a> (std::vector&lt; std::vector&lt; double &gt; &gt; &amp;y, std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;u, int fNumber, int &amp;numPoints, std::vector&lt; double &gt; &amp;values)</td></tr>
+<tr class="memdesc:a999cad672e6a232eee0d781faa0dcbae inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, вычисляющий функции задачи в нескольких точках одновременно  <br /></td></tr>
+<tr class="memitem:aa2a834ab1767bc6139e39d7600c613dd inherit pub_methods_class_i_global_optimization_problem" id="r_aa2a834ab1767bc6139e39d7600c613dd"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#aa2a834ab1767bc6139e39d7600c613dd">CalculateAllFunctionals</a> (const std::vector&lt; double &gt; &amp;y, std::vector&lt; std::string &gt; &amp;u)</td></tr>
+<tr class="memdesc:aa2a834ab1767bc6139e39d7600c613dd inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, вычисляющий все функции задачи  <br /></td></tr>
+<tr class="memitem:a0bc4dbf7a10f0162141573964109ca4d inherit pub_methods_class_i_global_optimization_problem" id="r_a0bc4dbf7a10f0162141573964109ca4d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#a0bc4dbf7a10f0162141573964109ca4d">GetNumberOfDiscreteVariable</a> () const</td></tr>
+<tr class="memdesc:a0bc4dbf7a10f0162141573964109ca4d inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает число дискретных параметров, дискретные параметры всегда последние в векторе y.  <br /></td></tr>
+<tr class="memitem:ac123e6f35f8c83f6a2e5ad0cfb1a64d4 inherit pub_methods_class_i_global_optimization_problem" id="r_ac123e6f35f8c83f6a2e5ad0cfb1a64d4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#ac123e6f35f8c83f6a2e5ad0cfb1a64d4">SetNumberOfDiscreteVariable</a> (int numberOfDiscreteVariable)</td></tr>
+<tr class="memdesc:ac123e6f35f8c83f6a2e5ad0cfb1a64d4 inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод задает число дискретных параметров, дискретные параметры всегда последние в векторе y, только для задач с частично целочисленными параметрами  <br /></td></tr>
+<tr class="memitem:ad73c67f9ad81cbe44d6239ac5078e6ad inherit pub_methods_class_i_global_optimization_problem" id="r_ad73c67f9ad81cbe44d6239ac5078e6ad"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#ad73c67f9ad81cbe44d6239ac5078e6ad">GetDiscreteVariableValues</a> (std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;values) const</td></tr>
+<tr class="memdesc:ad73c67f9ad81cbe44d6239ac5078e6ad inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает число целочисленных переменных  <br /></td></tr>
+<tr class="memitem:aacfad6605919b8b34bff1bfed8cbe2b3 inherit pub_methods_class_i_global_optimization_problem" id="r_aacfad6605919b8b34bff1bfed8cbe2b3"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#aacfad6605919b8b34bff1bfed8cbe2b3">GetNumberOfContinuousVariable</a> () const</td></tr>
+<tr class="memdesc:aacfad6605919b8b34bff1bfed8cbe2b3 inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает число непрерывных переменных  <br /></td></tr>
+<tr class="memitem:ac60acccc9aec7a5ba99e5b16d6efd73d inherit pub_methods_class_i_global_optimization_problem" id="r_ac60acccc9aec7a5ba99e5b16d6efd73d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#ac60acccc9aec7a5ba99e5b16d6efd73d">SetParameter</a> (std::string name, std::string value)</td></tr>
+<tr class="memdesc:ac60acccc9aec7a5ba99e5b16d6efd73d inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод задает параметры задачи  <br /></td></tr>
+<tr class="memitem:a57476359426d15bb17e3aec00d5fafcb inherit pub_methods_class_i_global_optimization_problem" id="r_a57476359426d15bb17e3aec00d5fafcb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#a57476359426d15bb17e3aec00d5fafcb">SetParameter</a> (std::string name, <a class="el" href="_i_global_optimization_problem_8h.html#a4ca6b2e9d373978a5e2b4ffa50613574">IOptVariantType</a> value)</td></tr>
+<tr class="memdesc:a57476359426d15bb17e3aec00d5fafcb inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод задает параметры задачи  <br /></td></tr>
+<tr class="memitem:a86f70764d31fe1d2560de87fac513c9a inherit pub_methods_class_i_global_optimization_problem" id="r_a86f70764d31fe1d2560de87fac513c9a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#a86f70764d31fe1d2560de87fac513c9a">SetParameter</a> (std::string name, void *value)</td></tr>
+<tr class="memdesc:a86f70764d31fe1d2560de87fac513c9a inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод задает параметры задачи  <br /></td></tr>
+<tr class="memitem:a513c950c6ec05e5b691e68b0473ec4e9 inherit pub_methods_class_i_global_optimization_problem" id="r_a513c950c6ec05e5b691e68b0473ec4e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_global_optimization_problem.html#a513c950c6ec05e5b691e68b0473ec4e9">GetParameters</a> (std::vector&lt; std::string &gt; &amp;names, std::vector&lt; std::string &gt; &amp;values)</td></tr>
+<tr class="memdesc:a513c950c6ec05e5b691e68b0473ec4e9 inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод возвращает параметры задачи  <br /></td></tr>
+<tr class="memitem:a0e5243855c7c71cdf045a6eb1a869750 inherit pub_methods_class_i_global_optimization_problem" id="r_a0e5243855c7c71cdf045a6eb1a869750"><td class="memItemLeft" align="right" valign="top">
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IGlobalOptimizationProblem</b> ()</td></tr>
+<tr class="memdesc:a0e5243855c7c71cdf045a6eb1a869750 inherit pub_methods_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a2b793f6206bb720c6b934eb5c1abeb27" id="r_a2b793f6206bb720c6b934eb5c1abeb27"><td class="memItemLeft" align="right" valign="top"><a id="a2b793f6206bb720c6b934eb5c1abeb27" name="a2b793f6206bb720c6b934eb5c1abeb27"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mDimension</b></td></tr>
+<tr class="memdesc:a2b793f6206bb720c6b934eb5c1abeb27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размерность задачи <br /></td></tr>
+<tr class="memitem:a9b1a459a3b4cabe2bf69ab163933507f" id="r_a9b1a459a3b4cabe2bf69ab163933507f"><td class="memItemLeft" align="right" valign="top"><a id="a9b1a459a3b4cabe2bf69ab163933507f" name="a9b1a459a3b4cabe2bf69ab163933507f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsInitialized</b></td></tr>
+<tr class="memdesc:a9b1a459a3b4cabe2bf69ab163933507f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализирована ли задача <br /></td></tr>
+<tr class="memitem:a86dcaaa3d10f17bd793e5435d0f8e4b5" id="r_a86dcaaa3d10f17bd793e5435d0f8e4b5"><td class="memItemLeft" align="right" valign="top"><a id="a86dcaaa3d10f17bd793e5435d0f8e4b5" name="a86dcaaa3d10f17bd793e5435d0f8e4b5"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mPyFilePath</b></td></tr>
+<tr class="memdesc:a86dcaaa3d10f17bd793e5435d0f8e4b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Путь до папки в которой лежат скрипты <br /></td></tr>
+<tr class="memitem:a459207e0e39fcff29fcd180b144c9e9d" id="r_a459207e0e39fcff29fcd180b144c9e9d"><td class="memItemLeft" align="right" valign="top"><a id="a459207e0e39fcff29fcd180b144c9e9d" name="a459207e0e39fcff29fcd180b144c9e9d"></a>
+std::shared_ptr&lt; <a class="el" href="class_t_python_module_wrapper.html">TPythonModuleWrapper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mFunction</b></td></tr>
+<tr class="memdesc:a459207e0e39fcff29fcd180b144c9e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Интерфейс для подключения задач на языке python. <br /></td></tr>
+<tr class="memitem:aa8dc8d3eff7f9555fd2432d85794f68b" id="r_aa8dc8d3eff7f9555fd2432d85794f68b"><td class="memItemLeft" align="right" valign="top"><a id="aa8dc8d3eff7f9555fd2432d85794f68b" name="aa8dc8d3eff7f9555fd2432d85794f68b"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>mLibpython_handle</b></td></tr>
+<tr class="memdesc:aa8dc8d3eff7f9555fd2432d85794f68b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Путь до python в linux. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_static_attribs_class_i_global_optimization_problem"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_class_i_global_optimization_problem')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Статические открытые данные унаследованные от <a class="el" href="class_i_global_optimization_problem.html">IGlobalOptimizationProblem</a></td></tr>
+<tr class="memitem:af1d186570fab6fb316cb4af9111015e3 inherit pub_static_attribs_class_i_global_optimization_problem" id="r_af1d186570fab6fb316cb4af9111015e3"><td class="memItemLeft" align="right" valign="top">
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>PROBLEM_OK</b> = 0</td></tr>
+<tr class="memdesc:af1d186570fab6fb316cb4af9111015e3 inherit pub_static_attribs_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Код ошибки, возвращаемый, если операция завершена успешно <br /></td></tr>
+<tr class="memitem:a464c45553dc664a6ac400b653c402868 inherit pub_static_attribs_class_i_global_optimization_problem" id="r_a464c45553dc664a6ac400b653c402868"><td class="memItemLeft" align="right" valign="top">
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>PROBLEM_UNDEFINED</b> = -1</td></tr>
+<tr class="memdesc:a464c45553dc664a6ac400b653c402868 inherit pub_static_attribs_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Код ошибки, возвращаемый методами <a class="el" href="class_i_global_optimization_problem.html#ac39a14d97eae59a05931beb5996a87e6" title="Метод возвращает значение целевой функции в точке глобального минимума">GetOptimumValue</a> и <a class="el" href="class_i_global_optimization_problem.html#a63f6c39717afc27e9876f391096d902a" title="Метод возвращает координаты точки глобального минимума целевой функции">GetOptimumPoint</a>, если соответствующие параметры задачи не определены,. <br /></td></tr>
+<tr class="memitem:ae3e2e57cf5488b0ac6b8eec16fe7d5a6 inherit pub_static_attribs_class_i_global_optimization_problem" id="r_ae3e2e57cf5488b0ac6b8eec16fe7d5a6"><td class="memItemLeft" align="right" valign="top">
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>PROBLEM_ERROR</b> = -2</td></tr>
+<tr class="memdesc:ae3e2e57cf5488b0ac6b8eec16fe7d5a6 inherit pub_static_attribs_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Код ошибки, возвращаемый, если операция не выполнена <br /></td></tr>
+<tr class="memitem:a7c99ab2ee1be82b7905af0f92c00a3f5 inherit pub_static_attribs_class_i_global_optimization_problem" id="r_a7c99ab2ee1be82b7905af0f92c00a3f5"><td class="memItemLeft" align="right" valign="top">
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>ERROR_DISCRETE_VALUE</b> = -201</td></tr>
+<tr class="memdesc:a7c99ab2ee1be82b7905af0f92c00a3f5 inherit pub_static_attribs_class_i_global_optimization_problem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Код ошибки, возвращаемый, если попытались получить значения для недискретного параметра <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс обертка для задач python. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a93684b1159fd0c560c49b45063daf0e6" name="a93684b1159fd0c560c49b45063daf0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93684b1159fd0c560c49b45063daf0e6">&#9670;&#160;</a></span>CalculateFunctionals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PythonProblem::CalculateFunctionals </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>u</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fNumber</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод, вычисляющий функции задачи </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>непрерывные координаты точки, в которой необходимо вычислить значение </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">u</td><td>целочисленые координаты точки, в которой необходимо вычислить значение </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fNumber</td><td>Номер вычисляемой функции. 0 соответствует первому ограничению, <a class="el" href="#aeb97980eb0498aa1bbdb6be41e7add65" title="Метод возвращает число общее функций в задаче (оно равно число ограничений + число критериев)">GetNumberOfFunctions()</a> - 1 &ndash; последнему критерию </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Значение функции с указанным номером </dd></dl>
+
+<p>Переопределяет метод предка <a class="el" href="class_i_global_optimization_problem.html#ab6aba3a0236bcca75daed0e70c625924">IGlobalOptimizationProblem</a>.</p>
+
+</div>
+</div>
+<a id="a752292212773ce59cae3df6152b9489d" name="a752292212773ce59cae3df6152b9489d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a752292212773ce59cae3df6152b9489d">&#9670;&#160;</a></span>GetBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PythonProblem::GetBounds </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>upper</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lower</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод возвращает границы области поиска </p>
+
+<p>Замещает <a class="el" href="class_i_global_optimization_problem.html#a21906cba2dbb5fde770badd94dfaf3a0">IGlobalOptimizationProblem</a>.</p>
+
+</div>
+</div>
+<a id="ae64e21464d06f8e8d2fec54a07e828a1" name="ae64e21464d06f8e8d2fec54a07e828a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae64e21464d06f8e8d2fec54a07e828a1">&#9670;&#160;</a></span>GetDimension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PythonProblem::GetDimension </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает размерность задачи, можно вызывать после <a class="el" href="#aa2fed4c485ca0bf319887a81b9dbf5e9" title="Инициализация задачи">Initialize</a>. </p>
+
+<p>Замещает <a class="el" href="class_i_global_optimization_problem.html#a62856de00a146a7ccf4157fe61df4309">IGlobalOptimizationProblem</a>.</p>
+
+</div>
+</div>
+<a id="ac451228958b5875899d0d395ac6cac3b" name="ac451228958b5875899d0d395ac6cac3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac451228958b5875899d0d395ac6cac3b">&#9670;&#160;</a></span>GetNumberOfConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PythonProblem::GetNumberOfConstraints </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод возвращает число ограничений в задаче </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Число ограничений </dd></dl>
+
+<p>Замещает <a class="el" href="class_i_global_optimization_problem.html#a5c527655b7fa3b26b4b803e97823707e">IGlobalOptimizationProblem</a>.</p>
+
+</div>
+</div>
+<a id="acc4f5dbba4c2cb1c0cd9dbebb85d5ddf" name="acc4f5dbba4c2cb1c0cd9dbebb85d5ddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc4f5dbba4c2cb1c0cd9dbebb85d5ddf">&#9670;&#160;</a></span>GetNumberOfCriterions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PythonProblem::GetNumberOfCriterions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод возвращает число критериев в задаче </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Число критериев </dd></dl>
+
+<p>Замещает <a class="el" href="class_i_global_optimization_problem.html#ab0ff23b07312791571bf12e85aa2d43a">IGlobalOptimizationProblem</a>.</p>
+
+</div>
+</div>
+<a id="aeb97980eb0498aa1bbdb6be41e7add65" name="aeb97980eb0498aa1bbdb6be41e7add65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb97980eb0498aa1bbdb6be41e7add65">&#9670;&#160;</a></span>GetNumberOfFunctions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PythonProblem::GetNumberOfFunctions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод возвращает число общее функций в задаче (оно равно число ограничений + число критериев) </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Число функций </dd></dl>
+
+<p>Замещает <a class="el" href="class_i_global_optimization_problem.html#a8f5386e37df0303fd488a2344d721892">IGlobalOptimizationProblem</a>.</p>
+
+</div>
+</div>
+<a id="af9ee304071def5bce98c23b456a88cb4" name="af9ee304071def5bce98c23b456a88cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9ee304071def5bce98c23b456a88cb4">&#9670;&#160;</a></span>GetOptimumPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PythonProblem::GetOptimumPoint </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>u</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод возвращает координаты точки глобального минимума целевой функции </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td>точка, в которой достигается оптимальное значение </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Код ошибки (<a class="el" href="class_i_global_optimization_problem.html#af1d186570fab6fb316cb4af9111015e3" title="Код ошибки, возвращаемый, если операция завершена успешно">PROBLEM_OK</a> или #UNDEFINED) </dd></dl>
+
+<p>Замещает <a class="el" href="class_i_global_optimization_problem.html#a63f6c39717afc27e9876f391096d902a">IGlobalOptimizationProblem</a>.</p>
+
+</div>
+</div>
+<a id="a04c2da7dd63503df0686cb58ff156b08" name="a04c2da7dd63503df0686cb58ff156b08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04c2da7dd63503df0686cb58ff156b08">&#9670;&#160;</a></span>GetOptimumValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PythonProblem::GetOptimumValue </td>
+          <td>(</td>
+          <td class="paramtype">double &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод возвращает значение целевой функции в точке глобального минимума </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>оптимальное значение </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Код ошибки (<a class="el" href="class_i_global_optimization_problem.html#af1d186570fab6fb316cb4af9111015e3" title="Код ошибки, возвращаемый, если операция завершена успешно">PROBLEM_OK</a> или #UNDEFINED) </dd></dl>
+
+<p>Замещает <a class="el" href="class_i_global_optimization_problem.html#ac39a14d97eae59a05931beb5996a87e6">IGlobalOptimizationProblem</a>.</p>
+
+</div>
+</div>
+<a id="aa2fed4c485ca0bf319887a81b9dbf5e9" name="aa2fed4c485ca0bf319887a81b9dbf5e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2fed4c485ca0bf319887a81b9dbf5e9">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PythonProblem::Initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Инициализация задачи </p>
+
+<p>Замещает <a class="el" href="class_i_global_optimization_problem.html#a57b23554106ee14ae048a1dfa0b58773">IGlobalOptimizationProblem</a>.</p>
+
+</div>
+</div>
+<a id="ac8c2b888c51b3102f0c6751aa28b7bd8" name="ac8c2b888c51b3102f0c6751aa28b7bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c2b888c51b3102f0c6751aa28b7bd8">&#9670;&#160;</a></span>SetConfigPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PythonProblem::SetConfigPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>configPath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Задание пути до конфигурационного файла Данный метод должн вызываться перед <a class="el" href="#aa2fed4c485ca0bf319887a81b9dbf5e9" title="Инициализация задачи">Initialize</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">configPath</td><td>строка, содержащая путь к конфигурационному файлу задачи </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Код ошибки </dd></dl>
+
+<p>Переопределяет метод предка <a class="el" href="class_i_global_optimization_problem.html#a52014930e5f6d036f68f954c90b8dbcb">IGlobalOptimizationProblem</a>.</p>
+
+</div>
+</div>
+<a id="a733c80c40af5fea20043516417eb95ec" name="a733c80c40af5fea20043516417eb95ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a733c80c40af5fea20043516417eb95ec">&#9670;&#160;</a></span>SetDimension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PythonProblem::SetDimension </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dimension</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод задаёт размерность задачи </p>
+<p>Данный метод должен вызываться перед <a class="el" href="#aa2fed4c485ca0bf319887a81b9dbf5e9" title="Инициализация задачи">Initialize</a>. Размерность должна быть в списке поддерживаемых. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>размерность задачи </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Код ошибки </dd></dl>
+
+<p>Замещает <a class="el" href="class_i_global_optimization_problem.html#a5b57808ee2c3f6fdcdc9bebfec4f415a">IGlobalOptimizationProblem</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>third_party/Problems/Problems/python_objective/<a class="el" href="python__function_8h_source.html">python_function.h</a></li>
+<li>third_party/Problems/Problems/python_objective/<b>python_function.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Globalizer</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_base_interval_8h_source.html">Исходный файл globalizer/method/include/BaseInterval.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_base_parameters_8h.html">Файл globalizer/parameters/include/BaseParameters.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_solver.html">Класс Solver</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, TODO.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/html/class_python_problem.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

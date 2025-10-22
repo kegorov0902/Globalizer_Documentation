@@ -1,0 +1,14 @@
+.. meta::db59f3d292e62b68160fa9907c4873245df4ef62383b6034f0b053433cf2f69861cda69de1fb142044398ec0437c795dc9b88e3ef4fec6905db4c68374130f1d
+
+:orphan:
+
+.. title:: Globalizer: Содержание директории globalizer/problem
+
+Содержание директории globalizer/problem
+========================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_ed2d12b1dfca7a7a4180a9d3073586b4.html

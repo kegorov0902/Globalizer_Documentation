@@ -1,0 +1,14 @@
+.. meta::b0405f3e962ecfa3543c674ea4c10ea1a28b0743549bfe8e3f10f43d528069fe7f8f0c76c25eead441db09a30e201f66a30557826f251015ad56f6e34c793dee
+
+:orphan:
+
+.. title:: Globalizer: Содержание директории globalizer/problem/src
+
+Содержание директории globalizer/problem/src
+============================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_f34054045e19d717166461c2e0a4a45e.html

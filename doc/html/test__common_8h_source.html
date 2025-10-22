@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Globalizer: Исходный файл tests/src/test_common.h &#8212; документация Globalizer 141025</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=799f848e"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=cd1d70c9"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="tests-src-test-common-h">
+<h1>Исходный файл tests/src/test_common.h<a class="headerlink" href="#tests-src-test-common-h" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="doxygen-content docutils container">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Исходный файл tests/src/test_common.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li><li class="navelem"><a href="dir_171063ca2b6d8df6d9147a9ad3041fe6.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">test_common.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __TEST_COMMON_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __TEST_COMMON_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;gtest/gtest.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#define _N 4</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  <span class="keywordtype">void</span> ReadIterationFromFile(FILE* pf, <span class="keywordtype">int</span> &amp;IterationCount,</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>                             <span class="keywordtype">double</span> &amp;AchievedAccuracy, <span class="keywordtype">bool</span> &amp;recalc,</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>                             <span class="keywordtype">double</span> &amp;BestTrial_FuncValue,</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>                             <span class="keywordtype">double</span> &amp;BestTrial_x, <span class="keywordtype">double</span>* BestTrial_y,</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>                             <span class="keywordtype">double</span> &amp;pCurTrials_FuncValue,</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                             <span class="keywordtype">double</span> &amp;pCurTrials_x, <span class="keywordtype">double</span>* pCurTrials_y)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">int</span> recalc_int;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">char</span> tmp[30];</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    fscanf(pf, <span class="stringliteral">&quot;%s%s%d&quot;</span>, tmp, tmp, &amp;IterationCount);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    fscanf(pf, <span class="stringliteral">&quot;%s%s%lf&quot;</span>, tmp, tmp, &amp;AchievedAccuracy);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    fscanf(pf, <span class="stringliteral">&quot;%s%s%i&quot;</span>, tmp, tmp, &amp;recalc_int); <span class="comment">//bool type does not exists in C language, so C-style I/O functions like scanf have no template %b</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    fscanf(pf, <span class="stringliteral">&quot;%s%s%lf&quot;</span>, tmp, tmp, &amp;BestTrial_FuncValue);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    fscanf(pf, <span class="stringliteral">&quot;%s%s%lf&quot;</span>, tmp, tmp, &amp;BestTrial_x);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    recalc_int == 0 ? recalc = false : recalc = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;_N; i++)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        fscanf(pf, <span class="stringliteral">&quot;%s%s%lf&quot;</span>, tmp, tmp, &amp;BestTrial_y[i]);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    fscanf(pf, <span class="stringliteral">&quot;%s%s%lf&quot;</span>, tmp, tmp, &amp;pCurTrials_FuncValue);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    fscanf(pf, <span class="stringliteral">&quot;%s%s%lf&quot;</span>, tmp, tmp, &amp;pCurTrials_x);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; _N; i++)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      fscanf(pf, <span class="stringliteral">&quot;%s%s%lf&quot;</span>, tmp, tmp, &amp;pCurTrials_y[i]);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> CheckMetodIteration(<span class="keyword">const</span> std::string&amp; stateFile, <span class="keyword">const</span> std::string&amp; currentFile, <span class="keywordtype">int</span> countOfIterations)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  FILE* rightf;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  FILE* currentf;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordtype">int</span> IterationCount;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordtype">double</span> AchievedAccuracy;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordtype">bool</span> recalc;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordtype">double</span> BestTrial_FuncValue;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordtype">double</span> BestTrial_x;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">double</span> BestTrial_y[MaxDim];</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordtype">double</span> pCurTrials_FuncValue;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">double</span> pCurTrials_x;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordtype">double</span> pCurTrials_y[MaxDim];</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordtype">int</span> currentIterationCount;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">double</span> currentAchievedAccuracy;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">bool</span> currentrecalc;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">double</span> currentBestTrial_FuncValue;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordtype">double</span> currentBestTrial_x;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">double</span> currentBestTrial_y[MaxDim];</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordtype">double</span> currentpCurTrials_FuncValue;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordtype">double</span> currentpCurTrials_x;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordtype">double</span> currentpCurTrials_y[MaxDim];</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  rightf = fopen(stateFile.c_str(),<span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  currentf = fopen(currentFile.c_str(),<span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordflow">if</span>(rightf == 0 || currentf == 0)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    ASSERT_TRUE(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">while</span>(countOfIterations &gt; 0)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      ReadIterationFromFile(rightf, IterationCount, AchievedAccuracy, recalc,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>          BestTrial_FuncValue, BestTrial_x, BestTrial_y, pCurTrials_FuncValue,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>          pCurTrials_x, pCurTrials_y);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      ReadIterationFromFile(currentf, currentIterationCount, currentAchievedAccuracy,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>          currentrecalc, currentBestTrial_FuncValue, currentBestTrial_x, currentBestTrial_y,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>          currentpCurTrials_FuncValue, currentpCurTrials_x, currentpCurTrials_y);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      ASSERT_EQ(IterationCount, currentIterationCount);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      ASSERT_DOUBLE_EQ(AchievedAccuracy, currentAchievedAccuracy);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      ASSERT_EQ(recalc, currentrecalc);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      ASSERT_DOUBLE_EQ(BestTrial_FuncValue, currentBestTrial_FuncValue);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      ASSERT_DOUBLE_EQ(BestTrial_x, currentBestTrial_x);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      ASSERT_DOUBLE_EQ(pCurTrials_FuncValue, currentpCurTrials_FuncValue);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      ASSERT_DOUBLE_EQ(pCurTrials_x, currentpCurTrials_x);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; _N; i++)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        ASSERT_DOUBLE_EQ(BestTrial_y[i], currentBestTrial_y[i]);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        ASSERT_DOUBLE_EQ(pCurTrials_y[i], currentpCurTrials_y[i]);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      countOfIterations--;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  fclose(rightf);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  fclose(currentf);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Globalizer</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_base_interval_8h_source.html">Исходный файл globalizer/method/include/BaseInterval.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_base_parameters_8h.html">Файл globalizer/parameters/include/BaseParameters.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_solver.html">Класс Solver</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, TODO.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/html/test__common_8h_source.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

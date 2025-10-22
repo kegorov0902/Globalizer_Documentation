@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Globalizer: Класс SearchInterval &#8212; документация Globalizer 141025</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=799f848e"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=cd1d70c9"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="searchinterval">
+<h1>Класс SearchInterval<a class="headerlink" href="#searchinterval" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="doxygen-content docutils container">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс SearchInterval</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="class_search_interval-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс SearchInterval</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Граф наследования:SearchInterval:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_search_interval.png" usemap="#SearchInterval_map" alt=""/>
+  <map id="SearchInterval_map" name="SearchInterval_map">
+<area href="class_queue_base_data.html" alt="QueueBaseData" shape="rect" coords="0,0,104,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a2501ec7fca9a378ceae1a03fc806549b" id="r_a2501ec7fca9a378ceae1a03fc806549b"><td class="memItemLeft" align="right" valign="top"><a id="a2501ec7fca9a378ceae1a03fc806549b" name="a2501ec7fca9a378ceae1a03fc806549b"></a>
+<a class="el" href="class_extended.html">Extended</a>&#160;</td><td class="memItemRight" valign="bottom"><b>xl</b> ()</td></tr>
+<tr class="memdesc:a2501ec7fca9a378ceae1a03fc806549b"><td class="mdescLeft">&#160;</td><td class="mdescRight">левая граница интервала <br /></td></tr>
+<tr class="memitem:a8574b5e106715a954324a4f8541c9aff" id="r_a8574b5e106715a954324a4f8541c9aff"><td class="memItemLeft" align="right" valign="top"><a id="a8574b5e106715a954324a4f8541c9aff" name="a8574b5e106715a954324a4f8541c9aff"></a>
+<a class="el" href="class_extended.html">Extended</a>&#160;</td><td class="memItemRight" valign="bottom"><b>xr</b> ()</td></tr>
+<tr class="memdesc:a8574b5e106715a954324a4f8541c9aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">правая граница интервала <br /></td></tr>
+<tr class="memitem:a9f29ea18217216b5f41d04f9c4e06956" id="r_a9f29ea18217216b5f41d04f9c4e06956"><td class="memItemLeft" align="right" valign="top"><a id="a9f29ea18217216b5f41d04f9c4e06956" name="a9f29ea18217216b5f41d04f9c4e06956"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>zl</b> ()</td></tr>
+<tr class="memdesc:a9f29ea18217216b5f41d04f9c4e06956"><td class="mdescLeft">&#160;</td><td class="mdescRight">значение последнего вычисленного функционала в xl <br /></td></tr>
+<tr class="memitem:a19a2e05f79470637939ee354fa29bf3a" id="r_a19a2e05f79470637939ee354fa29bf3a"><td class="memItemLeft" align="right" valign="top"><a id="a19a2e05f79470637939ee354fa29bf3a" name="a19a2e05f79470637939ee354fa29bf3a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>izl</b> ()</td></tr>
+<tr class="memdesc:a19a2e05f79470637939ee354fa29bf3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">индекс последнего вычисленного фукнционала в xl <br /></td></tr>
+<tr class="memitem:aa730f85f99b550619f21bc9a5f141f27" id="r_aa730f85f99b550619f21bc9a5f141f27"><td class="memItemLeft" align="right" valign="top"><a id="aa730f85f99b550619f21bc9a5f141f27" name="aa730f85f99b550619f21bc9a5f141f27"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>zr</b> ()</td></tr>
+<tr class="memdesc:aa730f85f99b550619f21bc9a5f141f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">значение последнего вычисленного функционала в xr <br /></td></tr>
+<tr class="memitem:a19fdc0bd503344afe5366655fe71572b" id="r_a19fdc0bd503344afe5366655fe71572b"><td class="memItemLeft" align="right" valign="top"><a id="a19fdc0bd503344afe5366655fe71572b" name="a19fdc0bd503344afe5366655fe71572b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>izr</b> ()</td></tr>
+<tr class="memdesc:a19fdc0bd503344afe5366655fe71572b"><td class="mdescLeft">&#160;</td><td class="mdescRight">индекс последнего вычисленного фукнционала в xr <br /></td></tr>
+<tr class="memitem:a8022ca909c1766fc15745cf727dbcd8f" id="r_a8022ca909c1766fc15745cf727dbcd8f"><td class="memItemLeft" align="right" valign="top"><a id="a8022ca909c1766fc15745cf727dbcd8f" name="a8022ca909c1766fc15745cf727dbcd8f"></a>
+double *&#160;</td><td class="memItemRight" valign="bottom"><b>z</b> ()</td></tr>
+<tr class="memdesc:a8022ca909c1766fc15745cf727dbcd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">значения вычисленных функционалов в izl, кол-во - <a class="el" href="#a19a2e05f79470637939ee354fa29bf3a" title="индекс последнего вычисленного фукнционала в xl">izl()</a> + 1 <br /></td></tr>
+<tr class="memitem:aa5190275c3d01b2dd2f14ffa967d2b43" id="r_aa5190275c3d01b2dd2f14ffa967d2b43"><td class="memItemLeft" align="right" valign="top"><a id="aa5190275c3d01b2dd2f14ffa967d2b43" name="aa5190275c3d01b2dd2f14ffa967d2b43"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>discreteValuesIndex</b> ()</td></tr>
+<tr class="memdesc:aa5190275c3d01b2dd2f14ffa967d2b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Индекс значения дискретного параметра <br /></td></tr>
+<tr class="memitem:aa82b0f38e78b61aba17ccb0cd0befe98" id="r_aa82b0f38e78b61aba17ccb0cd0befe98"><td class="memItemLeft" align="right" valign="top"><a id="aa82b0f38e78b61aba17ccb0cd0befe98" name="aa82b0f38e78b61aba17ccb0cd0befe98"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="class_search_interval.html">SearchInterval</a> &amp;p)</td></tr>
+<tr class="memitem:a1cf5152b8c92615045b59710bf62adbc" id="r_a1cf5152b8c92615045b59710bf62adbc"><td class="memItemLeft" align="right" valign="top"><a id="a1cf5152b8c92615045b59710bf62adbc" name="a1cf5152b8c92615045b59710bf62adbc"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a class="el" href="class_search_interval.html">SearchInterval</a> &amp;p)</td></tr>
+<tr class="memitem:ac4e0884479132e440422128d3075a9ac" id="r_ac4e0884479132e440422128d3075a9ac"><td class="memItemLeft" align="right" valign="top"><a id="ac4e0884479132e440422128d3075a9ac" name="ac4e0884479132e440422128d3075a9ac"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (<a class="el" href="class_search_interval.html">SearchInterval</a> &amp;p)</td></tr>
+<tr class="memitem:a00a0ce795c00af8acb54d7e72463ea93" id="r_a00a0ce795c00af8acb54d7e72463ea93"><td class="memItemLeft" align="right" valign="top"><a id="a00a0ce795c00af8acb54d7e72463ea93" name="a00a0ce795c00af8acb54d7e72463ea93"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CreatePoint</b> ()</td></tr>
+<tr class="memitem:a610f108340da4fe953faf154b6eeef7d" id="r_a610f108340da4fe953faf154b6eeef7d"><td class="memItemLeft" align="right" valign="top"><a id="a610f108340da4fe953faf154b6eeef7d" name="a610f108340da4fe953faf154b6eeef7d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SearchInterval</b> (const <a class="el" href="class_search_interval.html">SearchInterval</a> &amp;p)</td></tr>
+<tr class="inherit_header pub_methods_class_queue_base_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_queue_base_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Открытые члены унаследованные от <a class="el" href="class_queue_base_data.html">QueueBaseData</a></td></tr>
+<tr class="memitem:a2dcc30157b2d8e40b21996923bf312bf inherit pub_methods_class_queue_base_data" id="r_a2dcc30157b2d8e40b21996923bf312bf"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetQueueElementa</b> (<a class="el" href="struct_queue_element.html">QueueElement</a> *q)</td></tr>
+<tr class="memitem:a2ac31c2e9ead6a48b409aec4ca85a6d6 inherit pub_methods_class_queue_base_data" id="r_a2ac31c2e9ead6a48b409aec4ca85a6d6"><td class="memItemLeft" align="right" valign="top">
+virtual <a class="el" href="struct_queue_element.html">QueueElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetQueueElementa</b> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ae77121a387a05d1274c9d4605afc8624" id="r_ae77121a387a05d1274c9d4605afc8624"><td class="memItemLeft" align="right" valign="top"><a id="ae77121a387a05d1274c9d4605afc8624" name="ae77121a387a05d1274c9d4605afc8624"></a>
+<a class="el" href="class_trial.html">Trial</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>LeftPoint</b></td></tr>
+<tr class="memdesc:ae77121a387a05d1274c9d4605afc8624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Левая точка интервала <br /></td></tr>
+<tr class="memitem:a96548c74879d9d6407725a4973d9df26" id="r_a96548c74879d9d6407725a4973d9df26"><td class="memItemLeft" align="right" valign="top"><a id="a96548c74879d9d6407725a4973d9df26" name="a96548c74879d9d6407725a4973d9df26"></a>
+<a class="el" href="class_trial.html">Trial</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>RightPoint</b></td></tr>
+<tr class="memdesc:a96548c74879d9d6407725a4973d9df26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Правая точка интервала <br /></td></tr>
+<tr class="memitem:a14e53417e461583e85b9bedaee11dea8" id="r_a14e53417e461583e85b9bedaee11dea8"><td class="memItemLeft" align="right" valign="top"><a id="a14e53417e461583e85b9bedaee11dea8" name="a14e53417e461583e85b9bedaee11dea8"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>delta</b></td></tr>
+<tr class="memdesc:a14e53417e461583e85b9bedaee11dea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">"гельдеровская" длина <br /></td></tr>
+<tr class="memitem:abf9a81c1e9d270f15a4064bb5e40c12a" id="r_abf9a81c1e9d270f15a4064bb5e40c12a"><td class="memItemLeft" align="right" valign="top"><a id="abf9a81c1e9d270f15a4064bb5e40c12a" name="abf9a81c1e9d270f15a4064bb5e40c12a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ind</b></td></tr>
+<tr class="memdesc:abf9a81c1e9d270f15a4064bb5e40c12a"><td class="mdescLeft">&#160;</td><td class="mdescRight">номер итерации <br /></td></tr>
+<tr class="memitem:a493916e1b89d20b8932e22da85c86942" id="r_a493916e1b89d20b8932e22da85c86942"><td class="memItemLeft" align="right" valign="top"><a id="a493916e1b89d20b8932e22da85c86942" name="a493916e1b89d20b8932e22da85c86942"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>K</b></td></tr>
+<tr class="memdesc:a493916e1b89d20b8932e22da85c86942"><td class="mdescLeft">&#160;</td><td class="mdescRight">число "вложенных" итераций <br /></td></tr>
+<tr class="memitem:ab84dd393724cfc87fa58d869e6ffa121" id="r_ab84dd393724cfc87fa58d869e6ffa121"><td class="memItemLeft" align="right" valign="top"><a id="ab84dd393724cfc87fa58d869e6ffa121" name="ab84dd393724cfc87fa58d869e6ffa121"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>R</b></td></tr>
+<tr class="memdesc:ab84dd393724cfc87fa58d869e6ffa121"><td class="mdescLeft">&#160;</td><td class="mdescRight">характеристика интервала (xl, xr) <br /></td></tr>
+<tr class="memitem:a45d2504a7a6cc7806d8c21a7fe2608d2" id="r_a45d2504a7a6cc7806d8c21a7fe2608d2"><td class="memItemLeft" align="right" valign="top"><a id="a45d2504a7a6cc7806d8c21a7fe2608d2" name="a45d2504a7a6cc7806d8c21a7fe2608d2"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>locR</b></td></tr>
+<tr class="memdesc:a45d2504a7a6cc7806d8c21a7fe2608d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">локальная характеристика интервала (xl, xr) <br /></td></tr>
+<tr class="memitem:af7f8ccf7311701f7644a5a39b5187a4c" id="r_af7f8ccf7311701f7644a5a39b5187a4c"><td class="memItemLeft" align="right" valign="top"><a id="af7f8ccf7311701f7644a5a39b5187a4c" name="af7f8ccf7311701f7644a5a39b5187a4c"></a>
+<a class="el" href="class_tree_node.html">TreeNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>treeNode</b></td></tr>
+<tr class="memdesc:af7f8ccf7311701f7644a5a39b5187a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Элемент дерева хранящий этот интервал <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_queue_base_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_queue_base_data')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Защищенные данные унаследованные от <a class="el" href="class_queue_base_data.html">QueueBaseData</a></td></tr>
+<tr class="memitem:af668471b658fdcce42a5330ea86ea5d5 inherit pro_attribs_class_queue_base_data" id="r_af668471b658fdcce42a5330ea86ea5d5"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="struct_queue_element.html">QueueElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>queueElementa</b></td></tr>
+<tr class="memdesc:af668471b658fdcce42a5330ea86ea5d5 inherit pro_attribs_class_queue_base_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Элемент очереди, хранящий этот интервал <br /></td></tr>
+</table>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>globalizer/method/include/<a class="el" href="_search_interval_8h_source.html">SearchInterval.h</a></li>
+<li>globalizer/method/src/<b>SearchInterval.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Globalizer</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_base_interval_8h_source.html">Исходный файл globalizer/method/include/BaseInterval.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_base_parameters_8h.html">Файл globalizer/parameters/include/BaseParameters.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_solver.html">Класс Solver</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, TODO.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/html/class_search_interval.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Globalizer: Actions Reference &#8212; документация Globalizer 141025</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=799f848e"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=cd1d70c9"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="actions-reference">
+<h1>Actions Reference<a class="headerlink" href="#actions-reference" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="doxygen-content docutils container">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Actions Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Actions Reference </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md249"></a></p>
+<p><a href="../gmock_for_dummies.md#actions-what-should-it-do"><b>Actions</b></a> specify what a mock function should do when invoked. This page lists the built-in actions provided by GoogleTest. All actions are defined in the <span class="tt">::testing</span> namespace.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md250"></a>
+Returning a Value</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><a class="el" href="class_action.html">Action</a>  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">Return()</span>  </td><td class="markdownTableBodyLeft">Return from a <span class="tt">void</span> mock function.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">Return(value)</span>  </td><td class="markdownTableBodyLeft">Return <span class="tt">value</span>. If the type of <span class="tt">value</span> is different to the mock function's return type, <span class="tt">value</span> is converted to the latter type <em>at the time the expectation is set</em>, not when the action is executed.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">ReturnArg&lt;N&gt;()</span>  </td><td class="markdownTableBodyLeft">Return the <span class="tt">N</span>-th (0-based) argument.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">ReturnNew&lt;T&gt;(a1, ..., ak)</span>  </td><td class="markdownTableBodyLeft">Return <span class="tt">new T(a1, ..., ak)</span>; a different object is created each time.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">ReturnNull()</span>  </td><td class="markdownTableBodyLeft">Return a null pointer.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">ReturnPointee(ptr)</span>  </td><td class="markdownTableBodyLeft">Return the value pointed to by <span class="tt">ptr</span>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">ReturnRef(variable)</span>  </td><td class="markdownTableBodyLeft">Return a reference to <span class="tt">variable</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">ReturnRefOfCopy(value)</span>  </td><td class="markdownTableBodyLeft">Return a reference to a copy of <span class="tt">value</span>; the copy lives as long as the action.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">ReturnRoundRobin({a1, ..., ak})</span>  </td><td class="markdownTableBodyLeft">Each call will return the next <span class="tt">ai</span> in the list, starting at the beginning when the end of the list is reached.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md251"></a>
+Side Effects</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><a class="el" href="class_action.html">Action</a>  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">Assign(&amp;variable, value)</span>  </td><td class="markdownTableBodyLeft">Assign <span class="tt">value</span> to variable.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">DeleteArg&lt;N&gt;()</span>  </td><td class="markdownTableBodyLeft">Delete the <span class="tt">N</span>-th (0-based) argument, which must be a pointer.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">SaveArg&lt;N&gt;(pointer)</span>  </td><td class="markdownTableBodyLeft">Save the <span class="tt">N</span>-th (0-based) argument to <span class="tt">*pointer</span> by copy-assignment.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">SaveArgByMove&lt;N&gt;(pointer)</span>  </td><td class="markdownTableBodyLeft">Save the <span class="tt">N</span>-th (0-based) argument to <span class="tt">*pointer</span> by move-assignment.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">SaveArgPointee&lt;N&gt;(pointer)</span>  </td><td class="markdownTableBodyLeft">Save the value pointed to by the <span class="tt">N</span>-th (0-based) argument to <span class="tt">*pointer</span>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">SetArgReferee&lt;N&gt;(value)</span>  </td><td class="markdownTableBodyLeft">Assign <span class="tt">value</span> to the variable referenced by the <span class="tt">N</span>-th (0-based) argument.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">SetArgPointee&lt;N&gt;(value)</span>  </td><td class="markdownTableBodyLeft">Assign <span class="tt">value</span> to the variable pointed by the <span class="tt">N</span>-th (0-based) argument.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">SetArgumentPointee&lt;N&gt;(value)</span>  </td><td class="markdownTableBodyLeft">Same as <span class="tt">SetArgPointee&lt;N&gt;(value)</span>. Deprecated. Will be removed in v1.7.0.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">SetArrayArgument&lt;N&gt;(first, last)</span>  </td><td class="markdownTableBodyLeft">Copies the elements in source range [<span class="tt">first</span>, <span class="tt">last</span>) to the array pointed to by the <span class="tt">N</span>-th (0-based) argument, which can be either a pointer or an iterator. The action does not take ownership of the elements in the source range.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">SetErrnoAndReturn(error, value)</span>  </td><td class="markdownTableBodyLeft">Set <span class="tt">errno</span> to <span class="tt">error</span> and return <span class="tt">value</span>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">Throw(exception)</span>  </td><td class="markdownTableBodyLeft">Throws the given exception, which can be any copyable value. Available since v1.1.0.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md252"></a>
+Using a Function, Functor, or Lambda as an Action</h1>
+<p>In the following, by "callable" we mean a free function, <span class="tt">std::function</span>, functor, or lambda.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><a class="el" href="class_action.html">Action</a>  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">f</span>  </td><td class="markdownTableBodyLeft">Invoke <span class="tt">f</span> with the arguments passed to the mock function, where <span class="tt">f</span> is a callable.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">Invoke(f)</span>  </td><td class="markdownTableBodyLeft">Invoke <span class="tt">f</span> with the arguments passed to the mock function, where <span class="tt">f</span> can be a global/static function or a functor.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">Invoke(object_pointer, &amp;class::method)</span>  </td><td class="markdownTableBodyLeft">Invoke the method on the object with the arguments passed to the mock function.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">InvokeWithoutArgs(f)</span>  </td><td class="markdownTableBodyLeft">Invoke <span class="tt">f</span>, which can be a global/static function or a functor. <span class="tt">f</span> must take no arguments.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">InvokeWithoutArgs(object_pointer, &amp;class::method)</span>  </td><td class="markdownTableBodyLeft">Invoke the method on the object, which takes no arguments.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">InvokeArgument&lt;N&gt;(arg1, arg2, ..., argk)</span>  </td><td class="markdownTableBodyLeft">Invoke the mock function's <span class="tt">N</span>-th (0-based) argument, which must be a function or a functor, with the <span class="tt">k</span> arguments.  </td></tr>
+</table>
+<p>The return value of the invoked function (except <span class="tt">InvokeArgument</span>) is used as the return value of the action.</p>
+<p>When defining a callable to be used with <span class="tt">Invoke*()</span>, you can declare any unused parameters as <span class="tt">Unused</span>:</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span>::testing::Invoke;</div>
+<div class="line"><span class="keywordtype">double</span> Distance(Unused, <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y) { <span class="keywordflow">return</span> sqrt(x*x + y*y); }</div>
+<div class="line">...</div>
+<div class="line">EXPECT_CALL(mock, Foo(<span class="stringliteral">&quot;Hi&quot;</span>, _, _)).WillOnce(Invoke(Distance));</div>
+</div><!-- fragment --><p><span class="tt">Invoke(callback)</span> and <span class="tt">InvokeWithoutArgs(callback)</span> take ownership of <span class="tt">callback</span>, which must be permanent. The type of <span class="tt">callback</span> must be a base callback type instead of a derived one, e.g.</p>
+<div class="fragment"><div class="line">BlockingClosure* done = <span class="keyword">new</span> BlockingClosure;</div>
+<div class="line">... Invoke(done) ...;  <span class="comment">// This won&#39;t compile!</span></div>
+<div class="line"> </div>
+<div class="line">Closure* done2 = <span class="keyword">new</span> BlockingClosure;</div>
+<div class="line">... Invoke(done2) ...;  <span class="comment">// This works.</span></div>
+</div><!-- fragment --><p>In <span class="tt">InvokeArgument&lt;N&gt;(...)</span>, if an argument needs to be passed by reference, wrap it inside <span class="tt">std::ref()</span>. For example,</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span>::testing::InvokeArgument;</div>
+<div class="line">...</div>
+<div class="line">InvokeArgument&lt;2&gt;(5, string(<span class="stringliteral">&quot;Hi&quot;</span>), std::ref(foo))</div>
+</div><!-- fragment --><p>calls the mock function's #2 argument, passing to it <span class="tt">5</span> and <span class="tt">string("Hi")</span> by value, and <span class="tt">foo</span> by reference.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md253"></a>
+Default Action</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><a class="el" href="class_action.html">Action</a>  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">DoDefault()</span>  </td><td class="markdownTableBodyLeft">Do the default action (specified by <span class="tt">ON_CALL()</span> or the built-in one).  </td></tr>
+</table>
+<p>{: .callout .note} <b>Note:</b> due to technical reasons, <span class="tt">DoDefault()</span> cannot be used inside a composite action - trying to do so will result in a run-time error.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md254"></a>
+Composite Actions</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><a class="el" href="class_action.html">Action</a>  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">DoAll(a1, a2, ..., an)</span>  </td><td class="markdownTableBodyLeft">Do all actions <span class="tt">a1</span> to <span class="tt">an</span> and return the result of <span class="tt">an</span> in each invocation. The first <span class="tt">n - 1</span> sub-actions must return void and will receive a readonly view of the arguments.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">IgnoreResult(a)</span>  </td><td class="markdownTableBodyLeft">Perform action <span class="tt">a</span> and ignore its result. <span class="tt">a</span> must not return void.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">WithArg&lt;N&gt;(a)</span>  </td><td class="markdownTableBodyLeft">Pass the <span class="tt">N</span>-th (0-based) argument of the mock function to action <span class="tt">a</span> and perform it.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">WithArgs&lt;N1, N2, ..., Nk&gt;(a)</span>  </td><td class="markdownTableBodyLeft">Pass the selected (0-based) arguments of the mock function to action <span class="tt">a</span> and perform it.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">WithoutArgs(a)</span>  </td><td class="markdownTableBodyLeft">Perform action <span class="tt">a</span> without any arguments.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md255"></a>
+Defining Actions</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Macro  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">ACTION(Sum) { return arg0 + arg1; }</span>  </td><td class="markdownTableBodyLeft">Defines an action <span class="tt">Sum()</span> to return the sum of the mock function's argument #0 and #1.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><span class="tt">ACTION_P(Plus, n) { return arg0 + n; }</span>  </td><td class="markdownTableBodyLeft">Defines an action <span class="tt">Plus(n)</span> to return the sum of the mock function's argument #0 and <span class="tt">n</span>.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><span class="tt">ACTION_Pk(Foo, p1, ..., pk) { statements; }</span>  </td><td class="markdownTableBodyLeft">Defines a parameterized action <span class="tt">Foo(p1, ..., pk)</span> to execute the given <span class="tt">statements</span>.  </td></tr>
+</table>
+<p>The <span class="tt">ACTION*</span> macros cannot be used inside a function or class. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Globalizer</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_base_interval_8h_source.html">Исходный файл globalizer/method/include/BaseInterval.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_base_parameters_8h.html">Файл globalizer/parameters/include/BaseParameters.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_solver.html">Класс Solver</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, TODO.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/html/md_third__party_2gtest_2docs_2reference_2actions.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

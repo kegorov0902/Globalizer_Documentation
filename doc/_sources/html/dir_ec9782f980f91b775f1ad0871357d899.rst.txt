@@ -1,0 +1,14 @@
+.. meta::676339bd993250b186e4f9319b3b882c2bb6761b579c05efcbbc8f85dc22222a4b5cea97a32477ae6d991a6ee3ebfdf16bbf19eb29b4a038ec40067f0d50d093
+
+:orphan:
+
+.. title:: Globalizer: Содержание директории third_party/Problems/examples
+
+Содержание директории third\_party/Problems/examples
+====================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_ec9782f980f91b775f1ad0871357d899.html

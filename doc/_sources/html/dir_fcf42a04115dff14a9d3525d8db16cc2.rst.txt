@@ -1,0 +1,14 @@
+.. meta::12ae68aa23f61ecb6e9c7964acc684c92e4ab3c6ad0ae2ab66625845ec539add2e6fd83384ab9158d05ee97d79fcdbfbc26e38ab5f0cf8b0011083b9436d8b05
+
+:orphan:
+
+.. title:: Globalizer: Содержание директории third_party/Problems/third_party/gtest/googletest/samples
+
+Содержание директории third\_party/Problems/third\_party/gtest/googletest/samples
+=================================================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_fcf42a04115dff14a9d3525d8db16cc2.html
