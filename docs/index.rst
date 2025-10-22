@@ -13,4 +13,4 @@ Welcome to Globalizer documentation! Globalizer is an optimisation tool.
    :maxdepth: 2
    :caption: Contents:
 
-   html/class_solver
+   class_solver
