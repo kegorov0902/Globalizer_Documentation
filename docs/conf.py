@@ -26,3 +26,17 @@ language = 'ru'
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+html_theme_options = {
+    'logo_only': False,
+    'display_version': True,
+    'prev_next_buttons_position': 'bottom',
+    'style_external_links': False,
+    'vcs_pageview_mode': '',
+    'style_nav_header_background': '#2980B9',
+    # Кастомные ссылки для навигации
+    'navbar_links': [
+        ("Home", "https://github.com/your-username/your-repository", True),
+        ("Documentation", "index", False),
+    ],
+}
