@@ -36,7 +36,7 @@ html_theme_options = {
     'style_nav_header_background': '#2980B9',
     # Кастомные ссылки для навигации
     'navbar_links': [
-        ("Home", "https://github.com/your-username/your-repository", True),
+        ("Home", "https://github.com/OptimLLab/Globalizer", True),
         ("Documentation", "index", False),
     ],
 }
