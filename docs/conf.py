@@ -28,7 +28,7 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 html_context = {
-    'repository_url': 'https://github.com/your-username/your-repository'
+    'repository_url': 'https://github.com/OptimLLab/Globalizer'
 }
 
 html_theme_options = {
