@@ -10,7 +10,7 @@ Welcome to Globalizer documentation! Globalizer is an optimisation tool. A sourc
 
 .. image:: source/html/Globalizer_logo.png
    :alt: A descriptive alt text for your image
-   :width: 1200px
+   :width: 700px
    :align: center
 
 .. toctree::
