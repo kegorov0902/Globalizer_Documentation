@@ -18,3 +18,4 @@ Welcome to Globalizer documentation! Globalizer is an optimisation tool. A sourc
    :caption: Contents:
 
    source/html/class_solver
+   source/html/overview
