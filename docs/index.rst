@@ -6,7 +6,7 @@
 Globalizer documentation
 ========================
 
-Welcome to Globalizer documentation! Globalizer is an optimisation tool.
+Welcome to Globalizer documentation! Globalizer is an optimisation tool. A source code could be found here: https://github.com/OptimLLab/Globalizer
 
 .. image:: source/html/Globalizer_logo.png
    :alt: A descriptive alt text for your image
