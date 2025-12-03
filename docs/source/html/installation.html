@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Установка и настройка | Globalizer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 900px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid black; /* Чёрная линия под заголовком */
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .content-placeholder {
+            margin: 30px 0;
+            padding: 25px;
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .placeholder-text {
+            color: #6c757d;
+            font-size: 1.1em;
+            margin: 0;
+        }
+        .placeholder-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #adb5bd;
+        }
+        .placeholder-instruction {
+            color: #495057;
+            font-style: italic;
+            margin-top: 15px;
+            font-size: 0.95em;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .nav-link {
+            color: #3498db;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        .install-steps {
+            background-color: #f0f7ff;
+            border: 1px solid #cfe2ff;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 25px;
+            text-align: left;
+        }
+        .steps-title {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .steps-list {
+            list-style-type: none;
+            padding-left: 0;
+            counter-reset: step-counter;
+        }
+        .steps-list li {
+            margin-bottom: 15px;
+            padding-left: 40px;
+            position: relative;
+            counter-increment: step-counter;
+        }
+        .steps-list li:before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .step-name {
+            font-weight: 600;
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .step-desc {
+            color: #6c757d;
+            font-size: 0.95em;
+        }
+        .code-example {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            margin: 15px 0;
+            font-size: 0.9em;
+            line-height: 1.4;
+            overflow-x: auto;
+        }
+        .requirements {
+            background-color: #fff8e1;
+            border: 1px solid #ffd54f;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .requirements-title {
+            color: #f57c00;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Установка и настройка</h1>
+        
+        <div class="content-placeholder">
+            <div class="placeholder-icon">⚙️</div>
+            <p class="placeholder-text">Здесь будет размещена подробная инструкция по установке и настройке системы Globalizer</p>
+            <p class="placeholder-instruction">
+                В этот раздел можно будет добавить пошаговые инструкции для различных платформ, 
+                требования к системе, примеры конфигурационных файлов и рекомендации по настройке
+            </p>
+            
+            <div class="install-steps">
+                <ul class="steps-list">
+                    <li>
+                        <span class="step-name">Требования к системе</span>
+                        <span class="step-desc">Минимальные и рекомендуемые системные требования</span>
+                    </li>
+                    <li>
+                        <span class="step-name">Установка зависимостей</span>
+                        <span class="step-desc">Установка необходимых библиотек и инструментов</span>
+                    </li>
+                    <li>
+                        <span class="step-name">Клонирование репозитория</span>
+                        <span class="step-desc">Для начала клонируйте репозиторий с исходным кодом на свой компьютер:<br></span>
+                        <code>git clone https://github.com/OptimLLab/Globalizer.git<br></code>
+                        <span class="step-desc">Далее перейдите в папку с кодом из репозитория и создайте в ней папку "build":<br></span>
+                        <code>cd Globalizer/<br></code>
+                        <code>mkdir build</code>
+                    </li>
+                    <li>
+                        <span class="step-name">Сборка</span>
+                        <span class="step-desc">Перейдите в папку "build":<br></span>
+                        <code>cd build<br></code>
+                        <span class="step-desc">Выполните следующие команды:<br></span>
+                        <code>cmake ..<cd></code>
+                        <code>cmake --build ../build --config Release</code>
+                    </li>
+                    <li>
+                        <span class="step-name">Проверка установки</span>
+                        <span class="step-desc">Тестирование работоспособности системы</span>
+                    </li>
+                </ul>
+                
+                <div class="requirements">
+                    <div class="requirements-title">Предварительные требования:</div>
+                    <ul style="color: #5d4037; margin-top: 8px; padding-left: 20px;">
+                        <li>Операционная система: Linux, Windows или macOS</li>
+                        <li>Компилятор C++ с поддержкой стандарта C++17</li>
+                        <li>CMake версии 3.15 или выше</li>
+                        <li>Git для клонирования репозитория</li>
+                        <li>Дополнительно: CUDA для GPU-ускорения (опционально)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2>Поддержка платформ</h2>
+        <p>Система Globalizer поддерживает установку на следующие платформы:</p>
+        
+        <div class="install-steps" style="background-color: #f9f9f9; border-color: #ddd;">
+            <ul class="steps-list" style="counter-reset: platform-counter;">
+                <li>
+                    <span class="step-name">Linux (Ubuntu/Debian)</span>
+                    <span class="step-desc">Полная поддержка, рекомендуется для production-использования</span>
+                </li>
+                <li>
+                    <span class="step-name">Windows</span>
+                    <span class="step-desc">Поддержка через WSL2 или нативная установка с Visual Studio</span>
+                </li>
+                <li>
+                    <span class="step-name">macOS</span>
+                    <span class="step-desc">Поддержка через Homebrew и нативную компиляцию</span>
+                </li>
+                <li>
+                    <span class="step-name">Docker</span>
+                    <span class="step-desc">Готовые контейнеры для быстрого развертывания</span>
+                </li>
+            </ul>
+        </div>
+</body>
+</html>

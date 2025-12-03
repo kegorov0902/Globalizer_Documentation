@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Начало работы с Globalizer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 900px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid black; /* Чёрная линия толщиной 3px */
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        .intro-text {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f0f7ff;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+        .code-block {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            margin: 20px 0;
+            white-space: pre-wrap;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+        .code-comment {
+            color: #6a737d;
+        }
+        .code-keyword {
+            color: #d73a49;
+            font-weight: bold;
+        }
+        .code-type {
+            color: #005cc5;
+        }
+        .code-string {
+            color: #032f62;
+        }
+        .code-number {
+            color: #005cc5;
+        }
+        .code-function {
+            color: #6f42c1;
+        }
+        footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+        .note {
+            background-color: #fffde7;
+            border-left: 4px solid #ffd600;
+            padding: 12px 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Начало работы</h1>
+        
+        <div class="intro-text">
+            Пример использования фреймворка Globalizer для решения задачи минимизации функции Стронгина
+        </div>
+
+        <div class="code-block"><span class="code-keyword">#include</span> <span class="code-string">"Globalizer.h"</span>
+
+<span class="code-type">double</span> <span class="code-function">StronginC3Functionals</span>(<span class="code-keyword">const</span> <span class="code-type">double</span>* y, <span class="code-type">int</span> fNumber)
+{
+  <span class="code-type">double</span> res = <span class="code-number">0.0</span>;
+  <span class="code-type">double</span> x1 = y[<span class="code-number">0</span>], x2 = y[<span class="code-number">1</span>];
+  <span class="code-keyword">switch</span> (fNumber)
+  {
+  <span class="code-keyword">case</span> <span class="code-number">0</span>: <span class="code-comment">// ограничение 1</span>
+    res = <span class="code-number">0.01</span> * ((x1 - <span class="code-number">2.2</span>) * (x1 - <span class="code-number">2.2</span>) + (x2 - <span class="code-number">1.2</span>) * (x2 - <span class="code-number">1.2</span>) - <span class="code-number">2.25</span>);
+    <span class="code-keyword">break</span>;
+  <span class="code-keyword">case</span> <span class="code-number">1</span>: <span class="code-comment">// ограничение 2</span>
+    res = <span class="code-number">100.0</span> * (<span class="code-number">1.0</span> - ((x1 - <span class="code-number">2.0</span>) / <span class="code-number">1.2</span>) * ((x1 - <span class="code-number">2.0</span>) / <span class="code-number">1.2</span>) -
+      (x2 / <span class="code-number">2.0</span>) * (x2 / <span class="code-number">2.0</span>));
+    <span class="code-keyword">break</span>;
+  <span class="code-keyword">case</span> <span class="code-number">2</span>: <span class="code-comment">// ограничение 3</span>
+    res = <span class="code-number">10.0</span> * (x2 - <span class="code-number">1.5</span> - <span class="code-number">1.5</span> * sin(<span class="code-number">6.283</span> * (x1 - <span class="code-number">1.75</span>)));
+    <span class="code-keyword">break</span>;
+  <span class="code-keyword">case</span> <span class="code-number">3</span>: <span class="code-comment">// критерий</span>
+  {
+    <span class="code-type">double</span> t1 = pow(<span class="code-number">0.5</span> * x1 - <span class="code-number">0.5</span>, <span class="code-number">4.0</span>);
+    <span class="code-type">double</span> t2 = pow(x2 - <span class="code-number">1.0</span>, <span class="code-number">4.0</span>);
+    res = <span class="code-number">1.5</span> * x1 * x1 * exp(<span class="code-number">1.0</span> - x1 * x1 - <span class="code-number">20.25</span> * (x1 - x2) * (x1 - x2));
+    res = res + t1 * t2 * exp(<span class="code-number">2.0</span> - t1 - t2);
+    res = -res;
+  }
+  <span class="code-keyword">break</span>;
+  }
+
+  <span class="code-keyword">return</span> res;
+}
+
+<span class="code-comment">// ------------------------------------------------------------------------------------------------</span>
+<span class="code-type">int</span> <span class="code-function">main</span>(<span class="code-type">int</span> argc, <span class="code-type">char</span>* argv[])
+{
+  <span class="code-function">GlobalizerInitialization</span>(argc, argv);
+
+  parameters.Dimension = <span class="code-number">2</span>;
+  IProblem* problem = <span class="code-keyword">new</span> <span class="code-function">ProblemFromFunctionPointers</span>(parameters.Dimension, <span class="code-comment">// размерность задачи</span>
+    { <span class="code-number">0.0</span>, -<span class="code-number">1.0</span> }, <span class="code-comment">// нижняя граница</span>
+    { <span class="code-number">4.0</span>, <span class="code-number">3.0</span> }, <span class="code-comment">// верхняя граница</span>
+    StronginC3Functionals, <span class="code-comment">// задача</span>
+    <span class="code-number">4</span> <span class="code-comment">// количество функций (3 ограничения + 1 критерий)</span>
+  );
+
+  problem-><span class="code-function">Initialize</span>();
+
+  <span class="code-comment">// Решатель</span>
+  <span class="code-type">Solver</span> <span class="code-function">solver</span>(problem);
+
+  <span class="code-comment">// Решаем задачу</span>
+  <span class="code-keyword">if</span> (solver.<span class="code-function">Solve</span>() != SYSTEM_OK)
+    <span class="code-keyword">throw</span> <span class="code-function">EXCEPTION</span>(<span class="code-string">"Error: solver.Solve crash!!!"</span>);
+
+  <span class="code-keyword">delete</span> problem;
+
+  <span class="code-keyword">return</span> <span class="code-number">0</span>;
+}</div>
+    </div>
+</body>
+</html>
