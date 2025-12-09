@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Globalizer documentation
+Globalizer
 ========================
 
-Welcome to Globalizer documentation! Globalizer is an optimisation tool. A source code could be found here: https://github.com/OptimLLab/Globalizer
+Докусентация по системе Globalizer
 
 .. image:: source/html/Globalizer_logo.png
    :alt: A descriptive alt text for your image
@@ -15,7 +15,7 @@ Welcome to Globalizer documentation! Globalizer is an optimisation tool. A sourc
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Содержание:
 
    source/html/overview
    source/html/about_project
