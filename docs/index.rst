@@ -6,7 +6,7 @@
 Globalizer
 ========================
 
-Докусентация по системе Globalizer
+Документация по системе Globalizer
 
 .. image:: source/html/Globalizer_logo.png
    :alt: A descriptive alt text for your image
