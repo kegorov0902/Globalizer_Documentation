@@ -2,7 +2,7 @@
 
 .. title:: Globalizer: Класс Solver
 
-Обзор
+Основные публикации
 ============
 
 .. container:: doxygen-content

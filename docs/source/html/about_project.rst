@@ -2,11 +2,11 @@
 
 .. title:: Globalizer: Класс Solver
 
-Примеры использования
+О проекте
 ============
 
 .. container:: doxygen-content
 
    
    .. raw:: html
-     :file: usage_examples.html
+     :file: about_project.html
