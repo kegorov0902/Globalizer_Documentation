@@ -19,8 +19,6 @@ Globalizer
    :width: 200px
    :align: center
 
-Исходный код находится 'здесь <https://github.com/OptimLLab/Globalizer>'_.
-
 .. toctree::
    :maxdepth: 2
    :caption: Содержание:
