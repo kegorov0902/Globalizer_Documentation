@@ -16,6 +16,7 @@ Globalizer
 
 .. image:: /source/html/Globalizer_logo.png
    :width: 400px
+   :align: center
 
 .. toctree::
    :maxdepth: 2
