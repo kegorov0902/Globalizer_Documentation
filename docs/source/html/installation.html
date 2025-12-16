@@ -8,13 +8,15 @@
         * {
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         
         body {
-            background-color: #f5f7fa;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: #333;
             line-height: 1.6;
-            margin: 0;
+            min-height: 100vh;
             padding: 20px;
         }
         
@@ -22,116 +24,308 @@
             max-width: 1000px;
             margin: 0 auto;
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            padding: 30px;
-        }
-        
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-        }
-        
-        h2 {
-            color: #2c3e50;
-            margin-top: 30px;
-        }
-        
-        .section {
-            margin-bottom: 30px;
-            border-left: 3px solid #3498db;
-            padding-left: 15px;
-        }
-        
-        .accordion {
-            background-color: #f8f9fa;
-            border: 1px solid #eaeaea;
-            border-radius: 5px;
-            margin-bottom: 15px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            position: relative;
             overflow: hidden;
         }
         
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #3498db, #2ecc71, #e74c3c, #f39c12);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            border-radius: 2px;
+        }
+        
+        .install-guide {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .accordion {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        
+        .accordion:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
         .accordion-header {
-            padding: 15px 20px;
-            background-color: #eef5ff;
+            padding: 20px 25px;
+            background-color: #f8fafc;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-weight: 600;
-            transition: background-color 0.3s;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+            user-select: none;
         }
         
         .accordion-header:hover {
-            background-color: #e1ecff;
+            background-color: #edf2f7;
+        }
+        
+        .accordion-header.active {
+            background-color: #e3f2fd;
+            border-bottom-color: #3498db;
+            color: #2980b9;
         }
         
         .accordion-header::after {
             content: '+';
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 300;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
+            color: #3498db;
         }
         
         .accordion-header.active::after {
             content: '-';
+            transform: rotate(180deg);
         }
         
         .accordion-content {
-            padding: 0 20px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            transition: max-height 0.5s ease-out, padding 0.3s ease-out;
         }
         
         .accordion-content.active {
-            padding: 20px;
-            max-height: 500px;
+            max-height: 2000px;
         }
         
-        .link-item {
-            display: block;
-            padding: 15px 20px;
-            background-color: #f8f9fa;
-            border: 1px solid #eaeaea;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 600;
-            transition: all 0.3s;
+        .content-inner {
+            padding: 25px;
         }
         
-        .link-item:hover {
-            background-color: #eef5ff;
+        /* Стили для системных требований */
+        .requirements-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .requirement-item {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 0 5px 5px 0;
+            transition: transform 0.2s ease;
+        }
+        
+        .requirement-item:hover {
             transform: translateX(5px);
+            background-color: #f0f7ff;
         }
         
-        .link-item::after {
-            content: '→';
-            float: right;
+        .requirement-item strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        /* Стили для Windows установки */
+        .code-block {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            position: relative;
+        }
+        
+        .code-block::before {
+            content: 'Код';
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background-color: #3498db;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
             font-weight: bold;
         }
         
-        .requirements-list, .getting-started-list {
-            padding-left: 20px;
+        .step-list {
+            list-style: none;
+            counter-reset: step-counter;
         }
         
-        .requirements-list li, .getting-started-list li {
+        .step-list li {
+            counter-increment: step-counter;
+            margin-bottom: 25px;
+            padding-left: 50px;
+            position: relative;
+        }
+        
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #3498db;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        /* Стили для Linux раздела (в разработке) */
+        .warning-box {
+            background-color: #fff8e1;
+            border-left: 5px solid #ffb300;
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+            text-align: center;
+        }
+        
+        .warning-icon {
+            font-size: 3rem;
+            color: #ffb300;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .warning-title {
+            color: #ff6f00;
+            font-size: 1.5rem;
             margin-bottom: 10px;
         }
         
-        .note {
-            background-color: #fffde7;
-            border-left: 4px solid #ffd600;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 5px 5px 0;
+        .warning-text {
+            color: #5d4037;
+            margin-bottom: 20px;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            width: 45%;
+            background: linear-gradient(90deg, #ffb300, #ff9800);
+            border-radius: 4px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+        
+        /* Стили для начала работы */
+        .getting-started-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .step-card {
+            background-color: #f0f7ff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #d1e3ff;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: #e3f2fd;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #2ecc71;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .requirements-list,
+            .getting-started-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .accordion-header {
+                padding: 15px 20px;
+                font-size: 1.1rem;
+            }
+            
+            .content-inner {
+                padding: 20px;
+            }
         }
         
         footer {
-            margin-top: 40px;
+            margin-top: 50px;
             text-align: center;
             color: #7f8c8d;
             font-size: 0.9rem;
@@ -139,97 +333,165 @@
             padding-top: 20px;
         }
         
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
+        .highlight {
+            background-color: #e8f4fc;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
-            <!-- Раскрывающееся окно "Системные требования" -->
+        <div class="install-guide">
+            <!-- Системные требования -->
             <div class="accordion">
                 <div class="accordion-header" id="requirements-header">
                     Системные требования
                 </div>
                 <div class="accordion-content" id="requirements-content">
-                    <p>Для установки и работы программного обеспечения убедитесь, что ваша система соответствует следующим требованиям:</p>
-                    <ul class="requirements-list">
-                        <li><strong>Здесь будут перечислены необходимые требования: </strong>ОС, требования к аппаратной части и т.д.</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Ссылка на установку под Windows -->
-            <a href="windows-installation.html" class="link-item">
-                Установка и сборка под Windows
-            </a>
-            
-            <!-- Ссылка на установку под Linux -->
-            <a href="linux-installation.html" class="link-item">
-                Установка и сборка под Linux
-            </a>
-            
-            <!-- Раскрывающееся окно "Начало работы" -->
+                    <div class="content-inner">
+                        <p>Для работы приложения убедитесь, что ваша система соответствует следующим минимальным требованиям:</p>
+                        
+                        <ul class="requirements-list">
+                            <li class="requirement-item">
+                                <strong>Операционная система</strong>
+                                Windows 10/11 (64-bit) или Linux (Ubuntu 20.04+, CentOS 8+)
+                            </li>
+                            <li class="requirement-item">
+                                <strong>Процессор</strong>
+                                2+ ядра, 2.0 ГГц или выше
+                            </li>
+                            <li class="requirement-item">
+                                <strong>Оперативная память</strong>
+                                Минимум 4 ГБ (рекомендуется 8 ГБ)
+                            </li>
+                        </ul>
+                    </div>
+                </div>         
+            <!-- Установка под Windows -->
             <div class="accordion">
-                <div class="accordion-header" id="getting-started-header">
-                    Начало работы
+                <div class="accordion-header" id="windows-header">
+                    Установка и сборка под Windows
                 </div>
-                <div class="accordion-content" id="getting-started-content">
-                    <p>После успешной установки программного обеспечения выполните следующие шаги для начала работы:</p>
-                    <ol class="getting-started-list">
-                        <li><strong>Здесь будет описание начала работы с Globalizer:</strong></li>
-                    </ol>
+                <div class="accordion-content" id="windows-content">
+                    <div class="content-inner">
+                        <h3 style="color: #2c3e50; margin-bottom: 20px;">Пошаговая инструкция для Windows</h3>
+                        
+                        <ol class="step-list">
+                            <li>
+                                <strong>Клонирование репозитория</strong>
+                                <div class="code-block">
+                                    <!-- Блок кода 1 -->
+                                    <pre><code>git clone https://github.com/OptimLLab/Globalizer.git</code></pre>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <strong>Перейдите в папку Globalizer и создайте в неё папку build</strong>
+                                <div class="code-block">
+                                    <!-- Блок кода 2 -->
+                                    <pre><code>cd Globalizer/
+mkdir build</code></pre>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <strong>Перейдите в папку build и запустите CMake</strong>
+                                <div class="code-block">
+                                    <!-- Блок кода 3 -->
+                                    <pre><code>cd build
+cmake ..
+cmake --build ../build --config Release</code></pre>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </div>
+            
+            <!-- Установка под Linux -->
+            <div class="accordion">
+                <div class="accordion-header" id="linux-header">
+                    Установка и сборка под Linux
+                </div>
+                <div class="accordion-content" id="linux-content">
+                    <div class="content-inner">
+                        <div class="warning-box">
+                            <div class="warning-icon">🚧</div>
+                            <h3 class="warning-title">Раздел в разработке</h3>
+                            <p class="warning-text">
+                                Инструкция для установки Globalizer под Linux будет добавлена позже
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Функционал для раскрывающихся окон
+            // Получаем все заголовки аккордеона
             const accordionHeaders = document.querySelectorAll('.accordion-header');
             
+            // Функция для переключения аккордеона
+            function toggleAccordion(header) {
+                const content = header.nextElementSibling;
+                const isActive = header.classList.contains('active');
+                
+                // Закрываем все остальные аккордеоны
+                accordionHeaders.forEach(otherHeader => {
+                    if (otherHeader !== header) {
+                        otherHeader.classList.remove('active');
+                        otherHeader.nextElementSibling.classList.remove('active');
+                    }
+                });
+                
+                // Открываем/закрываем текущий аккордеон
+                if (!isActive) {
+                    header.classList.add('active');
+                    content.classList.add('active');
+                } else {
+                    header.classList.remove('active');
+                    content.classList.remove('active');
+                }
+            }
+            
+            // Добавляем обработчик клика для каждого заголовка
             accordionHeaders.forEach(header => {
                 header.addEventListener('click', function() {
-                    const content = this.nextElementSibling;
-                    const isActive = this.classList.contains('active');
-                    
-                    // Закрываем все другие раскрывающиеся окна
-                    accordionHeaders.forEach(otherHeader => {
-                        if (otherHeader !== this) {
-                            otherHeader.classList.remove('active');
-                            otherHeader.nextElementSibling.classList.remove('active');
-                        }
-                    });
-                    
-                    // Переключаем текущее окно
-                    this.classList.toggle('active');
-                    content.classList.toggle('active');
-                    
-                    // Если окно было закрыто, закрываем его полностью
-                    if (isActive) {
+                    toggleAccordion(this);
+                });
+            });
+            
+            // Открываем первый аккордеон по умолчанию
+            if (accordionHeaders.length > 0) {
+                accordionHeaders[0].classList.add('active');
+                accordionHeaders[0].nextElementSibling.classList.add('active');
+            }
+            
+            // Добавляем возможность закрыть аккордеон при клике на активный
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function(e) {
+                    // Если аккордеон уже открыт и кликнули снова - закрываем
+                    if (this.classList.contains('active') && e.detail > 1) {
                         this.classList.remove('active');
-                        content.classList.remove('active');
+                        this.nextElementSibling.classList.remove('active');
                     }
                 });
             });
             
-            // Открываем первое раскрывающееся окно по умолчанию
-            document.getElementById('requirements-header').classList.add('active');
-            document.getElementById('requirements-content').classList.add('active');
-            
-            // Имитация работы ссылок (так как страницы windows-installation.html и linux-installation.html не существуют)
-            const links = document.querySelectorAll('.link-item');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    if (!this.getAttribute('href').includes('.html')) {
+            // Добавляем поддержку клавиатуры
+            accordionHeaders.forEach(header => {
+                header.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();
-                        alert('Это демонстрационная версия. В реальном приложении эта ссылка вела бы на отдельную страницу.');
+                        toggleAccordion(this);
                     }
                 });
+                
+                // Делаем заголовки доступными для навигации с клавиатуры
+                header.setAttribute('tabindex', '0');
             });
         });
     </script>
