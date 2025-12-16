@@ -14,11 +14,6 @@ Globalizer
 задачи настройки гиперпараметров методов искусственного интеллекта и машинного
 обучения.
 
-.. image:: source/html/Globalizer_logo.png
-   :alt: A descriptive alt text for your image
-   :width: 400px
-   :align: center
-
 .. toctree::
    :maxdepth: 2
    :caption: Содержание:
