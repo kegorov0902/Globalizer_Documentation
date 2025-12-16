@@ -16,7 +16,7 @@ Globalizer
 
 .. image:: source/html/Globalizer_logo.png
    :alt: A descriptive alt text for your image
-   :width: 200px
+   :width: 400px
    :align: center
 
 .. toctree::
