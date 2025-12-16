@@ -26,7 +26,7 @@ Globalizer
    * возможность выбора начального приближения и точности вычислений;
    * визуализация процесса решения задачи.
 
-Исходный код находится `здесь<https://github.com/OptimLLab/Globalizer>`_
+Исходный код находится `здесь<https://github.com/OptimLLab/Globalizer>`__
 
 .. toctree::
    :maxdepth: 2
