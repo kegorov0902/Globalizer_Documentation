@@ -23,6 +23,7 @@ Globalizer
    :maxdepth: 2
    :caption: Содержание:
 
+   source/html/overview
    source/html/about_project
    source/html/mathematical
    source/html/installation
