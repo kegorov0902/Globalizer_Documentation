@@ -3,105 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Руководство по установке</title>
     <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            max-width: 800px;
-        }
-        h1 {
+            background-color: #f5f7fa;
             color: #333;
-            border-bottom: 2px solid #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
+            margin-top: 0;
         }
-        p {
-            margin-bottom: 20px;
-            text-align: justify;
+        
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
         }
-        ul {
-            margin: 10px 0;
-            padding-left: 30px;
+        
+        .section {
+            margin-bottom: 30px;
+            border-left: 3px solid #3498db;
+            padding-left: 15px;
         }
-        li {
-            margin-bottom: 8px;
-        }
-        .code-block {
-            background-color: #f5f5f5;
-            padding: 15px;
+        
+        .accordion {
+            background-color: #f8f9fa;
+            border: 1px solid #eaeaea;
             border-radius: 5px;
-            font-family: 'Courier New', monospace;
-            margin: 10px 0;
-            white-space: pre-wrap;
-            border-left: 4px solid #007acc;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .accordion-header {
+            padding: 15px 20px;
+            background-color: #eef5ff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .accordion-header:hover {
+            background-color: #e1ecff;
+        }
+        
+        .accordion-header::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: transform 0.3s;
+        }
+        
+        .accordion-header.active::after {
+            content: '-';
+        }
+        
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        
+        .accordion-content.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .link-item {
+            display: block;
+            padding: 15px 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #eaeaea;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .link-item:hover {
+            background-color: #eef5ff;
+            transform: translateX(5px);
+        }
+        
+        .link-item::after {
+            content: '→';
+            float: right;
+            font-weight: bold;
+        }
+        
+        .requirements-list, .getting-started-list {
+            padding-left: 20px;
+        }
+        
+        .requirements-list li, .getting-started-list li {
+            margin-bottom: 10px;
+        }
+        
+        .note {
+            background-color: #fffde7;
+            border-left: 4px solid #ffd600;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h2>Поддержка платформ</h2>
-        <p>Система Globalizer поддерживает установку на следующие платформы:</p>
-        
-        <div class="install-steps" style="background-color: #f9f9f9; border-color: #ddd;">
-            <ul class="steps-list" style="counter-reset: platform-counter;">
-                <li>
-                    <span class="step-name">Linux (Ubuntu/Debian)</span>
-                </li>
-                <li>
-                    <span class="step-name">Windows</span>
-                </li>
-                <li>
-                    <span class="step-name">macOS</span>
-                </li>
-                <li>
-                    <span class="step-name">Docker</span>
-                </li>
-            </ul>
-        </div>
-    <div class="container">    
-        <div class="content-placeholder">
-            <div class="install-steps">
-                <ul class="steps-list">
-                    <li>
-                        <span class="step-name">Требования к системе<br></span>
-                        <span class="step-desc">Минимальные и рекомендуемые системные требования</span>
-                    </li>
-                    <li>
-                        <span class="step-name">Установка зависимостей<br></span>
-                        <span class="step-desc">Установка необходимых библиотек и инструментов</span>
-                    </li>
-                    <li>
-                        <span class="step-name">Клонирование репозитория<br></span>
-                        <span class="step-desc">Для начала клонируйте репозиторий с исходным кодом на свой компьютер:<br></span>
-                        <code>git clone https://github.com/OptimLLab/Globalizer.git<br></code>
-                        <span class="step-desc">Далее перейдите в папку с кодом из репозитория и создайте в ней папку "build":<br></span>
-                        <code>cd Globalizer/<br></code>
-                        <code>mkdir build</code>
-                    </li>
-                    <li>
-                        <span class="step-name">Сборка<br></span>
-                        <span class="step-desc">Перейдите в папку "build":<br></span>
-                        <code>cd build<br></code>
-                        <span class="step-desc">Выполните следующие команды:<br></span>
-                        <code>cmake ..<br></code>
-                        <code>cmake --build ../build --config Release</code>
-                    </li>
-                    <li>
-                        <span class="step-name">Проверка установки<br></span>
-                        <span class="step-desc">Тестирование работоспособности системы</span>
-                    </li>
-                </ul>
-                
-                <div class="requirements">
-                    <div class="requirements-title">Предварительные требования:</div>
-                    <ul style="color: #5d4037; margin-top: 8px; padding-left: 20px;">
-                        <li>Операционная система: Linux, Windows или macOS</li>
-                        <li>Компилятор C++ с поддержкой стандарта C++17</li>
-                        <li>CMake версии 3.15 или выше</li>
-                        <li>Git для клонирования репозитория</li>
-                        <li>Дополнительно: CUDA для GPU-ускорения (опционально)</li>
+    <div class="container">
+        <div class="section">
+            <h2>Содержание</h2>
+            
+            <!-- Раскрывающееся окно "Системные требования" -->
+            <div class="accordion">
+                <div class="accordion-header" id="requirements-header">
+                    Системные требования
+                </div>
+                <div class="accordion-content" id="requirements-content">
+                    <p>Для установки и работы программного обеспечения убедитесь, что ваша система соответствует следующим требованиям:</p>
+                    <ul class="requirements-list">
+                        <li><strong>Здесь будут перечислены необходимые требования: </strong>ОС, требования к аппаратной части и т.д.</li>
                     </ul>
                 </div>
             </div>
+            
+            <!-- Ссылка на установку под Windows -->
+            <a href="windows-installation.html" class="link-item">
+                Установка и сборка под Windows
+            </a>
+            
+            <!-- Ссылка на установку под Linux -->
+            <a href="linux-installation.html" class="link-item">
+                Установка и сборка под Linux
+            </a>
+            
+            <!-- Раскрывающееся окно "Начало работы" -->
+            <div class="accordion">
+                <div class="accordion-header" id="getting-started-header">
+                    Начало работы
+                </div>
+                <div class="accordion-content" id="getting-started-content">
+                    <p>После успешной установки программного обеспечения выполните следующие шаги для начала работы:</p>
+                    <ol class="getting-started-list">
+                        <li><strong>Здесь будет описание начала работы с Globalizer:</strong></li>
+                    </ol>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Функционал для раскрывающихся окон
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const isActive = this.classList.contains('active');
+                    
+                    // Закрываем все другие раскрывающиеся окна
+                    accordionHeaders.forEach(otherHeader => {
+                        if (otherHeader !== this) {
+                            otherHeader.classList.remove('active');
+                            otherHeader.nextElementSibling.classList.remove('active');
+                        }
+                    });
+                    
+                    // Переключаем текущее окно
+                    this.classList.toggle('active');
+                    content.classList.toggle('active');
+                    
+                    // Если окно было закрыто, закрываем его полностью
+                    if (isActive) {
+                        this.classList.remove('active');
+                        content.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Открываем первое раскрывающееся окно по умолчанию
+            document.getElementById('requirements-header').classList.add('active');
+            document.getElementById('requirements-content').classList.add('active');
+            
+            // Имитация работы ссылок (так как страницы windows-installation.html и linux-installation.html не существуют)
+            const links = document.querySelectorAll('.link-item');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (!this.getAttribute('href').includes('.html')) {
+                        e.preventDefault();
+                        alert('Это демонстрационная версия. В реальном приложении эта ссылка вела бы на отдельную страницу.');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
