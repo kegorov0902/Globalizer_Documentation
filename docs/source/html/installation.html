@@ -38,7 +38,7 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #3498db, #2ecc71, #e74c3c, #f39c12);
+            background: #000000; /* Чёрная линия вместо градиента */
         }
         
         h1 {
@@ -58,7 +58,7 @@
             transform: translateX(-50%);
             width: 150px;
             height: 4px;
-            background: linear-gradient(90deg, #3498db, #2ecc71);
+            background: #000000; /* Чёрная линия вместо градиента */
             border-radius: 2px;
         }
         
@@ -342,6 +342,10 @@
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Установка и начало работы</h1>
+        
+        <div class="install-guide">
             <!-- Системные требования -->
             <div class="accordion">
                 <div class="accordion-header" id="requirements-header">
@@ -367,6 +371,8 @@
                         </ul>
                     </div>
                 </div>         
+            </div>
+            
             <!-- Установка под Windows -->
             <div class="accordion">
                 <div class="accordion-header" id="windows-header">
@@ -389,7 +395,7 @@
                                 <strong>Перейдите в папку Globalizer и создайте в неё папку build</strong>
                                 <div class="code-block">
                                     <!-- Блок кода 2 -->
-                                    <pre><code>cd Globalizer/
+                                    <pre><code>cd Globalizer/<br>
 mkdir build</code></pre>
                                 </div>
                             </li>
@@ -398,8 +404,8 @@ mkdir build</code></pre>
                                 <strong>Перейдите в папку build и запустите CMake</strong>
                                 <div class="code-block">
                                     <!-- Блок кода 3 -->
-                                    <pre><code>cd build
-cmake ..
+                                    <pre><code>cd build<br>
+cmake ..<br>
 cmake --build ../build --config Release</code></pre>
                                 </div>
                             </li>
@@ -426,6 +432,7 @@ cmake --build ../build --config Release</code></pre>
                 </div>
             </div>
         </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
