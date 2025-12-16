@@ -19,6 +19,8 @@ Globalizer
    :width: 200px
    :align: center
 
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Основные функциональные возможности Globalizer:
