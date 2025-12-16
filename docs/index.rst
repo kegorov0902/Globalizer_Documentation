@@ -27,7 +27,8 @@ Globalizer
    * визуализация процесса решения задачи.
 
 Исходный код находится `здесь`_
-.. _Здесь: https://github.com/OptimLLab/Globalizer
+
+.. _здесь: https://github.com/OptimLLab/Globalizer
 
 .. toctree::
    :maxdepth: 2
