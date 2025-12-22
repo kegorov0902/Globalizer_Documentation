@@ -1,128 +1,518 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.14.0"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Globalizer: Иерархия классов</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
-<script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8"/>
+    <title>Globalizer: Иерархия классов</title>
+    <!-- Убраны конфликтующие стили Doxygen -->
+    <!-- <link href="tabs.css" rel="stylesheet" type="text/css"/> -->
+    <!-- <link href="doxygen.css" rel="stylesheet" type="text/css" /> -->
+    <style type="text/css">
+        /* Минимальные стили для иерархии классов */
+        .directory {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 20px 0;
+        }
+        
+        .directory table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        .directory tr {
+            border-bottom: 1px solid #e1e4e5;
+        }
+        
+        .directory tr.even {
+            background-color: #f5f5f5;
+        }
+        
+        .directory tr.odd {
+            background-color: #ffffff;
+        }
+        
+        .directory td {
+            padding: 8px 10px;
+            vertical-align: top;
+        }
+        
+        .directory td.entry {
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .directory .icona {
+            margin-right: 5px;
+            font-weight: bold;
+        }
+        
+        .directory .icon {
+            color: #2980b9;
+        }
+        
+        .directory .arrow {
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .directory .arrowhead {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        
+        .directory .arrowhead.opened {
+            border-width: 6px 4px 0 4px;
+            border-color: #666 transparent transparent transparent;
+        }
+        
+        .directory .arrowhead.closed {
+            border-width: 4px 0 4px 6px;
+            border-color: transparent transparent transparent #666;
+        }
+        
+        .header {
+            margin-bottom: 20px;
+        }
+        
+        .headertitle .title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2980b9;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 10px;
+        }
+        
+        .textblock {
+            margin: 10px 0 20px 0;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .levels {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .levels span {
+            cursor: pointer;
+            margin: 0 3px;
+            padding: 2px 6px;
+            background-color: #eee;
+            border-radius: 3px;
+        }
+        
+        .levels span:hover {
+            background-color: #ddd;
+        }
+        
+        a.el {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        
+        a.el:hover {
+            text-decoration: underline;
+            color: #1a5276;
+        }
+        
+        .desc {
+            color: #666;
+            font-style: italic;
+            padding-left: 20px !important;
+        }
+    </style>
+    <script type="text/javascript">
+        // Упрощенный JavaScript для сворачивания/разворачивания
+        function toggleFolder(id) {
+            var rows = document.querySelectorAll('[id^="row_' + id + '"]');
+            var arrow = document.getElementById('arr_' + id);
+            
+            if (!arrow) return;
+            
+            var isVisible = rows[0].style.display !== 'none';
+            
+            for (var i = 0; i < rows.length; i++) {
+                rows[i].style.display = isVisible ? 'none' : 'table-row';
+            }
+            
+            if (isVisible) {
+                arrow.innerHTML = '<span class="arrowhead closed"></span>';
+            } else {
+                arrow.innerHTML = '<span class="arrowhead opened"></span>';
+            }
+        }
+        
+        // Функция для изменения уровня детализации
+        function toggleLevel(level) {
+            var allRows = document.querySelectorAll('[id^="row_"]');
+            
+            for (var i = 0; i < allRows.length; i++) {
+                var rowId = allRows[i].id;
+                var depth = (rowId.match(/_/g) || []).length - 1;
+                
+                if (depth >= level) {
+                    allRows[i].style.display = 'none';
+                    // Обновляем стрелки
+                    var arrowId = rowId.replace('row_', 'arr_');
+                    var arrow = document.getElementById(arrowId);
+                    if (arrow) {
+                        arrow.innerHTML = '<span class="arrowhead closed"></span>';
+                    }
+                } else {
+                    allRows[i].style.display = 'table-row';
+                    // Обновляем стрелки для видимых элементов
+                    var arrowId = rowId.replace('row_', 'arr_');
+                    var arrow = document.getElementById(arrowId);
+                    if (arrow) {
+                        arrow.innerHTML = '<span class="arrowhead opened"></span>';
+                    }
+                }
+            }
+            
+            // Показываем первый уровень
+            if (level === 1) {
+                var level1Rows = document.querySelectorAll('[id^="row_"][id$="_"]');
+                for (var j = 0; j < level1Rows.length; j++) {
+                    level1Rows[j].style.display = 'table-row';
+                }
+            }
+        }
+        
+        // Инициализация при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            // Изначально показываем все до 3 уровня
+            toggleLevel(3);
+            
+            // Добавляем обработчики для стрелок
+            var arrows = document.querySelectorAll('.arrow');
+            for (var i = 0; i < arrows.length; i++) {
+                arrows[i].addEventListener('click', function(e) {
+                    var id = this.id.replace('arr_', '');
+                    toggleFolder(id);
+                    e.stopPropagation();
+                });
+            }
+            
+            // Добавляем обработчики для кнопок уровней
+            var levelButtons = document.querySelectorAll('.levels span');
+            for (var j = 0; j < levelButtons.length; j++) {
+                levelButtons[j].addEventListener('click', function() {
+                    var level = parseInt(this.textContent);
+                    toggleLevel(level);
+                });
+            }
+        });
+    </script>
 </head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
-   </div>
-   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
-  </td>
- </tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- Создано системой Doxygen 1.14.0 -->
-<script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-</script>
-<script type="text/javascript">
-$(function() { codefold.init(); });
-</script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Поиск',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
-</div><!-- top -->
-<div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
-</div>
-
 <div class="header">
-  <div class="headertitle"><div class="title">Иерархия классов</div></div>
-</div><!--header-->
+    <div class="headertitle">
+        <div class="title">Иерархия классов Globalizer</div>
+    </div>
+</div>
+
 <div class="contents">
-<div class="textblock">Иерархия классов.</div><div class="directory">
-<div class="levels">[уровень детализации <span onclick="javascript:dynsection.toggleLevel(1);">1</span><span onclick="javascript:dynsection.toggleLevel(2);">2</span><span onclick="javascript:dynsection.toggleLevel(3);">3</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct__binary__function.html" target="_self">_binary_function&lt; _Arg1, _Arg2, _Result &gt;</a></td><td class="desc"></td></tr>
-<tr id="row_1_" class="odd"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="dynsection.toggleFolder('1_')"><span class="arrowhead opened"></span></span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct__binary__function.html" target="_self">_binary_function&lt; QueueElement, QueueElement, bool &gt;</a></td><td class="desc"></td></tr>
-<tr id="row_1_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct__less.html" target="_self">_less</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="odd"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_2_" class="arrow" onclick="dynsection.toggleFolder('2_')"><span class="arrowhead opened"></span></span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_i_method.html" target="_self">IMethod</a></td><td class="desc">Базовый класс, реализующий алгоритм глобального поиска </td></tr>
-<tr id="row_2_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_2_0_" class="arrow" onclick="dynsection.toggleFolder('2_0_')"><span class="arrowhead opened"></span></span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_method.html" target="_self">Method</a></td><td class="desc">Базовый класс, реализующий алгоритм глобального поиска </td></tr>
-<tr id="row_2_0_0_" class="odd"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_mixed_integer_method.html" target="_self">MixedIntegerMethod</a></td><td class="desc">Базовый класс, реализующий алгоритм глобального поиска </td></tr>
-<tr id="row_3_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_3_" class="arrow" onclick="dynsection.toggleFolder('3_')"><span class="arrowhead opened"></span></span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_i_solver.html" target="_self">ISolver</a></td><td class="desc">Интерфейс, базового класса </td></tr>
-<tr id="row_3_0_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_h_d_solver.html" target="_self">HDSolver</a></td><td class="desc">Базовый класс для решателя задач большой размерности </td></tr>
-<tr id="row_3_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_solver.html" target="_self">Solver</a></td><td class="desc">Базовые классы для решения задач глобальной оптимизации </td></tr>
-<tr id="row_4_" class="odd"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_4_" class="arrow" onclick="dynsection.toggleFolder('4_')"><span class="arrowhead opened"></span></span><span class="icona"><span class="icon">C</span></span><b>LocalMethod</b></td><td class="desc"></td></tr>
-<tr id="row_4_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_parallel_hooke_jeeves_method.html" target="_self">ParallelHookeJeevesMethod</a></td><td class="desc"></td></tr>
-<tr id="row_5_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_method_factory.html" target="_self">MethodFactory</a></td><td class="desc"></td></tr>
-<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_min_max_heap.html" target="_self">MinMaxHeap&lt; T, Compare &gt;</a></td><td class="desc"></td></tr>
-<tr id="row_7_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_performance.html" target="_self">Performance</a></td><td class="desc"></td></tr>
-<tr id="row_8_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_8_" class="arrow" onclick="dynsection.toggleFolder('8_')"><span class="arrowhead opened"></span></span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_priority_queue_common.html" target="_self">PriorityQueueCommon</a></td><td class="desc"></td></tr>
-<tr id="row_8_0_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_priority_dual_queue.html" target="_self">PriorityDualQueue</a></td><td class="desc"></td></tr>
-<tr id="row_8_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_priority_queue.html" target="_self">PriorityQueue</a></td><td class="desc"></td></tr>
-<tr id="row_9_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_process.html" target="_self">Process</a></td><td class="desc"></td></tr>
-<tr id="row_10_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_10_" class="arrow" onclick="dynsection.toggleFolder('10_')"><span class="arrowhead opened"></span></span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_queue_base_data.html" target="_self">QueueBaseData</a></td><td class="desc"></td></tr>
-<tr id="row_10_0_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_search_interval.html" target="_self">SearchInterval</a></td><td class="desc"></td></tr>
-<tr id="row_10_1_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_10_1_" class="arrow" onclick="dynsection.toggleFolder('10_1_')"><span class="arrowhead opened"></span></span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_task.html" target="_self">Task</a></td><td class="desc">Класс, инкапсулирующий информацию о задаче оптимизации </td></tr>
-<tr id="row_10_1_0_" class="odd"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_h_d_task.html" target="_self">HDTask</a></td><td class="desc"></td></tr>
-<tr id="row_11_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_queue_element.html" target="_self">QueueElement</a></td><td class="desc"></td></tr>
-<tr id="row_12_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_searc_data_iterator.html" target="_self">SearcDataIterator</a></td><td class="desc"></td></tr>
-<tr id="row_13_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_search_data.html" target="_self">SearchData</a></td><td class="desc"></td></tr>
-<tr id="row_14_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_search_interval_factory.html" target="_self">SearchIntervalFactory</a></td><td class="desc"></td></tr>
-<tr id="row_15_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_search_iteration.html" target="_self">SearchIteration</a></td><td class="desc"></td></tr>
-<tr id="row_16_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_solution_result.html" target="_self">SolutionResult</a></td><td class="desc">Результаты работы системы </td></tr>
-<tr id="row_17_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_task_factory.html" target="_self">TaskFactory</a></td><td class="desc"></td></tr>
-<tr id="row_18_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tree_node.html" target="_self">TreeNode</a></td><td class="desc"></td></tr>
-<tr id="row_19_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_trial.html" target="_self">Trial</a></td><td class="desc"></td></tr>
-<tr id="row_20_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_trial_factory.html" target="_self">TrialFactory</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
-</small></address>
-</div><!-- doc-content -->
+    <div class="textblock">Иерархия классов программной системы Globalizer для решения задач глобальной оптимизации.</div>
+    
+    <div class="directory">
+        <div class="levels">Уровень детализации: 
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+        </div>
+        
+        <table class="directory">
+            <tr id="row_0_" class="even">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="struct__binary__function.html" target="_self">_binary_function&lt; _Arg1, _Arg2, _Result &gt;</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_1_" class="odd">
+                <td class="entry">
+                    <span style="width:0px;display:inline-block;">&#160;</span>
+                    <span id="arr_1_" class="arrow" title="Нажмите для развертывания/свертывания">
+                        <span class="arrowhead opened"></span>
+                    </span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="struct__binary__function.html" target="_self">_binary_function&lt; QueueElement, QueueElement, bool &gt;</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_1_0_" class="even">
+                <td class="entry">
+                    <span style="width:32px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="struct__less.html" target="_self">_less</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_2_" class="odd">
+                <td class="entry">
+                    <span style="width:0px;display:inline-block;">&#160;</span>
+                    <span id="arr_2_" class="arrow" title="Нажмите для развертывания/свертывания">
+                        <span class="arrowhead opened"></span>
+                    </span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_i_method.html" target="_self">IMethod</a>
+                </td>
+                <td class="desc">Базовый класс, реализующий алгоритм глобального поиска</td>
+            </tr>
+            <tr id="row_2_0_" class="even">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span id="arr_2_0_" class="arrow" title="Нажмите для развертывания/свертывания">
+                        <span class="arrowhead opened"></span>
+                    </span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_method.html" target="_self">Method</a>
+                </td>
+                <td class="desc">Базовый класс, реализующий алгоритм глобального поиска</td>
+            </tr>
+            <tr id="row_2_0_0_" class="odd">
+                <td class="entry">
+                    <span style="width:48px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_mixed_integer_method.html" target="_self">MixedIntegerMethod</a>
+                </td>
+                <td class="desc">Базовый класс, реализующий алгоритм глобального поиска</td>
+            </tr>
+            <tr id="row_3_" class="even">
+                <td class="entry">
+                    <span style="width:0px;display:inline-block;">&#160;</span>
+                    <span id="arr_3_" class="arrow" title="Нажмите для развертывания/свертывания">
+                        <span class="arrowhead opened"></span>
+                    </span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_i_solver.html" target="_self">ISolver</a>
+                </td>
+                <td class="desc">Интерфейс базового класса</td>
+            </tr>
+            <tr id="row_3_0_" class="odd">
+                <td class="entry">
+                    <span style="width:32px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_h_d_solver.html" target="_self">HDSolver</a>
+                </td>
+                <td class="desc">Базовый класс для решателя задач большой размерности</td>
+            </tr>
+            <tr id="row_3_1_" class="even">
+                <td class="entry">
+                    <span style="width:32px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_solver.html" target="_self">Solver</a>
+                </td>
+                <td class="desc">Базовые классы для решения задач глобальной оптимизации</td>
+            </tr>
+            <!-- Остальные строки остаются без изменений -->
+            <tr id="row_4_" class="odd">
+                <td class="entry">
+                    <span style="width:0px;display:inline-block;">&#160;</span>
+                    <span id="arr_4_" class="arrow" title="Нажмите для развертывания/свертывания">
+                        <span class="arrowhead opened"></span>
+                    </span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <b>LocalMethod</b>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_4_0_" class="even">
+                <td class="entry">
+                    <span style="width:32px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_parallel_hooke_jeeves_method.html" target="_self">ParallelHookeJeevesMethod</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_5_" class="odd">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_method_factory.html" target="_self">MethodFactory</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_6_" class="even">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_min_max_heap.html" target="_self">MinMaxHeap&lt; T, Compare &gt;</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_7_" class="odd">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_performance.html" target="_self">Performance</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_8_" class="even">
+                <td class="entry">
+                    <span style="width:0px;display:inline-block;">&#160;</span>
+                    <span id="arr_8_" class="arrow" title="Нажмите для развертывания/свертывания">
+                        <span class="arrowhead opened"></span>
+                    </span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_priority_queue_common.html" target="_self">PriorityQueueCommon</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_8_0_" class="odd">
+                <td class="entry">
+                    <span style="width:32px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_priority_dual_queue.html" target="_self">PriorityDualQueue</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_8_1_" class="even">
+                <td class="entry">
+                    <span style="width:32px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_priority_queue.html" target="_self">PriorityQueue</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_9_" class="odd">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_process.html" target="_self">Process</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_10_" class="even">
+                <td class="entry">
+                    <span style="width:0px;display:inline-block;">&#160;</span>
+                    <span id="arr_10_" class="arrow" title="Нажмите для развертывания/свертывания">
+                        <span class="arrowhead opened"></span>
+                    </span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_queue_base_data.html" target="_self">QueueBaseData</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_10_0_" class="odd">
+                <td class="entry">
+                    <span style="width:32px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_search_interval.html" target="_self">SearchInterval</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_10_1_" class="even">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span id="arr_10_1_" class="arrow" title="Нажмите для развертывания/свертывания">
+                        <span class="arrowhead opened"></span>
+                    </span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_task.html" target="_self">Task</a>
+                </td>
+                <td class="desc">Класс, инкапсулирующий информацию о задаче оптимизации</td>
+            </tr>
+            <tr id="row_10_1_0_" class="odd">
+                <td class="entry">
+                    <span style="width:48px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_h_d_task.html" target="_self">HDTask</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_11_" class="even">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="struct_queue_element.html" target="_self">QueueElement</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_12_" class="odd">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_searc_data_iterator.html" target="_self">SearcDataIterator</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_13_" class="even">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_search_data.html" target="_self">SearchData</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_14_" class="odd">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_search_interval_factory.html" target="_self">SearchIntervalFactory</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_15_" class="even">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="struct_search_iteration.html" target="_self">SearchIteration</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_16_" class="odd">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="struct_solution_result.html" target="_self">SolutionResult</a>
+                </td>
+                <td class="desc">Результаты работы системы</td>
+            </tr>
+            <tr id="row_17_" class="even">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_task_factory.html" target="_self">TaskFactory</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_18_" class="odd">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_tree_node.html" target="_self">TreeNode</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_19_" class="even">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_trial.html" target="_self">Trial</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+            <tr id="row_20_" class="odd">
+                <td class="entry">
+                    <span style="width:16px;display:inline-block;">&#160;</span>
+                    <span class="icona"><span class="icon">C</span></span>
+                    <a class="el" href="class_trial_factory.html" target="_self">TrialFactory</a>
+                </td>
+                <td class="desc"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div style="margin-top: 30px; padding-top: 10px; border-top: 1px solid #ddd; color: #666; font-size: 0.9em;">
+    Сгенерировано системой Doxygen 1.14.0
+</div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 Исходный код
 ================
 
-Исхожный код Globalizer
+Исходный код Globalizer
 
 .. toctree::
    :maxdepth: 2
