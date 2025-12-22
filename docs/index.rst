@@ -39,4 +39,4 @@ Globalizer
    source/html/mathematical
    source/html/installation
    source/html/start_of_work
-   source/code/index
+   source/html/code/index
