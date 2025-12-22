@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Исходный файл globalizer/method/include/MethodInterface.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_2922e673acdab09499a7633b88aa1b94.html">globalizer</a></li><li class="navelem"><a href="dir_350eaf7083002ecbf39d5a55e614d3c8.html">method</a></li><li class="navelem"><a href="dir_de85c71d6f92277f8e845da3ac1a5419.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">MethodInterface.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//                                                                         //</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//             LOBACHEVSKY STATE UNIVERSITY OF NIZHNY NOVGOROD             //</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//                                                                         //</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//                       Copyright (c) 2015 by UNN.                        //</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//                          All Rights Reserved.                           //</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//                                                                         //</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//  File:      method.h                                                    //</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//                                                                         //</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  Purpose:   Header file for method class                                //</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//                                                                         //</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//  Author(s): Barkalov K., Sysoyev A.                                     //</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//                                                                         //</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef __METHOD_INTERFACE_H__</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define __METHOD_INTERFACE_H__</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;Common.h&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="_task_8h.html">Task.h</a>&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;Trial.h&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;Evolvent.h&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;Parameters.h&quot;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// ------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="};">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_i_method.html">   46</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_method.html">IMethod</a></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_i_method.html#a063cb84fc5ca9eb717697aa0d8f096fd">   51</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_method.html#a063cb84fc5ca9eb717697aa0d8f096fd">FirstIteration</a>() = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_i_method.html#addf040f41081adb8949ce3f3585497b0">   57</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_method.html#addf040f41081adb8949ce3f3585497b0">CalculateIterationPoints</a>() = 0;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_i_method.html#ad26a59bc231bddbeb357950d26e435b2">   64</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_method.html#ad26a59bc231bddbeb357950d26e435b2">CalculateFunctionals</a>() = 0;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_i_method.html#a4511ce3952a313c27ebe6f0d28bbd180">   68</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_method.html#a4511ce3952a313c27ebe6f0d28bbd180">RenewSearchData</a>() = 0;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_i_method.html#aeef6a346afec54875f15e1fdd6f547c7">   79</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_method.html#aeef6a346afec54875f15e1fdd6f547c7">CheckStopCondition</a>() = 0;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_i_method.html#a9aa2015f4985f0d127f0574487025b00">   85</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_method.html#a9aa2015f4985f0d127f0574487025b00">EstimateOptimum</a>() = 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_i_method.html#a28ce1a66b64249bf67944929d3d506e3">   89</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_method.html#a28ce1a66b64249bf67944929d3d506e3">FinalizeIteration</a>() = 0;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_i_method.html#ac382e873eb0e5e34dc71be6c1198c249">   95</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_i_method.html#ac382e873eb0e5e34dc71be6c1198c249">GetIterationCount</a>() = 0;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_i_method.html#a2c228373b2f1efe1045a9bd334589088">  101</a></span>  <span class="keyword">virtual</span> <a class="code hl_class" href="class_trial.html">Trial</a>* <a class="code hl_function" href="class_i_method.html#a2c228373b2f1efe1045a9bd334589088">GetOptimEstimation</a>() = 0;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_i_method.html#ab41ebbe903d375ae6df4c7e96080ae1c">  109</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_i_method.html#ab41ebbe903d375ae6df4c7e96080ae1c">GetNumberOfTrials</a>() = 0;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_i_method.html#a65212951e70d7a3169347548ff0fd149">  112</a></span>  <span class="keyword">virtual</span> std::vector&lt;int&gt; <a class="code hl_function" href="class_i_method.html#a65212951e70d7a3169347548ff0fd149">GetFunctionCalculationCount</a>() = 0;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_i_method.html#ac662aef33f37d903772f478a73ee5b86">  115</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_i_method.html#ac662aef33f37d903772f478a73ee5b86">GetAchievedAccuracy</a>() = 0;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_i_method.html#a7fb9ef706dfe23814fff92e5a1f0c75a">  123</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_method.html#a7fb9ef706dfe23814fff92e5a1f0c75a">InsertPoints</a>(<span class="keyword">const</span> std::vector&lt;Trial*&gt;&amp; points) = 0;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="class_i_method.html#a3dc1efcbf9d99ca9cecce7656d94e6dc">  126</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_method.html#a3dc1efcbf9d99ca9cecce7656d94e6dc">PrintPoints</a>(<span class="keyword">const</span> std::string &amp; fileName) = 0;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="class_i_method.html#a1ae29fb3568a1caa58f17289e7af937c">  129</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_method.html#a1ae29fb3568a1caa58f17289e7af937c">LocalSearch</a>() = 0;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_i_method.html#a50442e188d2d4084db8b19ece08a9df4">  132</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span>  <a class="code hl_function" href="class_i_method.html#a50442e188d2d4084db8b19ece08a9df4">SavePoints</a>() = 0;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_i_method.html#a538664cfc43bebe6eaef6075930d01d0">  135</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_i_method.html#a538664cfc43bebe6eaef6075930d01d0">GetLocalPointCount</a>() = 0;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="class_i_method.html#a14881e56c1e202551cf25e51bb3d8e54">  137</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_i_method.html#a14881e56c1e202551cf25e51bb3d8e54">GetNumberLocalMethodtStart</a>() = 0;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_i_method.html#a714339951a1f765a1b3b04bade996170">  139</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_method.html#a714339951a1f765a1b3b04bade996170">PrintSection</a>() = 0;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>};</div>
+</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">// - end of file ----------------------------------------------------------------------------------</span></div>
+<div class="ttc" id="a_task_8h_html"><div class="ttname"><a href="_task_8h.html">Task.h</a></div><div class="ttdoc">Объявление класса Task.</div></div>
+<div class="ttc" id="aclass_i_method_html"><div class="ttname"><a href="class_i_method.html">IMethod</a></div><div class="ttdoc">Базовый класс, реализующий алгоритм глобального поиска.</div><div class="ttdef"><b>Определения</b> MethodInterface.h:47</div></div>
+<div class="ttc" id="aclass_i_method_html_a063cb84fc5ca9eb717697aa0d8f096fd"><div class="ttname"><a href="class_i_method.html#a063cb84fc5ca9eb717697aa0d8f096fd">IMethod::FirstIteration</a></div><div class="ttdeci">virtual void FirstIteration()=0</div><div class="ttdoc">Функция выполняет первую итерацию метода</div></div>
+<div class="ttc" id="aclass_i_method_html_a14881e56c1e202551cf25e51bb3d8e54"><div class="ttname"><a href="class_i_method.html#a14881e56c1e202551cf25e51bb3d8e54">IMethod::GetNumberLocalMethodtStart</a></div><div class="ttdeci">virtual int GetNumberLocalMethodtStart()=0</div><div class="ttdoc">Возвращает число запусков локально метода</div></div>
+<div class="ttc" id="aclass_i_method_html_a1ae29fb3568a1caa58f17289e7af937c"><div class="ttname"><a href="class_i_method.html#a1ae29fb3568a1caa58f17289e7af937c">IMethod::LocalSearch</a></div><div class="ttdeci">virtual void LocalSearch()=0</div><div class="ttdoc">Запуск локального метода Хука-Дживса</div></div>
+<div class="ttc" id="aclass_i_method_html_a28ce1a66b64249bf67944929d3d506e3"><div class="ttname"><a href="class_i_method.html#a28ce1a66b64249bf67944929d3d506e3">IMethod::FinalizeIteration</a></div><div class="ttdeci">virtual void FinalizeIteration()=0</div><div class="ttdoc">Функция вызывается в конце проведения итерации</div></div>
+<div class="ttc" id="aclass_i_method_html_a2c228373b2f1efe1045a9bd334589088"><div class="ttname"><a href="class_i_method.html#a2c228373b2f1efe1045a9bd334589088">IMethod::GetOptimEstimation</a></div><div class="ttdeci">virtual Trial * GetOptimEstimation()=0</div><div class="ttdoc">Получить текущую оценку оптимума</div></div>
+<div class="ttc" id="aclass_i_method_html_a3dc1efcbf9d99ca9cecce7656d94e6dc"><div class="ttname"><a href="class_i_method.html#a3dc1efcbf9d99ca9cecce7656d94e6dc">IMethod::PrintPoints</a></div><div class="ttdeci">virtual void PrintPoints(const std::string &amp;fileName)=0</div><div class="ttdoc">Печать точек в файл, для отрисовки</div></div>
+<div class="ttc" id="aclass_i_method_html_a4511ce3952a313c27ebe6f0d28bbd180"><div class="ttname"><a href="class_i_method.html#a4511ce3952a313c27ebe6f0d28bbd180">IMethod::RenewSearchData</a></div><div class="ttdeci">virtual void RenewSearchData()=0</div><div class="ttdoc">Обновление поисковой информации</div></div>
+<div class="ttc" id="aclass_i_method_html_a50442e188d2d4084db8b19ece08a9df4"><div class="ttname"><a href="class_i_method.html#a50442e188d2d4084db8b19ece08a9df4">IMethod::SavePoints</a></div><div class="ttdeci">virtual void SavePoints()=0</div><div class="ttdoc">Метод сохраняющий точки в статический массив</div></div>
+<div class="ttc" id="aclass_i_method_html_a538664cfc43bebe6eaef6075930d01d0"><div class="ttname"><a href="class_i_method.html#a538664cfc43bebe6eaef6075930d01d0">IMethod::GetLocalPointCount</a></div><div class="ttdeci">virtual int GetLocalPointCount()=0</div><div class="ttdoc">Возвращает число точек полученное от локальныго метода</div></div>
+<div class="ttc" id="aclass_i_method_html_a65212951e70d7a3169347548ff0fd149"><div class="ttname"><a href="class_i_method.html#a65212951e70d7a3169347548ff0fd149">IMethod::GetFunctionCalculationCount</a></div><div class="ttdeci">virtual std::vector&lt; int &gt; GetFunctionCalculationCount()=0</div><div class="ttdoc">Возвращает число вычислений каждой функции</div></div>
+<div class="ttc" id="aclass_i_method_html_a714339951a1f765a1b3b04bade996170"><div class="ttname"><a href="class_i_method.html#a714339951a1f765a1b3b04bade996170">IMethod::PrintSection</a></div><div class="ttdeci">virtual void PrintSection()=0</div><div class="ttdoc">Печатает информацию о сечениях</div></div>
+<div class="ttc" id="aclass_i_method_html_a7fb9ef706dfe23814fff92e5a1f0c75a"><div class="ttname"><a href="class_i_method.html#a7fb9ef706dfe23814fff92e5a1f0c75a">IMethod::InsertPoints</a></div><div class="ttdeci">virtual void InsertPoints(const std::vector&lt; Trial * &gt; &amp;points)=0</div><div class="ttdoc">Добавляет испытания в поисковую информацию, при этом обновляя константу Гёльдера и оценку оптимума</div></div>
+<div class="ttc" id="aclass_i_method_html_a9aa2015f4985f0d127f0574487025b00"><div class="ttname"><a href="class_i_method.html#a9aa2015f4985f0d127f0574487025b00">IMethod::EstimateOptimum</a></div><div class="ttdeci">virtual bool EstimateOptimum()=0</div><div class="ttdoc">Оценить текущее значение оптимума</div></div>
+<div class="ttc" id="aclass_i_method_html_ab41ebbe903d375ae6df4c7e96080ae1c"><div class="ttname"><a href="class_i_method.html#ab41ebbe903d375ae6df4c7e96080ae1c">IMethod::GetNumberOfTrials</a></div><div class="ttdeci">virtual int GetNumberOfTrials()=0</div><div class="ttdoc">Сбор статистики</div></div>
+<div class="ttc" id="aclass_i_method_html_ac382e873eb0e5e34dc71be6c1198c249"><div class="ttname"><a href="class_i_method.html#ac382e873eb0e5e34dc71be6c1198c249">IMethod::GetIterationCount</a></div><div class="ttdeci">virtual int GetIterationCount()=0</div><div class="ttdoc">Получить число испытаний</div></div>
+<div class="ttc" id="aclass_i_method_html_ac662aef33f37d903772f478a73ee5b86"><div class="ttname"><a href="class_i_method.html#ac662aef33f37d903772f478a73ee5b86">IMethod::GetAchievedAccuracy</a></div><div class="ttdeci">virtual double GetAchievedAccuracy()=0</div><div class="ttdoc">Возвращает достигнутую точность</div></div>
+<div class="ttc" id="aclass_i_method_html_ad26a59bc231bddbeb357950d26e435b2"><div class="ttname"><a href="class_i_method.html#ad26a59bc231bddbeb357950d26e435b2">IMethod::CalculateFunctionals</a></div><div class="ttdeci">virtual void CalculateFunctionals()=0</div><div class="ttdoc">Вычисление функций задачи</div></div>
+<div class="ttc" id="aclass_i_method_html_addf040f41081adb8949ce3f3585497b0"><div class="ttname"><a href="class_i_method.html#addf040f41081adb8949ce3f3585497b0">IMethod::CalculateIterationPoints</a></div><div class="ttdeci">virtual void CalculateIterationPoints()=0</div><div class="ttdoc">Вычисления точек очередной итерации</div></div>
+<div class="ttc" id="aclass_i_method_html_aeef6a346afec54875f15e1fdd6f547c7"><div class="ttname"><a href="class_i_method.html#aeef6a346afec54875f15e1fdd6f547c7">IMethod::CheckStopCondition</a></div><div class="ttdeci">virtual bool CheckStopCondition()=0</div><div class="ttdoc">Проверка выполнения критерия остановки метода</div></div>
+<div class="ttc" id="aclass_trial_html"><div class="ttname"><a href="class_trial.html">Trial</a></div><div class="ttdef"><b>Определения</b> Trial.h:31</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

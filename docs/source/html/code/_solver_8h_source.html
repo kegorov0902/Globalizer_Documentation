@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Исходный файл globalizer/include/Solver.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_2922e673acdab09499a7633b88aa1b94.html">globalizer</a></li><li class="navelem"><a href="dir_fc810cea89ce8d89f5c82461832e3bdc.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">Solver.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __SOLVER_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __SOLVER_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#ifndef _CRT_SECURE_NO_WARNINGS</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#define _CRT_SECURE_NO_WARNINGS</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;mpi.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;exception&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Common.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;GlobProcess.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;Exception.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;InitProblem.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;OutputSystem.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;Messages.h&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;SolutionResult.h&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="_solver_interface_8h.html">SolverInterface.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;GlobalizerProblem.h&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#ifdef _GLOBALIZER_BENCHMARKS</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;IGlobalOptimizationProblem.h&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;GlobalOptimizationProblemManager.h&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif </span><span class="comment">// _GLOBALIZER_BENCHMARKS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_solver.html">   31</a></span><span class="keyword">class </span>Solver : <span class="keyword">public</span> <a class="code hl_class" href="class_i_solver.html">ISolver</a></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_solver.html#aadb2b46d58256d3fddb200ff9a8f03a3">   35</a></span>  <a class="code hl_class" href="class_process.html">Process</a>* <a class="code hl_variable" href="class_solver.html#aadb2b46d58256d3fddb200ff9a8f03a3">mProcess</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_solver.html#aa83612ae67bbc93d68efc497331e2f2e">   37</a></span>  IProblem* <a class="code hl_variable" href="class_solver.html#aa83612ae67bbc93d68efc497331e2f2e">mProblem</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_solver.html#a7c98cf9c313cff5b6152281a3b0cb48c">   40</a></span>  <a class="code hl_class" href="class_task.html">Task</a>* <a class="code hl_variable" href="class_solver.html#a7c98cf9c313cff5b6152281a3b0cb48c">pTask</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_solver.html#a8af66067fcbd6233e67d2197adf5a966">   42</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_solver.html#a8af66067fcbd6233e67d2197adf5a966">isExternalTask</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_solver.html#a159c89972a7e05df54c8e6ce1165c6ed">   44</a></span>  <a class="code hl_class" href="class_search_data.html">SearchData</a>* <a class="code hl_variable" href="class_solver.html#a159c89972a7e05df54c8e6ce1165c6ed">pData</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_solver.html#aa32adbcb628aa485d5699d76684ecf83">   47</a></span>  <a class="code hl_struct" href="struct_solution_result.html">SolutionResult</a>* <a class="code hl_variable" href="class_solver.html#aa32adbcb628aa485d5699d76684ecf83">result</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_solver.html#a57b58ccc66593f18b3e017cd8c5fca0e">ClearData</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_solver.html#a0c501c26bf4fece4d66717429c69b1b4">InitAutoPrecision</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_solver.html#affdd073f26d9d9a589037ad34e9c15b1">CreateProcess</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_solver.html#aad6a0c6c5db972906297db141a659722">CheckParameters</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_solver.html#aab4875abdeceee0527cf24d805f795cc">MpiCalculation</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_solver.html#aaf3c3792163304045b0a099f9f24337a">AsyncCalculation</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_solver.html#ade5b4ad912fe187123361511e2c9135c">   67</a></span>  std::vector&lt;Trial*&gt;* <a class="code hl_variable" href="class_solver.html#ade5b4ad912fe187123361511e2c9135c">addPoints</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  Solver(IProblem* problem);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#ifdef _GLOBALIZER_BENCHMARKS</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  Solver(IGlobalOptimizationProblem* problem);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_solver.html#a7a55494d22a1fc17a2e83a93db06331b">Solve</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_solver.html#a7a55494d22a1fc17a2e83a93db06331b">Solve</a>(<a class="code hl_class" href="class_task.html">Task</a>* task);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keyword">virtual</span> ~Solver();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_solver.html#ac290ba3af545d8e5ba744ee1a5b22fb6">SetProblem</a>(IProblem* problem);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  IProblem* <a class="code hl_function" href="class_solver.html#a625ff137e2dcb3e1799b64db422c4aa3">GetProblem</a>();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <a class="code hl_struct" href="struct_solution_result.html">SolutionResult</a>* <a class="code hl_function" href="class_solver.html#ac0ca3c13bc69b59eeaddb81922748581">GetSolutionResult</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_solver.html#a11a9c9b7b83f65146b29c5f3b32c5bc9">SetPoint</a>(std::vector&lt;Trial*&gt;&amp; points);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keyword">virtual</span> std::vector&lt;Trial*&gt;&amp; <a class="code hl_function" href="class_solver.html#ac202695238df939d41b10c268cb44247">GetAllPoint</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <a class="code hl_class" href="class_task.html">Task</a>* <a class="code hl_function" href="class_solver.html#a6ef1aa39a89e68b566528b2ae3cdf897">GetTask</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <a class="code hl_class" href="class_search_data.html">SearchData</a>* <a class="code hl_function" href="class_solver.html#a852db9e551ea13fc72d0fbf0694e95ab">GetData</a>();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>};</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif </span><span class="comment">//solver.h</span></div>
+<div class="ttc" id="a_solver_interface_8h_html"><div class="ttname"><a href="_solver_interface_8h.html">SolverInterface.h</a></div></div>
+<div class="ttc" id="aclass_i_solver_html"><div class="ttname"><a href="class_i_solver.html">ISolver</a></div><div class="ttdoc">Интерфейс, базового класса</div><div class="ttdef"><b>Определения</b> SolverInterface.h:40</div></div>
+<div class="ttc" id="aclass_process_html"><div class="ttname"><a href="class_process.html">Process</a></div><div class="ttdef"><b>Определения</b> GlobProcess.h:33</div></div>
+<div class="ttc" id="aclass_search_data_html"><div class="ttname"><a href="class_search_data.html">SearchData</a></div><div class="ttdef"><b>Определения</b> SearchData.h:38</div></div>
+<div class="ttc" id="aclass_solver_html_a0c501c26bf4fece4d66717429c69b1b4"><div class="ttname"><a href="class_solver.html#a0c501c26bf4fece4d66717429c69b1b4">Solver::InitAutoPrecision</a></div><div class="ttdeci">virtual void InitAutoPrecision()</div><div class="ttdoc">Инициализация чисел с расширенной точностью</div><div class="ttdef"><b>Определения</b> Solver.cpp:400</div></div>
+<div class="ttc" id="aclass_solver_html_a11a9c9b7b83f65146b29c5f3b32c5bc9"><div class="ttname"><a href="class_solver.html#a11a9c9b7b83f65146b29c5f3b32c5bc9">Solver::SetPoint</a></div><div class="ttdeci">virtual void SetPoint(std::vector&lt; Trial * &gt; &amp;points)</div><div class="ttdoc">Добавляет точки испытаний</div><div class="ttdef"><b>Определения</b> Solver.cpp:480</div></div>
+<div class="ttc" id="aclass_solver_html_a159c89972a7e05df54c8e6ce1165c6ed"><div class="ttname"><a href="class_solver.html#a159c89972a7e05df54c8e6ce1165c6ed">Solver::pData</a></div><div class="ttdeci">SearchData * pData</div><div class="ttdoc">База данных(поисковая информация)</div><div class="ttdef"><b>Определения</b> Solver.h:44</div></div>
+<div class="ttc" id="aclass_solver_html_a57b58ccc66593f18b3e017cd8c5fca0e"><div class="ttname"><a href="class_solver.html#a57b58ccc66593f18b3e017cd8c5fca0e">Solver::ClearData</a></div><div class="ttdeci">virtual void ClearData()</div><div class="ttdoc">Очистить данные</div><div class="ttdef"><b>Определения</b> Solver.cpp:26</div></div>
+<div class="ttc" id="aclass_solver_html_a625ff137e2dcb3e1799b64db422c4aa3"><div class="ttname"><a href="class_solver.html#a625ff137e2dcb3e1799b64db422c4aa3">Solver::GetProblem</a></div><div class="ttdeci">IProblem * GetProblem()</div><div class="ttdoc">Возвращает решаемую задачу</div><div class="ttdef"><b>Определения</b> Solver.cpp:462</div></div>
+<div class="ttc" id="aclass_solver_html_a6ef1aa39a89e68b566528b2ae3cdf897"><div class="ttname"><a href="class_solver.html#a6ef1aa39a89e68b566528b2ae3cdf897">Solver::GetTask</a></div><div class="ttdeci">Task * GetTask()</div><div class="ttdoc">Возвращает задачу решателя</div><div class="ttdef"><b>Определения</b> Solver.cpp:492</div></div>
+<div class="ttc" id="aclass_solver_html_a7a55494d22a1fc17a2e83a93db06331b"><div class="ttname"><a href="class_solver.html#a7a55494d22a1fc17a2e83a93db06331b">Solver::Solve</a></div><div class="ttdeci">virtual int Solve()</div><div class="ttdoc">Решение задачи по умолчанию</div><div class="ttdef"><b>Определения</b> Solver.cpp:269</div></div>
+<div class="ttc" id="aclass_solver_html_a7c98cf9c313cff5b6152281a3b0cb48c"><div class="ttname"><a href="class_solver.html#a7c98cf9c313cff5b6152281a3b0cb48c">Solver::pTask</a></div><div class="ttdeci">Task * pTask</div><div class="ttdoc">Общее описание задачи</div><div class="ttdef"><b>Определения</b> Solver.h:40</div></div>
+<div class="ttc" id="aclass_solver_html_a852db9e551ea13fc72d0fbf0694e95ab"><div class="ttname"><a href="class_solver.html#a852db9e551ea13fc72d0fbf0694e95ab">Solver::GetData</a></div><div class="ttdeci">SearchData * GetData()</div><div class="ttdoc">Возвращает поисковую информацию</div><div class="ttdef"><b>Определения</b> Solver.cpp:499</div></div>
+<div class="ttc" id="aclass_solver_html_a8af66067fcbd6233e67d2197adf5a966"><div class="ttname"><a href="class_solver.html#a8af66067fcbd6233e67d2197adf5a966">Solver::isExternalTask</a></div><div class="ttdeci">bool isExternalTask</div><div class="ttdoc">Задача пораждена в Solver или пришла извне</div><div class="ttdef"><b>Определения</b> Solver.h:42</div></div>
+<div class="ttc" id="aclass_solver_html_aa32adbcb628aa485d5699d76684ecf83"><div class="ttname"><a href="class_solver.html#aa32adbcb628aa485d5699d76684ecf83">Solver::result</a></div><div class="ttdeci">SolutionResult * result</div><div class="ttdoc">Результат работы системы</div><div class="ttdef"><b>Определения</b> Solver.h:47</div></div>
+<div class="ttc" id="aclass_solver_html_aa83612ae67bbc93d68efc497331e2f2e"><div class="ttname"><a href="class_solver.html#aa83612ae67bbc93d68efc497331e2f2e">Solver::mProblem</a></div><div class="ttdeci">IProblem * mProblem</div><div class="ttdoc">Задача</div><div class="ttdef"><b>Определения</b> Solver.h:37</div></div>
+<div class="ttc" id="aclass_solver_html_aab4875abdeceee0527cf24d805f795cc"><div class="ttname"><a href="class_solver.html#aab4875abdeceee0527cf24d805f795cc">Solver::MpiCalculation</a></div><div class="ttdeci">void MpiCalculation()</div><div class="ttdoc">Решатель производящий вычисление при параллельном АГП (распараллеливание по точкам) на MPI.</div><div class="ttdef"><b>Определения</b> Solver.cpp:142</div></div>
+<div class="ttc" id="aclass_solver_html_aad6a0c6c5db972906297db141a659722"><div class="ttname"><a href="class_solver.html#aad6a0c6c5db972906297db141a659722">Solver::CheckParameters</a></div><div class="ttdeci">int CheckParameters()</div><div class="ttdoc">Проверяет что параметры солвера соответствуют решаемой задаче</div><div class="ttdef"><b>Определения</b> Solver.cpp:68</div></div>
+<div class="ttc" id="aclass_solver_html_aadb2b46d58256d3fddb200ff9a8f03a3"><div class="ttname"><a href="class_solver.html#aadb2b46d58256d3fddb200ff9a8f03a3">Solver::mProcess</a></div><div class="ttdeci">Process * mProcess</div><div class="ttdoc">Процесс решающий задачу</div><div class="ttdef"><b>Определения</b> Solver.h:35</div></div>
+<div class="ttc" id="aclass_solver_html_aaf3c3792163304045b0a099f9f24337a"><div class="ttname"><a href="class_solver.html#aaf3c3792163304045b0a099f9f24337a">Solver::AsyncCalculation</a></div><div class="ttdeci">void AsyncCalculation()</div><div class="ttdoc">Решатель используемый при ассинхронной схеме</div><div class="ttdef"><b>Определения</b> Solver.cpp:196</div></div>
+<div class="ttc" id="aclass_solver_html_ac0ca3c13bc69b59eeaddb81922748581"><div class="ttname"><a href="class_solver.html#ac0ca3c13bc69b59eeaddb81922748581">Solver::GetSolutionResult</a></div><div class="ttdeci">SolutionResult * GetSolutionResult()</div><div class="ttdoc">Возвращает полученное решение</div><div class="ttdef"><b>Определения</b> Solver.cpp:468</div></div>
+<div class="ttc" id="aclass_solver_html_ac202695238df939d41b10c268cb44247"><div class="ttname"><a href="class_solver.html#ac202695238df939d41b10c268cb44247">Solver::GetAllPoint</a></div><div class="ttdeci">virtual std::vector&lt; Trial * &gt; &amp; GetAllPoint()</div><div class="ttdoc">Возврящает все имеющиеся точки испытаний</div><div class="ttdef"><b>Определения</b> Solver.cpp:487</div></div>
+<div class="ttc" id="aclass_solver_html_ac290ba3af545d8e5ba744ee1a5b22fb6"><div class="ttname"><a href="class_solver.html#ac290ba3af545d8e5ba744ee1a5b22fb6">Solver::SetProblem</a></div><div class="ttdeci">void SetProblem(IProblem *problem)</div><div class="ttdoc">Задает задачу для решения</div><div class="ttdef"><b>Определения</b> Solver.cpp:456</div></div>
+<div class="ttc" id="aclass_solver_html_ade5b4ad912fe187123361511e2c9135c"><div class="ttname"><a href="class_solver.html#ade5b4ad912fe187123361511e2c9135c">Solver::addPoints</a></div><div class="ttdeci">std::vector&lt; Trial * &gt; * addPoints</div><div class="ttdoc">Точки которые будут добавлены после первой итерации</div><div class="ttdef"><b>Определения</b> Solver.h:67</div></div>
+<div class="ttc" id="aclass_solver_html_affdd073f26d9d9a589037ad34e9c15b1"><div class="ttname"><a href="class_solver.html#affdd073f26d9d9a589037ad34e9c15b1">Solver::CreateProcess</a></div><div class="ttdeci">virtual int CreateProcess()</div><div class="ttdoc">Создание процесса и всего остального</div><div class="ttdef"><b>Определения</b> Solver.cpp:416</div></div>
+<div class="ttc" id="aclass_task_html"><div class="ttname"><a href="class_task.html">Task</a></div><div class="ttdoc">Класс, инкапсулирующий информацию о задаче оптимизации.</div><div class="ttdef"><b>Определения</b> Task.h:53</div></div>
+<div class="ttc" id="astruct_solution_result_html"><div class="ttname"><a href="struct_solution_result.html">SolutionResult</a></div><div class="ttdoc">Результаты работы системы</div><div class="ttdef"><b>Определения</b> SolutionResult.h:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

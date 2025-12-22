@@ -1,0 +1,728 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс IMethod</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_i_method-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс IMethod<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Базовый класс, реализующий алгоритм глобального поиска.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_method_interface_8h_source.html">MethodInterface.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:IMethod:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_i_method.png" usemap="#IMethod_map" alt=""/>
+  <map id="IMethod_map" name="IMethod_map">
+<area href="class_method.html" title="Базовый класс, реализующий алгоритм глобального поиска." alt="Method" shape="rect" coords="0,56,127,80"/>
+<area href="class_mixed_integer_method.html" title="Базовый класс, реализующий алгоритм глобального поиска." alt="MixedIntegerMethod" shape="rect" coords="0,112,127,136"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a063cb84fc5ca9eb717697aa0d8f096fd" id="r_a063cb84fc5ca9eb717697aa0d8f096fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a063cb84fc5ca9eb717697aa0d8f096fd">FirstIteration</a> ()=0</td></tr>
+<tr class="memdesc:a063cb84fc5ca9eb717697aa0d8f096fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция выполняет первую итерацию метода  <br /></td></tr>
+<tr class="memitem:addf040f41081adb8949ce3f3585497b0" id="r_addf040f41081adb8949ce3f3585497b0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addf040f41081adb8949ce3f3585497b0">CalculateIterationPoints</a> ()=0</td></tr>
+<tr class="memdesc:addf040f41081adb8949ce3f3585497b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисления точек очередной итерации  <br /></td></tr>
+<tr class="memitem:ad26a59bc231bddbeb357950d26e435b2" id="r_ad26a59bc231bddbeb357950d26e435b2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad26a59bc231bddbeb357950d26e435b2">CalculateFunctionals</a> ()=0</td></tr>
+<tr class="memdesc:ad26a59bc231bddbeb357950d26e435b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисление функций задачи  <br /></td></tr>
+<tr class="memitem:a4511ce3952a313c27ebe6f0d28bbd180" id="r_a4511ce3952a313c27ebe6f0d28bbd180"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4511ce3952a313c27ebe6f0d28bbd180">RenewSearchData</a> ()=0</td></tr>
+<tr class="memdesc:a4511ce3952a313c27ebe6f0d28bbd180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновление поисковой информации  <br /></td></tr>
+<tr class="memitem:aeef6a346afec54875f15e1fdd6f547c7" id="r_aeef6a346afec54875f15e1fdd6f547c7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeef6a346afec54875f15e1fdd6f547c7">CheckStopCondition</a> ()=0</td></tr>
+<tr class="memdesc:aeef6a346afec54875f15e1fdd6f547c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка выполнения критерия остановки метода  <br /></td></tr>
+<tr class="memitem:a9aa2015f4985f0d127f0574487025b00" id="r_a9aa2015f4985f0d127f0574487025b00"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9aa2015f4985f0d127f0574487025b00">EstimateOptimum</a> ()=0</td></tr>
+<tr class="memdesc:a9aa2015f4985f0d127f0574487025b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оценить текущее значение оптимума  <br /></td></tr>
+<tr class="memitem:a28ce1a66b64249bf67944929d3d506e3" id="r_a28ce1a66b64249bf67944929d3d506e3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28ce1a66b64249bf67944929d3d506e3">FinalizeIteration</a> ()=0</td></tr>
+<tr class="memdesc:a28ce1a66b64249bf67944929d3d506e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция вызывается в конце проведения итерации  <br /></td></tr>
+<tr class="memitem:ac382e873eb0e5e34dc71be6c1198c249" id="r_ac382e873eb0e5e34dc71be6c1198c249"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac382e873eb0e5e34dc71be6c1198c249">GetIterationCount</a> ()=0</td></tr>
+<tr class="memdesc:ac382e873eb0e5e34dc71be6c1198c249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить число испытаний  <br /></td></tr>
+<tr class="memitem:a2c228373b2f1efe1045a9bd334589088" id="r_a2c228373b2f1efe1045a9bd334589088"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_trial.html">Trial</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c228373b2f1efe1045a9bd334589088">GetOptimEstimation</a> ()=0</td></tr>
+<tr class="memdesc:a2c228373b2f1efe1045a9bd334589088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить текущую оценку оптимума  <br /></td></tr>
+<tr class="memitem:ab41ebbe903d375ae6df4c7e96080ae1c" id="r_ab41ebbe903d375ae6df4c7e96080ae1c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab41ebbe903d375ae6df4c7e96080ae1c">GetNumberOfTrials</a> ()=0</td></tr>
+<tr class="memdesc:ab41ebbe903d375ae6df4c7e96080ae1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сбор статистики  <br /></td></tr>
+<tr class="memitem:a65212951e70d7a3169347548ff0fd149" id="r_a65212951e70d7a3169347548ff0fd149"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65212951e70d7a3169347548ff0fd149">GetFunctionCalculationCount</a> ()=0</td></tr>
+<tr class="memdesc:a65212951e70d7a3169347548ff0fd149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает число вычислений каждой функции  <br /></td></tr>
+<tr class="memitem:ac662aef33f37d903772f478a73ee5b86" id="r_ac662aef33f37d903772f478a73ee5b86"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac662aef33f37d903772f478a73ee5b86">GetAchievedAccuracy</a> ()=0</td></tr>
+<tr class="memdesc:ac662aef33f37d903772f478a73ee5b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает достигнутую точность  <br /></td></tr>
+<tr class="memitem:a7fb9ef706dfe23814fff92e5a1f0c75a" id="r_a7fb9ef706dfe23814fff92e5a1f0c75a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fb9ef706dfe23814fff92e5a1f0c75a">InsertPoints</a> (const std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp;points)=0</td></tr>
+<tr class="memdesc:a7fb9ef706dfe23814fff92e5a1f0c75a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет испытания в поисковую информацию, при этом обновляя константу Гёльдера и оценку оптимума  <br /></td></tr>
+<tr class="memitem:a3dc1efcbf9d99ca9cecce7656d94e6dc" id="r_a3dc1efcbf9d99ca9cecce7656d94e6dc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dc1efcbf9d99ca9cecce7656d94e6dc">PrintPoints</a> (const std::string &amp;fileName)=0</td></tr>
+<tr class="memdesc:a3dc1efcbf9d99ca9cecce7656d94e6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печать точек в файл, для отрисовки  <br /></td></tr>
+<tr class="memitem:a1ae29fb3568a1caa58f17289e7af937c" id="r_a1ae29fb3568a1caa58f17289e7af937c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ae29fb3568a1caa58f17289e7af937c">LocalSearch</a> ()=0</td></tr>
+<tr class="memdesc:a1ae29fb3568a1caa58f17289e7af937c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запуск локального метода Хука-Дживса  <br /></td></tr>
+<tr class="memitem:a50442e188d2d4084db8b19ece08a9df4" id="r_a50442e188d2d4084db8b19ece08a9df4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50442e188d2d4084db8b19ece08a9df4">SavePoints</a> ()=0</td></tr>
+<tr class="memdesc:a50442e188d2d4084db8b19ece08a9df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод сохраняющий точки в статический массив  <br /></td></tr>
+<tr class="memitem:a538664cfc43bebe6eaef6075930d01d0" id="r_a538664cfc43bebe6eaef6075930d01d0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a538664cfc43bebe6eaef6075930d01d0">GetLocalPointCount</a> ()=0</td></tr>
+<tr class="memdesc:a538664cfc43bebe6eaef6075930d01d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает число точек полученное от локальныго метода  <br /></td></tr>
+<tr class="memitem:a14881e56c1e202551cf25e51bb3d8e54" id="r_a14881e56c1e202551cf25e51bb3d8e54"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14881e56c1e202551cf25e51bb3d8e54">GetNumberLocalMethodtStart</a> ()=0</td></tr>
+<tr class="memdesc:a14881e56c1e202551cf25e51bb3d8e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает число запусков локально метода  <br /></td></tr>
+<tr class="memitem:a714339951a1f765a1b3b04bade996170" id="r_a714339951a1f765a1b3b04bade996170"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a714339951a1f765a1b3b04bade996170">PrintSection</a> ()=0</td></tr>
+<tr class="memdesc:a714339951a1f765a1b3b04bade996170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печатает информацию о сечениях  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Базовый класс, реализующий алгоритм глобального поиска. </p>
+<p>В классе <a class="el" href="class_method.html" title="Базовый класс, реализующий алгоритм глобального поиска.">Method</a> реализованы основные функции, определяющие работу алгоритма глобального поиска. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="ad26a59bc231bddbeb357950d26e435b2" name="ad26a59bc231bddbeb357950d26e435b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad26a59bc231bddbeb357950d26e435b2">&#9670;&#160;</a></span>CalculateFunctionals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMethod::CalculateFunctionals </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вычисление функций задачи </p>
+<p>Проводятся испытания в точках из массива #pCurTrials, результаты проведенных испытаний записываются в тот же массив </p>
+
+<p>Замещается в <a class="el" href="class_method.html#aa497f625c2cd2212a700f21e5ce7eb49">Method</a>.</p>
+
+</div>
+</div>
+<a id="addf040f41081adb8949ce3f3585497b0" name="addf040f41081adb8949ce3f3585497b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf040f41081adb8949ce3f3585497b0">&#9670;&#160;</a></span>CalculateIterationPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMethod::CalculateIterationPoints </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вычисления точек очередной итерации </p>
+<p>Вычисленные точки очередной итерации записываются в массив #pCurTrials </p>
+
+<p>Замещается в <a class="el" href="class_method.html#a3f339857804878e303b4ae9b4ec56678">Method</a> и <a class="el" href="class_mixed_integer_method.html#a5f83a9ca1763bff3559a4f54b9d2a247">MixedIntegerMethod</a>.</p>
+
+</div>
+</div>
+<a id="aeef6a346afec54875f15e1fdd6f547c7" name="aeef6a346afec54875f15e1fdd6f547c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef6a346afec54875f15e1fdd6f547c7">&#9670;&#160;</a></span>CheckStopCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IMethod::CheckStopCondition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверка выполнения критерия остановки метода </p>
+<p>Метод прекращает работу в следующих случаях:</p><ul>
+<li>число испытаний превысило максимально допустимое значение</li>
+<li>если решается одна задача и выполнен критерий \( x_t - x_{t-1} &lt; \epsilon \)</li>
+<li>если решается серия задач и выполнен критерий \( \| y^k - y^\ast \| &lt; \epsilon \)</li>
+</ul>
+<dl class="section return"><dt>Возвращает</dt><dd>истина, если критерий остановки выполнен; ложь - в противном случае. </dd></dl>
+
+<p>Замещается в <a class="el" href="class_method.html#abd86f678d445e2b574b7c6fd7fb4764c">Method</a>.</p>
+
+</div>
+</div>
+<a id="a9aa2015f4985f0d127f0574487025b00" name="a9aa2015f4985f0d127f0574487025b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aa2015f4985f0d127f0574487025b00">&#9670;&#160;</a></span>EstimateOptimum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IMethod::EstimateOptimum </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Оценить текущее значение оптимума </p>
+<dl class="section return"><dt>Возвращает</dt><dd>истина, если оптимум изменился; ложь - в противном случае </dd></dl>
+
+<p>Замещается в <a class="el" href="class_method.html#a9896639b4af98218b37fa93e7151fd02">Method</a>.</p>
+
+</div>
+</div>
+<a id="a28ce1a66b64249bf67944929d3d506e3" name="a28ce1a66b64249bf67944929d3d506e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28ce1a66b64249bf67944929d3d506e3">&#9670;&#160;</a></span>FinalizeIteration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMethod::FinalizeIteration </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Функция вызывается в конце проведения итерации </p>
+
+<p>Замещается в <a class="el" href="class_method.html#af48411633078a8f67f34767148539317">Method</a>.</p>
+
+</div>
+</div>
+<a id="a063cb84fc5ca9eb717697aa0d8f096fd" name="a063cb84fc5ca9eb717697aa0d8f096fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a063cb84fc5ca9eb717697aa0d8f096fd">&#9670;&#160;</a></span>FirstIteration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMethod::FirstIteration </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Функция выполняет первую итерацию метода </p>
+
+<p>Замещается в <a class="el" href="class_method.html#a9b0eb01172cbf154da8d4d6d1af82b30">Method</a> и <a class="el" href="class_mixed_integer_method.html#a5116a3e5f077acfc8acdd14bdf80f045">MixedIntegerMethod</a>.</p>
+
+</div>
+</div>
+<a id="ac662aef33f37d903772f478a73ee5b86" name="ac662aef33f37d903772f478a73ee5b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac662aef33f37d903772f478a73ee5b86">&#9670;&#160;</a></span>GetAchievedAccuracy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double IMethod::GetAchievedAccuracy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает достигнутую точность </p>
+
+<p>Замещается в <a class="el" href="class_method.html#a0a2ec023bcab3fa9a9328f52f41e0a28">Method</a>.</p>
+
+</div>
+</div>
+<a id="a65212951e70d7a3169347548ff0fd149" name="a65212951e70d7a3169347548ff0fd149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65212951e70d7a3169347548ff0fd149">&#9670;&#160;</a></span>GetFunctionCalculationCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; int &gt; IMethod::GetFunctionCalculationCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает число вычислений каждой функции </p>
+
+<p>Замещается в <a class="el" href="class_method.html#a573126d5fdf6cca60cd46a90271b2c29">Method</a>.</p>
+
+</div>
+</div>
+<a id="ac382e873eb0e5e34dc71be6c1198c249" name="ac382e873eb0e5e34dc71be6c1198c249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac382e873eb0e5e34dc71be6c1198c249">&#9670;&#160;</a></span>GetIterationCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int IMethod::GetIterationCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить число испытаний </p>
+<dl class="section return"><dt>Возвращает</dt><dd>число испытаний </dd></dl>
+
+<p>Замещается в <a class="el" href="class_method.html#aa01bf2474aa910e6023404fe75706107">Method</a>.</p>
+
+</div>
+</div>
+<a id="a538664cfc43bebe6eaef6075930d01d0" name="a538664cfc43bebe6eaef6075930d01d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a538664cfc43bebe6eaef6075930d01d0">&#9670;&#160;</a></span>GetLocalPointCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int IMethod::GetLocalPointCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает число точек полученное от локальныго метода </p>
+
+<p>Замещается в <a class="el" href="class_method.html#af66f14908b85772cfe0c1ad25f2d52d5">Method</a>.</p>
+
+</div>
+</div>
+<a id="a14881e56c1e202551cf25e51bb3d8e54" name="a14881e56c1e202551cf25e51bb3d8e54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14881e56c1e202551cf25e51bb3d8e54">&#9670;&#160;</a></span>GetNumberLocalMethodtStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int IMethod::GetNumberLocalMethodtStart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает число запусков локально метода </p>
+
+<p>Замещается в <a class="el" href="class_method.html#a67940b3cca31604eabc0502b9e769dc5">Method</a>.</p>
+
+</div>
+</div>
+<a id="ab41ebbe903d375ae6df4c7e96080ae1c" name="ab41ebbe903d375ae6df4c7e96080ae1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab41ebbe903d375ae6df4c7e96080ae1c">&#9670;&#160;</a></span>GetNumberOfTrials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int IMethod::GetNumberOfTrials </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сбор статистики </p>
+<p>Функция возвращает общее число испытаний, выполненных при решении текущей задачи и всех вложенных подзадач </p><dl class="section return"><dt>Возвращает</dt><dd>общее число испытаний </dd></dl>
+
+<p>Замещается в <a class="el" href="class_method.html#a0b14358dec7a37fc9652541f79242d38">Method</a>.</p>
+
+</div>
+</div>
+<a id="a2c228373b2f1efe1045a9bd334589088" name="a2c228373b2f1efe1045a9bd334589088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c228373b2f1efe1045a9bd334589088">&#9670;&#160;</a></span>GetOptimEstimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_trial.html">Trial</a> * IMethod::GetOptimEstimation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить текущую оценку оптимума </p>
+<dl class="section return"><dt>Возвращает</dt><dd>испытание, соответствующее текущему оптимуму </dd></dl>
+
+<p>Замещается в <a class="el" href="class_method.html#a7fd054f6a71abc0ca99a294e7b727913">Method</a>.</p>
+
+</div>
+</div>
+<a id="a7fb9ef706dfe23814fff92e5a1f0c75a" name="a7fb9ef706dfe23814fff92e5a1f0c75a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fb9ef706dfe23814fff92e5a1f0c75a">&#9670;&#160;</a></span>InsertPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMethod::InsertPoints </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>points</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Добавляет испытания в поисковую информацию, при этом обновляя константу Гёльдера и оценку оптимума </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">points</td><td>точки испытаний, которые будут добавлены </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="class_method.html#aa0950e053421aeeb8110d0f69f267f72">Method</a>.</p>
+
+</div>
+</div>
+<a id="a1ae29fb3568a1caa58f17289e7af937c" name="a1ae29fb3568a1caa58f17289e7af937c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ae29fb3568a1caa58f17289e7af937c">&#9670;&#160;</a></span>LocalSearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMethod::LocalSearch </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Запуск локального метода Хука-Дживса </p>
+
+<p>Замещается в <a class="el" href="class_method.html#ab64ca7f91f4797dcd9b17ca6954a900d">Method</a>.</p>
+
+</div>
+</div>
+<a id="a3dc1efcbf9d99ca9cecce7656d94e6dc" name="a3dc1efcbf9d99ca9cecce7656d94e6dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc1efcbf9d99ca9cecce7656d94e6dc">&#9670;&#160;</a></span>PrintPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMethod::PrintPoints </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Печать точек в файл, для отрисовки </p>
+
+<p>Замещается в <a class="el" href="class_method.html#a866d0799d0644262952a12da5a979850">Method</a>.</p>
+
+</div>
+</div>
+<a id="a714339951a1f765a1b3b04bade996170" name="a714339951a1f765a1b3b04bade996170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a714339951a1f765a1b3b04bade996170">&#9670;&#160;</a></span>PrintSection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMethod::PrintSection </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Печатает информацию о сечениях </p>
+
+<p>Замещается в <a class="el" href="class_method.html#a29c68d69463d52b5b21b741f10a30aa4">Method</a>.</p>
+
+</div>
+</div>
+<a id="a4511ce3952a313c27ebe6f0d28bbd180" name="a4511ce3952a313c27ebe6f0d28bbd180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4511ce3952a313c27ebe6f0d28bbd180">&#9670;&#160;</a></span>RenewSearchData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMethod::RenewSearchData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обновление поисковой информации </p>
+
+<p>Замещается в <a class="el" href="class_method.html#a75605b10f14a8eddeee32d652e83feca">Method</a>.</p>
+
+</div>
+</div>
+<a id="a50442e188d2d4084db8b19ece08a9df4" name="a50442e188d2d4084db8b19ece08a9df4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50442e188d2d4084db8b19ece08a9df4">&#9670;&#160;</a></span>SavePoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMethod::SavePoints </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод сохраняющий точки в статический массив </p>
+
+<p>Замещается в <a class="el" href="class_method.html#ad3f725c32c4a4ff8eebf483c2ae48796">Method</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>globalizer/method/include/<a class="el" href="_method_interface_8h_source.html">MethodInterface.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

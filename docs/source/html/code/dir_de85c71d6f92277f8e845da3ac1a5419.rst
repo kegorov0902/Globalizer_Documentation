@@ -1,0 +1,14 @@
+.. meta::8bc860b3caf94b518b819e07a79c838c6315f20af02a09924b11a5280c6fec3dbe18d547b6c91541cc0c71ff9b670344e9fa92b99e45b067ef5676f300a7dc8b
+
+:orphan:
+
+.. title:: Globalizer: Содержание директории globalizer/method/include
+
+Содержание директории globalizer/method/include
+===============================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_de85c71d6f92277f8e845da3ac1a5419.html

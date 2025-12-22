@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Globalizer: Класс HDSolver</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Globalizer<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Exascale Minimizer - параллельная программная система для решения задач глобальной оптимизации</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="class_h_d_solver-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс HDSolver</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Базовый класс для решателя задач большой размерности  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_h_d_solver_8h_source.html">HDSolver.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:HDSolver:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_h_d_solver.png" usemap="#HDSolver_map" alt=""/>
+  <map id="HDSolver_map" name="HDSolver_map">
+<area href="class_i_solver.html" title="Интерфейс, базового класса" alt="ISolver" shape="rect" coords="0,0,67,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a087e8978afc803316c0884da1601ad51" id="r_a087e8978afc803316c0884da1601ad51"><td class="memItemLeft" align="right" valign="top"><a id="a087e8978afc803316c0884da1601ad51" name="a087e8978afc803316c0884da1601ad51"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HDSolver</b> (IProblem *<a class="el" href="#a4c1b1ccbf2557a3854fb328143027a7b">problem</a>, std::vector&lt; int &gt; _dimentions={})</td></tr>
+<tr class="memitem:a26d15da592c310b16377535feca7f989" id="r_a26d15da592c310b16377535feca7f989"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26d15da592c310b16377535feca7f989">Solve</a> ()</td></tr>
+<tr class="memdesc:a26d15da592c310b16377535feca7f989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Решение задачи по умолчанию  <br /></td></tr>
+<tr class="memitem:a609574048e9d89e0c05ac087931f208d" id="r_a609574048e9d89e0c05ac087931f208d"><td class="memItemLeft" align="right" valign="top"><a id="a609574048e9d89e0c05ac087931f208d" name="a609574048e9d89e0c05ac087931f208d"></a>
+<a class="el" href="struct_solution_result.html">SolutionResult</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSolutionResult</b> ()</td></tr>
+<tr class="memitem:a0dbd5dcb03d6f10cd35138dd5edbda5a" id="r_a0dbd5dcb03d6f10cd35138dd5edbda5a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dbd5dcb03d6f10cd35138dd5edbda5a">SetPoint</a> (std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp;points)</td></tr>
+<tr class="memdesc:a0dbd5dcb03d6f10cd35138dd5edbda5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет точки испытаний  <br /></td></tr>
+<tr class="memitem:a631a5e9c5bc3419cf2df4a1ddcf32f13" id="r_a631a5e9c5bc3419cf2df4a1ddcf32f13"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a631a5e9c5bc3419cf2df4a1ddcf32f13">GetAllPoint</a> ()</td></tr>
+<tr class="memdesc:a631a5e9c5bc3419cf2df4a1ddcf32f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврящает все имеющиеся точки испытаний  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a387cb488596b08602822eeb1912016a9" id="r_a387cb488596b08602822eeb1912016a9"><td class="memItemLeft" align="right" valign="top"><a id="a387cb488596b08602822eeb1912016a9" name="a387cb488596b08602822eeb1912016a9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDimentions</b> (std::vector&lt; int &gt; _dimentions)</td></tr>
+<tr class="memdesc:a387cb488596b08602822eeb1912016a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задачть размерности <br /></td></tr>
+<tr class="memitem:abbb3c40519aa04947e8ec7861f7c0c6c" id="r_abbb3c40519aa04947e8ec7861f7c0c6c"><td class="memItemLeft" align="right" valign="top"><a id="abbb3c40519aa04947e8ec7861f7c0c6c" name="abbb3c40519aa04947e8ec7861f7c0c6c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateStartPoint</b> ()</td></tr>
+<tr class="memdesc:abbb3c40519aa04947e8ec7861f7c0c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать начальную точку решения задач <br /></td></tr>
+<tr class="memitem:a98577fb0857fecbfd12c6196e6be24ac" id="r_a98577fb0857fecbfd12c6196e6be24ac"><td class="memItemLeft" align="right" valign="top"><a id="a98577fb0857fecbfd12c6196e6be24ac" name="a98577fb0857fecbfd12c6196e6be24ac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Construct</b> ()</td></tr>
+<tr class="memdesc:a98577fb0857fecbfd12c6196e6be24ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">заполняет основные поля класса <br /></td></tr>
+<tr class="memitem:ad3491d37aa0f15a70ded95abfce12870" id="r_ad3491d37aa0f15a70ded95abfce12870"><td class="memItemLeft" align="right" valign="top"><a id="ad3491d37aa0f15a70ded95abfce12870" name="ad3491d37aa0f15a70ded95abfce12870"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddPoint</b> (<a class="el" href="class_solver.html">Solver</a> *solver, int i, std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp;points, int startParameterNumber)</td></tr>
+<tr class="memdesc:ad3491d37aa0f15a70ded95abfce12870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет вычесленные точки в общий массив с точками <br /></td></tr>
+<tr class="memitem:abf0b3b7788cd28f2b02882950f250f7a" id="r_abf0b3b7788cd28f2b02882950f250f7a"><td class="memItemLeft" align="right" valign="top"><a id="abf0b3b7788cd28f2b02882950f250f7a" name="abf0b3b7788cd28f2b02882950f250f7a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateStartPoint</b> (<a class="el" href="struct_solution_result.html">SolutionResult</a> *solution, double &amp;bestValue, int curDimensions, int startParameterNumber, std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp;points, <a class="el" href="class_h_d_task.html">HDTask</a> *curTask)</td></tr>
+<tr class="memdesc:abf0b3b7788cd28f2b02882950f250f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет стартовую точку <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:ab82843f40bb681a98a7b27b2c9184e8a" id="r_ab82843f40bb681a98a7b27b2c9184e8a"><td class="memItemLeft" align="right" valign="top"><a id="ab82843f40bb681a98a7b27b2c9184e8a" name="ab82843f40bb681a98a7b27b2c9184e8a"></a>
+std::vector&lt; <a class="el" href="class_solver.html">Solver</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>solvers</b></td></tr>
+<tr class="memdesc:ab82843f40bb681a98a7b27b2c9184e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Решатели для оптимизации по группам параметров <br /></td></tr>
+<tr class="memitem:ac0a21312b4c115ddc1c592bbc9e7e763" id="r_ac0a21312b4c115ddc1c592bbc9e7e763"><td class="memItemLeft" align="right" valign="top"><a id="ac0a21312b4c115ddc1c592bbc9e7e763" name="ac0a21312b4c115ddc1c592bbc9e7e763"></a>
+<a class="el" href="class_solver.html">Solver</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>finalSolver</b></td></tr>
+<tr class="memdesc:ac0a21312b4c115ddc1c592bbc9e7e763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Решатель для объединения всех остальных Решателей <br /></td></tr>
+<tr class="memitem:a25280017b4a4d759977a55a9891e72ac" id="r_a25280017b4a4d759977a55a9891e72ac"><td class="memItemLeft" align="right" valign="top"><a id="a25280017b4a4d759977a55a9891e72ac" name="a25280017b4a4d759977a55a9891e72ac"></a>
+std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dimensions</b></td></tr>
+<tr class="memdesc:a25280017b4a4d759977a55a9891e72ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размерости групп парамеров, по умолчанию по 1. <br /></td></tr>
+<tr class="memitem:a71110e3f78c64dd562718ac3d7c017c4" id="r_a71110e3f78c64dd562718ac3d7c017c4"><td class="memItemLeft" align="right" valign="top"><a id="a71110e3f78c64dd562718ac3d7c017c4" name="a71110e3f78c64dd562718ac3d7c017c4"></a>
+<a class="el" href="struct_solution_result.html">SolutionResult</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>solutionResult</b></td></tr>
+<tr class="memdesc:a71110e3f78c64dd562718ac3d7c017c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Решение задачи оптимизации <br /></td></tr>
+<tr class="memitem:ae50444f99069cf677b93c4d47392a010" id="r_ae50444f99069cf677b93c4d47392a010"><td class="memItemLeft" align="right" valign="top"><a id="ae50444f99069cf677b93c4d47392a010" name="ae50444f99069cf677b93c4d47392a010"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>originalDimension</b></td></tr>
+<tr class="memdesc:ae50444f99069cf677b93c4d47392a010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размерность исходной задачи <br /></td></tr>
+<tr class="memitem:a2ed914cf8f0f2c217e4937a826d95b10" id="r_a2ed914cf8f0f2c217e4937a826d95b10"><td class="memItemLeft" align="right" valign="top"><a id="a2ed914cf8f0f2c217e4937a826d95b10" name="a2ed914cf8f0f2c217e4937a826d95b10"></a>
+std::vector&lt; <a class="el" href="class_h_d_task.html">HDTask</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tasks</b></td></tr>
+<tr class="memdesc:a2ed914cf8f0f2c217e4937a826d95b10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задачи для оптимизации по группам параметров <br /></td></tr>
+<tr class="memitem:a4c1b1ccbf2557a3854fb328143027a7b" id="r_a4c1b1ccbf2557a3854fb328143027a7b"><td class="memItemLeft" align="right" valign="top"><a id="a4c1b1ccbf2557a3854fb328143027a7b" name="a4c1b1ccbf2557a3854fb328143027a7b"></a>
+IProblem *&#160;</td><td class="memItemRight" valign="bottom"><b>problem</b></td></tr>
+<tr class="memdesc:a4c1b1ccbf2557a3854fb328143027a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">задача оптимизации <br /></td></tr>
+<tr class="memitem:a2c2362d35dfafac1136b5f8f2c4354c3" id="r_a2c2362d35dfafac1136b5f8f2c4354c3"><td class="memItemLeft" align="right" valign="top"><a id="a2c2362d35dfafac1136b5f8f2c4354c3" name="a2c2362d35dfafac1136b5f8f2c4354c3"></a>
+std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>alternativeStartingPoint</b></td></tr>
+<tr class="memdesc:a2c2362d35dfafac1136b5f8f2c4354c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">альтернативная стартовая точка на случай если не удалось улучшить решение <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Базовый класс для решателя задач большой размерности </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a631a5e9c5bc3419cf2df4a1ddcf32f13" name="a631a5e9c5bc3419cf2df4a1ddcf32f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a631a5e9c5bc3419cf2df4a1ddcf32f13">&#9670;&#160;</a></span>GetAllPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp; HDSolver::GetAllPoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возврящает все имеющиеся точки испытаний </p>
+
+<p>Замещает <a class="el" href="class_i_solver.html#a2fb2a44a05900a2a96ebe3b7558a7249">ISolver</a>.</p>
+
+</div>
+</div>
+<a id="a0dbd5dcb03d6f10cd35138dd5edbda5a" name="a0dbd5dcb03d6f10cd35138dd5edbda5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dbd5dcb03d6f10cd35138dd5edbda5a">&#9670;&#160;</a></span>SetPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HDSolver::SetPoint </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_trial.html">Trial</a> * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>points</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Добавляет точки испытаний </p>
+
+<p>Замещает <a class="el" href="class_i_solver.html#a32c762e9d830484ef6349696557814ef">ISolver</a>.</p>
+
+</div>
+</div>
+<a id="a26d15da592c310b16377535feca7f989" name="a26d15da592c310b16377535feca7f989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26d15da592c310b16377535feca7f989">&#9670;&#160;</a></span>Solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int HDSolver::Solve </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Решение задачи по умолчанию </p>
+<p>curr_child = parameters.parallel_tree.ProcChild[i];!!!!!</p>
+
+<p>Замещает <a class="el" href="class_i_solver.html#a0062ea0ef69f0a7224ce85b394670380">ISolver</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>globalizer/include/<a class="el" href="_h_d_solver_8h_source.html">HDSolver.h</a></li>
+<li>globalizer/src/<b>HDSolver.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
