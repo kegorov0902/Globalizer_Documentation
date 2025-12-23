@@ -1,11 +1,11 @@
-.. meta::8fdd010e4ddc7477a923b6f1f3c2ae8984f56a749b41a28c1205bab4f2ca4504492fba60b6c8b65da8d97ceb6ee55f269353dd0fbaf2682bde719a1cf68b77e6
+.. meta::cc9e7655e00addd9dc38a2b76f88c266554621a8f215a74dde182d8efdf85d0c847a5eba911ed8b5bc3d5df76aed3ebe66a2d6715f805286fbd64d6c96dc2846
 
 :orphan:
 
-.. title:: Globalizer: ÐÐ»Ð°ÑÑ MixedIntegerMethod
+.. title:: Globalizer: Класс MixedIntegerMethod
 
-ÐÐ»Ð°ÑÑ MixedIntegerMethod
-=============================
+Класс MixedIntegerMethod
+========================
 
 .. container:: doxygen-content
 
