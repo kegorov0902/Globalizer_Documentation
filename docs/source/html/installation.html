@@ -68,69 +68,33 @@
             gap: 20px;
         }
         
-        .accordion {
+        /* Стили для разделов установки */
+        .install-section {
             background-color: #fff;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             border: 1px solid #e0e0e0;
             transition: all 0.3s ease;
+            margin-bottom: 30px;
         }
         
-        .accordion:hover {
+        .install-section:hover {
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             transform: translateY(-2px);
         }
         
-        .accordion-header {
+        .section-header {
             padding: 20px 25px;
-            background-color: #f8fafc;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background-color: #e3f2fd;
             font-weight: 600;
             font-size: 1.2rem;
-            color: #2c3e50;
-            border-bottom: 1px solid transparent;
-            transition: all 0.3s ease;
+            color: #2980b9;
+            border-bottom: 1px solid #3498db;
             user-select: none;
         }
         
-        .accordion-header:hover {
-            background-color: #edf2f7;
-        }
-        
-        .accordion-header.active {
-            background-color: #e3f2fd;
-            border-bottom-color: #3498db;
-            color: #2980b9;
-        }
-        
-        .accordion-header::after {
-            content: '+';
-            font-size: 1.8rem;
-            font-weight: 300;
-            transition: transform 0.3s ease;
-            color: #3498db;
-        }
-        
-        .accordion-header.active::after {
-            content: '-';
-            transform: rotate(180deg);
-        }
-        
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-out, padding 0.3s ease-out;
-        }
-        
-        .accordion-content.active {
-            max-height: 2000px;
-        }
-        
-        .content-inner {
+        .section-content {
             padding: 25px;
         }
         
@@ -215,7 +179,7 @@
             font-size: 1.1rem;
         }
         
-        /* Стили для Linux раздела (в разработке) */
+        /* Стили для Linux раздела */
         .warning-box {
             background-color: #fff8e1;
             border-left: 5px solid #ffb300;
@@ -314,12 +278,12 @@
                 grid-template-columns: 1fr;
             }
             
-            .accordion-header {
+            .section-header {
                 padding: 15px 20px;
                 font-size: 1.1rem;
             }
             
-            .content-inner {
+            .section-content {
                 padding: 20px;
             }
         }
@@ -339,159 +303,169 @@
             border-radius: 3px;
             font-weight: 500;
         }
+        
+        h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            margin-top: 15px;
+        }
+        
+        h4 {
+            color: #2c3e50;
+            margin: 15px 0 10px 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        strong em, em strong {
+            color: #e74c3c;
+        }
     </style>
 </head>
 <body>
-            <div class="accordion">
-                <div class="accordion-header" id="requirements-header">
-                    Системные требования
-                </div>
-                <div class="accordion-content" id="requirements-content">
-                    <div class="content-inner">
-                        <p>Для работы приложения убедитесь, что ваша система соответствует следующим минимальным требованиям:</p>
-                        
-                        <ul class="requirements-list">
-                            <li class="requirement-item">
-                                <strong>Операционная система</strong>
-                                Windows 10/11 (64-bit) или Linux (Ubuntu 20.04+, CentOS 8+)
-                            </li>
-                            <li class="requirement-item">
-                                <strong>Процессор</strong>
-                                2+ ядра, 2.0 ГГц или выше
-                            </li>
-                            <li class="requirement-item">
-                                <strong>Оперативная память</strong>
-                                Минимум 4 ГБ (рекомендуется 8 ГБ)
-                            </li>
-                        </ul>
-                    </div>
-                </div>         
-            </div>
+        <h1>Руководство по установке</h1>
+        
+        <div class="install-guide">
             
             <!-- Установка под Windows -->
-            <div class="accordion">
-                <div class="accordion-header" id="windows-header">
+            <div class="install-section">
+                <div class="section-header" id="windows-header">
                     Установка и сборка под Windows
                 </div>
-                <div class="accordion-content" id="windows-content">
-                    <div class="content-inner">
-                        <h3 style="color: #2c3e50; margin-bottom: 20px;">Пошаговая инструкция для Windows</h3>
+                <div class="section-content" id="windows-content">
+                    <h3>Пошаговая инструкция для Windows</h3>
+                    
+                    <ol class="step-list">
+                        <li>
+                            <strong>Подготовка</strong><br>
+                            <h4>1. Установка Microsoft Visual Studio</h4>
+                            Для установки Microsoft Visual Studio можно воспользоваться официальным сайтом:<br>
+                            <div class="code-block">
+                                <pre><code>https://visualstudio.microsoft.com/ru/vs/community/</code></pre>
+                            </div>
+                            <h4>2. Установка CMake</h4>
+                            Для установки или обновления CMake можно воспользоваться следующей ссылкой:<br>
+                            <div class="code-block">
+                                <pre><code>https://cmake.org/download/</code></pre>
+                            </div>
+                            <h4>3. Установка и настройка Anaconda/miniconda</h4>
+                            Для установки Anaconda или miniconda можно воспользоваться официальным сайтом:<br>
+                            <div class="code-block">
+                                <pre><code>https://www.anaconda.com/download/</code></pre>
+                            </div>
+                            Anaconda/miniconda необходим для того, чтобы работал скрипт с автоматической настройкой решения. <em>conda.exe</em> должен быть виден из той консоли, в которой вы работаете; для этого нужно добавить в путь:<br>	
+                            <h4>3.1. Для Anaconda:</h4>
+                            <div class="code-block">
+                                <pre><code>C:\ProgramData\anaconda3\Scripts</code></pre>
+                            </div>
+                            <h4>3.2. Для miniconda:</h4>
+                            <div class="code-block">
+                                <pre><code>C:\ProgramData\miniconda3\Scripts</code></pre>
+                            </div>
+                            <strong><em>ВАЖНО: </em></strong>Если Вы первый раз установили Anaconda или miniconda необходимо разрешить скачивание с основных хранилищ библиотек.
+                        </li>
+                        <li>
+                            <strong>Скачивание Globalizer</strong><br>
+                            Для установки Globalizer можно воспользоваться одним из способов ниже:<br>
+                            <h4>Способ 1: Скачать исходный код с официального аккаунта авторов на GitHub</h4>
+                            1.1: Перейдите по <a href="https://github.com/OptimLLab/Globalizer">ссылке</a><br>
+                            1.2: Нажмите на кнопку "code" и выберите пункт "Download ZIP" как показано на Рис. 1:<br>
+                            <img src="installation.png" alt="Скачивание архива"/><br>
+                            <em>Рис.1: Скачивание архива</em><br>
+                            <br>
+                            <h4>Способ 2: Клонировать репозиторий средствами git с использованием терминала git bash или командной строки Windows: </h4>
+                            <div class="code-block">
+                                <pre><code>git clone https://github.com/OptimLLab/Globalizer.git<br>cd Globalizer/</code></pre>
+                            </div> 
+                        </li>
                         
-                        <ol class="step-list">
-                            <li>
-                                <strong>Клонирование репозитория</strong>
-                                <div class="code-block">
-                                    <!-- Блок кода 1 -->
-                                    <pre><code>git clone https://github.com/OptimLLab/Globalizer.git</code></pre>
-                                </div>
-                            </li>
-                            
-                            <li>
-                                <strong>Перейдите в папку Globalizer и создайте в неё папку build</strong>
-                                <div class="code-block">
-                                    <!-- Блок кода 2 -->
-                                    <pre><code>cd Globalizer/<br>
-mkdir build</code></pre>
-                                </div>
-                            </li>
-                            
-                            <li>
-                                <strong>Перейдите в папку build и запустите CMake</strong>
-                                <div class="code-block">
-                                    <!-- Блок кода 3 -->
-                                    <pre><code>cd build<br>
-cmake ..<br>
-cmake --build ../build --config Release</code></pre>
-                                </div>
-                            </li>
-                        </ol>
-                    </div>
+                        <li>
+                            <strong>Сборка Globalizer</strong><br>
+                            <h4>1. Сборка Globalizer со встроенными задачами:</h4>
+                            1.1: Перейдите в папку Globalizer и создайте в ней ещё одну папку, которую назовём BuildGlobalizer:
+                            <div class="code-block">
+                                <pre><code>cd Globalizer/<br>mkdir BuildGlobalizer</code></pre>
+                            </div>
+                            1.2: Перейдите в созданную папку и запустите cmake:
+                            <div class="code-block">
+                                <pre><code>cd BuildGlobalizer<br>cmake ..<br>cmake --build ../BuildGlobalizer --config Release</code></pre>
+                            </div>
+                            <br>
+                            <h4>2. Сборка Globalizer для Microsoft Visual Studio 2022:</h4>
+                            <strong><em>ВАЖНО: У Вас должна быть установлена и выбрана средой по умолчанию Microsoft Visual Studio 2022 - выберите запускаемым проектом GlobalizerSimpleMain, соберите решение и запустите приложение</em></strong><br>
+                            2.1: Перейдите в папку <em><strong>Globalizer/gen</strong></em> и запустите исполняемый файл:<br>
+                            <div class="code-block">
+                                <pre><code>cd Globalizer/gen<br>./vs-17_64-no_mp-No_MPI.bat</code></pre>
+                            </div>
+                            <h4>3. Сборка Globalizer с задачами из репозиториев <a href="https://github.com/OptimLLab/Globalizer_Benchmarks">Globalizer_Benchmarks</a> и <a href="https://github.com/OptimLLab/GCGen:">GCGen</a>:</h4>
+                            3.1: Перейдите в папку Globalizer и создайте в ней ещё одну папку, которую назовём BuildGlobalizer:
+                            <div class="code-block">
+                                <pre><code>cd Globalizer/<br>mkdir BuildGlobalizer</code></pre>
+                            </div>
+                            3.2: Запустите conda:
+                            <div class="code-block">
+                                <pre><code>git submodule init<br>git submodule update<br>conda init</code></pre>
+                            </div>
+                            3.3: Создайте виртуальное окружение:
+                            <div class="code-block">
+                                <pre><code>conda create -p /BuildGlobalizer/Globalizer_env python=3.12<br>conda activate /BuildGlobalizer/Globalizer_env</code></pre>
+                            </div>
+                            3.4: Установите зависимости, перейдиет в папку BuildGlobalizer и запустите CMake:
+                            <div class="code-block">
+                                <pre><code>pip install -r third_party/Problems/Problems/iOptProblem/requirements.txt<br>cd BuildGlobalizer<br>cmake -DGLOBALIZER_BUILD_PROBLEMS=ON -DBUILD_ALL_TASK=ON ..
+                                	<br>cmake --build ../BuildGlobalizer --config Release
+                                </code></pre>
+                            </div>
+                            <h4>4. Сборка Globalizer для Microsoft Visual Studio с задачами из репозиториев:</h4>
+                            Перейдите в папку Globalizer/gen и запустите исполняемый файл:
+                            <div class="code-block">
+                                <pre><code>cd Globalizer/gen<br>StartVS.bat</code></pre>
+                            </div>
+                        </li>
+                    </ol>
                 </div>
             </div>
             
             <!-- Установка под Linux -->
-            <div class="accordion">
-                <div class="accordion-header" id="linux-header">
+            <div class="install-section">
+                <div class="section-header" id="linux-header">
                     Установка и сборка под Linux
                 </div>
-                <div class="accordion-content" id="linux-content">
-                    <div class="content-inner">
-                        <div class="warning-box">
-                            <div class="warning-icon">🚧</div>
-                            <h3 class="warning-title">Раздел в разработке</h3>
-                            <p class="warning-text">
-                                Инструкция для установки Globalizer под Linux будет добавлена позже
-                            </p>
+                <div class="section-content" id="linux-content">
+                    <div class="warning-box">
+                        <div class="warning-icon">🚧</div>
+                        <h3 class="warning-title">Раздел в разработке</h3>
+                        <p class="warning-text">
+                            Инструкция для установки Globalizer под Linux будет добавлена позже
+                        </p>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
                         </div>
                     </div>
                 </div>
             </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Получаем все заголовки аккордеона
-            const accordionHeaders = document.querySelectorAll('.accordion-header');
             
-            // Функция для переключения аккордеона
-            function toggleAccordion(header) {
-                const content = header.nextElementSibling;
-                const isActive = header.classList.contains('active');
-                
-                // Закрываем все остальные аккордеоны
-                accordionHeaders.forEach(otherHeader => {
-                    if (otherHeader !== header) {
-                        otherHeader.classList.remove('active');
-                        otherHeader.nextElementSibling.classList.remove('active');
-                    }
-                });
-                
-                // Открываем/закрываем текущий аккордеон
-                if (!isActive) {
-                    header.classList.add('active');
-                    content.classList.add('active');
-                } else {
-                    header.classList.remove('active');
-                    content.classList.remove('active');
-                }
-            }
-            
-            // Добавляем обработчик клика для каждого заголовка
-            accordionHeaders.forEach(header => {
-                header.addEventListener('click', function() {
-                    toggleAccordion(this);
-                });
-            });
-            
-            // Открываем первый аккордеон по умолчанию
-            if (accordionHeaders.length > 0) {
-                accordionHeaders[0].classList.add('active');
-                accordionHeaders[0].nextElementSibling.classList.add('active');
-            }
-            
-            // Добавляем возможность закрыть аккордеон при клике на активный
-            accordionHeaders.forEach(header => {
-                header.addEventListener('click', function(e) {
-                    // Если аккордеон уже открыт и кликнули снова - закрываем
-                    if (this.classList.contains('active') && e.detail > 1) {
-                        this.classList.remove('active');
-                        this.nextElementSibling.classList.remove('active');
-                    }
-                });
-            });
-            
-            // Добавляем поддержку клавиатуры
-            accordionHeaders.forEach(header => {
-                header.addEventListener('keydown', function(e) {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        toggleAccordion(this);
-                    }
-                });
-                
-                // Делаем заголовки доступными для навигации с клавиатуры
-                header.setAttribute('tabindex', '0');
-            });
-        });
-    </script>
+        </div>
+        
+        <footer>
+            Руководство по установке Globalizer &copy; 2023
+        </footer>
+    </div>
 </body>
 </html>
