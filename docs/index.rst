@@ -37,6 +37,6 @@ Globalizer
    source/html/overview
    source/html/about_project
    source/html/mathematical
-   source/html/installation
+   source/html/installation/index
    source/html/start_of_work
    source/html/code/index
