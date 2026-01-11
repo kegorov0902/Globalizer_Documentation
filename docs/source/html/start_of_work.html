@@ -119,11 +119,11 @@ cd ../_bin</code></pre>
                     3.1: Windows:<br>
                     <div class="code-block">
                         <pre><code>GlobalizerSimpleMain_15_12_2025</code></pre>
-                    </div>
+                    </div><br><br>
                     3.2: Linux:<br>
                     <div class="code-block">
                         <pre><code>./GlobalizerSimpleMain_15_12_2025</code></pre>
-                    </div>
+                    </div><br>
                 </li>
 
                 <li>
@@ -138,7 +138,7 @@ stronginc3_problem.h, stronginc3_problem.cpp проекта stronginc3, отли
 например:<br>
                     <div class="code-block">
                         <pre><code>GLOBALIZER_BENCHMARKS_define_problem(SampleProblem_15_12_2025)</code></pre>
-                    </div>
+                    </div><br>
                     1.3: Написать код заголовочного файла задачи (например,
 SampleProblem_15_12_2025.h). Пример заголовочного файла задачи
 приведен в Листинге ниже.<br>
@@ -157,17 +157,17 @@ CC=icc CXX=icpc cmake -DCMAKE_C_COMPILER=icc
 -DGLOBALIZER_BENCHMARKS_PYTHON_PATH="../BuildGlobalizer/Globalizer_env" ..
 make
 cd ../_bin</code></pre>
-                    </div>
+                    </div><br>
                     3. Запустить решение задачи, настроив параметры запуска:<br>
-                    3.1: Windows:
+                    3.1: Windows:<br>
                     <div class="code-block">
                         <pre><code>GlobalizerSampleMain -lib SampleProblem_15_12_2025.dll</code></pre>
-                    </div>
-                    3.2: Linux:
+                    </div><br>
+                    3.2: Linux:<br>
                     <div class="code-block">
                         <pre><code>./GlobalizerSampleMain -lib ../third_party/Problems/_bin/libSampleProblem_15_12_2025.so</code></pre>
-                    </div>
-                    Пример возможного файла исходного кода:
+                    </div><br>
+                    Пример возможного файла исходного кода:<br>
                     <div class="code-block">
                         <pre><code>#include "SampleProblem_15_12_2025.h"
 
@@ -333,7 +333,7 @@ LIB_EXPORT_API void destroy(IGlobalOptimizationProblem* ptr)
 delete ptr;
 }
 // - end of file ----------------------------------------------------------------------------------</code></pre>
-                    </div>
+                    </div><br>
                 </li>
 
                 <li>
@@ -341,11 +341,11 @@ delete ptr;
                         1. Windows:<br>
                         <div class="code-block">
                             <pre><code>GlobalizerSampleMain -lib SampleProblem_15_12_2025.dll -N 2 -sip search_data.txt -PlotFileName search_data.png -PLOT</code></pre>
-                        </div>
+                        </div><br>
                         2. Linux:<br>
                         <div class="code-block">
                             <pre><code>GlobalizerSampleMain -lib ../third_party/Problems/_bin/libSampleProblem_15_12_2025.so -N 2 -sip search_data.txt -PlotFileName search_data.png -PLOT</code></pre>
-                        </div>
+                        </div><br>
                 </li>
             </ol>
         </div>
