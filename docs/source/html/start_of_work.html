@@ -28,7 +28,7 @@
             margin-bottom: 8px;
         }
         .code-block {
-            display: inline-flex;
+            display: inline-block;
             background-color: #f5f5f5;
             padding: 15px;
             border-radius: 5px;
@@ -107,7 +107,11 @@ int main(int argc, char* argv[]){
 программной системы Globalizer:<br>
                     <div class="code-block">
                         <pre><code>cd ../BuildGlobalizer/
-CC=icc CXX=icpc cmake -DCMAKE_C_COMPILER=icc -DCMAKE_CXX_COMPILER=icpc -DGLOBALIZER_BUILD_PROBLEMS=ON -DGLOBALIZER_BUILD_GCGEN=ON -DBUILD_ALL_TASK=ON -DGLOBALIZER_MAX_DIMENSION=130 -DGLOBALIZER_MAX_Number_Of_Function=70 -DGLOBALIZER_BUILD_TESTS=ON -DGLOBALIZER_USE_MPI=ON -DGLOBALIZER_MPI=intel -DGLOBALIZER_PYTHON=ON -DGLOBALIZER_BENCHMARKS_PYTHON=ON -DGLOBALIZER_BENCHMARKS_PYTHON_PATH="../BuildGlobalizer/Globalizer_env" ..
+CC=icc CXX=icpc cmake -DCMAKE_C_COMPILER=icc -DCMAKE_CXX_COMPILER=icpc 
+-DGLOBALIZER_BUILD_PROBLEMS=ON -DGLOBALIZER_BUILD_GCGEN=ON 
+-DBUILD_ALL_TASK=ON -DGLOBALIZER_MAX_DIMENSION=130 -DGLOBALIZER_MAX_Number_Of_Function=70 
+-DGLOBALIZER_BUILD_TESTS=ON -DGLOBALIZER_USE_MPI=ON -DGLOBALIZER_MPI=intel -DGLOBALIZER_PYTHON=ON 
+-DGLOBALIZER_BENCHMARKS_PYTHON=ON -DGLOBALIZER_BENCHMARKS_PYTHON_PATH="../BuildGlobalizer/Globalizer_env" ..
 make
 cd ../_bin</code></pre>
                     </div>
@@ -145,7 +149,12 @@ SampleProblem_15_12_2025.cpp). Пример файла исходного код
 программной системы Globalizer:<br>
                     <div class="code-block">
                         <pre><code>cd ../BuildGlobalizer/
-CC=icc CXX=icpc cmake -DCMAKE_C_COMPILER=icc -DCMAKE_CXX_COMPILER=icpc -DGLOBALIZER_BUILD_PROBLEMS=ON -DGLOBALIZER_BUILD_GCGEN=ON -DBUILD_ALL_TASK=ON -DGLOBALIZER_MAX_DIMENSION=130 -DGLOBALIZER_MAX_Number_Of_Function=70 -DGLOBALIZER_BUILD_TESTS=ON -DGLOBALIZER_USE_MPI=ON -DGLOBALIZER_MPI=intel -DGLOBALIZER_PYTHON=ON -DGLOBALIZER_BENCHMARKS_PYTHON=ON -DGLOBALIZER_BENCHMARKS_PYTHON_PATH="../BuildGlobalizer/Globalizer_env" ..
+CC=icc CXX=icpc cmake -DCMAKE_C_COMPILER=icc 
+-DCMAKE_CXX_COMPILER=icpc -DGLOBALIZER_BUILD_PROBLEMS=ON -DGLOBALIZER_BUILD_GCGEN=ON 
+-DBUILD_ALL_TASK=ON -DGLOBALIZER_MAX_DIMENSION=130 -DGLOBALIZER_MAX_Number_Of_Function=70 
+-DGLOBALIZER_BUILD_TESTS=ON -DGLOBALIZER_USE_MPI=ON -DGLOBALIZER_MPI=intel -DGLOBALIZER_PYTHON=ON 
+-DGLOBALIZER_BENCHMARKS_PYTHON=ON 
+-DGLOBALIZER_BENCHMARKS_PYTHON_PATH="../BuildGlobalizer/Globalizer_env" ..
 make
 cd ../_bin</code></pre>
                     </div>
