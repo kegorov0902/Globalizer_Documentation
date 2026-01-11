@@ -78,7 +78,7 @@
                             Для установки Anaconda или miniconda можно воспользоваться официальным сайтом:<br>
                             <div class="code-block">
                                 <pre><code>https://www.anaconda.com/download/</code></pre>
-                            </div>
+                            </div><br>
                             Anaconda/miniconda необходим для того, чтобы работал скрипт с автоматической настройкой решения. <em>conda.exe</em> должен быть виден из той консоли, в которой вы работаете; для этого нужно добавить в путь:<br>	
                             <h4>3.1. Для Anaconda:</h4>
                             <div class="code-block">
@@ -87,7 +87,7 @@
                             <h4>3.2. Для miniconda:</h4>
                             <div class="code-block">
                                 <pre><code>C:\ProgramData\miniconda3\Scripts</code></pre>
-                            </div>
+                            </div><br>
                             <strong><em>ВАЖНО: </em></strong>Если Вы первый раз установили Anaconda или miniconda необходимо разрешить скачивание с основных хранилищ библиотек.
                         </li>
                         <li>
@@ -111,7 +111,7 @@
                             1.1: Перейдите в папку Globalizer и создайте в ней ещё одну папку, которую назовём BuildGlobalizer:
                             <div class="code-block">
                                 <pre><code>cd Globalizer/<br>mkdir BuildGlobalizer</code></pre>
-                            </div>
+                            </div><br>
                             1.2: Перейдите в созданную папку и запустите cmake:
                             <div class="code-block">
                                 <pre><code>cd BuildGlobalizer<br>cmake ..<br>cmake --build ../BuildGlobalizer --config Release</code></pre>
@@ -127,15 +127,15 @@
                             3.1: Перейдите в папку Globalizer и создайте в ней ещё одну папку, которую назовём BuildGlobalizer:
                             <div class="code-block">
                                 <pre><code>cd Globalizer/<br>mkdir BuildGlobalizer</code></pre>
-                            </div>
-                            3.2: Запустите conda:
+                            </div><br>
+                            3.2: Запустите conda:<br>
                             <div class="code-block">
                                 <pre><code>git submodule init<br>git submodule update<br>conda init</code></pre>
-                            </div>
-                            3.3: Создайте виртуальное окружение:
+                            </div><br>
+                            3.3: Создайте виртуальное окружение:<br>
                             <div class="code-block">
                                 <pre><code>conda create -p /BuildGlobalizer/Globalizer_env python=3.12<br>conda activate /BuildGlobalizer/Globalizer_env</code></pre>
-                            </div>
+                            </div><br>
                             3.4: Установите зависимости, перейдиет в папку BuildGlobalizer и запустите CMake:
                             <div class="code-block">
                                 <pre><code>pip install -r third_party/Problems/Problems/iOptProblem/requirements.txt<br>cd BuildGlobalizer<br>cmake -DGLOBALIZER_BUILD_PROBLEMS=ON -DBUILD_ALL_TASK=ON ..
@@ -143,7 +143,7 @@
                                 </code></pre>
                             </div>
                             <h4>4. Сборка Globalizer для Microsoft Visual Studio с задачами из репозиториев:</h4>
-                            Перейдите в папку Globalizer/gen и запустите исполняемый файл:
+                            Перейдите в папку Globalizer/gen и запустите исполняемый файл:<br>
                             <div class="code-block">
                                 <pre><code>cd Globalizer/gen<br>StartVS.bat</code></pre>
                             </div>
