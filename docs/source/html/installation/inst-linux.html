@@ -28,6 +28,7 @@
             margin-bottom: 8px;
         }
         .code-block {
+        	display: inline-block;
             background-color: #f5f5f5;
             padding: 15px;
             border-radius: 5px;
@@ -60,12 +61,12 @@
                 <ol class="step-list">
                 	<li>
                 		<strong>Подготовка</strong><br>
-                		<h4>1. Установка Anaconds/miniconda</h4><br>
+                		<h4>1. Установка Anaconda/miniconda</h4><br>
                 		Что бы заработал скрипт с автоматической настройкой решения, должна быть
 установлена Anaconda или miniconda, также conda должна быть видна из той консоли в
 которой Вы будете работать.
 Для установки Anaconda или miniconda можно воспользоваться официальным <a href="https://www.anaconda.com/download">сайтом</a>
-или скачайте через консоль:
+или скачайте через консоль:<br>
 						<div class="code-block">
                             <pre><code>curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-
 Linux-x86_64.sh<br>bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
@@ -80,7 +81,7 @@ Linux-x86_64.sh<br>bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
                             <img src="installation.png" alt="Скачивание архива"/><br>
                             <em>Рис.1: Скачивание архива</em><br>
                             <br>
-                            <h4>Способ 2: Клонировать репозиторий средствами git с использованием терминала git bash или командной строки Windows: </h4>
+                            <h4>Способ 2: Клонировать репозиторий средствами git с использованием терминала: </h4>
                             <div class="code-block">
                                 <pre><code>git clone https://github.com/OptimLLab/Globalizer.git<br>cd Globalizer/</code></pre>
                             </div> 
@@ -91,7 +92,7 @@ Linux-x86_64.sh<br>bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
                             1.1: Перейдите в папку Globalizer и создайте в ней ещё одну папку, которую назовём BuildGlobalizer:
                             <div class="code-block">
                                 <pre><code>cd Globalizer/<br>mkdir BuildGlobalizer</code></pre>
-                            </div>
+                            </div><br>
                             1.2: Перейдите в созданную папку и запустите cmake:
                             <div class="code-block">
                                 <pre><code>cd BuildGlobalizer<br>cmake ..<br>cmake --build ../BuildGlobalizer --config Release</code></pre>
@@ -109,8 +110,8 @@ forge/label/debug python=3.12 -y<br>conda activate BuildGlobalizer/Globalizer_en
                             	<pre><code>git submodule init<br>git submodule update<br>pip install -r
 third_party/Problems/Problems/iOptProblem/requirements.txt<br>conda install cmake<br>python
 &quot;third_party/Problems/Problems/iOptProblem/Tests/data/loader.py&quot;<br>python
-&quot;third_party/Problems/Problems/iOptProblem/SVC_3D_Transformator.py&quot;</code></pre>
-                            </div>
+&quot;third_party/Problems/Problems/iOptProblem/SVC_3D_Transformator.py&quot;</code></pre><br>
+                            </div><br>
                             2.3: Сборка проекта системы Globalizer с использованием CMake:<br>
                             <div class="code-block">
                             	<pre><code>CC=icc CXX=icpc cmake -DCMAKE_C_COMPILER=icc -DCMAKE_CXX_COMPILER=icpc
