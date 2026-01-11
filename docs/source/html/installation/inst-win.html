@@ -27,28 +27,25 @@
         li {
             margin-bottom: 8px;
         }
-        .code-block {
+        .code-wrapper {
             display: inline-flex;
             background-color: #f5f5f5;
             padding: 15px;
             border-radius: 5px;
-            font-family: 'Courier New', monospace;
             margin: 10px 0;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            overflow-x: auto;
             border-left: 4px solid #007acc;
+            overflow-x: auto;
         }
-        .code-block pre {
+        pre {
             margin: 0;
+            font-family: 'Courier New', monospace;
             white-space: pre;
             word-wrap: normal;
             overflow-x: auto;
         }
-        .code-block code {
+        code {
             display: block;
-            overflow-x: auto;
-            white-space: pre;
+            font-family: 'Courier New', monospace;
         }
     </style>
 </head>
@@ -66,26 +63,26 @@
                             <strong>Подготовка</strong><br>
                             <h4>1. Установка Microsoft Visual Studio</h4>
                             Для установки Microsoft Visual Studio можно воспользоваться официальным сайтом:<br>
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>https://visualstudio.microsoft.com/ru/vs/community/</code></pre>
                             </div>
                             <h4>2. Установка CMake</h4>
                             Для установки или обновления CMake можно воспользоваться следующей ссылкой:<br>
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>https://cmake.org/download/</code></pre>
                             </div>
                             <h4>3. Установка и настройка Anaconda/miniconda</h4>
                             Для установки Anaconda или miniconda можно воспользоваться официальным сайтом:<br>
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>https://www.anaconda.com/download/</code></pre>
                             </div><br>
                             Anaconda/miniconda необходим для того, чтобы работал скрипт с автоматической настройкой решения. <em>conda.exe</em> должен быть виден из той консоли, в которой вы работаете; для этого нужно добавить в путь:<br>	
                             <h4>3.1. Для Anaconda:</h4>
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>C:\ProgramData\anaconda3\Scripts</code></pre>
                             </div>
                             <h4>3.2. Для miniconda:</h4>
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>C:\ProgramData\miniconda3\Scripts</code></pre>
                             </div><br>
                             <strong><em>ВАЖНО: </em></strong>Если Вы первый раз установили Anaconda или miniconda необходимо разрешить скачивание с основных хранилищ библиотек.
@@ -100,7 +97,7 @@
                             <em>Рис.1: Скачивание архива</em><br>
                             <br>
                             <h4>Способ 2: Клонировать репозиторий средствами git с использованием терминала git bash или командной строки Windows: </h4>
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>git clone https://github.com/OptimLLab/Globalizer.git<br>cd Globalizer/</code></pre>
                             </div> 
                         </li>
@@ -109,42 +106,42 @@
                             <strong>Сборка Globalizer</strong><br>
                             <h4>1. Сборка Globalizer со встроенными задачами:</h4>
                             1.1: Перейдите в папку Globalizer и создайте в ней ещё одну папку, которую назовём BuildGlobalizer:
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>cd Globalizer/<br>mkdir BuildGlobalizer</code></pre>
                             </div><br>
                             1.2: Перейдите в созданную папку и запустите cmake:
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>cd BuildGlobalizer<br>cmake ..<br>cmake --build ../BuildGlobalizer --config Release</code></pre>
                             </div>
                             <br>
                             <h4>2. Сборка Globalizer для Microsoft Visual Studio 2022:</h4>
                             <strong><em>ВАЖНО: У Вас должна быть установлена и выбрана средой по умолчанию Microsoft Visual Studio 2022 - выберите запускаемым проектом GlobalizerSimpleMain, соберите решение и запустите приложение</em></strong><br>
                             2.1: Перейдите в папку <em><strong>Globalizer/gen</strong></em> и запустите исполняемый файл:<br>
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>cd Globalizer/gen<br>./vs-17_64-no_mp-No_MPI.bat</code></pre>
                             </div>
                             <h4>3. Сборка Globalizer с задачами из репозиториев <a href="https://github.com/OptimLLab/Globalizer_Benchmarks">Globalizer_Benchmarks</a> и <a href="https://github.com/OptimLLab/GCGen:">GCGen</a>:</h4>
                             3.1: Перейдите в папку Globalizer и создайте в ней ещё одну папку, которую назовём BuildGlobalizer:
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>cd Globalizer/<br>mkdir BuildGlobalizer</code></pre>
                             </div><br>
                             3.2: Запустите conda:<br>
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>git submodule init<br>git submodule update<br>conda init</code></pre>
                             </div><br>
                             3.3: Создайте виртуальное окружение:<br>
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>conda create -p /BuildGlobalizer/Globalizer_env python=3.12<br>conda activate /BuildGlobalizer/Globalizer_env</code></pre>
                             </div><br>
                             3.4: Установите зависимости, перейдиет в папку BuildGlobalizer и запустите CMake:
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>pip install -r third_party/Problems/Problems/iOptProblem/requirements.txt<br>cd BuildGlobalizer<br>cmake -DGLOBALIZER_BUILD_PROBLEMS=ON -DBUILD_ALL_TASK=ON ..
                                 	<br>cmake --build ../BuildGlobalizer --config Release
                                 </code></pre>
                             </div>
                             <h4>4. Сборка Globalizer для Microsoft Visual Studio с задачами из репозиториев:</h4>
                             Перейдите в папку Globalizer/gen и запустите исполняемый файл:<br>
-                            <div class="code-block">
+                            <div class="code-wrapper">
                                 <pre><code>cd Globalizer/gen<br>StartVS.bat</code></pre>
                             </div>
                         </li>
