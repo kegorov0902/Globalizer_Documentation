@@ -34,7 +34,20 @@
             font-family: 'Courier New', monospace;
             margin: 10px 0;
             white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-x: auto;
             border-left: 4px solid #007acc;
+        }
+        .code-block pre {
+            margin: 0;
+            white-space: pre;
+            word-wrap: normal;
+            overflow-x: auto;
+        }
+        .code-block code {
+            display: block;
+            overflow-x: auto;
+            white-space: pre;
         }
     </style>
 </head>
