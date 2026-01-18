@@ -6,6 +6,7 @@
 
 Globalizer
 ==========
+Исходный код системы GLobalizer
 
 .. toctree::
    :caption: Титульная страница
