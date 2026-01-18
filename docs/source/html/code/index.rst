@@ -13,7 +13,6 @@ Globalizer
    :hidden:
 
    Классы <annotated_>
-   Файлы <files>
 
 .. container:: doxygen-content
 
