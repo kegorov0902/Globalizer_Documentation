@@ -15,7 +15,6 @@
       Классы <annotated>
       Алфавитный указатель классов <classes>
       Иерархия классов <hierarchy>
-      Члены классов <functions__>
 
    .. raw:: html
 
