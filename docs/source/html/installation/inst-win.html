@@ -50,6 +50,24 @@
             overflow-x: auto;
             white-space: pre;
         }
+        /* Стили для спойлеров */
+        details {
+            margin: 10px 0;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px;
+            background-color: #e9e9e9;
+            border-radius: 3px;
+        }
+        summary:hover {
+            background-color: #d9d9d9;
+        }
     </style>
 </head>
 <body>
@@ -104,7 +122,9 @@
                         
                         <li>
                             <strong>Сборка Globalizer</strong><br>
-                            <h4>1. Сборка Globalizer со встроенными задачами:</h4>
+                            
+                            <details>
+                            <summary>1. Сборка Globalizer со встроенными задачами:</summary>
                             1.1: Перейдите в папку Globalizer и создайте в ней ещё одну папку, которую назовём BuildGlobalizer:<br>
                             <div class="code-block">
                                 <pre><code>cd Globalizer/<br>mkdir BuildGlobalizer</code></pre>
@@ -113,14 +133,19 @@
                             <div class="code-block">
                                 <pre><code>cd BuildGlobalizer<br>cmake ..<br>cmake --build ../BuildGlobalizer --config Release</code></pre>
                             </div>
-                            <br>
-                            <h4>2. Сборка Globalizer для Microsoft Visual Studio 2022:</h4>
+                            </details>
+                            
+                            <details>
+                            <summary>2. Сборка Globalizer для Microsoft Visual Studio 2022:</summary>
                             <strong><em>ВАЖНО: У Вас должна быть установлена и выбрана средой по умолчанию Microsoft Visual Studio 2022 - выберите запускаемым проектом GlobalizerSimpleMain, соберите решение и запустите приложение</em></strong><br>
                             2.1: Перейдите в папку <em><strong>Globalizer/gen</strong></em> и запустите исполняемый файл:<br>
                             <div class="code-block">
                                 <pre><code>cd Globalizer/gen<br>./vs-17_64-no_mp-No_MPI.bat</code></pre>
                             </div>
-                            <h4>3. Сборка Globalizer с задачами из репозиториев <a href="https://github.com/OptimLLab/Globalizer_Benchmarks">Globalizer_Benchmarks</a> и <a href="https://github.com/OptimLLab/GCGen:">GCGen</a>:</h4>
+                            </details>
+                            
+                            <details>
+                            <summary>3. Сборка Globalizer с задачами из репозиториев <a href="https://github.com/OptimLLab/Globalizer_Benchmarks">Globalizer_Benchmarks</a> и <a href="https://github.com/OptimLLab/GCGen:">GCGen</a>:</summary>
                             3.1: Перейдите в папку Globalizer и создайте в ней ещё одну папку, которую назовём BuildGlobalizer:<br>
                             <div class="code-block">
                                 <pre><code>cd Globalizer/<br>mkdir BuildGlobalizer</code></pre>
@@ -139,18 +164,27 @@
                                     <br>cmake --build ../BuildGlobalizer --config Release
                                 </code></pre>
                             </div>
-                            <h4>4. Сборка Globalizer для Microsoft Visual Studio с задачами из репозиториев:</h4>
+                            </details>
+                            
+                            <details>
+                            <summary>4. Сборка Globalizer для Microsoft Visual Studio с задачами из репозиториев:</summary>
                             Перейдите в папку Globalizer/gen и запустите исполняемый файл:<br>
                             <div class="code-block">
                                 <pre><code>cd Globalizer/gen<br>./StartVS.bat</code></pre>
                             </div>
-                            <h4>5. Сборка Globalizer для plotter:</h4>
+                            </details>
+                            
+                            <details>
+                            <summary>5. Сборка Globalizer для plotter:</summary>
                             Клонируйте репозиторий, перейдите в папку Globalizer/gen и запустите исполняемый файл:<br>
                             <div class="code-block">
                                 <pre><code>git clone https://github.com/UsovaMA/Globalizer.git<br>cd Globalizer/gen<br>./vs-17_64-no_mp-No_MPI_no_problem_PYTHON.bat</code></pre>
                             </div>
+                            </details>
+                            
                         </li>
                     </ol>
                 </div>
             </div>
 </body>
+</html>
