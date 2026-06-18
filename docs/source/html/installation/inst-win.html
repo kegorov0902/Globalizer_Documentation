@@ -175,12 +175,60 @@
                             </details>
                             
                             <details>
-                            <summary>5. Сборка Globalizer для plotter:</summary>
-                            Клонируйте репозиторий, перейдите в папку Globalizer/gen и запустите исполняемый файл:<br>
-                            <div class="code-block">
-                                <pre><code>git clone https://github.com/UsovaMA/Globalizer.git<br>cd Globalizer/gen<br>./vs-17_64-no_mp-No_MPI_no_problem_PYTHON.bat</code></pre>
-                            </div>
-                            </details>
+                    <summary>5. Сборка Globalizer для plotter (с поддержкой отрисовки):</summary>
+                    
+                    <div class="important-note">
+                        <strong>ВАЖНО:</strong><br>
+                        <ul>
+                            <li>И сборку, и запуск Visual Studio следует выполнять в стандартной консоли Windows (CMD).</li>
+                            <li>Для автоматической настройки проекта Visual Studio <code>conda.exe</code> должна быть доступна в консоли, в которой вы будете работать. Если при запуске появляется сообщение <em>"conda" не является внутренней или внешней командой... </em> необходимо добавить в переменную окружения (переменную среды) <code>path</code> путь до приложения <code>conda.exe</code>. Например, <code>C:\ProgramData\miniconda3\Scripts</code> для miniconda или <code>C:\ProgramData\anaconda3\Scripts</code> для Anaconda.</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>5.1. Первая сборка и запуск (с поддержкой plotter):</h4>
+                    <p>Выполните последовательно команды в CMD:</p>
+                    <div class="code-block">
+                        <pre><code>git clone https://github.com/OptimLLab/Globalizer.git
+cd Globalizer
+git submodule init
+git submodule update
+mkdir build_64
+conda init
+conda create -p "build_64\Globalizer_env" -c conda-forge/label/debug python=3.12 -y
+conda activate "build_64\Globalizer_env"
+cd build_64
+pip install -r ../third_party/Problems/Problems/iOptProblem/requirements.txt
+cmake -DGLOBALIZER_BUILD_PROBLEMS=ON -DGLOBALIZER_BUILD_GCGEN=ON -DBUILD_ALL_TASK=ON -DGLOBALIZER_MAX_DIMENSION=130 -DGLOBALIZER_MAX_Number_Of_Function=70 -DGLOBALIZER_BUILD_TESTS=ON -DGLOBALIZER_USE_MPI=OFF -DGLOBALIZER_PYTHON=ON -DPython_FIND_DEBUG=OFF ..
+                    </code></pre>
+                    </div>
+                    
+                    <h4>5.2. Запуск после первой сборки:</h4>
+                    <p>Откройте файл решения <code>globalizer.sln</code> в папке <code>build_64</code>.</p>
+                    <p>Для проверки работоспособности plotter необходимо попробовать запустить проект <strong>GlobalizerSimpleMain</strong>.</p>
+                    
+                    <h4>5.3. Повторный запуск без пересборки:</h4>
+                    <div class="important-note">
+                        <strong>ВАЖНО:</strong> Активацию conda и запуск Visual Studio следует выполнять в стандартной консоли Windows (CMD).
+                    </div>
+                    <div class="code-block">
+                        <pre><code>cd Globalizer
+conda activate "build_64\Globalizer_env"
+cd build_64
+globalizer.sln
+                    </code></pre>
+                    </div>
+                    
+                    <h4>5.4. Альтернативный способ решения проблемы видимости библиотек Python (например, если отсутствует miniconda и Anaconda, но есть Python с необходимыми библиотеками):</h4>
+                    <div class="code-block">
+                        <pre><code>git clone https://github.com/OptimLLab/Globalizer.git
+cd Globalizer/gen
+./vs-17_64-no_mp-No_MPI_no_problem_PYTHON.bat
+                    </code></pre>
+                    </div>
+                    <p>Файл <code>vs-17_64-no_mp-No_MPI_no_problem_PYTHON.bat</code> полностью дублирует стандартный файл <code>vs-17_64-no_mp-No_MPI_no_problem.bat</code> с включением ключа <code>-DGLOBALIZER_PYTHON</code>.</p>
+                    <p>После сборки запуск будет выполнен автоматически (12-я строка bat-файла). Для проверки работоспособности plotter необходимо попробовать запустить проект <strong>GlobalizerSimpleMain</strong>. Если при этом появляется ошибка видимости библиотеки <code>python*.lib</code> — добавьте зависимость запускаемого проекта от python вручную.</p>
+                    
+                    </details>
                             
                         </li>
                     </ol>

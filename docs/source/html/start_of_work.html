@@ -339,10 +339,79 @@ delete ptr;
                 <li>
                     <strong>Визуализация</strong><br>
                         1. Windows:<br>
-                        <div class="code-block">
+                        <!--<div class="code-block">
                             <pre><code>GlobalizerSampleMain -lib SampleProblem_15_12_2025.dll -N 2 -sip search_data.txt 
                             -PlotFileName search_data.png -PLOT</code></pre>
-                        </div><br>
+                        </div>-->
+
+                        <h4>1.1. Запуск plotter по уже имеющимся файлам (без повторного решения задачи)</h4>
+                        
+                        <details>
+                            <summary>1.1.1. Запуск с параметрами по умолчанию (линии уровня с интерполяцией)</summary>
+                            <p>Запуск собственным Python:</p>
+                            <div class="code-block">
+                                <pre><code>cd Globalizer/lib/plotters
+python start_py.py "../../build_64" "_problem_info.txt" "Globalizer_iterPointsSavePath.txt"</code></pre>
+                            </div>
+                            <p><em>Пояснения. Первый позиционный параметр — это путь до файлов, второй — файл с информацией о задаче, третий — файл с точками испытаний (оба файла генерируются при решении задачи в Globalizer). Остальные параметры являются опциональными.</em></p>
+                            <p>Запуск при наличии Python с установленными библиотеками только в виртуальном пространстве, активированном conda:</p>
+                            <div class="code-block">
+                                <pre><code>..\..\build_64\Globalizer_env\python.exe start_py.py "../../build_64" "_problem_info.txt" "Globalizer_iterPointsSavePath.txt"</code></pre>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>1.1.2. Запуск с настройкой параметров</summary>
+                            <p>Подсказку по имеющимся параметрам можно вызвать через команду:</p>
+                            <div class="code-block">
+                                <pre><code>python start_py.py --help
+python start_py.py --h</code></pre>
+                            </div>
+                            
+                            <p><strong>Описание всех параметров:</strong></p>
+                            <div class="code-block">
+                                <pre><code>usage: start_py.py [-h] [-pfn PLOTFILENAME] [-ft {LevelLayers,Surface}] 
+                   [-ct {ObjectiveFunction,Approximation,Interpolation,ByPoints,OnlyPoints}] 
+                   [-ctc {ObjectiveFunction,Approximation,Interpolation,ByPoints,OnlyPoints}] 
+                   [-eps EPSILON] [-x1 X1] [-x2 X2] [-lvls LEVELS] 
+                   [-grido OBJECTIVEGRIDSIZE] [-gridc CONSTRAINTSGRIDSIZE] 
+                   [-b BOUNDS] [-ShowFigure] [-HideTrialsPoints] 
+                   [-PointsBelowGraph] [-FillFeasibleRegion] [-1D]
+                   SourceFilesPath ProblemFileName TrialsFileName</code></pre>
+                            </div>
+                            
+                            <p><strong>Позиционные аргументы:</strong></p>
+                            <ul>
+                                <li><code>SourceFilesPath</code> — путь до файлов для чтения информации о задаче и точек испытаний.</li>
+                                <li><code>ProblemFileName</code> — файл с информацией о задаче.</li>
+                                <li><code>TrialsFileName</code> — файл с точками испытаний.</li>
+                            </ul>
+                            
+                            <p><strong>Опциональные параметры:</strong></p>
+                            <ul>
+                                <li><code>-h, --help</code> — показать справку и выйти.</li>
+                                <li><code>-pfn PLOTFILENAME, --PlotFileName PLOTFILENAME</code> — имя файла для сохранения изображения.</li>
+                                <li><code>-ft {LevelLayers,Surface}, --FigureType {LevelLayers,Surface}</code> — тип визуализации целевой функции.</li>
+                                <li><code>-ct {ObjectiveFunction,Approximation,Interpolation,ByPoints,OnlyPoints}, --CalcsType {ObjectiveFunction,Approximation,Interpolation,ByPoints,OnlyPoints}</code> — тип вычислений для визуализации целевой функции.</li>
+                                <li><code>-eps EPSILON, --Epsilon EPSILON</code> — точность решения.</li>
+                                <li><code>-x1 X1, --x1 X1</code> — первый номер параметра для визуализации.</li>
+                                <li><code>-x2 X2, --x2 X2</code> — второй номер параметра для визуализации.</li>
+                                <li><code>-lvls LEVELS, --Levels LEVELS</code> — количество линий уровня в режиме LevelLayers.</li>
+                                <li><code>-grido OBJECTIVEGRIDSIZE, --ObjectiveGridSize OBJECTIVEGRIDSIZE</code> — количество точек сетки для визуализации целевой функции.</li>
+                                <li><code>-gridc CONSTRAINTSGRIDSIZE, --ConstraintsGridSize CONSTRAINTSGRIDSIZE</code> — количество точек сетки для визуализации ограничений.</li>
+                                <li><code>-b BOUNDS, --Bounds BOUNDS</code> — границы области визуализации (в формате " {lower_x1}_{lower_x2} {upper_x1}_{upper_x2}" или " {lower_x1}_{upper_x1}"). <strong>Важно:</strong> обязателен пробел в начале, если lower_x1 &lt; 0.</li>
+                                <li><code>-ShowFigure, --ShowFigure</code> — флаг, указывающий на необходимость открытия полученного рисунка в интерактивном окне.</li>
+                                <li><code>-HideTrialsPoints, --HideTrialsPoints</code> — флаг, указывающий на необходимость скрытия пробных точек.</li>
+                                <li><code>-PointsBelowGraph, --PointsBelowGraph</code> — флаг, указывающий на необходимость смещения пробных точек на рисунке ниже графика.</li>
+                                <li><code>-FillFeasibleRegion, --FillFeasibleRegion</code> — флаг, указывающий на необходимость заливки допустимой области цветом.</li>
+                                <li><code>-1D, --1D</code> — флаг, указывающий на необходимость отрисовки одномерного графика по x1.</li>
+                            </ul>
+                            
+                            <p><strong>Пример настройки параметров запуска plotter:</strong></p>
+                            <div class="code-block">
+                                <pre><code>..\..\build_64\Globalizer_env\python.exe start_py.py "../../build_64" "_problem_info.txt" "Globalizer_iterPointsSavePath.txt" -pfn "task_name_06_03_2026.png" -ft LevelLayers -ct Interpolation -b " -0.5_-0.5 3.5_3.0" -ShowFigure -FillFeasibleRegion</code></pre>
+                            </div>
+                        </details>
                         2. Linux:<br>
                         <div class="code-block">
                             <pre><code>GlobalizerSampleMain -lib ../third_party/Problems/_bin/libSampleProblem_15_12_2025.so 
