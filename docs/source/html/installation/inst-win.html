@@ -198,7 +198,8 @@ conda create -p "build_64\Globalizer_env" -c conda-forge/label/debug python=3.12
 conda activate "build_64\Globalizer_env"
 cd build_64
 pip install -r ../third_party/Problems/Problems/iOptProblem/requirements.txt
-cmake -DGLOBALIZER_BUILD_PROBLEMS=ON -DGLOBALIZER_BUILD_GCGEN=ON -DBUILD_ALL_TASK=ON -DGLOBALIZER_MAX_DIMENSION=130 -DGLOBALIZER_MAX_Number_Of_Function=70 -DGLOBALIZER_BUILD_TESTS=ON -DGLOBALIZER_USE_MPI=OFF -DGLOBALIZER_PYTHON=ON -DPython_FIND_DEBUG=OFF ..
+cmake -DGLOBALIZER_BUILD_PROBLEMS=ON -DGLOBALIZER_BUILD_GCGEN=ON -DBUILD_ALL_TASK=ON -DGLOBALIZER_MAX_DIMENSION=130 -DGLOBALIZER_MAX_Number_Of_Function=70 -DGLOBALIZER_BUILD_TESTS=ON -DGLOBALIZER_USE_MPI=OFF 
+-DGLOBALIZER_PYTHON=ON -DPython_FIND_DEBUG=OFF ..
                     </code></pre>
                     </div>
                     
