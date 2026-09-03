@@ -40,4 +40,5 @@ Globalizer
    source/html/installation/index
    source/html/start_of_work
    source/html/parameters
+   source/html/library_api
    source/html/code/index
