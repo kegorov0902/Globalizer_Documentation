@@ -98,13 +98,13 @@ Globalizer — многомерный решатель задач глобаль
 2.3. Выполнение скрипта по шагам
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**[1/7] Git submodules**  Обновляет git-подмодули (third_party).
-**[2/7] Conda environment**  Находит conda; при отсутствии создаёт окружение Globalizer_env с Python 3.11.
-**[3/7] Python packages**  Устанавливает pip, pybind11 ≥ 2.13, numpy ≥ 2.0 из requirements_build.txt.
-**[4/7] Visual Studio detection**  Находит Visual Studio через vswhere.exe; определяет генератор и версию CMake.
-**[5/7] CMake configuration**  Конфигурирует с -DGLOBALIZER_PYBIND_VERSION=ON, задаёт пути к Python и pybind11.
-**[6/7] Build**  Собирает цель PYDGlobalizer в конфигурации Release (при флаге /build).
-**[7/7] Import test**  Проверяет, что модуль загружается и содержит solve / validate_problem.
+- **[1/7] Git submodules** — обновляет git-подмодули (third_party).
+- **[2/7] Conda environment** — находит conda; при отсутствии создаёт окружение Globalizer_env с Python 3.11.
+- **[3/7] Python packages** — устанавливает pip, pybind11 ≥ 2.13, numpy ≥ 2.0 из requirements_build.txt.
+- **[4/7] Visual Studio detection** — находит Visual Studio через vswhere.exe; определяет генератор и версию CMake.
+- **[5/7] CMake configuration** — конфигурирует с -DGLOBALIZER_PYBIND_VERSION=ON, задаёт пути к Python и pybind11.
+- **[6/7] Build** — собирает цель PYDGlobalizer в конфигурации Release (при флаге /build).
+- **[7/7] Import test** — проверяет, что модуль загружается и содержит solve / validate_problem.
 
 2.4. Артефакты сборки
 ~~~~~~~~~~~~~~~~~~~~~
@@ -805,6 +805,6 @@ BaseProblem, требует реализовать следующие метод
 Полезные ссылки
 ---------------
 
-**Документация Globalizer** — https://globalizer-documentation.readthedocs.io/en/latest/
-**Исходный код** — https://github.com/OptimLLab/Globalizer
-**pybind11** — https://pybind11.readthedocs.io/
+- **Документация Globalizer** — https://globalizer-documentation.readthedocs.io/en/latest/
+- **Исходный код** — https://github.com/OptimLLab/Globalizer
+- **pybind11** — https://pybind11.readthedocs.io/
