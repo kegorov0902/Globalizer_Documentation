@@ -41,4 +41,5 @@ Globalizer
    source/html/start_of_work
    source/html/parameters
    source/html/library_api
+   source/html/pydglobalizer
    source/html/code/index
