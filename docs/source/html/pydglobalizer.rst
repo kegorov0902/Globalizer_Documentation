@@ -5,21 +5,31 @@ Globalizer — многомерный решатель задач глобаль
 
 **ВАЖНО:** в решении есть два объекта с похожими названиями, являющимися принципиально разными вещами и отвечающими за разные задачи: 
 а) PYDGlobalizer - скомпилированное C++-расширение (_bin/PYDGlobalizer*.pyd). Для использования нужно прописать следующую строку в начале вашей программы на Python: 
+
 .. code-block:: powershell
-	import PYDGlobalizer 
+
+   import PYDGlobalizer 
+
 б) PYGlobalizer/ - каталог с Python-вспомогательными модулями (PYProblem.py, trial.py, problem.py). Для использования вставьте в начало вашей рпограммы следующий код:
+
 .. code-block:: powershell
-	from PYProblem import PYProblem
+
+   from PYProblem import PYProblem
 
 Разные имена устраняют коллизию импорта: раньше каталог PYGlobalizer/ мог перекрыть бинарный модуль в sys.path, и импорт приводил к ошибке "module has no attribute validate_problem".
 
 Присутствуют два стиля вызова - современный и устаревший, который был оставлен для обратной совместимости. Их вызовы:
 а) Современный - принимает объект SolverParameters, возвращает словарь.
+
 .. code-block:: powershell
-	solve(problem, params) 
+
+   solve(problem, params) 
+
 б) Устаревший - старая позиционная сигнатура, возвращает тот же словарь.
+
 .. code-block:: powershell
-	solve_legacy(problem, maxParams, r, localRefineSolution, numThreads) 
+
+   solve_legacy(problem, maxParams, r, localRefineSolution, numThreads) 
 
 1. Требования к окружению:
 --------------------------
@@ -73,15 +83,17 @@ Globalizer — многомерный решатель задач глобаль
 
 2.2. Команды сборки
 ~~~~~~~~~~~~~~~~~~~
+
 .. code-block:: powershell
-	REM полная сборка (создать окружение + сконфигурировать + собрать)
-	gen\StartVS-no_mp-No_MPI_PYGlobalizer.bat /build
 
-	REM пересборка со сбросом кэша
-	gen\StartVS-no_mp-No_MPI_PYGlobalizer.bat /clean /build
+   REM полная сборка (создать окружение + сконфигурировать + собрать)
+   gen\StartVS-no_mp-No_MPI_PYGlobalizer.bat /build
 
-	REM только конфигурация + открыть Visual Studio (без сборки)
-	gen\StartVS-no_mp-No_MPI_PYGlobalizer.bat
+   REM пересборка со сбросом кэша
+   gen\StartVS-no_mp-No_MPI_PYGlobalizer.bat /clean /build
+
+   REM только конфигурация + открыть Visual Studio (без сборки)
+   gen\StartVS-no_mp-No_MPI_PYGlobalizer.bat
 
 2.3. Выполнение скрипта по шагам
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,13 +110,14 @@ Globalizer — многомерный решатель задач глобаль
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: powershell
-	_bin\PYDGlobalizer.cp311-win_amd64.pyd   <- модуль расширения
-	_bin\PYDGlobalizer.pdb                   <- символы (для отладки)
-	build_64_py\                             <- каталог CMake
-	build_64_py\Globalizer_env\             <- conda-окружение
+
+   _bin\PYDGlobalizer.cp311-win_amd64.pyd   <- модуль расширения
+   _bin\PYDGlobalizer.pdb                   <- символы (для отладки)
+   build_64_py\                             <- каталог CMake
+   build_64_py\Globalizer_env\             <- conda-окружение
 
 .. note::
-	Примечание: Не смешивайте build_64 (StartVS.bat с MP/MPI) и build_64_py (этот скрипт). Кэш CMake хранит старые значения, поэтому общий каталог может незаметно вернуть MP/MPI. При смене конфигурации используйте /clean.
+   Примечание: Не смешивайте build_64 (StartVS.bat с MP/MPI) и build_64_py (этот скрипт). Кэш CMake хранит старые значения, поэтому общий каталог может незаметно вернуть MP/MPI. При смене конфигурации используйте /clean.
 
 2.5. Ключевые опции CMake
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -190,9 +203,10 @@ Globalizer — многомерный решатель задач глобаль
 | error                | str                       | Текст ошибки (присутствует только при            |
 |                      |                           | success=False)                                   |
 +----------------------+---------------------------+--------------------------------------------------+
+
 .. note::
-	Примечание: Решатель выбирается автоматически: Solver — для задач небольшой размерности, HDSolver — для высокоразмерных задач. 
-	Граница выбора зависит от размерности и числа итераций.
+   Примечание: Решатель выбирается автоматически: Solver — для задач небольшой размерности, HDSolver — для высокоразмерных задач. 
+   Граница выбора зависит от размерности и числа итераций.
 
 3.4. validate_problem — проверка задачи без решения
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -202,34 +216,36 @@ valid (bool), dimension, n_functions, n_constraints, n_criteria, error.
 Используйте её перед solve, чтобы убедиться в корректности описания задачи.
 
 .. code-block:: python
-	info = PYDGlobalizer.validate_problem(problem)
-	if info["valid"]:
-    	print(f"dim={info['dimension']}, constraints={info['n_constraints']}")
+
+   info = PYDGlobalizer.validate_problem(problem)
+   if info["valid"]:
+       print(f"dim={info['dimension']}, constraints={info['n_constraints']}")
 
 3.5. Минимальный пример
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
-	from PYProblem import PYProblem
-	import PYDGlobalizer
 
-	problem = PYProblem(dimension=4, numCriterions=1)
-	problem.set_bounds([-5.12]*4, [5.12]*4)
-	problem.add_function(lambda x: sum(xi**2 for xi in x), name="sphere")
-	problem.set_optimum(0.0, [0.0]*4)
+   from PYProblem import PYProblem
+   import PYDGlobalizer
 
-	params = PYDGlobalizer.SolverParameters()
-	params.max_iterations = 3000
-	params.r = 4.0
-	params.epsilon = 0.01
-	params.local_refine = True
-	params.verbose = 2
+   problem = PYProblem(dimension=4, numCriterions=1)
+   problem.set_bounds([-5.12]*4, [5.12]*4)
+   problem.add_function(lambda x: sum(xi**2 for xi in x), name="sphere")
+   problem.set_optimum(0.0, [0.0]*4)
 
-	result = PYDGlobalizer.solve(problem, params)
-	print(result["best_value"], result["best_point"])
+   params = PYDGlobalizer.SolverParameters()
+   params.max_iterations = 3000
+   params.r = 4.0
+   params.epsilon = 0.01
+   params.local_refine = True
+   params.verbose = 2
+
+   result = PYDGlobalizer.solve(problem, params)
+   print(result["best_value"], result["best_point"])
 
 .. note::
-	Примечание: Порядок добавления функций важен: сначала добавляются numCriterions критериев, затем ограничения. Ограничения задаются в форме g(x) ≤ 0.
+   Примечание: Порядок добавления функций важен: сначала добавляются numCriterions критериев, затем ограничения. Ограничения задаются в форме g(x) ≤ 0.
 
 4. Описание класса PYProblem
 ----------------------------
@@ -241,14 +257,14 @@ PYProblem — Python-класс (PYGlobalizer/PYProblem.py), описывающ�
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
-	PYProblem(dimension: int | None = None, numCriterions: int = 1
+
+   PYProblem(dimension: int | None = None, numCriterions: int = 1)
 
 Параметр ``dimension`` задаёт число непрерывных переменных. Если не указан, определяется из границ ``set_bounds``. 
 ``numCriterions`` — число целевых функций (остальные добавленные функции считаются ограничениями).
 
 4.2. Методы конфигурации
 ~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 .. list-table::
    :header-rows: 1
@@ -310,10 +326,11 @@ Globalizer поддерживает задачи с частично целоч�
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
-	problem.set_discrete_variables(
-	    discrete_values: list[list[str]],   # список допустимых значений для каждой переменной
-	    discrete_names: list[str] | None     # имена переменных (необязательно)
-	)
+
+   problem.set_discrete_variables(
+       discrete_values: list[list[str]],   # список допустимых значений для каждой переменной
+       discrete_names: list[str] | None     # имена переменных (необязательно)
+   )
 
 Каждое допустимое значение задаётся строкой: "-1", "0", "1", "0.5" и т.д. Список discrete_values имеет длину, равную числу дискретных переменных; 
 каждый вложенный список — допустимые значения для одной переменной. После вызова _dimension увеличивается на число дискретных переменных.
@@ -326,50 +343,50 @@ Python без трансляции: **x[0..n-1]** — непрерывные п�
 Граница поиска для дискретных переменных задаётся как ``[min(values), max(values)]``, решатель гарантирует подстановку только допустимых значений.
 
 .. note::
-	Примечание: Это поведение реализовано в новой версии PYProblem.cpp: GetBounds заполняет дискретные координаты минимумом/максимумом допустимых значений, 
-	GetNextDiscreteValues возвращает реальные значения из mDiscreteNumeric, а CalculateFunctionals передаёт y в Python без изменений. 
-	Init() переопределён пустым, поэтому повторный вызов Initialize() из solve() не сбрасывает данные задачи.
+   Примечание: Это поведение реализовано в новой версии PYProblem.cpp: GetBounds заполняет дискретные координаты минимумом/максимумом допустимых значений, 
+   GetNextDiscreteValues возвращает реальные значения из mDiscreteNumeric, а CalculateFunctionals передаёт y в Python без изменений. 
+   Init() переопределён пустым, поэтому повторный вызов Initialize() из solve() не сбрасывает данные задачи.
 
 5.3. Пример: RASTRIGIN_INT (2 непрерывных + 2 дискретных)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
-	import math
-	from PYProblem import PYProblem
-	import PYDGlobalizer
 
-	def rastrigin_int(x):
-	    """x[0], x[1] — непрерывные; x[2], x[3] — дискретные {-1, 0, 1}."""
-	    pi = math.pi
-	    s = 0.0
-	    for j in range(2):
-	        s += x[j]**2 - 10.0 * math.cos(2.0*pi*x[j]) + 10.0
-	    for j in range(2, 4):
-	        r = round(x[j]) / 2.0
-	        s += 0.01 * (x[j] - r)**2
-	    return s
+   import math
+   from PYProblem import PYProblem
+   import PYDGlobalizer
 
-	# Создаём задачу: 2 непрерывных переменных
-	problem = PYProblem(dimension=2, numCriterions=1)
-	problem.set_bounds([-2.2, -2.2], [1.8, 1.8])     # границы для x[0], x[1]
+   def rastrigin_int(x):
+       """x[0], x[1] — непрерывные; x[2], x[3] — дискретные {-1, 0, 1}."""
+       pi = math.pi
+       s = 0.0
+       for j in range(2):
+           s += x[j]**2 - 10.0 * math.cos(2.0*pi*x[j]) + 10.0
+       for j in range(2, 4):
+           r = round(x[j]) / 2.0
+           s += 0.01 * (x[j] - r)**2
+       return s
 
-	# Добавляем 2 дискретных переменных с допустимыми значениями {-1, 0, 1}
-	problem.set_discrete_variables(
-	    [[ "-1", "0", "1" ], [ "-1", "0", "1" ]],
-	    ["discrete_1", "discrete_2"]
-	)
-	# Теперь problem._dimension == 4 (2 непрерывных + 2 дискретных)
+   # Создаём задачу: 2 непрерывных переменных
+   problem = PYProblem(dimension=2, numCriterions=1)
+   problem.set_bounds([-2.2, -2.2], [1.8, 1.8])     # границы для x[0], x[1]
 
-	problem.add_function(rastrigin_int)
-	problem.set_optimum(0.0, [0.0, 0.0, 0.0, 0.0])
+   # Добавляем 2 дискретных переменных с допустимыми значениями {-1, 0, 1}
+   problem.set_discrete_variables(
+       [[ "-1", "0", "1" ], [ "-1", "0", "1" ]],
+       ["discrete_1", "discrete_2"]
+   )
+   # Теперь problem._dimension == 4 (2 непрерывных + 2 дискретных)
 
-	result = PYDGlobalizer.solve_legacy(problem, 5000, 4.5, True, 1)
-	print(result["best_value"])    # ожидается ~0
-	print(result["best_point"])    # ожидается [~0, ~0, 0, 0]
+   problem.add_function(rastrigin_int)
+   problem.set_optimum(0.0, [0.0, 0.0, 0.0, 0.0])
+
+   result = PYDGlobalizer.solve_legacy(problem, 5000, 4.5, True, 1)
+   print(result["best_value"])    # ожидается ~0
+   print(result["best_point"])    # ожидается [~0, ~0, 0, 0]
 
 5.4. Ключевые правила
 ~~~~~~~~~~~~~~~~~~~~~
-
 
 - Порядок вызовов важен: ``set_bounds`` задаётся ДО ``set_discrete_variables``.
   В ``set_bounds`` передаются только границы непрерывных переменных.
@@ -496,10 +513,12 @@ BaseProblem, требует реализовать следующие метод
 
 Все примеры лежат в каталоге ``examples/``. Запускать их нужно из корня репозитория.
 Для запуска нужно использовать следующий перечень команд:
+
 .. code-block:: powershell
-	conda activate .\build_64_py\Globalizer_env
-	cd /d <корень репозитория>
-	python examples\<имя_файла>.py
+
+   conda activate .\build_64_py\Globalizer_env
+   cd /d <корень репозитория>
+   python examples\<имя_файла>.py
 
 6.1. Перечень примеров
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -540,8 +559,8 @@ BaseProblem, требует реализовать следующие метод
      - нет
 
 .. note::
-	Примечание: Примеры с внешними зависимостями при их отсутствии печатают [SKIP] и корректно завершаются — не падают с трейсбеком. 
-	Рекомендуемый порядок проверки: example_manual_sphere.py → example_constrained.py → example_legacy.py → example_ackley.py → example_rastrigin_int.py → Example_simple.py.
+   Примечание: Примеры с внешними зависимостями при их отсутствии печатают [SKIP] и корректно завершаются — не падают с трейсбеком. 
+   Рекомендуемый порядок проверки: example_manual_sphere.py → example_constrained.py → example_legacy.py → example_ackley.py → example_rastrigin_int.py → Example_simple.py.
 
 6.2. Пример с ограничением (example_constrained.py)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -550,19 +569,20 @@ BaseProblem, требует реализовать следующие метод
 Решение находится на границе круга ``R=1`` в направлении ``(1,1)``, то есть примерно в точке ``(0.707, 0.707)``.
 
 .. code-block:: python
-	problem = PYProblem(dimension=2, numCriterions=1)
-	problem.set_bounds([-2.0, -2.0], [2.0, 2.0])
-	# ВАЖЕН порядок: критерий первым, ограничение вторым
-	problem.add_function(lambda x: (x[0]-1)**2 + (x[1]-1)**2, name="objective")
-	problem.add_function(lambda x: x[0]**2 + x[1]**2 - 1.0,   name="g_circle")
 
-	info = PYDGlobalizer.validate_problem(problem)
-	print("validate:", info)
+   problem = PYProblem(dimension=2, numCriterions=1)
+   problem.set_bounds([-2.0, -2.0], [2.0, 2.0])
+   # ВАЖЕН порядок: критерий первым, ограничение вторым
+   problem.add_function(lambda x: (x[0]-1)**2 + (x[1]-1)**2, name="objective")
+   problem.add_function(lambda x: x[0]**2 + x[1]**2 - 1.0,   name="g_circle")
 
-	params = PYDGlobalizer.SolverParameters()
-	params.max_iterations = 4000; params.r = 3.5; params.verbose = 2
-	result = PYDGlobalizer.solve(problem, params)
-	# ожидаемый результат: x* ≈ [0.707, 0.707], f* ≈ 0.172
+   info = PYDGlobalizer.validate_problem(problem)
+   print("validate:", info)
+
+   params = PYDGlobalizer.SolverParameters()
+   params.max_iterations = 4000; params.r = 3.5; params.verbose = 2
+   result = PYDGlobalizer.solve(problem, params)
+   # ожидаемый результат: x* ≈ [0.707, 0.707], f* ≈ 0.172
 
 6.3. Работа с бенчмарками (Example_simple.py)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -571,18 +591,19 @@ BaseProblem, требует реализовать следующие метод
 При копировании переносятся границы, функции и, если есть, дискретные переменные.
 
 .. code-block:: python
-	from iOptProblemSimple import rastrigin
-	from PYProblem import PYProblem
-	import PYDGlobalizer
 
-	source = rastrigin.Rastrigin(2)
-	problem = PYProblem()
-	problem.copy_from_problem(source)
+   from iOptProblemSimple import rastrigin
+   from PYProblem import PYProblem
+   import PYDGlobalizer
 
-	params = PYDGlobalizer.SolverParameters()
-	params.max_iterations = 50; params.r = 5.0
-	result = PYDGlobalizer.solve(problem, params)
-	print(result)
+   source = rastrigin.Rastrigin(2)
+   problem = PYProblem()
+   problem.copy_from_problem(source)
+
+   params = PYDGlobalizer.SolverParameters()
+   params.max_iterations = 50; params.r = 5.0
+   result = PYDGlobalizer.solve(problem, params)
+   print(result)
 
 7. Тестирование и отладка (debug_pyglobalizer.py)
 -------------------------------------------------
@@ -617,10 +638,11 @@ BaseProblem, требует реализовать следующие метод
 Используйте следующий перечень команд для запуска отладки:
 
 .. code-block:: powershell
-	conda activate .\build_64_py\Globalizer_env
-	cd /d <корень репозитория>
-	python examples\debug_pyglobalizer.py
-	python examples\debug_pyglobalizer.py --iters 500
+
+   conda activate .\build_64_py\Globalizer_env
+   cd /d <корень репозитория>
+   python examples\debug_pyglobalizer.py
+   python examples\debug_pyglobalizer.py --iters 500
 
 7.3. Отладка через Launch (F5 в Visual Studio)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -639,21 +661,22 @@ BaseProblem, требует реализовать следующие метод
 - Нажмите F5 (Debug → Start Debugging).
 
 .. code-block:: xml
-	<!-- PYGlobalizer.vcxproj.user -->
-	<Project>
-	  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-	    <LocalDebuggerCommand>
-	      $(ProjectDir)..\build_64_py\Globalizer_env\python.exe
-	    </LocalDebuggerCommand>
-	    <LocalDebuggerCommandArguments>
-	      "$(ProjectDir)..\examples\debug_pyglobalizer.py" --iters 200
-	    </LocalDebuggerCommandArguments>
-	    <LocalDebuggerWorkingDirectory>$(ProjectDir)..</LocalDebuggerWorkingDirectory>
-	    <LocalDebuggerEnvironment>
-	      PYTHONPATH=$(ProjectDir)..\PYGlobalizer;$(ProjectDir)..\_bin;$(OutDir)
-	    </LocalDebuggerEnvironment>
-	  </PropertyGroup>
-	</Project>
+
+   <!-- PYGlobalizer.vcxproj.user -->
+   <Project>
+     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+       <LocalDebuggerCommand>
+         $(ProjectDir)..\build_64_py\Globalizer_env\python.exe
+       </LocalDebuggerCommand>
+       <LocalDebuggerCommandArguments>
+         "$(ProjectDir)..\examples\debug_pyglobalizer.py" --iters 200
+       </LocalDebuggerCommandArguments>
+       <LocalDebuggerWorkingDirectory>$(ProjectDir)..</LocalDebuggerWorkingDirectory>
+       <LocalDebuggerEnvironment>
+         PYTHONPATH=$(ProjectDir)..\PYGlobalizer;$(ProjectDir)..\_bin;$(OutDir)
+       </LocalDebuggerEnvironment>
+     </PropertyGroup>
+   </Project>
 
 7.4. Отладка через Attach
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -661,7 +684,8 @@ BaseProblem, требует реализовать следующие метод
 Используйте, если запуск через VS неудобен.
 
 .. code-block:: powershell
-	python examples\debug_pyglobalizer.py --wait
+
+   python examples\debug_pyglobalizer.py --wait
 
 Скрипт напечатает PID и будет ждать Enter. В Visual Studio: ``Debug → Attach to Process``, найдите ``python.exe``, в поле «Attach to» выберите Native code (или Native + Python), нажмите Attach. Вернитесь в консоль и нажмите Enter.
 
@@ -710,9 +734,10 @@ BaseProblem, требует реализовать следующие метод
 Для проверки окржуения воспользуйтесь следующей командой:
 
 .. code-block:: powershell
-	conda activate .\build_64_py\Globalizer_env
-	python -c "import PYDGlobalizer as m; print(m.__file__, m.__version__)"
-	python -c "import PYDGlobalizer as m; print(hasattr(m,'solve'), hasattr(m,'validate_problem'))"
+
+   conda activate .\build_64_py\Globalizer_env
+   python -c "import PYDGlobalizer as m; print(m.__file__, m.__version__)"
+   python -c "import PYDGlobalizer as m; print(hasattr(m,'solve'), hasattr(m,'validate_problem'))"
 
 8.2. Таблица проблем и решений
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
